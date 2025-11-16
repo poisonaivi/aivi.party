@@ -8,8 +8,8 @@
     src: url(fonts/sf-pixelate/SFPixelate.ttf) format("truetype");
 }
 @font-face {
-    font-family: "437DOS";
-    src: url(fonts/437dos-termuni/437dos-termuni.otf) format("opentype");
+    font-family: "Monopix";
+    src: url(fonts/monopix.otf) format("opentype");
 }
 #devToolbar{
     background-color: white;
@@ -87,8 +87,8 @@ body {
     padding: 0;
     background-color: black;
     -webkit-text-size-adjust: none;
-    line-height: 110%;
-    font-family: "SF Pixelate";
+    font-family: "Monopix";
+    font-size: 20px;
     color: var(--text);
     background-image: var(--background-image);
     background-size: 600px;
@@ -103,8 +103,6 @@ div.card:not(.noStatic), .static {
 }
 h1, h2 {
     line-height: 150%;
-}
-h1, h2 {
     margin: 0;
     font-weight: normal;
     font-family: "Atlantis Headline";
@@ -117,7 +115,7 @@ h1 {
     text-shadow: 0.02em 0.02em var(--text), -0.02em 0.02em var(--text), -0.02em -0.02em var(--text), 0.02em -0.02em var(--text), 0.1em 0.1em var(--text-shadow), 0 0 40px var(--accent);
 } 
 h2 {
-    font-size: 140%;
+    font-size: 120%;
     color: var(--accent);
     text-shadow: 0.03em 0.03em var(--accent-shadow), -0.03em 0.03em var(--accent-shadow), -0.03em -0.03em var(--accent-shadow), 0.03em -0.03em var(--accent-shadow), 0.1em 0.1em var(--text-shadow), 0 0 24px var(--accent);
     word-spacing: 0.25em;
