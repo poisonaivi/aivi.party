@@ -110,7 +110,7 @@ h1, h2 {
 }
 h1 {
     padding-right: 4px;
-    font-size: 260%;
+    font-size: 240%;
     color: var(--title);
     text-shadow: 0.02em 0.02em var(--text), -0.02em 0.02em var(--text), -0.02em -0.02em var(--text), 0.02em -0.02em var(--text), 0.1em 0.1em var(--text-shadow), 0 0 40px var(--accent);
 } 
