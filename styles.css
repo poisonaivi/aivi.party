@@ -122,7 +122,6 @@ h2 {
 }
 p, li, .caption, .plaintext {
     text-shadow: 0.1em 0.1em var(--text-shadow), 0 0 8px var(--text);
-    word-spacing: -0.2em;
     line-height: 150%;
 }
 p, .plaintext {
