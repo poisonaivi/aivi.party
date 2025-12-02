@@ -72,7 +72,7 @@
         </div>
         <div id="header-fetch" class="contentColumn">Loading</div>
         <script>
-            fetch("/r/indexAnniversaryHeader.html")
+            fetch("/r/header.html")
                 .then(response => response.text())
                 .then(content => {
                     document.getElementById("header-fetch").innerHTML = content;
