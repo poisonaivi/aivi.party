@@ -87,21 +87,21 @@ $.ajax({
                 if (timeDiff <= 2592000) {
                     var timeInactive = Math.floor(timeDiff / 604800)
                     if (timeInactive == 1)
-                        timeInactive += " week ago";
+                        timeInactive += " week";
                     else
-                        timeInactive += " weeks ago";
+                        timeInactive += " weeks";
                 } else if (timeDiff <= 31556926) {
                     var timeInactive = Math.floor(timeDiff / 2592000)
                     if (timeInactive == 1)
-                        timeInactive += " month ago";
+                        timeInactive += " month";
                     else
-                        timeInactive += " months ago";
+                        timeInactive += " months";
                 } else {
                     var timeInactive = Math.floor(timeDiff / 31556926)
                     if (timeInactive == 1)
-                        timeInactive += " year ago";
+                        timeInactive += " year";
                     else
-                        timeInactive += " years ago";
+                        timeInactive += " years";
                 }
                 $("span#inactiveDuration")
                     .html(timeInactive);

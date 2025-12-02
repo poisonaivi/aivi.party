@@ -116,7 +116,6 @@ function dismissCard(cardId) {
 function developerMode() {
     document.getElementById("usingMobile").hidden = false;
     localStorage.removeItem("usingMobile");
-    document.getElementById("underConstruction").hidden = false;
     document.getElementById("queerSafety").hidden = false;
     localStorage.removeItem("queerSafety");
     document.getElementById("inactiveNotice").hidden = false;

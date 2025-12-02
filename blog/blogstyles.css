@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    font-family: monopix;
+}
+ul {
+    /* bullet followed by a non-breaking space */
+    list-style-type: "• ";
+}
