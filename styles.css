@@ -4,6 +4,10 @@
          url(fonts/atlantis/AtlantisHeadline-Bold.ttf) format("truetype");
 }
 @font-face {
+    font-family: "Monopix XL";
+    src: url(fonts/monopix-xl.otf) format("opentype"),
+}
+@font-face {
     font-family: "SF Pixelate";
     src: url(fonts/sf-pixelate/SFPixelate.ttf) format("truetype");
 }
@@ -110,12 +114,12 @@ h1, h2 {
 }
 h1 {
     padding-right: 4px;
-    font-size: 240%;
+    font-size: 50px;
     color: var(--title);
     text-shadow: 0.02em 0.02em var(--text), -0.02em 0.02em var(--text), -0.02em -0.02em var(--text), 0.02em -0.02em var(--text), 0.1em 0.1em var(--text-shadow), 0 0 40px var(--accent);
 } 
 h2 {
-    font-size: 120%;
+    font-size: 24px;
     color: var(--accent);
     text-shadow: 0.03em 0.03em var(--accent-shadow), -0.03em 0.03em var(--accent-shadow), -0.03em -0.03em var(--accent-shadow), 0.03em -0.03em var(--accent-shadow), 0.1em 0.1em var(--text-shadow), 0 0 24px var(--accent);
     word-spacing: 0.25em;
