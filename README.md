@@ -1,7 +1,7 @@
 > [!NOTE]
-> Site permanently moved to amethystx.net as of February 2025. <br>'am3thystx.pages.dev' will continue to resolve.
+> Site permanently moved to aivi.party as of January 2026. <br>All old domains will continue to resolve.
 
-# AMETHYSTX.net - Art, Projects, About Me, and More!
+# AIVI.party - Art, Projects, About Me, and More!
 
 ![site button](./badges/88x31.gif)
 ## Directories:
