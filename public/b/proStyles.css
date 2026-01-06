@@ -1,0 +1,106 @@
+#devToolbar{
+    background-color: white;
+    font: initial;
+    animation: none;
+    text-shadow: none;
+    color: black;
+}
+
+:root {
+    --text: #f4e0fd;
+    --link: #e7a4f0;
+    --accent: #ca50da;
+    --title: #9a10c8;
+    --accent-shadow: #611685;
+    --success: #0c0;
+    --success-accent: #030;
+    --danger: #f00;
+    --danger-accent: #500;
+    /* FIND DEFAULT DROPSHADOW COLORS IN app.js. THESE ARE PREADJUSTED.*/
+    --text-dropshadow: #f4e0fd2a;
+    --accent-dropshadow: #ca50da21;
+    --title-dropshadow: #9a10c836;
+    /* Flicker constants */
+    --flicker-low-vfx: brightness(0.9);
+    --flicker-high-vfx: brightness(1.1);
+}
+
+body {
+    background: #fff;
+    -webkit-text-size-adjust: none;
+    font-family: Helvetica;
+    font-size: 120%;
+    color: black;
+    margin: 0;
+}
+
+header {
+    height: 100vh; 
+}
+
+#headerContent {
+    margin: 10vw;
+    padding: 30px;
+    position: relative;
+    background: linear-gradient(125deg, var(--text), #0000, #0000);
+}
+
+#scrollArr {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    animation: nudgeDown 3s infinite;
+}
+
+@keyframes nudgeDown {
+    0% {
+        transform: translateY(0px);
+        text-shadow: 0 0 30px #0000;
+    }
+    67% {
+        transform: translateY(12px);
+        text-shadow: 0 0 20px var(--title);
+    }
+    100% {
+        transform: translateY(0px);
+        text-shadow: 0 0 30px #0000;
+    }
+}
+
+
+h1 {
+    color: var(--accent-shadow);
+    font-size: 500%;
+    margin: 10px 0 0 0;
+}
+
+h2 {
+    color: var(--title);
+    font-size: 240%;
+    margin: 0;
+}
+
+.caption {
+    opacity: 0.6; 
+    font-size: 75%;
+}
+
+a {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.bigButton {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 120%;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--link);
+    color: var(--accent-shadow);
+    transition: ease-in-out 50ms;
+    &:hover {
+        filter: brightness(1.2);
+    }
+}

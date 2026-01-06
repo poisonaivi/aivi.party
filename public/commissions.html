@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.35">
+    <meta content="#9A10C8" name="theme-color">
+
+    <!-- HTML Meta Tags -->
+    <meta name="description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://amethystx.net/commissions">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AMETHYSTX.net - Commissions">
+    <meta property="og:description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
+    <meta property="og:image" content="https://amethystx.net/images/aivi-preview-banner.png">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="amethystx.net">
+    <meta property="twitter:url" content="https://amethystx.net/commissions">
+    <meta name="twitter:title" content="AMETHYSTX.net - Commissions">
+    <meta name="twitter:description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
+    <meta name="twitter:image" content="https://amethystx.net/images/aivi-preview-banner.png">
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/amethystcrystal.png">
+    <title>COMMISSIONS</title>
+</head>
+<body>
+    <div class="caption">
+        <span>profile:</span>
+        <span id="styleProfile">detecting</span>
+    </div>
+    <details>
+        <summary class="caption">
+            <a><u>Dev Tools</u></a>
+        </summary>
+        <div style="background-color: white; color: black">
+            Developer Tools >>> you can ignore this (or mess around idc) >>>
+            <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
+            <button style="background-color: chocolate;" name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
+            <form style="display: inline-block;" action="https://amethystx.net/art.html">
+                <button>[GO DEPLOYMENT]</button>
+            </form>
+            &nbsp;&nbsp;&nbsp;
+            <form style="display: inline-block;" action="http://localhost:5500/art.html">
+                <button>[GO LOCAL]</button>
+            </form>
+        </div>
+    </details>
+    <header>
+        <div class="contentColumn">
+            <noscript>
+                <div class="card warningCard" id="JsDisabled">
+                    <h2 class="warning">Enable JavaScript!</h2>
+                    <p>Javascript is disabled on your browser.</p>
+                    <p>I'm not here to steal your data. Navigating this site requires JavaScript. <a href="https://javascript.amethystx.net/" target="_blank" rel="noopener noreferrer"><u>Learn more.</u></a></p>
+                </div>
+            </noscript>
+        </div>
+        <div id="header-fetch" class="contentColumn">Loading</div>
+        <script>
+            fetch("/r/header.html")
+                .then(response => response.text())
+                .then(content => {
+                    document.getElementById("header-fetch").innerHTML = content;
+                });
+        </script>
+    </header>
+    <table class="contentColumn">
+        <tr>
+            <td style="width: 72%">
+                <div class="card">
+                    <h2>Commissions</h2>
+                    <p>I do digital art commissions! Most of my work is <span class="highlight">furry/anthro art</span> since that's what I enjoy drawing. If you don't know what that is, then I wouldn't reccomend commissioning me.</p>
+                    <p>If you <i>are</i> interested, I'd certainly love to work with you! Keep in mind that I'm still somewhat new to this.</p>
+                    <p class="caption">On the plus side, that means my prices are pretty low!</p>
+                    <p>I've drawn <span class="highlight">8</span> commissions so far.</p>
+                </div>
+                <div class="card highlightCard">
+                    <h2>Getting started:</h2>
+                    <p>Read the terms of service? DM me on <a href="https://discord.com/users/802178124342493224" target="_blank" rel="noopener noreferrer"><u>Discord</u></a>.</p>
+                    <p>Please <u>make your intentions clear</u> in the <u>first DM</u>, otherwise you may be filtered out as spam.</p>
+                    <p class="caption">i.e., <a href="https://nohello.net/en/" target="_blank" rel="noopener noreferrer"><u>No Hello</u></a>.</p>
+                    <br><br>
+                    <p>Other ways to reach me:</p>
+                    <ul style="list-style-type:'- '; padding-left: 20px;">
+                            <li><a href="https://bsky.app/profile/amethystx.net" target="_blank" rel="noopener noreferrer"><u>Tag me on Bluesky</u></a></li>
+                            <li><a href="mailto:admin@amethystx.net"><u>Send me an email</u></a></li>
+                    </ul>
+                </div>
+                <div class="card noStatic">
+                    <div>
+                        <table class="static" style="width: 100%">
+                            <tr>
+                                <td width="50%">
+                                    <a class="caption svgBullet more" href="/b/terms.html" target="_blank" rel="noopener noreferrer"><u>Open in new tab</u></a>
+                                </td>
+                                <td>
+                                    <a class="caption svgBullet file" href="https://docs.google.com/document/d/1n_4nSqzhmKrMCQG9OwDd-HPAyRntM2ymu86URUHR8s8/mobilebasic" target="_blank" rel="noopener noreferrer"><u>Open in Google Docs</u></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                    <div>
+                        <iframe src="/b/terms.html" style="border: none; width: 100%; height: 750px; background-image: url(images/seamlesspaper.jpg);"></iframe>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <!-- <div class="card successCard">
+                    <p>Commissions are</p>
+                    <br><h2 class="flickering success" style="font-size: 200%;">OPEN!</h2>
+                </div> -->
+                <div class="card warningCard">
+                    <p>Commissions are</p>
+                    <br><h2 class="flickering warning" style="font-size: 200%;">CLOSED</h2>
+                </div>
+                <div class="card highlightCard">
+                    <h2>See my work</h2>
+                    <ul>
+                        <li>
+                            <span class="caption">Portfolio</span>
+                            <br>
+                            <a class="svgBullet file" href="/art.html" target="_blank" rel="noopener noreferrer"><u>/art</u></a>
+                        </li>
+                        <li>
+                            <span class="caption">Frequent & Newest</span>
+                            <br>
+                            <a class="svgBullet Bluesky" href="https://bsky.app/profile/amethystx.net" target="_blank" rel="noopener noreferrer"><u>Bluesky</u></a>
+                        </li>
+                        <!-- <li>
+                            <span class="caption">Portfolio</span>
+                            <br>
+                            <a class="svgBullet Cara" href="https://cara.app/poisonaivi" target="_blank" rel="noopener noreferrer"><u>Cara</u></a>
+                        </li> -->
+                        <li>
+                            <span class="caption">Archive</span>
+                            <br>
+                            <a class="svgBullet DeviantArt" href="https://www.deviantart.com/am3thystx" target="_blank" rel="noopener noreferrer"><u>DeviantArt</u></a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <footer>
+    <div class="contentColumn" id="footer-fetch">Loading</div>
+    <script>
+        fetch("/r/footer.html")
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById("footer-fetch").innerHTML = content;
+            });
+    </script>
+</footer>
+</body>
+</html>
