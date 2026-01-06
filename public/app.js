@@ -11,7 +11,7 @@ var consoleTitle = "____ _  _ ____ ___ _  _ _   _ ____ ___ _  _  _  _ ____ ___\n
 addEventListener("load", (event) => {
     optimizeForBrowser();
     path = window.location.pathname;
-    if (path == "/index.html" || path == "/") {
+    if (path == "/index.html" || path == "/public/index.html" || path == "/") {
         greetUser();
         startClock();
     }

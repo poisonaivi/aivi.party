@@ -38,8 +38,8 @@ html {
     --border-l: #0004;
     --notice-l: #bbb;
     --text-shadow-l: #fff;
-    --background-image-l: url(/vfx/tilingBgL.png);
-    --gradient-image-l: url(/vfx/fadeToWhite.png);
+    --background-image-l: url(vfx/tilingBgL.png);
+    --gradient-image-l: url(vfx/fadeToWhite.png);
     --success-l: #070;
     --success-accent-l: #7d7;
     --danger-l: #700;
@@ -53,8 +53,8 @@ html {
     --border-d: #fff4;
     --notice-d: #222;
     --text-shadow-d: #000;
-    --background-image-d: url(/vfx/tilingBg.png);
-    --gradient-image-d: url(/vfx/fadeToBlack.png);
+    --background-image-d: url(vfx/tilingBg.png);
+    --gradient-image-d: url(vfx/fadeToBlack.png);
     --success-d: #0c0;
     --success-accent-d: #030;
     --danger-d: #f00;
@@ -195,12 +195,12 @@ details > summary {
         display: none;
     }
     &::before {
-        content: url('/icons/more.svg');
+        content: url('icons/more.svg');
     }
 }
 details[open] > summary {
     &::before {
-        content: url('/icons/close.svg');
+        content: url('icons/close.svg');
     }
 }
 .svgBullet::before, details > summary::before {
@@ -213,61 +213,61 @@ details[open] > summary {
 }
 .svgBullet {
     &.folder::before {
-        content: url('/icons/folder.svg');
+        content: url('icons/folder.svg');
     }
     &.file::before {
-        content: url('/icons/file.svg');
+        content: url('icons/file.svg');
     }
     &.picture::before {
-        content: url('/icons/picture.svg');
+        content: url('icons/picture.svg');
     }
     &.link::before {
-        content: url('/icons/link.svg');
+        content: url('icons/link.svg');
     }
     &.more::before {
-        content: url('/icons/more.svg');
+        content: url('icons/more.svg');
     }
     &.close::before {
-        content: url('/icons/close.svg');
+        content: url('icons/close.svg');
     }
     &.check::before {
-        content: url('/icons/check.svg');
+        content: url('icons/check.svg');
     }
     &.Discord::before {
-        content: url('/logos/discord.svg');
+        content: url('logos/discord.svg');
     }
     &.Bluesky::before {
-        content: url('/logos/bluesky.svg');
+        content: url('logos/bluesky.svg');
     }
     &.Cara::before {
-        content: url('/logos/cara.svg');
+        content: url('logos/cara.svg');
     }
     &.DeviantArt::before {
-        content: url('/logos/deviantart.svg');
+        content: url('logos/deviantart.svg');
     }
     &.GitHub::before {
-        content: url('/logos/github.svg');
+        content: url('logos/github.svg');
     }
     &.Lastfm::before {
-        content: url('/logos/lastfm.svg');
+        content: url('logos/lastfm.svg');
     }
     &.MakerWorld::before {
-        content: url('/logos/makerworld.svg');
+        content: url('logos/makerworld.svg');
     }
     &.Roblox::before {
-        content: url('/logos/roblox.svg');
+        content: url('logos/roblox.svg');
     }
     &.UDcredits::before {
-        content: url('/icons/UDcredits.svg');
+        content: url('icons/UDcredits.svg');
     }
     &.UDmiles::before {
-        content: url('/icons/UDmiles.svg');
+        content: url('icons/UDmiles.svg');
     }
     &.UDbounty::before {
-        content: url('/icons/UDbounty.svg');
+        content: url('icons/UDbounty.svg');
     }
     &.female::before {
-        content: url('/icons/female.svg');
+        content: url('icons/female.svg');
     }
 }
 textarea {
@@ -382,7 +382,7 @@ img.bullet {
     margin-bottom: -80px;
     transform: translate(-12px, -12px);
     border-radius: 8px 8px 0 0;
-    mask-image: url(/vfx/gradientMask.png);
+    mask-image: url(vfx/gradientMask.png);
     mask-type: luminance;
     mask-repeat: no-repeat;
     mask-position: bottom;

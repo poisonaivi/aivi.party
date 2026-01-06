@@ -8,25 +8,25 @@
     <!-- HTML Meta Tags -->
     <meta name="description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://amethystx.net">
+    <meta property="og:url" content="https://aivi.party">
     <meta property="og:type" content="website">
     <meta property="og:title" content="AMETHYSTX.net - Art, Projects, About Me, and More!">
     <meta property="og:description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
-    <meta property="og:image" content="https://amethystx.net/images/aivi-preview-banner.png">
+    <meta property="og:image" content="https://aivi.party/images/aivi-preview-banner.png">
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="amethystx.net">
-    <meta property="twitter:url" content="https://amethystx.net">
+    <meta property="twitter:url" content="https://aivi.party">
     <meta name="twitter:title" content="AMETHYSTX.net - Art, Projects, About Me, and More!"">
     <meta name="twitter:description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
-    <meta name="twitter:image" content="https://amethystx.net/images/aivi-preview-banner.png">
+    <meta name="twitter:image" content="https://aivi.party/images/aivi-preview-banner.png">
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
-    <link rel="stylesheet" href="/styles.css">
-    <script defer src="/app.js"></script>
-    <link rel="icon" type="image/x-icon" href="/images/amethystcrystal.png">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/amethystcrystal.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="/scrobbler.js"></script>
+    <script src="scrobbler.js"></script>
     <title>AIVI party!</title>
 </head>
 <body>
@@ -42,7 +42,7 @@
             Developer Tools >>> you can ignore this (or mess around idc) >>>
             <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
             <button style="background-color: chocolate;" name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
-            <form style="display: inline-block;" action="https://amethystx.net/index.html">
+            <form style="display: inline-block;" action="https://aivi.party/index.html">
                 <button>[GO DEPLOYMENT]</button>
             </form>
             &nbsp;&nbsp;&nbsp;
@@ -57,13 +57,13 @@
                 <div class="card warningCard" id="JsDisabled">
                     <h2 class="warning">Enable JavaScript!</h2>
                     <p>Javascript is disabled on your browser.</p>
-                    <p>I'm not here to steal your data. Navigating this site requires JavaScript. <a href="https://javascript.amethystx.net/" target="_blank" rel="noopener noreferrer"><u>Learn more.</u></a></p>
+                    <p>I'm not here to steal your data. Navigating this site requires JavaScript. <a href="https://javascript.amethystx.net/" target="_blank"><u>Learn more.</u></a></p>
                 </div>
             </noscript>
         </div>
         <div id="header-fetch" class="contentColumn">Loading</div>
         <script>
-            fetch("/r/indexAnniversaryHeader.html")
+            fetch("r/indexAnniversaryHeader.html")
                 .then(response => response.text())
                 .then(content => {
                     document.getElementById("header-fetch").innerHTML = content;
@@ -84,8 +84,10 @@
                     <h2 id="greeting">Hello!</h2>
                     <p class="caption"><i>While traversing the vast internet, you stumble across... me?</i></p>
                     <div class="card highlightCard noStatic">
-                        <p><span class="highlight">NOTICE: </span>As of January 6, 2026, all content previously served on <a>amethystx.net</a> has been relocated to <a>aivi.party</a>.</p>
+                        <p><span class="highlight">NOTICE: </span>As of January 6, 2026, most content previously served on <a>amethystx.net</a> has been relocated to <a>aivi.party</a>. As everything transitions, broken links will gradually be resolved.</p>
+                        <p class="caption">Some services still rely on the old domain, amethystx.net, including:<br>Email forwarding<br>Subdomains</p>
                     </div>
+                    <br>
                     <p><span class="highlight">Welcome to my homepage!</span> You can call me <span class="highlight"><i>Amethyst</i></span> or <span class="highlight"><i>Aivi</i></span> <span class="caption">(eye-vee)</span>. This domain is my corner of cyberspace, and it's all <a href="about.html"><u>about my weird self</u></a> and my many, <i>many</i> interests.</p>
                     <p>To be clear, <span class="highlight"><i>this site wasn't made for everyone</i></span>! There's some swearing, NSFW outlinks, and the occasional rant into more serious topics. Also, this site is pretty graphics-heavy, so it looks best on a big screen powered by a decent computer running a popular browser.</p>
                     <p>If you like my site, you could leave a message in <a href="guestbook.html"><u>my guestbook</u></a>! That would be really cool.</p>
@@ -122,44 +124,44 @@
                 </div>
                 <div>
                     <marquee onmouseover="this.stop();" onmouseout="this.start();">
-                        <img src="/badges/best_desktop.gif">
-                        <img src="/badges/css-is-difficult.gif">
-                        <img src="/badges/queercoded.png">
-                        <img src="/badges/8831button.gif">
-                        <img src="/badges/no_nft.gif">
-                        <img src="/badges/web-design-passion.gif">
-                        <img src="/badges/trans_now.gif">
-                        <img src="/badges/queer.png">
-                        <img src="/badges/best_chrome.gif">
-                        <img src="/badges/no-frames.gif">
-                        <img src="/badges/copy_floppy.gif">
+                        <img src="badges/best_desktop.gif">
+                        <img src="badges/css-is-difficult.gif">
+                        <img src="badges/queercoded.png">
+                        <img src="badges/8831button.gif">
+                        <img src="badges/no_nft.gif">
+                        <img src="badges/web-design-passion.gif">
+                        <img src="badges/trans_now.gif">
+                        <img src="badges/queer.png">
+                        <img src="badges/best_chrome.gif">
+                        <img src="badges/no-frames.gif">
+                        <img src="badges/copy_floppy.gif">
                     </marquee>
                     <marquee direction="right" onmouseover="this.stop();" onmouseout="this.start();">
-                        <a class="badge" href="https://dimden.dev/" target="_blank" rel="noopener noreferrer"><img src="https://dimden.dev/services/images/88x31.gif"></a>
-                        <a class="badge" href="https://lyra.horse/" target="_blank" rel="noopener noreferrer"><img src="badges/lyra.horse.png"></a>
-                        <a class="badge" href="https://toasty.place" title="Toasty.place" target="_blank" rel="noopener noreferrer"><img src="https://toasty.place/images/buttons/sitebutton.gif"></a>
-                        <a class="badge" href="https://melankorin.net/" target="_blank" rel="noopener noreferrer"><img src="https://melankorin.net/assets/img/buttons/button-1.gif"></a>
-                        <a class="badge" href="https://darkosparko.nekoweb.org" target="_blank" rel="noopener noreferrer"><img src="https://darkosparko.nekoweb.org/rocket-button.gif" alt="Rocket into the Spark-Web!"></a>
-                        <a class="badge" href="https://pilosophos.com/" target="_blank" rel="noopener noreferrer"><img src="badges/pilosophos-circle-88x31.png"></a><!-- button by max.nekoweb.org -->
-                        <a class="badge" href="https://nekoweb.org/" target="_blank" rel="noopener noreferrer"><img src="https://nekoweb.org/assets/buttons/button11.gif"></a><!-- button by milkyway.moe -->
-                        <a class="badge" href="https://nekoweb.org/" target="_blank" rel="noopener noreferrer"><img src="https://nekoweb.org/assets/buttons/button5.gif"></a><!-- button by max.nekoweb.org -->
-                        <a class="badge" href="https://yesterweb.org/no-to-web3/" target="_blank" rel="noopener noreferrer"><img src="/badges/say-no-to-web3.gif"></a>
-                        <a class="badge" href="https://neocities.org/" target="_blank" rel="noopener noreferrer"><img src="/badges/delete-twitter.gif"></a>
-                        <a class="badge" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer"><img src="/badges/CC-BY-NC-ND-88x31.png"></a>
-                        <a class="badge" href="https://amethystx.net/"><img src="/badges/88x31.gif"></a>
+                        <a class="badge" href="https://dimden.dev/" target="_blank"><img src="https://dimden.dev/services/images/88x31.gif"></a>
+                        <a class="badge" href="https://lyra.horse/" target="_blank"><img src="badges/lyra.horse.png"></a>
+                        <a class="badge" href="https://toasty.place" title="Toasty.place" target="_blank"><img src="https://toasty.place/images/buttons/sitebutton.gif"></a>
+                        <a class="badge" href="https://melankorin.net/" target="_blank"><img src="https://melankorin.net/assets/img/buttons/button-1.gif"></a>
+                        <a class="badge" href="https://darkosparko.nekoweb.org" target="_blank"><img src="https://darkosparko.nekoweb.org/rocket-button.gif" alt="Rocket into the Spark-Web!"></a>
+                        <a class="badge" href="https://pilosophos.com/" target="_blank"><img src="badges/pilosophos-circle-88x31.png"></a><!-- button by max.nekoweb.org -->
+                        <a class="badge" href="https://nekoweb.org/" target="_blank"><img src="https://nekoweb.org/assets/buttons/button11.gif"></a><!-- button by milkyway.moe -->
+                        <a class="badge" href="https://nekoweb.org/" target="_blank"><img src="https://nekoweb.org/assets/buttons/button5.gif"></a><!-- button by max.nekoweb.org -->
+                        <a class="badge" href="https://yesterweb.org/no-to-web3/" target="_blank"><img src="badges/say-no-to-web3.gif"></a>
+                        <a class="badge" href="https://neocities.org/" target="_blank"><img src="badges/delete-twitter.gif"></a>
+                        <a class="badge" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img src="badges/CC-BY-NC-ND-88x31.png"></a>
+                        <a class="badge" href="https://aivi.party/"><img src="badges/88x31.gif"></a>
                     </marquee>
                 </div>
                 <!-- <div class="card highlightCard">
                     <h2>New(s)</h2>
                     <p class="caption">May 05, 2025</p>
                     <p>I made a VR headset so that's pretty cool.</p>
-                    <p>Read more <a href="/projects.html#3dpvr"><u>here</u></a>.</p>
-                    <p>Read even more and 3D-print your own <a href="https://github.com/ax-x3/3DP-VR/tree/main" target="_blank" rel="noopener noreferrer"><u>here</u></a>.</p>
+                    <p>Read more <a href="projects.html#3dpvr"><u>here</u></a>.</p>
+                    <p>Read even more and 3D-print your own <a href="https://github.com/ax-x3/3DP-VR/tree/main" target="_blank"><u>here</u></a>.</p>
                     <p class="caption">Apr 03, 2025</p>
                     <p>88x31 buttons!! I finally made one. Hotlink me if you exist.</p>
-                    <a class="badge" href="https://amethystx.net/"><img src="/badges/88x31.gif"></a>
+                    <a class="badge" href="https://aivi.party/"><img src="badges/88x31.gif"></a>
                     <br><br>
-                    <textarea readonly style="resize:none; height: 80px; width: 240px;"><a href="https://amethystx.net/"><img src="https://amethystx.net/badges/88x31.gif"></a></textarea>
+                    <textarea readonly style="resize:none; height: 80px; width: 240px;"><a href="https://aivi.party/"><img src="https://aivi.party/badges/88x31.gif"></a></textarea>
                     <p class="caption">Mar 17, 2025</p>
                     <p>CHATBOX!! LIKE A BOX FOR CHATS!</p>
                     <p>Here, you can talk to nobody. Because nobody visits my site. :(</p>
@@ -182,7 +184,7 @@
                     <div style="position: relative; z-index: 1; bottom: 0;">
                         <span class="success">FEATURED ARTWORK</span>
                         <br><h2>highway</h2>
-                        <p class="caption">September 15, 2025 • CSP • <a href="https://bsky.app/profile/amethystx.net/post/3lyurn2akbc2n" target="_blank" rel="noopener noreferrer"><u>Bluesky</u></a></p>
+                        <p class="caption">September 15, 2025 • CSP • <a href="https://bsky.app/profile/amethystx.net/post/3lyurn2akbc2n" target="_blank"><u>Bluesky</u></a></p>
                         <p>sneak peek at the piece i'm working on :3</p>
                         <br>
                         <a class="svgBullet more" href="art.html"><u>See more art!</u></a>
@@ -200,8 +202,8 @@
                                 <p>Hotlink or download!</p>
                             </td>
                             <td>
-                                <a class="badge" href="https://amethystx.net/"><img src="/badges/88x31.gif"></a>&nbsp;
-                                <textarea readonly style="line-break: anywhere; width: 290px; height: 31px; box-sizing: border-box;"><a href="https://amethystx.net/" target="_blank"><img src="https://amethystx.net/badges/88x31.gif"></a></textarea>
+                                <a class="badge" href="https://aivi.party/"><img src="badges/88x31.gif"></a>&nbsp;
+                                <textarea readonly style="line-break: anywhere; width: 290px; height: 31px; box-sizing: border-box;"><a href="https://aivi.party/" target="_blank"><img src="https://aivi.party/badges/88x31.gif"></a></textarea>
                                 <br>
                                 <div style="display: inline-block; width: 88px; height: 31px; border: 3px dashed var(--border); box-sizing: border-box;"></div>&nbsp;
                                 <textarea readonly style="color: var(--border); line-break: anywhere; width: 290px; height: 31px; box-sizing: border-box;">i'll make more at some point (not a promise)</textarea>
@@ -212,10 +214,10 @@
                         </tr>
                     </table>
                     <br>
-                    <span class="caption">Want a <a href="/badges/index.html"><u>catalog of every badge on my site</u></a>?</span>
+                    <span class="caption">Want a <a href="badges/index.html"><u>catalog of every badge on my site</u></a>?</span>
                 </div>
                 <div style="transform: scale(1.12) translateY(3px);">
-                    <img class="flickering" style="width: 100%;" src="/images/streetlamp.png">
+                    <img class="flickering" style="width: 100%;" src="images/streetlamp.png">
                 </div>
                 <button onclick="playSound('squeak')" style="position: absolute; scale: 1.5; transform: translate(130px, -43px); opacity: 0.4;"><img style="filter: hue-rotate(240deg) brightness(0.5);" src="images/amogusRed.png"></button>
                 <div class="card" style="padding: 0;">
@@ -232,18 +234,24 @@
                     <div style="margin: 0 0 0 24px; max-height: 585px; overflow-y: scroll;">
                         <ul>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
+                                <span class="highlight" style="vertical-align: 120%;">January 2026</span>
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
+                            </div>
+                            <li><p><i class="highlight">[06]</i> Relocated to aivi.party. Switched to Clouflare Workers implementation with Wrangler CLI. Set all old domains to forward to new domain. Changed header text and image.</p></li>
+                            <div style="margin: 30px 0; text-align: center;">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">December 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[15]</i> Removed gtag trackers since they were not being used anyway.</p></li>
                             <li><p><i class="highlight">[10]</i> Added monopix XL to art. Changed licensing statement in side card in art.html.</p></li>
                             <li><p><i class="highlight">[09]</i> Preparing font replacement. Defined font sizes using px rather than %.</p></li>
                             <li><p><i class="highlight">[01]</i> Created /blog/ Returned banner header. Rewrote automated alert cards. Deleted construction card. Moved side cards around.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">November 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[16]</i> Updated main font to Monopix by poisonAivi.</p></li>
                             <li><p><i class="highlight">[15]</i> Made text shadows more consistent. Deleted unnecessary fonts. Replaced id photo.</p></li>
@@ -251,9 +259,9 @@
                             <li><p><i class="highlight">[02]</i> Greatly optimized /vfx/ assets, improving FPS and zoom performance.</p></li>
                             <li><p><i class="highlight">[01]</i> Clarified usage rights in /art. Changed anniversary banner. Put eepy kitty back somewhere. Rewrote guestbook stuff.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">October 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[31]</i> Colored highlightCard border. Rewrote anniversary text. Added drop shadow to h1 elements.</p></li>
                             <li><p><i class="highlight">[17]</i> Swapped to anniversary header. Fixed titling error in credits.</p></li>
@@ -262,9 +270,9 @@
                             <li><p><i class="highlight">[06]</i> Added status card. Rewrote intro. Expanded software experience list.</p></li>
                             <li><p><i class="highlight">[03]</i> Reorganized credits, improved UD stats card.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">September 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[19]</i> Improved legibility of index header. Reduced file sizes of icon, static, and banner. Fixed double-static in footer. Removed clock desync re-assessment.</p></li>
                             <li><p><i class="highlight">[15]</i> Added latest art back to index. Made local time clock autmatically synchronize upon loading.</p></li>
@@ -272,9 +280,9 @@
                             <li><p><i class="highlight">[07]</i> Replaced show/hide JavaScript with correct details and summary tag. Moved some stuff around. Completely reworked css variables and added an experimental light theme. Made dismissable elements stay hidden using localStorage. Fixed devtools. Corrected footer format. Renamed lots of things for clarity.</p></li>
                             <li><p><i class="highlight">[06]</i> Fixed tab navigation; rewrote welcome and warning card. Re-aligned bullet images. Underlined clock. Added programming languages to credits. Moved hardware and software to about.html.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">August 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[24]</i> CSS standardization, fix background animation, simplify welcome card.</p></li>
                             <li><p><i class="highlight">[22]</i> Chat styles, border radii, and compactness of about.html.</p></li>
@@ -286,9 +294,9 @@
                             <li><p><i class="highlight">[02]</i> Fix issue preventing optimization from completing on non-index pages on mobile.</p></li>
                             <li><p><i class="highlight">[01]</i> Replaced onload code with eventlistener. JavaScript issue resolved. Cleaned up console logs.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">July 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[31]</i> Fixed issue preventing JavaScript from running completely.</p></li>
                             <li><p><i class="highlight">[28]</i> Improved mobile efficiency, reduced some image file sizes.</p></li>
@@ -301,9 +309,9 @@
                             <li><p><i class="highlight">[05]</i> Improved and added links to welcome card. Added driveUD to projects list. Added Ubuntu Linux to hardware specs.</p></li>
                             <li><p><i class="highlight">[03]</i> Revised inactivity card. Currently conducting a test.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">June 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[25]</i> Remove image from guestbook embed.</p></li>
                             <li><p><i class="highlight">[23]</i> Added Clip Studio Paint to software.</p></li>
@@ -313,9 +321,9 @@
                             <li><p><i class="highlight">[05]</i> Fixed project thumbnails not appearing on mobile devices. Added new computer to hardware in credits.html.</p></li>
                             <li><p><i class="highlight">[01]</i> Updated background tile, added scrolling. Updated mandelbrotter thumbnail</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">May 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[31]</i> Changed profile icon in about.html. Added more meta tags for bots, search engines, and previews.</p></li>
                             <li><p><i class="highlight">[30]</i> Added banner to index.html. Updated Mandelbrotter project.</p></li>
@@ -328,9 +336,9 @@
                             <li><p><i class="highlight">[02]</i> Fixed and modernized line heights. Added more marquees to index.html. Added tons of 88x31 buttons. Added to credits.html, including a hardware section with specs. Added Nekoweb ads. Made the album art spin when actively scrobbling. Zoomed out on small screens. Added visitor counter; might remove if better counter is found.</p></li>
                             <li><p><i class="highlight">[01]</i> Improved "last played" album cover visuals. Added NavLink ads to /index.html. Added folder and file icons where needed. Moved 88x31 files to new /badges/ folder. Fixed header and footer not showing fully on small screens.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">April 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[30]</i> Reformatted all SVGs. Replaced janky hardcoded SVGs with new svgBullet class. SVG files are now actually referenced. Reworded instructions in art-n-commissions.html. Improved art gallery links. Oh—and I hid a few easter eggs.</p></li>
                             <li><p><i class="highlight">[29]</i> Removed fade-in so that no-css-animation browsers can still view content. Updated and added way more songs to about.html, totaling 97. Renamed /animationResources/ directory to /vfx/. Deleted unused images. Moved root images to /images/. Added slashes to URIs so that pages can reference parent directory files. Created Sitemap card, revealing previously unlinked pages. Created index.html in /archive/ as a directory map.</p></li>
@@ -340,9 +348,9 @@
                             <li><p><i class="highlight">[08]</i> Completely redesigned projects.html card layout. Moved and enlarged main action buttons. Added SPrint to list. Made Contents list clickable.</p></li>
                             <li><p><i class="highlight">[03]</i> Created an 88x31 button!! Also a textarea in the footer for the hotlink code.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">March 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[31]</i> Reorganized credits.html. Removed software descriptions and moved to secondary column.</p></li>
                             <li><p><i class="highlight">[24]</i> Removed a large chunk of about.html to make it less depressing. Rewrote some.</p></li>
@@ -355,9 +363,9 @@
                             <li><p><i class="highlight">[07]</i> Small adjustments to 404 and 301 pages. Adjusted drop shadow colors for mobile devices. Fixed grammar in art-n-commissions.html.</p></li>
                             <li><p><i class="highlight">[05]</i> Added 404 page. Changed 301 page. Added where-is-it.html in /a/ as an inside joke.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">February 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[28]</i> Not sure what changed, but www.@ resolves! Added /b/javascript.html to help users enable JavaScript. Added as project in projects.html. Linked Enable JavaScript! to all page headers. Moved navbar to header.html, so no navbar current page marking, but ease of maintenence.</p></li>
                             <li><p><i class="highlight">[27]</i> Added Cara.app socials to index.html. Reworded commissioning card at bottom of art-n-commissions.html. Fixed tall characters being cut off in the navbar. Sorted archived pages into /a/, sorted business/professional pages into /b/, and sorted active resource pages into /r/.</p></li>
@@ -370,9 +378,9 @@
                             <li><p><i class="highlight">[09]</i> Little styling updates to Atabook. Added Website optional field.</p></li>
                             <li><p><i class="highlight">[08]</i> Created Guestbook on Atabook.org and embedded into guestbook.html. Retired old Google Doc guestbook. Improved Javascript disabled warning and mobile device warning. Added News card on index.html to show site news and other important stuff.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">January 2025</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[31]</i> Retitled warning card. Added Signatures card to art-n-commissions.html. Added way more content to about.html.</p></li>
                             <li><p><i class="highlight">[30]</i> Made queer warning card accessible by default again. Rewrote queer warning card to be more up-to-date and urgent. Added Erin Reed's website to credits.html.</p></li>
@@ -380,16 +388,16 @@
                             <li><p><i class="highlight">[07]</i> Replaced robotics.html with guestbook.html. Designed button CSS for site. Created a guestbook Google Doc for visitors. Pretty-ified the guestbook. Added guestbook card on index.html.</p></li>
                             <li><p><i class="highlight">[05]</i> Labeled Developer Toolbar. It'll either go away or be integrated better in the future. Added "Last Updated" card. Added "To Do" card.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">December 2024</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[17]</i> Redesigned static effect to remove unintentional brightness variation. Added gradient to static mask and changed mask mode to luminance instead of alpha.</p></li>
                             <li><p><i class="highlight">[12]</i> Deleted Spotify. Disabled old site link. Deactivated old site. Began putting inspiration in credits.html. Added stupid Site status card. It's always green.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">November 2024</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[21]</i> Made projects.html and populated it with my old creations. Real proud of the seamless thumbnail integration into the project cards.</p></li>
                             <li><p><i class="highlight">[16]</i> Huge color contrast improvements for visual accessibility. Also significantly decreased flickering and static effect.</p></li>
@@ -398,9 +406,9 @@
                             <li><p><i class="highlight">[06]</i> Added card for queer safety. Decorated background with some tiling artwork. Added a footer to all existing pages.</p></li>
                             <li><p><i class="highlight">[05]</i> Wrote Terms of Service in art-n-commissions.html. Made Google Doc link for accessibility.</p></li>
                             <div style="margin: 30px 0; text-align: center;">
-                                <img style="width: 200px;" src="/icons/embellishment.png">
+                                <img style="width: 200px;" src="icons/embellishment.png">
                                 <span class="highlight" style="vertical-align: 120%;">October 2024</span>
-                                <img style="width: 200px; transform: rotateY(180deg);" src="/icons/embellishment.png">
+                                <img style="width: 200px; transform: rotateY(180deg);" src="icons/embellishment.png">
                             </div>
                             <li><p><i class="highlight">[31]</i> Decorated index.html with some quiet artwork. Started to design a new card style for Terms of Service in art-n-commissions.html.</p></li>
                             <li><p><i class="highlight">[30]</i> Made art-n-commissions.html and drew a text embellishment. Completed 'About meh' and 'About this site' cards in about.html.</p></li>
@@ -421,7 +429,7 @@
                 </div>
             </td>
             <td>
-                <a href="https://stupidcalendar.pages.dev/" target="_blank" rel="noopener noreferrer">
+                <a href="https://stupidcalendar.pages.dev/" target="_blank">
                     <div class="card">
                         <span class="plaintext">It's</span>
                         <h2 id="localTime"><span class="warning">----:----:----</span></h2>
@@ -447,42 +455,42 @@
                     <h2>I'm also on</h2>
                     <ul>
                         <li>
-                            <a class="svgBullet Bluesky" href="https://bsky.app/profile/amethystx.net" target="_blank" rel="noopener noreferrer"><u>Bluesky</u></a>
+                            <a class="svgBullet Bluesky" href="https://bsky.app/profile/amethystx.net" target="_blank"><u>Bluesky</u></a>
                         </li>
                         <li>
-                            <a class="svgBullet GitHub" href="https://github.com/ax-x3" target="_blank" rel="noopener noreferrer"><u>GitHub</u></a>
+                            <a class="svgBullet GitHub" href="https://github.com/ax-x3" target="_blank"><u>GitHub</u></a>
                         </li>
                         <li>
-                            <a class="svgBullet DeviantArt" href="https://www.deviantart.com/am3thystx" target="_blank" rel="noopener noreferrer"><u>DeviantArt</u></a>
+                            <a class="svgBullet DeviantArt" href="https://www.deviantart.com/am3thystx" target="_blank"><u>DeviantArt</u></a>
                         </li>
                         <li>
-                            <a class="svgBullet Cara" href="https://cara.app/poisonaivi" target="_blank" rel="noopener noreferrer"><u>Cara</u></a>
+                            <a class="svgBullet Cara" href="https://cara.app/poisonaivi" target="_blank"><u>Cara</u></a>
                         </li>
                         <li>
-                            <a class="svgBullet Discord" href="https://discord.com/users/802178124342493224" target="_blank" rel="noopener noreferrer"><u>Discord</u></a>
+                            <a class="svgBullet Discord" href="https://discord.com/users/802178124342493224" target="_blank"><u>Discord</u></a>
                         </li>
                         <li>
-                            <a class="svgBullet Roblox" href="https://www.roblox.com/users/136983129/profile/" target="_blank" rel="noopener noreferrer"><u>Roblox</u></a>
+                            <a class="svgBullet Roblox" href="https://www.roblox.com/users/136983129/profile/" target="_blank"><u>Roblox</u></a>
                         </li>
                         <li>
-                            <a class="svgBullet Lastfm" href="https://www.last.fm/user/am3thystx" target="_blank" rel="noopener noreferrer"><u>Last.fm</u></a>
+                            <a class="svgBullet Lastfm" href="https://www.last.fm/user/am3thystx" target="_blank"><u>Last.fm</u></a>
                         </li>                    
                     </ul>
                     <audio id="squeak" src="sounds/squeak.mp3" preload="auto"></audio>
                     <button onclick="playSound('squeak')" style="position: absolute; scale: 1.5; transform: translate(150px, -1px); opacity: 0.4;"><img src="images/amogusRed.png"></button>
                 </div>
-                <!-- <a href="/commissions.html">
+                <a href="commissions.html">
                     <div class="card successCard">
                         <p>Commissions are</p>
                         <br><h2 class="flickering success" style="font-size: 200%;">OPEN!</h2>
                     </div>
-                </a> -->
-                <a href="/commissions.html">
+                </a>
+                <!-- <a href="commissions.html">
                     <div class="card warningCard">
                         <p>Commissions are</p>
                         <br><h2 class="flickering warning" style="font-size: 200%;">CLOSED</h2>
                     </div>
-                </a>
+                </a> -->
                 <div class="card">
                     <img class="nowPlaying thumbnail" id="trackart">
                     <div style="position: relative; z-index: 10;">
@@ -504,19 +512,19 @@
                 <div class="card highlightCard">
                     <h2>Sitemap</h2>
                     <ul>
-                        <li class="svgBullet folder"><a href="/"><u>/</u></a> <span class="caption">(main site)</span></li>
-                        <li class="svgBullet folder"><a href="/archive/"><u>/archive/</u></a></li>
-                        <li class="svgBullet folder"><a href="/b/"><u>/b/</u></a></li>
-                        <li class="svgBullet folder"><a href="/badges/"><u>/badges/</u><span class="flickering" style="position: absolute; color: yellow; background-color: red; width:fit-content; padding: 0 2px; font-size: 75%; transform: rotate(25deg) translate(-24px, 3px);">FREE!</span></a></li>
-                        <li class="svgBullet folder"><a href="/blog/"><u>/blog/</u></a></li>
-                        <li class="svgBullet folder"><a href="/industrial-tech/"><u>/industrial-tech/</u></a></li>
-                        <li class="svgBullet file"><a href="/roll.html" target="_blank" rel="noopener noreferrer"><u>Westover's Mountain</u></a></li>
+                        <li class="svgBullet folder"><a href=""><u>/</u></a> <span class="caption">(main site)</span></li>
+                        <li class="svgBullet folder"><a href="archive/"><u>/archive/</u></a></li>
+                        <li class="svgBullet folder"><a href="b/"><u>/b/</u></a></li>
+                        <li class="svgBullet folder"><a href="badges/"><u>/badges/</u><span class="flickering" style="position: absolute; color: yellow; background-color: red; width:fit-content; padding: 0 2px; font-size: 75%; transform: rotate(25deg) translate(-24px, 3px);">FREE!</span></a></li>
+                        <li class="svgBullet folder"><a href="blog/"><u>/blog/</u></a></li>
+                        <li class="svgBullet folder"><a href="industrial-tech/"><u>/industrial-tech/</u></a></li>
+                        <li class="svgBullet file"><a href="roll.html" target="_blank"><u>Westover's Mountain</u></a></li>
                     </ul>
                 </div>
                 <div class="card">
                     <!-- upds -->
                     <p>Last updated on</p>
-                    <br><h2>Dec 10, 2025</h2>
+                    <br><h2>Jan 6, 2026</h2>
                     <br><br>
                     <span class="caption">Created on Oct 19, 2024</span>
                 </div>
@@ -526,7 +534,7 @@
                     <p><span class="success">• ONLINE</span></p>
                 </div>
                 <div>
-                    <a href="https://youtu.be/WdPiOizr4eI" target="_blank" rel="noopener noreferrer"><h1 style="font-size: 500%; color: black; opacity: 0.075;">[AS]</h1></a>
+                    <a href="https://youtu.be/WdPiOizr4eI" target="_blank"><h1 style="font-size: 500%; color: black; opacity: 0.075;">[AS]</h1></a>
                 </div>
             </td>
         </tr>
@@ -534,7 +542,7 @@
     <footer>
     <div class="contentColumn" id="footer-fetch">Loading</div>
     <script>
-        fetch("/r/footer.html")
+        fetch("r/footer.html")
             .then(response => response.text())
             .then(content => {
                 document.getElementById("footer-fetch").innerHTML = content;

@@ -8,23 +8,23 @@
     <!-- HTML Meta Tags -->
     <meta name="description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://amethystx.net/about">
+    <meta property="og:url" content="https://aivi.party/about">
     <meta property="og:type" content="website">
     <meta property="og:title" content="AMETHYSTX.net - About Me">
     <meta property="og:description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
-    <meta property="og:image" content="https://amethystx.net/images/aivi-preview-banner.png">
+    <meta property="og:image" content="https://aivi.party/images/aivi-preview-banner.png">
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="amethystx.net">
-    <meta property="twitter:url" content="https://amethystx.net/about">
+    <meta property="twitter:url" content="https://aivi.party/about">
     <meta name="twitter:title" content="AMETHYSTX.net - About Me">
     <meta name="twitter:description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
-    <meta name="twitter:image" content="https://amethystx.net/images/aivi-preview-banner.png">
+    <meta name="twitter:image" content="https://aivi.party/images/aivi-preview-banner.png">
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
-    <link rel="stylesheet" href="/styles.css">
-    <script src="/app.js"></script>
-    <link rel="icon" type="image/x-icon" href="/images/amethystcrystal.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/amethystcrystal.png">
     <title>ABOUT</title>
 </head>
 <body>
@@ -40,7 +40,7 @@
             Developer Tools >>> you can ignore this (or mess around idc) >>>
             <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
             <button style="background-color: chocolate;" name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
-            <form style="display: inline-block;" action="https://amethystx.net/about.html">
+            <form style="display: inline-block;" action="https://aivi.party/about.html">
                 <button>[GO DEPLOYMENT]</button>
             </form>
             &nbsp;&nbsp;&nbsp;
@@ -55,13 +55,13 @@
                 <div class="card warningCard" id="JsDisabled">
                     <h2 class="warning">Enable JavaScript!</h2>
                     <p>Javascript is disabled on your browser.</p>
-                    <p>I'm not here to steal your data. Navigating this site requires JavaScript. <a href="https://javascript.amethystx.net/" target="_blank" rel="noopener noreferrer"><u>Learn more.</u></a></p>
+                    <p>I'm not here to steal your data. Navigating this site requires JavaScript. <a href="https://javascript.amethystx.net/" target="_blank"><u>Learn more.</u></a></p>
                 </div>
             </noscript>
         </div>
         <div id="header-fetch" class="contentColumn">Loading</div>
         <script>
-            fetch("/r/header.html")
+            fetch("r/header.html")
                 .then(response => response.text())
                 .then(content => {
                     document.getElementById("header-fetch").innerHTML = content;
@@ -73,7 +73,7 @@
             <td style="width: 72%">
                 <div class="card">
                     <h2>About me</h2>
-                    <p>I have a few different names, but most people know me as <a href="https://wikipedia.org/wiki/Amethyst" target="_blank" rel="noopener noreferrer"><u>Amethyst</u></a>. I'm a digital <a href="art.html" target="_blank" rel="noopener noreferrer"><u>artist</u></a>, <a href="projects.html" target="_blank" rel="noopener noreferrer"><u>programmer</u></a>, robotics nerd, furry, second-degree black belt, pianist, and ethical lockpicker.</p>
+                    <p>I have a few different names, but most people know me as <a href="https://wikipedia.org/wiki/Amethyst" target="_blank"><u>Amethyst</u></a>. I'm a digital <a href="art.html" target="_blank"><u>artist</u></a>, <a href="projects.html" target="_blank"><u>programmer</u></a>, robotics nerd, furry, second-degree black belt, pianist, and ethical lockpicker.</p>
                     <br>
                     <div class="card highlightCard noStatic" style="height: 370px; width: 620px; margin: 0 auto; border-radius: 30px; box-shadow: 10px 10px 40px var(--accent-shadow);">
                         <div style="float: left; margin-right: 20px;">
@@ -84,7 +84,7 @@
                         </div>
                         <h2 style="margin-top: 14px; margin-bottom: 4px;">Amethyst</h2>
                         <span class="highlight" style="float: right;"><br>ID1</span>
-                        <img src="/icons/embellishment.png" style="position: absolute; transform: translate(-35px, -8px) scaleX(-1);">
+                        <img src="icons/embellishment.png" style="position: absolute; transform: translate(-35px, -8px) scaleX(-1);">
                         <br>
                         <table style="width: 55%;">
                             <tr>
@@ -119,7 +119,7 @@
                         <br>
                         <h2 style="margin-top: 6px; margin-bottom: 4px;">Aivi</h2>
                         <span class="highlight" style="float: right;"><br>ID2</span>
-                        <img src="/icons/embellishment.png" style="position: absolute; transform: translate(-35px, -16px) scaleX(-1);">
+                        <img src="icons/embellishment.png" style="position: absolute; transform: translate(-35px, -16px) scaleX(-1);">
                         <br>
                         <table style="width: 55%;">
                             <tr>
@@ -348,19 +348,19 @@
                             <td style="width: 50%;">
                                 <ul>
                                     <li>
-                                        <img src="/icons/UDdiamond3.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
+                                        <img src="icons/UDdiamond3.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
                                         <span class="caption">Civillian rank 273</span><br>Diamond III
                                     </li>
                                     <li>
-                                        <img src="/icons/UDdiamond1.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
+                                        <img src="icons/UDdiamond1.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
                                         <span class="caption">Criminal rank 232</span><br>Diamond I
                                     </li>
                                     <li>
-                                        <img src="/icons/UDdiamond1.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
+                                        <img src="icons/UDdiamond1.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
                                         <span class="caption">Police rank 201</span><br>Diamond I
                                     </li>
                                     <li>
-                                        <img src="/icons/UDgold1.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
+                                        <img src="icons/UDgold1.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
                                         <span class="caption">Trucker rank 110</span><br>Gold I
                                     </li>
                                 </ul>
@@ -368,19 +368,19 @@
                             <td>
                                 <ul>
                                     <li>
-                                        <img src="/icons/UDruby1.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
+                                        <img src="icons/UDruby1.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
                                         <span class="caption">Transit rank 43</span><br>Ruby I
                                     </li>
                                     <li>
-                                        <img src="/icons/UDsilver3.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
+                                        <img src="icons/UDsilver3.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
                                         <span class="caption">Fire/EMT rank 37</span><br>Silver III
                                     </li>
                                     <li>
-                                        <img src="/icons/UDsilver1.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
+                                        <img src="icons/UDsilver1.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
                                         <span class="caption">Mail rank 16</span><br>Silver I
                                     </li>
                                     <li>
-                                        <img src="/icons/UDbronze3.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
+                                        <img src="icons/UDbronze3.png" style="width: 45px; float: left; transform: translate(-5px, 7px);">
                                         <span class="caption">DOT rank 8</span><br>Bronze III
                                     </li>
                                 </ul>
@@ -502,7 +502,7 @@
     <footer>
     <div class="contentColumn" id="footer-fetch">Loading</div>
     <script>
-        fetch("/r/footer.html")
+        fetch("r/footer.html")
             .then(response => response.text())
             .then(content => {
                 document.getElementById("footer-fetch").innerHTML = content;

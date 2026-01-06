@@ -8,23 +8,23 @@
     <!-- HTML Meta Tags -->
     <meta name="description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://amethystx.net/guestbook">
+    <meta property="og:url" content="https://aivi.party/guestbook">
     <meta property="og:type" content="website">
     <meta property="og:title" content="AMETHYSTX.net - Guestbook">
     <meta property="og:description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
-    <meta property="og:image" content="https://amethystx.net/images/aivi-preview-banner.png">
+    <meta property="og:image" content="https://aivi.party/images/aivi-preview-banner.png">
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="amethystx.net">
-    <meta property="twitter:url" content="https://amethystx.net/guestbook">
+    <meta property="twitter:url" content="https://aivi.party/guestbook">
     <meta name="twitter:title" content="AMETHYSTX.net - Guestbook">
     <meta name="twitter:description" content="Welcome to my quiet corner of the indie web. I filled it with cool things, so there's a lot to explore.">
-    <meta name="twitter:image" content="https://amethystx.net/images/aivi-preview-banner.png">
+    <meta name="twitter:image" content="https://aivi.party/images/aivi-preview-banner.png">
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
-    <link rel="stylesheet" href="/styles.css">
-    <script src="/app.js"></script>
-    <link rel="icon" type="image/x-icon" href="/images/amethystcrystal.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/amethystcrystal.png">
     <title>GUESTBOOK</title>
 </head>
 <body>
@@ -40,7 +40,7 @@
             Developer Tools >>> you can ignore this (or mess around idc) >>>
             <button style="background-color: greenyellow;" name="developer mode" onclick="developerMode()">Developer Mode (unhide alerts)</button>
             <button style="background-color: chocolate;" name="toggle flickering" onclick="toggleFlickering()">Toggle flickering effect</button>
-            <form style="display: inline-block;" action="https://amethystx.net/guestbook.html">
+            <form style="display: inline-block;" action="https://aivi.party/guestbook.html">
                 <button>[GO DEPLOYMENT]</button>
             </form>
             &nbsp;&nbsp;&nbsp;
@@ -55,13 +55,13 @@
                 <div class="card warningCard" id="JsDisabled">
                     <h2 class="warning">Enable JavaScript!</h2>
                     <p>Javascript is disabled on your browser.</p>
-                    <p>I'm not here to steal your data. Navigating this site requires JavaScript. <a href="https://javascript.amethystx.net/" target="_blank" rel="noopener noreferrer"><u>Learn more.</u></a></p>
+                    <p>I'm not here to steal your data. Navigating this site requires JavaScript. <a href="https://javascript.amethystx.net/" target="_blank"><u>Learn more.</u></a></p>
                 </div>
             </noscript>
         </div>
         <div id="header-fetch" class="contentColumn">Loading</div>
         <script>
-            fetch("/r/header.html")
+            fetch("r/header.html")
                 .then(response => response.text())
                 .then(content => {
                     document.getElementById("header-fetch").innerHTML = content;
@@ -83,7 +83,7 @@
                 </div>
                 <div class="card">
                     <h2>Old Guestbook</h2>
-                    <p>Located <a href="https://docs.google.com/document/d/1gX5HDlQ2IhSc7PpdqXr2eqlmw5wiw0_aTIF0zo_jJJs/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><u>here</u></a> for archival purposes. New entries should be made right on this page!</p>
+                    <p>Located <a href="https://docs.google.com/document/d/1gX5HDlQ2IhSc7PpdqXr2eqlmw5wiw0_aTIF0zo_jJJs/edit?usp=sharing" target="_blank"><u>here</u></a> for archival purposes. New entries should be made right on this page!</p>
                 </div>
                 <div>
                     <p style="line-height: 100%; color: var(--accent);">
@@ -107,7 +107,7 @@
     <footer>
     <div class="contentColumn" id="footer-fetch">Loading</div>
     <script>
-        fetch("/r/footer.html")
+        fetch("r/footer.html")
             .then(response => response.text())
             .then(content => {
                 document.getElementById("footer-fetch").innerHTML = content;
