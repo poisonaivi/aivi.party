@@ -11,7 +11,7 @@ var consoleTitle = "____ _  _ ____ ___ _  _ _   _ ____ ___ _  _  _  _ ____ ___\n
 addEventListener("load", (event) => {
     optimizeForBrowser();
     path = window.location.pathname;
-    if (path == "/index.html" || path == "/public/" || path == "/") {
+    if (path == "/index" || path == "/public/" || path == "/public/index.html" || path == "/") {
         greetUser();
         startClock();
     }
@@ -74,7 +74,7 @@ function greetUser() {
 
 function startClock() {
     const localTimeEle = document.getElementById("localTime");
-    const clockStatusEle = document.getElementById("clockStatus");
+    // const clockStatusEle = document.getElementById("clockStatus");
     const clockOptions = {
         timeZone: 'America/New_York',
         hour12: false,
@@ -85,14 +85,14 @@ function startClock() {
     // Get current time accurate to the minute.
     var localTime = formatter.format(Date.now());
     localTimeEle.innerHTML = "<u>" + localTime.substring(0, 5) + "</u>" + '<span class="warning">:----</span>';
-    clockStatusEle.innerHTML = "Calibrating...";
+    // clockStatusEle.innerHTML = "Calibrating...";
     // Calculate offset and wait until the next second is about to tick.
     setTimeout(() => {
         // Begin regular clock update with seconds.
         setTimeout(() => {
-            clockStatusEle.innerHTML = "Done! Accuracy: ±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms.";
+            // clockStatusEle.innerHTML = "Done! Accuracy: ±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms.";
             setTimeout(() => {
-                clockStatusEle.hidden = true;
+                // clockStatusEle.hidden = true;
             }, 3000);
         }, 1000);
         setInterval(() => {
