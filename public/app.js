@@ -6,7 +6,7 @@ function isMobile() {
 
 const root = document.documentElement;
 var flickeringEnabled = true;
-var consoleTitle = "____ _  _ ____ ___ _  _ _   _ ____ ___ _  _  _  _ ____ ___\n|__| |\\/| |___  |  |__|  \\_/  [__   |   \\/   |\\ | |___  |\n|  | |  | |___  |  |  |   |   ___]  |  _/\\_ .| \\| |___  |";
+var consoleTitle = "   _   _____   _____   ___  _   ___ _______   ___ \n  /_\\ |_ _\\ \\ / /_ _| | _ \\/_\\ | _ \\_   _\\ \\ / / |\n / _ \\ | | \\ V / | | _|  _/ _ \\|   / | |  \\ V /|_|\n/_/ \\_\\___| \\_/ |___(_)_|/_/ \\_\\_|_\\ |_|   |_| (_)";
 
 addEventListener("load", (event) => {
     optimizeForBrowser();
@@ -24,33 +24,25 @@ function optimizeForBrowser() {
         if (mobileCard != null && !localStorage.getItem("usingMobile")) {
             mobileCard.hidden = false;
         }
+        consoleTitle = "AIVI.party!";
         root.style.setProperty("--static-vfx", "none");
         document.body.style.setProperty("animation", "none");
-        consoleTitle = "AMETHYSTX.net";
         console.log("Browser: Mobile\nOptimization profile: Mobile\nChanges:\n Revealed mobile card\n Removed static effect\n Disabled background scroll\n Replaced console title");
-        styleProfile.innerHTML = "lightweight (mobile)";
     } else if (navigator.userAgent.indexOf("Chrome") != -1){
         console.log("Browser: Chrome\nOptimization profile: Default\nChanges:\n None");
-        styleProfile.innerHTML = "default (Chrome)";
     } else if (navigator.userAgent.indexOf("Safari") != -1) {
-        consoleTitle = "AMETHYSTX.net";
+        consoleTitle = "AIVI.party!";
         console.log("Browser: Safari\nOptimization profile: Default\nChanges:\n Replaced console title");
-        styleProfile.innerHTML = "default (Safari)";
     } else if (navigator.userAgent.indexOf("Edg") != -1) {
         console.log("Browser: Edge\nOptimization profile: Default\nChanges:\n None");
-        styleProfile.innerHTML = "default (Edge)";
     } else if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
         console.log("Browser: Opera\nOptimization profile: Default\nChanges:\n None");
-        styleProfile.innerHTML = "default (Opera)";
     } else if (navigator.userAgent.indexOf("Firefox") != -1) {
         console.log("Browser: Firefox\nOptimization profile: Default\nChanges:\n None");
-        styleProfile.innerHTML = "default (Firefox)";
     } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) { // if IE > 10
         console.log("Browser: Internet Explorer\nOptimization profile: Default\nChanges:\n None");
-        styleProfile.innerHTML = "default (Internet Explorer)";
     } else {
         console.log("Browser: detection failed\nOptimization profile: Default\nChanges:\n None");
-        styleProfile.innerHTML = "default (unknown)";
     }
 }
 
