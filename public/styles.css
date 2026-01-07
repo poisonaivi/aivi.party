@@ -79,7 +79,7 @@ html {
     --flicker-low-vfx: brightness(0.9);
     --flicker-high-vfx: brightness(1.1);
     /* Static */
-    --static-vfx: static 2s steps(1) infinite;
+    --static-vfx: static 3s steps(1) infinite;
 }
 .contentColumn {
     width: 1030px;
@@ -114,7 +114,7 @@ h1, h2 {
 }
 h1 {
     padding-right: 4px;
-    font-size: 50px;
+    font-size: 60px;
     color: var(--title);
     text-shadow: 0.02em 0.02em var(--text), -0.02em 0.02em var(--text), -0.02em -0.02em var(--text), 0.02em -0.02em var(--text), 0.1em 0.1em var(--text-shadow), 0 0 40px var(--accent);
 } 
