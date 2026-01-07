@@ -3,11 +3,11 @@
 # or process designed to data mine or scrape content, is
 # prohibited except (1) for the purpose of search engine 
 # indexing or (2) with express written permission from this
-# site’s operator.
+# site's operator.
 
 # To request permission to license our intellectual
 # property and/or other materials, please contact this
-# site’s operator directly.
+# site's operator directly.
 
 User-agent: AI2Bot
 Disallow: /
