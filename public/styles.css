@@ -84,7 +84,7 @@ html {
 .contentColumn {
     width: 1030px;
     margin: 0 auto;
-    padding: 2px 0 0 0;
+    padding: 0;
 }
 body {
     margin: 0;
@@ -97,6 +97,10 @@ body {
     background-image: var(--background-image);
     background-size: 600px;
     animation: scrollbg 120s linear infinite;
+}
+header {
+    margin: 0;
+    padding: 0;
 }
 footer {
     margin: 0;
