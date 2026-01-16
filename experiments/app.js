@@ -55,3 +55,17 @@ async function updateLastfm() {
         console.error(error);
     }
 }
+
+async function updateCommitInfo() {
+    try {
+        const res = await fetch('https://api.github.com/repos/ax-x3/aivi.party/commits/6.0');
+        if (!res.ok) {
+            document.getElementById("commitId").innerHTML = "Unavailable";
+            throw new Error("Failed to fetch.");
+        }
+        const resJSON = await res.json();
+        document.getElementById("commitId").innerHTML = resJSON.data.sha;
+    } catch (error) {
+        console.error(error);
+    }   
+}
