@@ -1,14 +1,3 @@
-export default {
-    async fetch(request, env, ctx) {
-        const {
-            id: versionId,
-            tag: versionTag,
-            timestamp: versionTimestamp
-        } = env.version;
-    },
-};
-
-
 async function loadElement(filename, elementid) {
     try {
         if (filename == null || filename.length == 0) {
