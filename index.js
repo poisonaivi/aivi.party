@@ -17,14 +17,18 @@ export default {
 
         // Set CORS headers
         const headers = new Headers({
-            'Access-Control-Allow-Origin': 'https://aivi.party/',
+            'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'GET, OPTIONS',
             'Access-Control-Allow-Headers': 'Content-Type',
             'Content-Type': 'application/json',
         });
 
-        return new Response(JSON.stringify(versionInfo), {
+        const response = {
+            statusCode: 200,
             headers: headers,
-        });
+            body: JSON.stringify(versionInfo),
+        };
+
+        return response;
     },
 };
