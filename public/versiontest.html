@@ -10,12 +10,20 @@
     <script>
         console.log("fetching:");
         fetch('https://aivi.party')
-            .then(response => response.json())
-            .then(data => {
-                // Log the version information to the browser console
+        .then(response => {
+            console.log('Response Status:', response.status);
+            return response.text(); // Get response as text first
+        })
+        .then(text => {
+            console.log('Response Body:', text); // Log the raw response body
+            try {
+                const data = JSON.parse(text); // Try to parse it
                 console.log("Cloudflare Worker Version Info:", data);
-            })
-            .catch(error => console.error('Error fetching version info:', error));
+            } catch (error) {
+                console.error('Failed to parse JSON:', error);
+            }
+        })
+        .catch(error => console.error('Error fetching version info:', error));
     </script>
 </body>
 </html>
