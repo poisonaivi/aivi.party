@@ -11,7 +11,9 @@
     --selection: #f6f;
     --selection-text: #404;
     --shadow: #000;
-    --link: #99f;
+    --section: #000;
+    --border: #555;
+    --link: #aaf;
     --link-b: #447;
     --accent: #f0f;
     --accent-b: #707;
@@ -21,7 +23,7 @@
     --warning-b: #770;
     --danger: #f00;
     --danger-b: #700;
-    font-size: 16px;
+    font-size: 18px;
     font-family: Monopix;
     color: var(--text);
 }
@@ -55,10 +57,10 @@ h1 {
     text-shadow: 0.032em 0.032em var(--accent-b), 0.032em -0.032em var(--accent-b), -0.032em -0.032em var(--accent-b), -0.032em 0.032em var(--accent-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--accent);
 }
 h2 {
-    font-size: 54px;
+    font-size: 36px;
 }
 h3 {
-    font-size: 36px;
+    font-size: 24px;
 }
 p, li, details {
     text-shadow: 0.062em 0.062em var(--shadow), 0 0 0.25em var(--text);
@@ -75,6 +77,7 @@ a {
     text-decoration-style: dotted;    
     &:hover {
         opacity: 0.6;
+        text-decoration-style: solid;    
     }
     &:active {
         opacity: 0.4;
@@ -83,6 +86,21 @@ a {
         color: var(--link);
         text-shadow: 0.032em 0.032em var(--link-b), 0.032em -0.032em var(--link-b), -0.032em -0.032em var(--link-b), -0.032em 0.032em var(--link-b), 0.092em 0.092em var(--shadow);
     }
+}
+section {
+    margin: 3px;
+    padding: 10px;
+    background-color: var(--section);
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    vertical-align: top;
 }
 small {
     opacity: 0.6;
@@ -119,6 +137,9 @@ details[open] > summary {
     &::before {
         content: url('assets/icons/arrow-drop-2x.png');
     }
+}
+.mainColumn {
+    width: 70%;
 }
 .success {
     color: var(--success);

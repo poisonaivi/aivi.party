@@ -9,11 +9,28 @@
 </head>
 <body>
     <main>
-        <header class="main" id="header"><script>loadElement("indexHeader.html", "header");</script></header>    
+        <small style="position: absolute; z-index: 2;">
+            version 6<span id="commitDate"></span><span id="commitId"></span>
+        </small>
+        <header class="main" id="header"><script>loadElement("indexHeader.html", "header");</script></header>  
+        <table class="main">
+            <tr>
+                <td class="mainColumn">
+                    <section>
+                        <h2>Welcome!</h2>
+                    </section>
+                </td>
+                <td>
+                    <section>
+
+                    </section>
+                </td>
+            </tr>
+        </table>
         <p>Presence: <span id="presence"></span></p>
         <p>Status: <span id="status"></span></p>
         <p>Song: <span id="song"></span></p>
-        <script>updateDiscord(); updateLastfm();</script>
+        <script>updateDiscord(); updateLastfm(); updateCommitInfo();</script>
     </main>
 </body>
 </html>

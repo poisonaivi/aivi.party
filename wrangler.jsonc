@@ -4,6 +4,12 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
+	"routes": [
+		{
+		  "pattern": "aivi.party/services/*",
+		  "zone_name": "86b504dfdf714644b6c26adc7cd9c631"
+		}
+	  ],
 	"name": "aiviparty",
 	"compatibility_date": "2026-01-15",
 	// "main": "./index.js",
@@ -27,9 +33,6 @@
 	 * databases, object storage, AI inference, real-time communication and more.
 	 * https://developers.cloudflare.com/workers/runtime-apis/bindings/
 	 */
-	"version_metadata": {
-		"binding": "CF_VERSION_METADATA"
-	}
 	/**
 	 * Environment Variables
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
