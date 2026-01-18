@@ -12,17 +12,21 @@
     --selection-text: #404;
     --shadow: #000;
     --section: #000;
-    --border: #555;
-    --link: #aaf;
-    --link-b: #447;
+    --border: #444;
+    --link: #caf;
+    --link-b: #547;
     --accent: #f0f;
     --accent-b: #707;
+    --accent-c: #202;
     --success: #0f0;
     --success-b: #070;
+    --success-c: #020;
     --warning: #ff0;
     --warning-b: #770;
+    --warning-c: #220;
     --danger: #f00;
     --danger-b: #700;
+    --danger-c: #200;
     font-size: 18px;
     font-family: Monopix;
     color: var(--text);
@@ -54,27 +58,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
     font-size: 90px;
-    text-shadow: 0.032em 0.032em var(--accent-b), 0.032em -0.032em var(--accent-b), -0.032em -0.032em var(--accent-b), -0.032em 0.032em var(--accent-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--accent);
 }
 h2 {
-    font-size: 36px;
+    font-size: 54px;
 }
 h3 {
-    font-size: 24px;
+    font-size: 36px;
+    position: relative;
 }
-p, li, details {
+p, li, details, small, .text {
     text-shadow: 0.062em 0.062em var(--shadow), 0 0 0.25em var(--text);
+    position: relative;
 }
 p {
     margin: 0;
 }
 span {
     text-shadow: inherit;
+    position: relative;
 }
 a {
     color: var(--link);
     text-shadow: 0.032em 0.032em var(--link-b), 0.032em -0.032em var(--link-b), -0.032em -0.032em var(--link-b), -0.032em 0.032em var(--link-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--link);
-    text-decoration-style: dotted;    
+    text-decoration-style: dotted;  
+    text-decoration-color: initial;
+    position: relative;
     &:hover {
         opacity: 0.6;
         text-decoration-style: solid;    
@@ -88,13 +96,29 @@ a {
     }
 }
 section {
-    margin: 3px;
-    padding: 10px;
+    margin: 0px 4px 8px 4px;
+    padding: 12px;
     background-color: var(--section);
     border: 2px solid var(--border);
-    border-radius: 6px;
+    border-radius: 10px;
     position: relative;
     z-index: 1;
+    &.success {
+        background-color: var(--success-c);
+        border-color: var(--success);
+    }
+    &.warning {
+        background-color: var(--warning-c);
+        border-color: var(--warning);
+    }
+    &.danger {
+        background-color: var(--danger-c);
+        border-color: var(--danger);
+    }
+    &.important {
+        background-color: var(--accent-c);
+        border-color: var(--accent);
+    }
 }
 table {
     border-collapse: collapse;
@@ -103,7 +127,8 @@ td {
     vertical-align: top;
 }
 small {
-    opacity: 0.6;
+    opacity: 0.5;
+    font-size: 14px;
 }
 textarea, .code {
     font-size: 0.9rem;
@@ -138,10 +163,20 @@ details[open] > summary {
         content: url('assets/icons/arrow-drop-2x.png');
     }
 }
-.mainColumn {
-    width: 70%;
+marquee {
+    display: block;
 }
-.success {
+.mainColumn {
+    max-width: 700px;
+}
+.secondaryColumn {
+    width: 30%;
+    max-width: 300px;
+}
+.text {
+    color: var(--text);
+}
+.success:not(section) {
     color: var(--success);
     text-shadow: 0.032em 0.032em var(--success-b), 0.032em -0.032em var(--success-b), -0.032em -0.032em var(--success-b), -0.032em 0.032em var(--success-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--success);
     &::selection {
@@ -149,7 +184,7 @@ details[open] > summary {
         text-shadow: 0.032em 0.032em var(--success-b), 0.032em -0.032em var(--success-b), -0.032em -0.032em var(--success-b), -0.032em 0.032em var(--success-b), 0.092em 0.092em var(--shadow);
     }
 }
-.warning {
+.warning:not(section) {
     color: var(--warning);
     text-shadow: 0.032em 0.032em var(--warning-b), 0.032em -0.032em var(--warning-b), -0.032em -0.032em var(--warning-b), -0.032em 0.032em var(--warning-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--warning);
     &::selection {
@@ -157,7 +192,7 @@ details[open] > summary {
         text-shadow: 0.032em 0.032em var(--warning-b), 0.032em -0.032em var(--warning-b), -0.032em -0.032em var(--warning-b), -0.032em 0.032em var(--warning-b), 0.092em 0.092em var(--shadow);
     }
 }
-.danger {
+.danger:not(section) {
     color: var(--danger);
     text-shadow: 0.032em 0.032em var(--danger-b), 0.032em -0.032em var(--danger-b), -0.032em -0.032em var(--danger-b), -0.032em 0.032em var(--danger-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--danger);
     &::selection {
@@ -165,7 +200,7 @@ details[open] > summary {
         text-shadow: 0.032em 0.032em var(--danger-b), 0.032em -0.032em var(--danger-b), -0.032em -0.032em var(--danger-b), -0.032em 0.032em var(--danger-b), 0.092em 0.092em var(--shadow);
     }
 }
-.important {
+.important:not(section) {
     color: var(--accent);
     text-shadow: 0.032em 0.032em var(--accent-b), 0.032em -0.032em var(--accent-b), -0.032em -0.032em var(--accent-b), -0.032em 0.032em var(--accent-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--accent);
     &::selection {
@@ -176,4 +211,13 @@ details[open] > summary {
 .icon {
     height: 1em;
     filter: drop-shadow(0.1em 0.1em var(--shadow)) drop-shadow(0 0 0.25em var(--text));
+    &.success {
+        filter: drop-shadow(0.1em 0.1em var(--shadow)) drop-shadow(0 0 0.25em var(--success));
+    }
+    &.warning {
+        filter: drop-shadow(0.1em 0.1em var(--shadow)) drop-shadow(0 0 0.25em var(--warning));
+    }
+    &.danger {
+        filter: drop-shadow(0.1em 0.1em var(--shadow)) drop-shadow(0 0 0.25em var(--danger));
+    }
 }

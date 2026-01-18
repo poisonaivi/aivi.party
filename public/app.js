@@ -66,7 +66,6 @@ function greetUser() {
 
 function startClock() {
     const localTimeEle = document.getElementById("localTime");
-    // const clockStatusEle = document.getElementById("clockStatus");
     const clockOptions = {
         timeZone: 'America/New_York',
         hour12: false,

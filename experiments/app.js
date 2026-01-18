@@ -21,54 +21,223 @@ async function loadElement(filename, elementid) {
     }
 }
 
+function updateGreeting() {
+    const hour = new Date().getHours();
+    const greeting = document.getElementById("greeting");
+    if (hour >= 4 && hour < 12) {
+        greeting.innerHTML = "Good morning!";
+    } else if (hour >= 12 && hour < 19) {
+        greeting.innerHTML = "Good afternoon!";
+    } else {
+        greeting.innerHTML = "Good evening!";
+    }
+}
+
 async function updateDiscord() {
+    const presenceLabel = document.getElementById("presenceLabel");
+    const presenceIcon = document.getElementById("presenceIcon");
+    const statusLabel = document.getElementById("statusLabel");
+    const statusDateLabel = document.getElementById("statusDateLabel");
+    const discordSection = document.getElementById("discordSection");
     try {
-        const res = await fetch("https://api.lanyard.rest/v1/users/802178124342493224");
+        const res = await fetch("https://aivi.party/services/discord-status");
         if (!res.ok) {
-            document.getElementById("presence").innerHTML = document.getElementById("status").innerHTML = "Unknown";
+            presenceLabel.innerHTML = "Presence not available.";
+            presenceLabel.className = "danger";
+            presenceIcon.className = "icon danger";
+            presenceIcon.src = "assets/icons/offline.png";
+            statusLabel.innerHTML = "<small>No status found.</small>"
+            statusDateLabel.innerHTML = "";
+            discordSection.className = "danger";
             throw new Error("Failed to fetch.");
         }
         const resJSON = await res.json();
-        document.getElementById("presence").innerHTML = resJSON.data.discord_status;
+        const presence = resJSON.data.discord_status;
+        if (presence == "online") {
+            presenceLabel.innerHTML = "online";
+            presenceLabel.className = "success";
+            presenceIcon.className = "icon success";
+            presenceIcon.src = "assets/icons/online.png";
+            discordSection.className = "success";
+        } else if (presence == "idle") {
+            presenceLabel.innerHTML = "idle";
+            presenceLabel.className = "warning";
+            presenceIcon.className = "icon warning";
+            presenceIcon.src = "assets/icons/idle.png";
+            discordSection.className = "warning";
+        } else if (presence == "dnd") {
+            presenceLabel.innerHTML = "do not disturb";
+            presenceLabel.className = "danger";
+            presenceIcon.className = "icon danger";
+            presenceIcon.src = "assets/icons/dnd.png";
+            discordSection.className = "danger";
+        } else if (presence == "offline") {
+            presenceLabel.innerHTML = "offline";
+            presenceLabel.className = "danger";
+            presenceIcon.className = "icon danger";
+            presenceIcon.src = "assets/icons/offline.png";
+            discordSection.className = "danger";
+        }
         if (resJSON.data.activities.length != 0) {
-            document.getElementById("status").innerHTML = resJSON.data.activities['0'].state;
+            const status = resJSON.data.activities['0'].state;
+            const statusDate = resJSON.data.activities['0'].created_at;
+            const clockOptions = {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+            }, formatter = new Intl.DateTimeFormat([], clockOptions);
+            statusLabel.innerHTML = "&ldquo;" + status + "&rdquo;";
+            statusDateLabel.innerHTML = "Status • " + formatter.format(new Date(statusDate));
         } else {
-            document.getElementById("status").innerHTML = "No status set.";
+            statusLabel.innerHTML = "<small>No status found.</small>"
+            statusDateLabel.innerHTML = "";
         }
-    } catch (error) {
-        console.error(error);
-    }            
-}
-
-async function updateLastfm() {
-    try {
-        const res = await fetch("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=am3thystx&api_key=c1797de6bf0b7e401b623118120cd9e1");
-        if (!res.ok) {
-            document.getElementById("song").innerHTML = "Unknown";
-            throw new Error("Failed to fetch.");
-        }
-        const resText = await res.text();
-        const p = new DOMParser();
-        const resXML = p.parseFromString(resText,"text/xml");
-        document.getElementById("song").innerHTML = resXML.getElementsByTagName("name")[0].childNodes[0].nodeValue;
     } catch (error) {
         console.error(error);
     }
+    setTimeout("updateDiscord()", 5000);
+}
+
+async function updateLastfm() {
+    const titleLabel = document.getElementById("titleLabel");
+    const artistLabel = document.getElementById("artistLabel");
+    const albumLabel = document.getElementById("albumLabel");
+    const musicSection = document.getElementById("musicSection");
+    const linkLabel = document.getElementById("linkLabel");
+    const playingLabel = document.getElementById("playingLabel");
+    try {
+        const res = await fetch("https://aivi.party/services/last-played");
+        if (!res.ok) {
+            titleLabel.innerHTML = "No data.";
+            artistLabel.innerHTML = "";
+            albumLabel.innerHTML = "";
+            musicSection.style.backgroundImage = "url(assets/blank-album-art.png";
+            linkLabel.removeAttribute("href");
+            playingLabel.innerHTML = "Last played";
+            throw new Error("Failed to fetch.");
+        }
+        const resJSON = await res.json();
+        const latest = resJSON.recenttracks.track[0];
+        var title = latest.name;
+        var artist = latest.artist["#text"];
+        var album = latest.album["#text"];
+        const albumArt = latest.image[2]["#text"];
+        const link = latest.url;
+        try {
+            var playing = latest.date.uts;
+        } catch (error) {
+            var playing = "y";
+        }
+        if (title != titleLabel.innerText) {
+            if (title.length > 14) {
+                title = "<marquee>" + title + "</marquee>";
+            }
+            titleLabel.innerHTML = title;
+        }
+        if (artist != artistLabel.innerText) {
+            if (artist.length > 29) {
+                artist = '<marquee scrollamount="4">' + artist + "</marquee>";
+            }
+            artistLabel.innerHTML = artist;
+        }
+        if (album != albumLabel.innerText) {
+            if (album.length > 29) {
+                album = '<marquee scrollamount="4">' + album + "</marquee>";
+            }
+            albumLabel.innerHTML = album;
+        }
+        // hash for no-album-art image
+        if (albumArt.includes("2a96cbd8b46e442fc41c2b86b821562f")) {
+            musicSection.style.backgroundImage = "url(assets/blank-album-art.png)";
+        } else {
+            musicSection.style.backgroundImage = "url(" + albumArt + ")";
+        }
+        linkLabel.href = link;
+        if (playing == "y") {
+            playingLabel.innerHTML = "Now playing";
+            musicSection.className = "important";
+        } else {
+            const timeSince = Math.floor(new Date().getTime() / 1000) - parseInt(playing);
+            if (timeSince <= 3600) {
+                var timeFormatted = Math.floor(timeSince / 60);
+                if (timeFormatted == 1)
+                    timeFormatted += " minute ago";
+                else
+                    timeFormatted += " minutes ago";
+            } else if (timeSince <= 86400) {
+                var timeFormatted = Math.floor(timeSince / 3600);
+                if (timeFormatted == 1)
+                    timeFormatted += " hour ago";
+                else
+                    timeFormatted += " hours ago";
+            } else {
+                var timeFormatted = Math.floor(timeSince / 86400);
+                if (timeFormatted == 1)
+                    timeFormatted += " day ago";
+                else
+                    timeFormatted += " days ago";
+            }
+            playingLabel.innerHTML = "Played " + timeFormatted;
+            musicSection.removeAttribute("class");
+        }
+    } catch (error) {
+        console.error(error);
+    }
+    setTimeout("updateLastfm()", 5000);
 }
 
 async function updateCommitInfo() {
     try {
-        const res = await fetch('https://api.github.com/repos/ax-x3/aivi.party/commits/6.0');
+        const res = await fetch("https://api.github.com/repos/ax-x3/aivi.party/commits/6.0");
         if (!res.ok) {
             document.getElementById("commit").innerHTML = "Unavailable";
             throw new Error("Failed to fetch.");
         }
         const resJSON = await res.json();
-        document.getElementById("commitId").innerHTML = " commit " + resJSON.sha;
         const date = new Date(resJSON.commit.committer.date);
-        document.getElementById("commitDate").innerHTML = "-" + date.getFullYear() + "." + (date.getMonth() + 1) + "." + (date.getDate() + 1);
-        console.log(resJSON);
+        document.getElementById("commitDate").innerHTML = "." + date.getUTCFullYear().toString().slice(2, 4) + "." + (date.getUTCMonth() + 1) + "." + (date.getUTCDate());
+        document.getElementById("commitId").innerHTML = " • " + resJSON.sha.slice(0, 7);
     } catch (error) {
         console.error(error);
     }   
+}
+
+function updateLocalTime() {
+    const date = new Date();
+    const clockOptions = {
+        timeZone: 'America/New_York',
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    }, formatter = new Intl.DateTimeFormat([], clockOptions);
+    var time = formatter.format(date);
+    var hours = time.slice(0, 2);
+    var minutes = time.slice(3, 5);
+    var seconds = time.slice(6, 8);
+    var milliseconds = date.getMilliseconds();
+    document.getElementById("localTime").innerHTML = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("unixTime").innerHTML = Date.now().toString().slice(0, -3);
+	setTimeout("updateLocalTime()", 1000 - milliseconds % 1000 );
+}
+
+function updateBeatTime() {
+    const date = new Date();
+    const clockOptions = {
+        timeZone: 'Europe/Berlin',
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    }, formatter = new Intl.DateTimeFormat([], clockOptions);
+    var milliseconds = date.getMilliseconds();
+    var time = formatter.format(date);
+    var timeInMs = parseInt(time.slice(0, 2)) * 3600000 + parseInt(time.slice(3,5)) * 60000 + parseInt(time.slice(6,8)) * 1000 + milliseconds;
+    var centibeats = Math.floor(timeInMs / 864).toString().padStart(5, "0");
+    var beats = centibeats.slice(0, 3) + "." + centibeats.slice(3, 5);
+    document.getElementById("beatTime").innerHTML = "@" + beats;
+    setTimeout("updateBeatTime()", 864 - timeInMs % 864 );
 }

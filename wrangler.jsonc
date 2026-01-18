@@ -6,11 +6,11 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "aiviparty",
 	"compatibility_date": "2026-01-15",
-	// "main": "./index.js",
+	"main": "./index.js",
 	"assets": {
 		// The path to the directory containing the `index.html` file to be served at `/`
 		"directory": "./public",
-		"not_found_handling": "404-page",
+		// "not_found_handling": "404-page",
 		"html_handling": "auto-trailing-slash"
 	},
 	"observability": {
