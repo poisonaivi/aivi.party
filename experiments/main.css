@@ -11,8 +11,9 @@
     --selection: #f6f;
     --selection-text: #404;
     --shadow: #000;
+    --small-text: #888;
     --section: #000;
-    --border: #444;
+    --border: #555;
     --link: #caf;
     --link-b: #547;
     --accent: #f0f;
@@ -30,6 +31,7 @@
     font-size: 18px;
     font-family: Monopix;
     color: var(--text);
+    -webkit-text-size-adjust: none;
 }
 body {
     margin: 0;
@@ -49,6 +51,7 @@ main, .main {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     color: var(--accent);
+    position: relative;
     text-shadow: 0.032em 0.032em var(--accent-b), 0.032em -0.032em var(--accent-b), -0.032em -0.032em var(--accent-b), -0.032em 0.032em var(--accent-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--accent);
     font-weight: 100;
     &::selection {
@@ -64,9 +67,9 @@ h2 {
 }
 h3 {
     font-size: 36px;
-    position: relative;
+    margin-bottom: 5px;
 }
-p, li, details, small, .text {
+p, li, details, .text {
     text-shadow: 0.062em 0.062em var(--shadow), 0 0 0.25em var(--text);
     position: relative;
 }
@@ -80,8 +83,7 @@ span {
 a {
     color: var(--link);
     text-shadow: 0.032em 0.032em var(--link-b), 0.032em -0.032em var(--link-b), -0.032em -0.032em var(--link-b), -0.032em 0.032em var(--link-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--link);
-    text-decoration-style: dotted;  
-    text-decoration-color: initial;
+    text-decoration-style: dashed;  
     position: relative;
     &:hover {
         opacity: 0.6;
@@ -119,16 +121,39 @@ section {
         background-color: var(--accent-c);
         border-color: var(--accent);
     }
+    section {
+        margin: -4px;
+        border-radius: 4px;
+    }
+    hr {
+        margin-left: -3px;
+        margin-right: -3px;
+    }
+}
+hr {
+    border: 1px solid var(--border);
 }
 table {
     border-collapse: collapse;
 }
 td {
     vertical-align: top;
+    padding: 0;
+}
+ol, ul {
+    margin: 0;
+}
+ul {
+    list-style-type: "•  ";
 }
 small {
-    opacity: 0.5;
+    color: var(--small-text);
     font-size: 14px;
+    position: relative;
+    text-shadow: 0.062em 0.062em var(--shadow), 0 0 0.25em var(--small-text);
+    img {
+        opacity: 0.5;
+    }
 }
 textarea, .code {
     font-size: 0.9rem;
@@ -147,9 +172,16 @@ textarea {
     padding: 10px;
 }
 details > summary {
-    text-decoration: underline dotted;
+    text-decoration: underline dashed;
     cursor: pointer;
     list-style-type: none;
+    &:hover {
+        opacity: 0.6;
+        text-decoration-style: solid;
+    }
+    &:active {
+        opacity: 0.4;
+    }
     &::-webkit-details-marker {
         display: none;
     }
@@ -166,11 +198,11 @@ details[open] > summary {
 marquee {
     display: block;
 }
-.mainColumn {
-    max-width: 700px;
+.primaryColumn {
+    width: 700px;
 }
 .secondaryColumn {
-    width: 30%;
+    min-width: 300px;
     max-width: 300px;
 }
 .text {
@@ -219,5 +251,16 @@ marquee {
     }
     &.danger {
         filter: drop-shadow(0.1em 0.1em var(--shadow)) drop-shadow(0 0 0.25em var(--danger));
+    }
+}
+
+#changelog tr td, .facts tr td {
+    &:first-of-type {
+        text-align: right;
+        width: 110px;
+        padding-right: 10px;
+    }
+    p {
+        margin-bottom: 18px;
     }
 }

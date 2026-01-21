@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AIVI.PARTY!</title>
     <script src="app.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <main>
-        <small style="position: absolute; z-index: 10;">
-            
-        </small>
         <header class="main" id="header"><script>loadElement("indexHeader.html", "header");</script></header>  
         <table class="main">
             <tr style="height: 0;">
@@ -23,18 +20,18 @@
                         <script>updateDiscord();</script>
                     </section>
                     <section>
-                        <p>EST • UTC -05:00</p>
+                        <p>Eastern Standard Time (UTC&#8209;5)</p>
                         <h2 id="localTime">--:--:--</h2>
-                        <small>UTS:<span id="unixTime">----------</span> • <span id="beatTime">@---.--</span> beats</small>
-                        <script>updateLocalTime();</script>
+                        <small>UTS:<span id="unixTime">----------</span> = <span id="beatTime">@---.--</span> beats</small>
+                        <script>updateClockTime();</script>
                         <script>updateBeatTime();</script>
                     </section>
                     <section id="musicSection" style="aspect-ratio: 1.6; box-shadow: inset 0 0 30px #000a; background-image: url(assets/blank-album-art.png); background-position: 50%; background-size: cover; overflow: hidden;">
-                        <div style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #000b;"></div>
+                        <div style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #000b;"></div>                        
                         <a href="https://www.last.fm/user/am3thystx" target="_blank">
                             <p style="float: right;" ><img class="icon" src="assets/logos/lastfm.png"></p>
-                            <small class="text" style="float: left;"><img class="icon" src="assets/icons/music.png"> <span id="playingLabel">Last played</span></small>
                         </a>
+                        <p style="float: left;"><img class="icon" src="assets/icons/music.png"> <span id="playingLabel">last played</span></p>
                         <div style="position: absolute; bottom: 12px; width: calc(100% - 2 * 12px);">
                             <a class="important" id="linkLabel" target="_blank"><h3 id="titleLabel" style="white-space: nowrap; overflow: visible;"><span class="danger">No song found.</span></h3></a>
                             <p id="artistLabel" style="white-space: nowrap; overflow: visible;"></p>
@@ -43,17 +40,19 @@
                         <script>updateLastfm();</script>
                     </section>
                 </td>
-                <td class="mainColumn" style="height: inherit;">
+                <td class="primaryColumn" style="height: inherit;">
                     <section style="overflow: hidden; box-sizing: border-box; height: calc(100% - 8px);">
                         <img src="assets/embellishment.png" style="width: 500px; position: absolute; top: -30px; left: -10px;">
-                        <h3><span id="greeting">Hello there!</span></h3>
+                        <h3><img class="icon" src="assets/icons/arrow-back.png"> <span id="greeting">Hello there!</span></h3>
                         <img src="assets/streetlamp.png" style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 0;">
                         <p><small>While traversing the vast Internet, you stumble across.... <i>me?</i></small></p>
                         <br>
-                        <p>Welcome to <span class="important">AIVI</span><span class="success">.PARTY!</span> You can call me <span class="important">Amethyst</span> or <span class="important">Aivi</span> <small>/eye-vee/</small>. This domain is my home in cyberspace, and it's mostly just a place for me to experiment with webdev, post my drawings, and write about my many interests.</p>
+                        <p>Welcome to <span class="important">AIVI</span><span class="success">.PARTY!</span> You can call me <span class="important">Amethyst</span> or <span class="important">Aivi</span> <small>(she/her/it)</small>. This domain is my home on the internet, and it's mostly just a place for me to experiment, post my drawings, write bad code, and talk about my many interests.</p>
                         <br>
                         <p>Before you continue exploring, you should know <span class="important">that this site isn't made for everyone</span>! There's foul language, NSFW outlinks, and the occasional rant into heavier topics. <span class="important">Proceed if you wish!</span></p>
-                        <small style="position: absolute; bottom: 12px; right: 12px;">v6<span id="commitDate"></span><span id="commitId"></span></small>
+                        <br>
+                        <small>As of January 6, 2026, most content previously served on amethystx.net has been relocated to aivi.party.</small>
+                        <small style="position: absolute; bottom: 12px; right: 12px;">version 6<span id="commitDate"></span><span id="commitId"></span></small>
                         <script>updateCommitInfo();</script>
                         <script>updateGreeting();</script>
                     </section>
@@ -61,15 +60,16 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <section>
+                    <section style="overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(assets/link-gradient.png); background-size: cover;"></div>
                         <table style="width: 100%; text-align: center;">
-                            <td style="width: 14.28%"><a href="https://bsky.app/profile/aivi.party" target="_blank">Bluesky<br><img class="icon" src="assets/logos/bluesky.png"></a></td>
-                            <td style="width: 14.28%"><a href="https://github.com/ax-x3" target="_blank">GitHub<br><img class="icon" src="assets/logos/github.png"></a></td>
-                            <td style="width: 14.28%"><a href="https://discord.com/users/802178124342493224" target="_blank">Discord<br><img class="icon" src="assets/logos/discord.png"></a></td>
                             <td style="width: 14.28%"><a href="https://www.deviantart.com/am3thystx" target="_blank">DeviantArt<br><img class="icon" src="assets/logos/deviantart.png"></a></td>
                             <td style="width: 14.28%"><a href="https://cara.app/poisonaivi" target="_blank">Cara<br><img class="icon" src="assets/logos/cara.png"></td>
-                            <td style="width: 14.28%"><a href="https://www.last.fm/user/am3thystx" target="_blank">Last.fm<br><img class="icon" src="assets/logos/lastfm.png"></a></td>
-                            <td style="width: 14.28%"><a href="https://webtiles.kicya.net/#875,-1625" target="_blank">WebTiles<br><img class="icon" src="assets/logos/webtiles.png"></a></td>
+                                <td style="width: 14.28%"><a href="https://discord.com/users/802178124342493224" target="_blank">Discord<br><img class="icon" src="assets/logos/discord.png"></a></td>
+                                <td style="width: 14.28%"><a href="https://bsky.app/profile/aivi.party" target="_blank">Bluesky<br><img class="icon" src="assets/logos/bluesky.png"></a></td>
+                                <td style="width: 14.28%"><a href="https://github.com/ax-x3" target="_blank">GitHub<br><img class="icon" src="assets/logos/github.png"></a></td>
+                                <td style="width: 14.28%"><a href="https://www.last.fm/user/am3thystx" target="_blank">Last.fm<br><img class="icon" src="assets/logos/lastfm.png"></a></td>
+                                <td style="width: 14.28%"><a href="https://webtiles.kicya.net/#875,-1625" target="_blank">WebTiles<br><img class="icon" src="assets/logos/webtiles.png"></a></td>
                         </table>
                     </section>
                 </td>
@@ -77,24 +77,145 @@
         </table>
         <table class="main">
             <tr>
-                <td class="mainColumn">
-                    <section>
-                        <h3>Chat</h3>
+                <td class="primaryColumn">
+                    <section style="padding: 0; overflow: hidden;">
+                        <iframe src="https://www3.cbox.ws/box/?boxid=3545093&boxtag=rRmvwj" width="100%" height="400px" allowtransparency="yes" tabindex="-1" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+                        <div style="height: 15px; margin: 2px 12px 12px 12px;">
+                            <small style="float: left">Chat messages are public, so be kind to others!</small>
+                            <small style="float: right">Also, check out the <a href="guestbook.html">guestbook</a>!</small>
+                        </div>
                     </section>
                     <section>
-                        <h3>Changelog</h3>
+                        <p><img class="icon" src="assets/icons/document.png"> changelog <small>version: <span class="success">6<span id="changelogCommitDate"><span class="danger">.x.x.x</span></span></span> hash: <span class="success"><span id="changelogCommitId"><span class="danger">No commits found.</span></span></span></small></p>
+                        <div style="height: 10px;"></div>
+                        <div style="height: 225px; overflow-y: scroll;">
+                            <table id="changelog" style="width: 100%;">
+                                <tr><td class="important">5.26.1.7</td><td><p>Updated warning card to reflect current threat level. Added IDP links with helpful information.</p></td></tr>
+                                <tr><td class="important">5.26.1.6</td><td><p>Relocated to aivi.party. Switched to Clouflare Workers implementation with Wrangler CLI. Set all old domains to forward to new domain. Redid all headers. Removed profile debug and dev tools.</p></td></tr>
+                                <tr><td class="important">5.25.12.15</td><td><p>Removed gtag trackers since they were not being used anyway.</p></td></tr>
+                                <tr><td class="important">5.25.12.10</td><td><p>Added monopix XL to art. Changed licensing statement in side card in art.html.</p></td></tr>
+                                <tr><td class="important">5.25.12.9</td><td><p>Preparing font replacement. Defined font sizes using px rather than %.</p></td></tr>
+                                <tr><td class="important">5.25.12.1</td><td><p>Created /blog/ Returned banner header. Rewrote automated alert cards. Deleted construction card. Moved side cards around.</p></td></tr>
+                                <tr><td class="important">5.25.11.16</td><td><p>Updated main font to Monopix by poisonAivi.</p></td></tr>
+                                <tr><td class="important">5.25.11.15</td><td><p>Made text shadows more consistent. Deleted unnecessary fonts. Replaced id photo.</p></td></tr>
+                                <tr><td class="important">5.25.11.7</td><td><p>About-me overhaul part 1. Rewrote and extended website section and designed "ID" card. Began rewriting personal section. Scaled down static mask.</p></td></tr>
+                                <tr><td class="important">5.25.11.2</td><td><p>Greatly optimized /vfx/ assets, improving FPS and zoom performance.</p></td></tr>
+                                <tr><td class="important">5.25.11.1</td><td><p>Clarified usage rights in /art. Changed anniversary banner. Put eepy kitty back somewhere. Rewrote guestbook stuff.</p></td></tr>
+                                <tr><td class="important">5.25.10.31</td><td><p>Colored highlightCard border. Rewrote anniversary text. Added drop shadow to h1 elements.</p></td></tr>
+                                <tr><td class="important">5.25.10.17</td><td><p>Swapped to anniversary header. Fixed titling error in credits.</p></td></tr>
+                                <tr><td class="important">5.25.10.15</td><td><p>Drastically decreased RAM usage when rendering static overlay, using only two highly compressed grayscale PNGs.</p></td></tr>
+                                <tr><td class="important">5.25.10.11</td><td><p>Deleted light mode. Fixed long-standing issue of header text glow being cut off. Made index header actually fade out. Small wording changes to JS warning.</p></td></tr>
+                                <tr><td class="important">5.25.10.6</td><td><p>Added status card. Rewrote intro. Expanded software experience list.</p></td></tr>
+                                <tr><td class="important">5.25.10.3</td><td><p>Reorganized credits, improved UD stats card.</p></td></tr>
+                                <tr><td class="important">5.25.9.19</td><td><p>Improved legibility of index header. Reduced file sizes of icon, static, and banner. Fixed double-static in footer. Removed clock desync re-assessment.</p></td></tr>
+                                <tr><td class="important">5.25.9.15</td><td><p>Added latest art back to index. Made local time clock autmatically synchronize upon loading.</p></td></tr>
+                                <tr><td class="important">5.25.9.9</td><td><p>Moved Enable Javascript! to a subdomain. Old file in /b/ still works just in case.</p></td></tr>
+                                <tr><td class="important">5.25.9.7</td><td><p>Replaced show/hide JavaScript with correct details and summary tag. Moved some stuff around. Completely reworked css variables and added an experimental light theme. Made dismissable elements stay hidden using localStorage. Fixed devtools. Corrected footer format. Renamed lots of things for clarity.</p></td></tr>
+                                <tr><td class="important">5.25.9.6</td><td><p>Fixed tab navigation; rewrote welcome and warning card. Re-aligned bullet images. Underlined clock. Added programming languages to credits. Moved hardware and software to about.html.</p></td></tr>
+                                <tr><td class="important">5.25.8.24</td><td><p>CSS standardization, fix background animation, simplify welcome card.</p></td></tr>
+                                <tr><td class="important">5.25.8.22</td><td><p>Chat styles, border radii, and compactness of about.html.</p></td></tr>
+                                <tr><td class="important">5.25.8.17</td><td><p>Reordered socials. Shortened about.html sections. Added viewership and accessibility warning.</p></td></tr>
+                                <tr><td class="important">5.25.8.11</td><td><p>Meowgen added to projects.</p></td></tr>
+                                <tr><td class="important">5.25.8.5</td><td><p>Reworked page headers and compacted index.html. Smoothened and shrunk gradient images. Improved color and visibility of thumbnails. Restored and shrunk opengraph image.</p></td></tr>
+                                <tr><td class="important">5.25.8.4</td><td><p>Added all viewable artwork to art.html. Reworked table layout code. Removed unnecessary tables from and automatically sized thumbnail cards.</p></td></tr>
+                                <tr><td class="important">5.25.8.3</td><td><p>Fixed unclickable link in projects.</p></td></tr>
+                                <tr><td class="important">5.25.8.2</td><td><p>Fix issue preventing optimization from completing on non-index pages on mobile.</p></td></tr>
+                                <tr><td class="important">5.25.8.1</td><td><p>Replaced onload code with eventlistener. JavaScript issue resolved. Cleaned up console logs.</p></td></tr>
+                                <tr><td class="important">5.25.7.31</td><td><p>Fixed issue preventing JavaScript from running completely.</p></td></tr>
+                                <tr><td class="important">5.25.7.28</td><td><p>Improved mobile efficiency, reduced some image file sizes.</p></td></tr>
+                                <tr><td class="important">5.25.7.27</td><td><p>Redid text effects in response to Chrome changes affecting &#8209;webkit&#8209;text&#8209;stroke. Removed Safari profile. Fixed paragraph margins. Class naming changes and CSS optimization. Corrected color on success and warning h2's.</p></td></tr>
+                                <tr><td class="important">5.25.7.23</td><td><p>Changed art.html into commissions.html. Added /art/ directory for gallery and hosting. Removed blog and index from navbar.</p></td></tr>
+                                <tr><td class="important">5.25.7.22</td><td><p>Improved Now Playing card. Changed likes and dislikes. Reorganized art.html. Added latest artwork to index.html. Removed News card.</p></td></tr>
+                                <tr><td class="important">5.25.7.15</td><td><p>Slower bg scroll, moved hotlink code to dedicated buttons card and reformatted footer. Made static default for all .card divs. Removed noStatic where no longer necessary.</p></td></tr>
+                                <tr><td class="important">5.25.7.14</td><td><p>Rewrote entire about me and welcome card. Normalized card title formatting on index.html. Made commissions card clickable.</p></td></tr>
+                                <tr><td class="important">5.25.7.9</td><td><p>Rewrote Welcome card text, About This Website text, and project labels. Made all text slightly smaller.</p></td></tr>
+                                <tr><td class="important">5.25.7.5</td><td><p>Improved and added links to welcome card. Added driveUD to projects list. Added Ubuntu Linux to hardware specs.</p></td></tr>
+                                <tr><td class="important">5.25.7.3</td><td><p>Revised inactivity card. Currently conducting a test.</p></td></tr>
+                                <tr><td class="important">5.25.6.25</td><td><p>Remove image from guestbook embed.</p></td></tr>
+                                <tr><td class="important">5.25.6.23</td><td><p>Added Clip Studio Paint to software.</p></td></tr>
+                                <tr><td class="important">5.25.6.22</td><td><p>Updated favicon and pixelated icon. Added opengraph tags to all other main pages.</p></td></tr>
+                                <tr><td class="important">5.25.6.19</td><td><p>Reworded safety alert card to include other groups and reflect new threats. Added an automatic message that appears if I'm inactive for over two weeks. Greatly reduced resolution of logo images. Deleted unused logo files. Sorted software experience card and added OBS; added drawing tablet to hardware card. Added to favorite sites.</p></td></tr>
+                                <tr><td class="important">5.25.6.7</td><td><p>Fixed thumbnails appearing over project titles in projects.html. Reworded some of the welcome card.</p></td></tr>
+                                <tr><td class="important">5.25.6.5</td><td><p>Fixed project thumbnails not appearing on mobile devices. Added new computer to hardware in credits.html.</p></td></tr>
+                                <tr><td class="important">5.25.6.1</td><td><p>Updated background tile, added scrolling. Updated mandelbrotter thumbnail</p></td></tr>
+                                <tr><td class="important">5.25.5.31</td><td><p>Changed profile icon in about.html. Added more meta tags for bots, search engines, and previews.</p></td></tr>
+                                <tr><td class="important">5.25.5.30</td><td><p>Added banner to index.html. Updated Mandelbrotter project.</p></td></tr>
+                                <tr><td class="important">5.25.5.28</td><td><p>Linked Keygen and added new badge.</p></td></tr>
+                                <tr><td class="important">5.25.5.21</td><td><p>Created styleProfile indicator which displays style modificaion profile. Mobile devices now have no static animations. Updated mobile device alert with new graphics and message.</p></td></tr>
+                                <tr><td class="important">5.25.5.20</td><td><p>Renamed art-n-commissions.html to art.html. Updated terms of service and added /b/terms.html. Added CC 88x31 badge. Made /b/index use anchors rather than forms for links. Added hidden page links to /b/.</p></td></tr>
+                                <tr><td class="important">5.25.5.19</td><td><p>Added site creation date. Added UDU Stats card on about.html. Updated footer to copyright eternity.</p></td></tr>
+                                <tr><td class="important">5.25.5.8</td><td><p>Improved some links. Added roll.html.</p></td></tr>
+                                <tr><td class="important">5.25.5.5</td><td><p>Lightened card borders & scaled down static effect mask. Added 2 buttons. Improved guestbook sizing. Added and populated index.html in /badges/. Added /badges/ to sitemap. Changed wording of directories. Removed obsolete javascript detection.</p></td></tr>
+                                <tr><td class="important">5.25.5.2</td><td><p>Fixed and modernized line heights. Added more marquees to index.html. Added tons of 88x31 buttons. Added to credits.html, including a hardware section with specs. Added Nekoweb ads. Made the album art spin when actively scrobbling. Zoomed out on small screens. Added visitor counter; might remove if better counter is found.</p></td></tr>
+                                <tr><td class="important">5.25.5.1</td><td><p>Improved "last played" album cover visuals. Added NavLink ads to /index.html. Added folder and file icons where needed. Moved 88x31 files to new /badges/ folder. Fixed header and footer not showing fully on small screens.</p></td></tr>
+                                <tr><td class="important">5.25.4.30</td><td><p>Reformatted all SVGs. Replaced janky hardcoded SVGs with new svgBullet class. SVG files are now actually referenced. Reworded instructions in art-n-commissions.html. Improved art gallery links. Oh—and I hid a few easter eggs.</p></td></tr>
+                                <tr><td class="important">5.25.4.29</td><td><p>Removed fade-in so that no-css-animation browsers can still view content. Updated and added way more songs to about.html, totaling 97. Renamed /animationResources/ directory to /vfx/. Deleted unused images. Moved root images to /images/. Added slashes to URIs so that pages can reference parent directory files. Created Sitemap card, revealing previously unlinked pages. Created index.html in /archive/ as a directory map.</p></td></tr>
+                                <tr><td class="important">5.25.4.24</td><td><p>Increased word-spacing of headers, fixing long existing issue of unreadable h2's.</p></td></tr>
+                                <tr><td class="important">5.25.4.23</td><td><p>Fixed issue with long song titles resizing main table layout. Used marquee tag. Restyled textarea to be easier on the eyes.</p></td></tr>
+                                <tr><td class="important">5.25.4.14</td><td><p>Added fade out overlay on chat.</p></td></tr>
+                                <tr><td class="important">5.25.4.8</td><td><p>Completely redesigned projects.html card layout. Moved and enlarged main action buttons. Added SPrint to list. Made Contents list clickable.</p></td></tr>
+                                <tr><td class="important">5.25.4.3</td><td><p>Created an 88x31 button!! Also a textarea in the footer for the hotlink code.</p></td></tr>
+                                <tr><td class="important">5.25.3.31</td><td><p>Reorganized credits.html. Removed software descriptions and moved to secondary column.</p></td></tr>
+                                <tr><td class="important">5.25.3.24</td><td><p>Removed a large chunk of about.html to make it less depressing. Rewrote some.</p></td></tr>
+                                <tr><td class="important">5.25.3.22</td><td><p>Added Now Playing/Last Played card using JQuery and API calls to Last.fm!!! I feel like a genius for figuring out how. Removed to-do list and guestbook card. Moved last updated card to bottom. Moved commissions status card to top.</p></td></tr>
+                                <tr><td class="important">5.25.3.20</td><td><p>Updated profile picture in about.html.</p></td></tr>
+                                <tr><td class="important">5.25.3.17</td><td><p>Added a Cbox chatbox to index.html. Styling and sizing.</p></td></tr>
+                                <tr><td class="important">5.25.3.15</td><td><p>Updated Contents in projects.html.</p></td></tr>
+                                <tr><td class="important">5.25.3.12</td><td><p>Changed favorite songs in about.html. VP is fire.</p></td></tr>
+                                <tr><td class="important">5.25.3.10</td><td><p>Reworded and retitled warning card to more accurately reflect recent changes. Moved News card below Welcome card.</p></td></tr>
+                                <tr><td class="important">5.25.3.7</td><td><p>Small adjustments to 404 and 301 pages. Adjusted drop shadow colors for mobile devices. Fixed grammar in art-n-commissions.html.</p></td></tr>
+                                <tr><td class="important">5.25.3.5</td><td><p>Added 404 page. Changed 301 page. Added where-is-it.html in /a/ as an inside joke.</p></td></tr>
+                                <tr><td class="important">5.25.2.28</td><td><p>Not sure what changed, but www.@ resolves! Added /b/javascript.html to help users enable JavaScript. Added as project in projects.html. Linked Enable JavaScript! to all page headers. Moved navbar to header.html, so no navbar current page marking, but ease of maintenence.</p></td></tr>
+                                <tr><td class="important">5.25.2.27</td><td><p>Added Cara.app socials to index.html. Reworded commissioning card at bottom of art-n-commissions.html. Fixed tall characters being cut off in the navbar. Sorted archived pages into /a/, sorted business/professional pages into /b/, and sorted active resource pages into /r/.</p></td></tr>
+                                <tr><td class="important">5.25.2.23</td><td><p>Created custom email for domain. Removed link spam from footer and replaced with invisibly obfuscated email. Links still available on index.html. Turned headers into a common header.html. Added Adabook to credits.</p></td></tr>
+                                <tr><td class="important">5.25.2.22</td><td><p>CONNECTED TO A REAL DOMAIN!!!!!!! Small visual changes. Applied better JavaScript detection to all pages.</p></td></tr>
+                                <tr><td class="important">5.25.2.20</td><td><p>Fixed amogus. Added paper texture to art-n-commissions.html ToS.</p></td></tr>
+                                <tr><td class="important">5.25.2.19</td><td><p>All off-site links now open in new tabs! Construction temporarily opened and closed. Reopened commissions.</p></td></tr>
+                                <tr><td class="important">5.25.2.18</td><td><p>All footers are shared!! Footers are now fetched from a common footer.html file. Added redirect.html for future migration purposes.</p></td></tr>
+                                <tr><td class="important">5.25.2.15</td><td><p>Added some more info about my likes/dislikes, as well as favorite artists/songs to about.html. Hid old site link completely. Added Bsky link to and reworded blog.html. Removed remaining mentions of Spotify. Adjusted 'caption' class. Hid all dev toolbars by default and added keybind for quick access. Made developer hrefs link to corresponding pages. Added Javascript warning to other JS-dependent pages. [AS] & amogus.</p></td></tr>
+                                <tr><td class="important">5.25.2.9</td><td><p>Little styling updates to Atabook. Added Website optional field.</p></td></tr>
+                                <tr><td class="important">5.25.2.8</td><td><p>Created Guestbook on Atabook.org and embedded into guestbook.html. Retired old Google Doc guestbook. Improved Javascript disabled warning and mobile device warning. Added News card on index.html to show site news and other important stuff.</p></td></tr>
+                                <tr><td class="important">5.25.1.31</td><td><p>Retitled warning card. Added Signatures card to art-n-commissions.html. Added way more content to about.html.</p></td></tr>
+                                <tr><td class="important">5.25.1.30</td><td><p>Made queer warning card accessible by default again. Rewrote queer warning card to be more up-to-date and urgent. Added Erin Reed's website to credits.html.</p></td></tr>
+                                <tr><td class="important">5.25.1.16</td><td><p>Rewrote and reorganized about.html. Updated About Me artwork. Moved projects.html introduction to sidebar. Rewrote commissions card. Added additional commissions card to index.html.</p></td></tr>
+                                <tr><td class="important">5.25.1.7</td><td><p>Replaced robotics.html with guestbook.html. Designed button CSS for site. Created a guestbook Google Doc for visitors. Pretty-ified the guestbook. Added guestbook card on index.html.</p></td></tr>
+                                <tr><td class="important">5.25.1.5</td><td><p>Labeled Developer Toolbar. It'll either go away or be integrated better in the future. Added "Last Updated" card. Added "To Do" card.</p></td></tr>
+                                <tr><td class="important">5.24.12.17</td><td><p>Redesigned static effect to remove unintentional brightness variation. Added gradient to static mask and changed mask mode to luminance instead of alpha.</p></td></tr>
+                                <tr><td class="important">5.24.12.12</td><td><p>Deleted Spotify. Disabled old site link. Deactivated old site. Began putting inspiration in credits.html. Added stupid Site status card. It's always green.</p></td></tr>
+                                <tr><td class="important">5.24.11.21</td><td><p>Made projects.html and populated it with my old creations. Real proud of the seamless thumbnail integration into the project cards.</p></td></tr>
+                                <tr><td class="important">5.24.11.16</td><td><p>Huge color contrast improvements for visual accessibility. Also significantly decreased flickering and static effect.</p></td></tr>
+                                <tr><td class="important">5.24.11.15</td><td><p>Drew a profile picture in about.html. Made queer safety message hidden by default. Improved changelog appearance to scroll & fade.</p></td></tr>
+                                <tr><td class="important">5.24.11.8</td><td><p>Made placeholder pages for projects.html, robotics.html, and blog.html. Added Bluesky social link. Added old site link. Adjusted spacing.</p></td></tr>
+                                <tr><td class="important">5.24.11.6</td><td><p>Added card for queer safety. Decorated background with some tiling artwork. Added a footer to all existing pages.</p></td></tr>
+                                <tr><td class="important">5.24.11.5</td><td><p>Wrote Terms of Service in art-n-commissions.html. Made Google Doc link for accessibility.</p></td></tr>
+                                <tr><td class="important">5.24.10.31</td><td><p>Decorated index.html with some quiet artwork. Started to design a new card style for Terms of Service in art-n-commissions.html.</p></td></tr>
+                                <tr><td class="important">5.24.10.30</td><td><p>Made art-n-commissions.html and drew a text embellishment. Completed 'About meh' and 'About this site' cards in about.html.</p></td></tr>
+                                <tr><td class="important">5.24.10.25</td><td><p>Made navbar and added some content to about.html and credits.html. Added option to toggle flickering effect.</p></td></tr>
+                                <tr><td class="important">5.24.10.23</td><td><p>Wrote greeting card and modified warning cards to be more easily understood. Added local time clock and social links for MakerWorld and Roblox.</p></td></tr>
+                                <tr><td class="important">5.24.10.22</td><td><p>Populated 2nd column with social links and <i>correctly</i> implemented SVGs. Temporarily added Dev Mode.</p></td></tr>
+                                <tr><td class="important">5.24.10.21</td><td><p>Built main layout and added some nice warning cards.</p></td></tr>
+                                <tr><td class="important">5.24.10.20</td><td><p>Added browser detection for consistent styling. Check Console.</p></td></tr>
+                                <tr><td class="important">5.24.10.19</td><td><p>First files published.</p></td></tr>
+                            </table>
+                        </div>
                     </section>
                 </td><td class="secondaryColumn">
                     <section>
-                        <h3>Buttons</h3>
+                        <p><span class="important">Badges</span> coming soon...</p>
+                        <img src="assets/badges/pride.png">
                     </section>
                     <section>
-                        <h3>Sitemap</h3>
+                        <iframe style="width: 100%; aspect-ratio: 1; border: none; display: block;" src="https://dimden.neocities.org/navlink/"></iframe>
+                        <hr>
+                        <iframe style="width: 100%; aspect-ratio: 1; border: none; display: block;" src="https://rubybulbs.net/neko.html"></iframe>
+                    </section>
+                    <section>
+                        <p><span class="important">Sitemap</span> coming soon...</p>
                     </section>
                 </td>
             </tr>
         </table>
     </main>
-    <div style="height: 500px"></div>
+    <footer class="main" id="footer"><script>loadElement("footer.html", "footer");</script></footer> 
 </body>
 </html>

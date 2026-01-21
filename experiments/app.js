@@ -157,7 +157,7 @@ async function updateLastfm() {
         }
         linkLabel.href = link;
         if (playing == "y") {
-            playingLabel.innerHTML = "Now playing";
+            playingLabel.innerHTML = "now playing";
             musicSection.className = "important";
         } else {
             const timeSince = Math.floor(new Date().getTime() / 1000) - parseInt(playing);
@@ -180,7 +180,7 @@ async function updateLastfm() {
                 else
                     timeFormatted += " days ago";
             }
-            playingLabel.innerHTML = "Played " + timeFormatted;
+            playingLabel.innerHTML = "played " + timeFormatted;
             musicSection.removeAttribute("class");
         }
     } catch (error) {
@@ -198,14 +198,15 @@ async function updateCommitInfo() {
         }
         const resJSON = await res.json();
         const date = new Date(resJSON.commit.committer.date);
-        document.getElementById("commitDate").innerHTML = "." + date.getUTCFullYear().toString().slice(2, 4) + "." + (date.getUTCMonth() + 1) + "." + (date.getUTCDate());
+        document.getElementById("commitDate").innerHTML = document.getElementById("changelogCommitDate").innerHTML = "." + date.getUTCFullYear().toString().slice(2, 4) + "." + (date.getUTCMonth() + 1) + "." + (date.getUTCDate());
         document.getElementById("commitId").innerHTML = " • " + resJSON.sha.slice(0, 7);
+        document.getElementById("changelogCommitId").innerHTML = resJSON.sha;
     } catch (error) {
         console.error(error);
     }   
 }
 
-function updateLocalTime() {
+function updateClockTime() {
     const date = new Date();
     const clockOptions = {
         timeZone: 'America/New_York',
@@ -221,7 +222,7 @@ function updateLocalTime() {
     var milliseconds = date.getMilliseconds();
     document.getElementById("localTime").innerHTML = hours + ":" + minutes + ":" + seconds;
     document.getElementById("unixTime").innerHTML = Date.now().toString().slice(0, -3);
-	setTimeout("updateLocalTime()", 1000 - milliseconds % 1000 );
+	setTimeout("updateClockTime()", 1000 - milliseconds % 1000 );
 }
 
 function updateBeatTime() {
