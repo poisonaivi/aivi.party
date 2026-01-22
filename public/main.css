@@ -69,7 +69,7 @@ h3 {
     font-size: 36px;
     margin-bottom: 5px;
 }
-p, li, details, .text {
+p, li, details, figcaption, .text {
     text-shadow: 0.062em 0.062em var(--shadow), 0 0 0.25em var(--text);
     position: relative;
 }
@@ -83,11 +83,10 @@ span {
 a {
     color: var(--link);
     text-shadow: 0.032em 0.032em var(--link-b), 0.032em -0.032em var(--link-b), -0.032em -0.032em var(--link-b), -0.032em 0.032em var(--link-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--link);
-    text-decoration-style: dashed;  
     position: relative;
     &:hover {
         opacity: 0.6;
-        text-decoration-style: solid;    
+        text-decoration-style: dashed;    
     }
     &:active {
         opacity: 0.4;
@@ -155,6 +154,10 @@ small {
         opacity: 0.5;
     }
 }
+iframe {
+    display: block;
+    border: none;
+}
 textarea, .code {
     font-size: 0.9rem;
     font-family: monospace;
@@ -172,12 +175,12 @@ textarea {
     padding: 10px;
 }
 details > summary {
-    text-decoration: underline dashed;
+    text-decoration: underline solid;
     cursor: pointer;
     list-style-type: none;
     &:hover {
         opacity: 0.6;
-        text-decoration-style: solid;
+        text-decoration-style: dashed;
     }
     &:active {
         opacity: 0.4;
@@ -262,5 +265,114 @@ marquee {
     }
     p {
         margin-bottom: 18px;
+    }
+}
+
+.gallery {
+    margin: 0px 4px;
+    figure {
+        border: 2px solid var(--border);
+        border-radius: 10px;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0 -1px 2px 0;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 700ms;
+        background-image: url(assets/transparency.png);
+        background-size: 16px;
+        img {
+            height: 250px;
+            display: block;
+        }
+        figcaption {
+            background: linear-gradient(#000d, #0002, #0000);
+            height: 100%;
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            position: absolute;
+            transition: inherit;
+            &.desc {
+                bottom: 0;
+                background: linear-gradient(#0000, #000c, #000);
+                height: unset;
+                opacity: 0;
+                font-size: 10px;
+            }
+        }
+        &:hover, &:active {
+            scale: 1.4;
+            box-shadow: 0 0 50px var(--shadow);
+            z-index: 2;
+            figcaption {
+                opacity: 0;
+                &.desc {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.listing {
+    margin: 0px 4px;
+    section {
+        margin: 0 0 8px 0;
+        height: 140px;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 700ms;
+        figure {
+            position: relative;
+            z-index: 0;
+            margin: 0;
+            height: 100%;
+            transition: inherit;
+            img {
+                height: 100%;
+                width: 25%;
+                object-fit: cover;
+                mask-image: linear-gradient(90deg, #000, #0000);
+                transition: inherit;
+            }
+        }
+        .desc {
+            display: inline-block;
+            position: absolute;
+            width: 77%;
+            z-index: 1;
+            margin-left: 20%;
+            padding: 8px 12px 4px 0px;
+            transition: inherit;
+            p {
+                position: absolute;
+                transition: inherit;
+            }
+            .actions {
+                font-size: 15px;
+                opacity: 0;
+                transition: inherit;
+            }
+        }
+        &:hover, &:active {
+            scale: 1.2;
+            box-shadow: 0 0 50px var(--shadow);
+            z-index: 2;
+            figure {
+                img {
+                    width: 40%;
+                }
+            }
+            .desc {
+                margin-left: 40%;
+                p {
+                    opacity: 0;
+                }
+                .actions {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

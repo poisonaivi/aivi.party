@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.35">
+    <meta content="#9A10C8" name="theme-color">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://aivi.party/guestbook">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AIVI.party - Guestbook">
+    <meta property="og:image" content="https://aivi.party/images/aivi-preview-banner.png">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="aivi.party">
+    <meta property="twitter:url" content="https://aivi.party/guestbook">
+    <meta name="twitter:title" content="AIVI.party - Guestbook">
+    <meta name="twitter:image" content="https://aivi.party/images/aivi-preview-banner.png">
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/amethystcrystal.png">
+    <title>GUESTBOOK</title>
+</head>
+<body>
+    <header>
+        <div class="contentColumn">
+            <noscript>
+                <div class="card warningCard" id="JsDisabled">
+                    <h2 class="warning">Enable JavaScript!</h2>
+                    <p>Javascript is disabled on your browser.</p>
+                    <p>I'm not here to steal your data. Navigating this site requires JavaScript. <a href="https://javascript.amethystx.net/" target="_blank"><u>Learn more.</u></a></p>
+                </div>
+            </noscript>
+        </div>
+        <div id="header-fetch" class="contentColumn">Loading</div>
+        <script>
+            fetch("r/header.html")
+                .then(response => response.text())
+                .then(content => {
+                    document.getElementById("header-fetch").innerHTML = content;
+                });
+        </script>
+    </header>
+    <table class="contentColumn">
+        <tr>
+            <td style="width: 72%">
+                <div class="card">
+                    <h2>Guestbook</h2>
+                    <iframe id="guestbookEmbed" src="https://poisonaivi.atabook.org/"></iframe>
+                </div>
+            </td>
+            <td>
+                <div class="card highlightCard">
+                    <h2>Leave a mark!</h2>
+                    <p>Write whatever you want, and I'll try to get back to you. There's just one rule: <span class="highlight">Don't be an ass.</span></p>
+                </div>
+                <div class="card">
+                    <h2>Old Guestbook</h2>
+                    <p>Located <a href="https://docs.google.com/document/d/1gX5HDlQ2IhSc7PpdqXr2eqlmw5wiw0_aTIF0zo_jJJs/edit?usp=sharing" target="_blank"><u>here</u></a> for archival purposes. New entries should be made right on this page!</p>
+                </div>
+                <div>
+                    <p style="line-height: 100%; color: var(--accent);">
+                        secu-kitty (to make sure you don't try anything funny)<br><br>
+                        <span style="display: block; width: 100%; text-align: center;">
+                            |<br>
+                            |<br>
+                            V<br>
+                        </span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Z<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z<br>
+                        &nbsp;&nbsp;&nbsp;|\&nbsp;z&nbsp;&nbsp;&nbsp;&nbsp;_,,,---,,_<br>
+                        &nbsp;&nbsp;&nbsp;/,`.-'`'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-.&nbsp;&nbsp;;-;;,_<br>
+                        &nbsp;_/,4-&nbsp;&nbsp;)&nbsp;)-,_..;\&nbsp;(&nbsp;&nbsp;`'-'<br>
+                        '----''(_/--'&nbsp;&nbsp;`-'\_)
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <footer>
+    <div class="contentColumn" id="footer-fetch">Loading</div>
+    <script>
+        fetch("r/footer.html")
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById("footer-fetch").innerHTML = content;
+            });
+    </script>
+</footer>
+</body>
+</html>

@@ -1,126 +1,244 @@
-function isMobile() {
-    let check = false;
-    (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
-    return check;
-};
-
-const root = document.documentElement;
-var flickeringEnabled = true;
-var consoleTitle = "   _   _____   _____   ___  _   ___ _______   ___ \n  /_\\ |_ _\\ \\ / /_ _| | _ \\/_\\ | _ \\_   _\\ \\ / / |\n / _ \\ | | \\ V / | | _|  _/ _ \\|   / | |  \\ V /|_|\n/_/ \\_\\___| \\_/ |___(_)_|/_/ \\_\\_|_\\ |_|   |_| (_)";
-
-addEventListener("load", (event) => {
-    optimizeForBrowser();
-    path = window.location.pathname;
-    if (path == "/index" || path == "/public/" || path == "/public/index.html" || path == "/") {
-        greetUser();
-        startClock();
-    }
-    console.log(consoleTitle);
-});
-
-function optimizeForBrowser() {
-    if (isMobile()) {
-        var mobileCard = document.getElementById("usingMobile");
-        if (mobileCard != null && !localStorage.getItem("usingMobile")) {
-            mobileCard.hidden = false;
+async function loadElement(filename, elementid) {
+    try {
+        if (filename == null || filename.length == 0) {
+            throw new Error("filename not specified.");
         }
-        consoleTitle = "AIVI.party!";
-        root.style.setProperty("--static-vfx", "none");
-        document.body.style.setProperty("animation", "none");
-        console.log("Browser: Mobile\nOptimization profile: Mobile\nChanges:\n Revealed mobile card\n Removed static effect\n Disabled background scroll\n Replaced console title");
-    } else if (navigator.userAgent.indexOf("Chrome") != -1){
-        console.log("Browser: Chrome\nOptimization profile: Default\nChanges:\n None");
-    } else if (navigator.userAgent.indexOf("Safari") != -1) {
-        consoleTitle = "AIVI.party!";
-        console.log("Browser: Safari\nOptimization profile: Default\nChanges:\n Replaced console title");
-    } else if (navigator.userAgent.indexOf("Edg") != -1) {
-        console.log("Browser: Edge\nOptimization profile: Default\nChanges:\n None");
-    } else if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
-        console.log("Browser: Opera\nOptimization profile: Default\nChanges:\n None");
-    } else if (navigator.userAgent.indexOf("Firefox") != -1) {
-        console.log("Browser: Firefox\nOptimization profile: Default\nChanges:\n None");
-    } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) { // if IE > 10
-        console.log("Browser: Internet Explorer\nOptimization profile: Default\nChanges:\n None");
-    } else {
-        console.log("Browser: detection failed\nOptimization profile: Default\nChanges:\n None");
+        if (elementid == null || elementid.length == 0) {
+            throw new Error("elementid not specified.");
+        }
+        const element = document.getElementById(elementid);
+        if (element == null) {
+            throw new Error("elementid does not exist within the document.");
+        }
+        const res = await fetch("elements/" + filename);
+        if (!res.ok) {
+            element.innerHTML = "<span class='danger'>Element failed to load.</span>";
+            throw new Error("Failed to fetch element.");
+        }
+        element.innerHTML = await res.text();
+    } catch (error) {
+        console.error(error);
     }
 }
 
-function redirect(url, delay) {
-    setTimeout(() => {
-        window.location.href = url;
-    }, delay);
-}
-
-function greetUser() {
+function updateGreeting() {
     const hour = new Date().getHours();
-    const greetingEle = document.getElementById("greeting");
+    const greeting = document.getElementById("greeting");
     if (hour >= 4 && hour < 12) {
-        greetingEle.innerHTML = "Good morning!";
+        greeting.innerHTML = "Good morning!";
     } else if (hour >= 12 && hour < 19) {
-        greetingEle.innerHTML = "Good afternoon!";
+        greeting.innerHTML = "Good afternoon!";
     } else {
-        greetingEle.innerHTML = "Good evening!";
+        greeting.innerHTML = "Good evening!";
     }
 }
 
-function startClock() {
-    const localTimeEle = document.getElementById("localTime");
+async function updateDiscord() {
+    const presenceLabel = document.getElementById("presenceLabel");
+    const presenceIcon = document.getElementById("presenceIcon");
+    const statusLabel = document.getElementById("statusLabel");
+    const statusDateLabel = document.getElementById("statusDateLabel");
+    const discordSection = document.getElementById("discordSection");
+    try {
+        const res = await fetch("https://aivi.party/services/discord-status");
+        if (!res.ok) {
+            presenceLabel.innerHTML = "Presence not available.";
+            presenceLabel.className = "danger";
+            presenceIcon.className = "icon danger";
+            presenceIcon.src = "assets/icons/offline.png";
+            statusLabel.innerHTML = "<small>No status found.</small>"
+            statusDateLabel.innerHTML = "";
+            discordSection.className = "danger";
+            throw new Error("Failed to fetch.");
+        }
+        const resJSON = await res.json();
+        const presence = resJSON.data.discord_status;
+        if (presence == "online") {
+            presenceLabel.innerHTML = "online";
+            presenceLabel.className = "success";
+            presenceIcon.className = "icon success";
+            presenceIcon.src = "assets/icons/online.png";
+            discordSection.className = "success";
+        } else if (presence == "idle") {
+            presenceLabel.innerHTML = "idle";
+            presenceLabel.className = "warning";
+            presenceIcon.className = "icon warning";
+            presenceIcon.src = "assets/icons/idle.png";
+            discordSection.className = "warning";
+        } else if (presence == "dnd") {
+            presenceLabel.innerHTML = "do not disturb";
+            presenceLabel.className = "danger";
+            presenceIcon.className = "icon danger";
+            presenceIcon.src = "assets/icons/dnd.png";
+            discordSection.className = "danger";
+        } else if (presence == "offline") {
+            presenceLabel.innerHTML = "offline";
+            presenceLabel.className = "danger";
+            presenceIcon.className = "icon danger";
+            presenceIcon.src = "assets/icons/offline.png";
+            discordSection.className = "danger";
+        }
+        if (resJSON.data.activities.length != 0) {
+            const status = resJSON.data.activities['0'].state;
+            const statusDate = resJSON.data.activities['0'].created_at;
+            const clockOptions = {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+            }, formatter = new Intl.DateTimeFormat([], clockOptions);
+            statusLabel.innerHTML = "&ldquo;" + status + "&rdquo;";
+            statusDateLabel.innerHTML = "Status • " + formatter.format(new Date(statusDate));
+        } else {
+            statusLabel.innerHTML = "<small>No status found.</small>"
+            statusDateLabel.innerHTML = "";
+        }
+    } catch (error) {
+        console.error(error);
+    }
+    setTimeout("updateDiscord()", 5000);
+}
+
+async function updateLastfm() {
+    const titleLabel = document.getElementById("titleLabel");
+    const artistLabel = document.getElementById("artistLabel");
+    const albumLabel = document.getElementById("albumLabel");
+    const musicSection = document.getElementById("musicSection");
+    const linkLabel = document.getElementById("linkLabel");
+    const playingLabel = document.getElementById("playingLabel");
+    try {
+        const res = await fetch("https://aivi.party/services/last-played");
+        if (!res.ok) {
+            titleLabel.innerHTML = "No data.";
+            artistLabel.innerHTML = "";
+            albumLabel.innerHTML = "";
+            musicSection.style.backgroundImage = "url(assets/blank-album-art.png";
+            linkLabel.removeAttribute("href");
+            playingLabel.innerHTML = "Last played";
+            throw new Error("Failed to fetch.");
+        }
+        const resJSON = await res.json();
+        const latest = resJSON.recenttracks.track[0];
+        var title = latest.name;
+        var artist = latest.artist["#text"];
+        var album = latest.album["#text"];
+        const albumArt = latest.image[2]["#text"];
+        const link = latest.url;
+        try {
+            var playing = latest.date.uts;
+        } catch (error) {
+            var playing = "y";
+        }
+        if (title != titleLabel.innerText) {
+            if (title.length > 14) {
+                title = "<marquee>" + title + "</marquee>";
+            }
+            titleLabel.innerHTML = title;
+        }
+        if (artist != artistLabel.innerText) {
+            if (artist.length > 29) {
+                artist = '<marquee scrollamount="4">' + artist + "</marquee>";
+            }
+            artistLabel.innerHTML = artist;
+        }
+        if (album != albumLabel.innerText) {
+            if (album.length > 29) {
+                album = '<marquee scrollamount="4">' + album + "</marquee>";
+            }
+            albumLabel.innerHTML = album;
+        }
+        // hash for no-album-art image
+        if (albumArt.includes("2a96cbd8b46e442fc41c2b86b821562f")) {
+            musicSection.style.backgroundImage = "url(assets/blank-album-art.png)";
+        } else {
+            musicSection.style.backgroundImage = "url(" + albumArt + ")";
+        }
+        linkLabel.href = link;
+        if (playing == "y") {
+            playingLabel.innerHTML = "now playing";
+            musicSection.className = "important";
+        } else {
+            const timeSince = Math.floor(new Date().getTime() / 1000) - parseInt(playing);
+            if (timeSince <= 3600) {
+                var timeFormatted = Math.floor(timeSince / 60);
+                if (timeFormatted == 1)
+                    timeFormatted += " minute ago";
+                else
+                    timeFormatted += " minutes ago";
+            } else if (timeSince <= 86400) {
+                var timeFormatted = Math.floor(timeSince / 3600);
+                if (timeFormatted == 1)
+                    timeFormatted += " hour ago";
+                else
+                    timeFormatted += " hours ago";
+            } else {
+                var timeFormatted = Math.floor(timeSince / 86400);
+                if (timeFormatted == 1)
+                    timeFormatted += " day ago";
+                else
+                    timeFormatted += " days ago";
+            }
+            playingLabel.innerHTML = "played " + timeFormatted;
+            musicSection.removeAttribute("class");
+        }
+    } catch (error) {
+        console.error(error);
+    }
+    setTimeout("updateLastfm()", 5000);
+}
+
+async function updateCommitInfo() {
+    try {
+        const res = await fetch("https://api.github.com/repos/ax-x3/aivi.party/commits/6.0");
+        if (!res.ok) {
+            document.getElementById("commit").innerHTML = "Unavailable";
+            throw new Error("Failed to fetch.");
+        }
+        const resJSON = await res.json();
+        const date = new Date(resJSON.commit.committer.date);
+        document.getElementById("commitDate").innerHTML = document.getElementById("changelogCommitDate").innerHTML = "." + date.getUTCFullYear().toString().slice(2, 4) + "." + (date.getUTCMonth() + 1) + "." + (date.getUTCDate());
+        document.getElementById("commitId").innerHTML = " • " + resJSON.sha.slice(0, 7);
+        document.getElementById("changelogCommitId").innerHTML = resJSON.sha;
+    } catch (error) {
+        console.error(error);
+    }   
+}
+
+function updateClockTime() {
+    const date = new Date();
     const clockOptions = {
         timeZone: 'America/New_York',
         hour12: false,
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric'
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
     }, formatter = new Intl.DateTimeFormat([], clockOptions);
-    // Get current time accurate to the minute.
-    var localTime = formatter.format(Date.now());
-    localTimeEle.innerHTML = "<u>" + localTime.substring(0, 5) + "</u>" + '<span class="warning">:----</span>';
-    // clockStatusEle.innerHTML = "Calibrating...";
-    // Calculate offset and wait until the next second is about to tick.
-    setTimeout(() => {
-        // Begin regular clock update with seconds.
-        setTimeout(() => {
-            // clockStatusEle.innerHTML = "Done! Accuracy: ±" + Math.abs((Date.now() + 500) % 1000 - 500) + "ms.";
-            setTimeout(() => {
-                // clockStatusEle.hidden = true;
-            }, 3000);
-        }, 1000);
-        setInterval(() => {
-            // Get time 500ms ahead to ensure early ticks do not show repeated or delayed time.
-            localTime = formatter.format(Date.now() + 500);
-            localTimeEle.innerHTML = "<u>" + localTime + "</u>";
-        }, 1000);
-    }, 998 - Date.now() % 1000);
+    var time = formatter.format(date);
+    var hours = time.slice(0, 2);
+    var minutes = time.slice(3, 5);
+    var seconds = time.slice(6, 8);
+    var milliseconds = date.getMilliseconds();
+    document.getElementById("localTime").innerHTML = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("unixTime").innerHTML = Date.now().toString().slice(0, -3);
+	setTimeout("updateClockTime()", 1000 - milliseconds % 1000 );
 }
 
-function playSound(soundId) {
-    document.getElementById(soundId).play();
-    document.getElementById(soundId).currentTime = 0;
-}
-
-function dismissCard(cardId) {
-    document.getElementById(cardId).hidden = true;
-    localStorage.setItem(cardId, true);
-}
-
-function developerMode() {
-    document.getElementById("usingMobile").hidden = false;
-    localStorage.removeItem("usingMobile");
-    document.getElementById("queerSafety").hidden = false;
-    localStorage.removeItem("queerSafety");
-    document.getElementById("inactiveNotice").hidden = false;
-}
-
-
-function toggleFlickering() {
-    if (flickeringEnabled) {
-        root.style.setProperty('--flicker-high-vfx', 'brightness(1)');
-        root.style.setProperty('--flicker-low-vfx', 'brightness(1)');
-        flickeringEnabled = false;
-    } else {
-        root.style.setProperty('--flicker-high-vfx', 'brightness(1.1)');
-        root.style.setProperty('--flicker-low-vfx', 'brightness(0.9)');
-        flickeringEnabled = true;
-    }
+function updateBeatTime() {
+    const date = new Date();
+    const clockOptions = {
+        timeZone: 'Europe/Berlin',
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    }, formatter = new Intl.DateTimeFormat([], clockOptions);
+    var milliseconds = date.getMilliseconds();
+    var time = formatter.format(date);
+    var timeInMs = parseInt(time.slice(0, 2)) * 3600000 + parseInt(time.slice(3,5)) * 60000 + parseInt(time.slice(6,8)) * 1000 + milliseconds;
+    var centibeats = Math.floor(timeInMs / 864).toString().padStart(5, "0");
+    var beats = centibeats.slice(0, 3) + "." + centibeats.slice(3, 5);
+    document.getElementById("beatTime").innerHTML = "@" + beats;
+    setTimeout("updateBeatTime()", 864 - timeInMs % 864 );
 }
