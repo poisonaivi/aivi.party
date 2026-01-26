@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Monopix";
-    src: url(fonts/monopix.otf) format("opentype");
+    src: url(/fonts/monopix.otf) format("opentype");
 }
 :root {
     --text: #fff;
@@ -59,7 +59,7 @@ a {
     }
 }
 section {
-    margin: 4px;
+    margin: 4px 2px 4px 2px;
     padding: 12px;
     border: 1px solid var(--border);
     section {

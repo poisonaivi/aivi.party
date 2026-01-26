@@ -54,8 +54,8 @@ async function pageNotFound() {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.38">
         <title>404 Not Found</title>
-        <script src="app.js"><\/script>
-        <link rel="stylesheet" href="main.css">
+        <script src="/app.js"><\/script>
+        <link rel="stylesheet" href="/main.css">
     </head>
     <body>
         <main>

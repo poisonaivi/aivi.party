@@ -8,7 +8,7 @@ export default {
             if (path[1] == "last-played") {
                 const res = await fetch("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=am3thystx&api_key=e7e7db3733ebd1413a1466b1ab6117de&format=json&limit=1");
                 if (!res.ok) {
-                    throw new Error("Failed to fetch.");
+                    throw new Error("Response from Last.fm was not OK.");
                 }
                 const resJSON = await res.json();
                 return new Response(JSON.stringify(resJSON), {
@@ -20,7 +20,7 @@ export default {
             } else if (path[1] == "discord-status") {
                 const res = await fetch("https://api.lanyard.rest/v1/users/802178124342493224");
                 if (!res.ok) {
-                    throw new Error("Failed to fetch.");
+                    throw new Error("Response from Lanyard was not OK.");
                 }
                 const resJSON = await res.json();
                 return new Response(JSON.stringify(resJSON), {
@@ -35,6 +35,8 @@ export default {
         } catch (error) {
             console.error(error);
         }
+    } else if (path[0] == "blog") {
+        return blogNotFound();
     } else {
         return pageNotFound();
     }
@@ -48,8 +50,9 @@ async function pageNotFound() {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.38">
         <title>404 Not Found</title>
-        <script src="app.js"></script>
-        <link rel="stylesheet" href="main.css">
+        <script src="/app.js"></script>
+        <link rel="stylesheet" href="/main.css">
+        <link rel="icon" href="/assets/amethyst-tilted-lowres.png">
     </head>
     <body>
         <main>
@@ -69,8 +72,41 @@ async function pageNotFound() {
     </body>
     </html>`;
     return new Response(html, {
+        status: 404,
         headers: {
             "content-type": "text/html;charset=UTF-8",
-        },
+        }
+    });
+}
+
+async function blogNotFound() {
+    const html = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.38">
+        <title>404 Not Found</title>
+        <link rel="stylesheet" href="/blog/blog.css">
+    </head>
+    <body>
+        <main>
+            <div class="main">
+                <section class="nav"><div class="back"><a href="/blog/index.html">&larr; Back</a></div>aivi's blog</section>
+                <section style="text-align: center;">
+                    <h1>404</h1>
+                    <h2><i>Not Found</i></h2>
+                    <div style="height: 100px;"></div>
+                    <p>The blog post you requested has not been written yet!</p>
+                    <p>For now, you can check out the <a href="/blog/last.html">latest post</a>.</p>
+                </section>
+            </div>
+        </main>
+    </body>
+    </html>`;
+    return new Response(html, {
+        status: 404,
+        headers: {
+            "content-type": "text/html;charset=UTF-8",
+        }
     });
 }

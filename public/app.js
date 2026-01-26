@@ -10,7 +10,7 @@ async function loadElement(filename, elementid) {
         if (element == null) {
             throw new Error("elementid does not exist within the document.");
         }
-        const res = await fetch("elements/" + filename);
+        const res = await fetch("/elements/" + filename);
         if (!res.ok) {
             element.innerHTML = "<span class='danger'>Element failed to load.</span>";
             throw new Error("Failed to fetch element.");
@@ -45,7 +45,7 @@ async function updateDiscord() {
             presenceLabel.innerHTML = "Presence not available.";
             presenceLabel.className = "danger";
             presenceIcon.className = "icon danger";
-            presenceIcon.src = "assets/icons/offline.png";
+            presenceIcon.src = "/assets/icons/offline.png";
             statusLabel.innerHTML = "<small>No status found.</small>"
             statusDateLabel.innerHTML = "";
             discordSection.className = "danger";
@@ -57,25 +57,25 @@ async function updateDiscord() {
             presenceLabel.innerHTML = "online";
             presenceLabel.className = "success";
             presenceIcon.className = "icon success";
-            presenceIcon.src = "assets/icons/online.png";
+            presenceIcon.src = "/assets/icons/online.png";
             discordSection.className = "success";
         } else if (presence == "idle") {
             presenceLabel.innerHTML = "idle";
             presenceLabel.className = "warning";
             presenceIcon.className = "icon warning";
-            presenceIcon.src = "assets/icons/idle.png";
+            presenceIcon.src = "/assets/icons/idle.png";
             discordSection.className = "warning";
         } else if (presence == "dnd") {
             presenceLabel.innerHTML = "do not disturb";
             presenceLabel.className = "danger";
             presenceIcon.className = "icon danger";
-            presenceIcon.src = "assets/icons/dnd.png";
+            presenceIcon.src = "/assets/icons/dnd.png";
             discordSection.className = "danger";
         } else if (presence == "offline") {
             presenceLabel.innerHTML = "offline";
             presenceLabel.className = "danger";
             presenceIcon.className = "icon danger";
-            presenceIcon.src = "assets/icons/offline.png";
+            presenceIcon.src = "/assets/icons/offline.png";
             discordSection.className = "danger";
         }
         if (resJSON.data.activities.length != 0) {
@@ -114,7 +114,7 @@ async function updateLastfm() {
             titleLabel.innerHTML = "No data.";
             artistLabel.innerHTML = "";
             albumLabel.innerHTML = "";
-            musicSection.style.backgroundImage = "url(assets/blank-album-art.png";
+            musicSection.style.backgroundImage = "url(/assets/blank-album-art.png";
             linkLabel.removeAttribute("href");
             playingLabel.innerHTML = "Last played";
             throw new Error("Failed to fetch.");
@@ -151,7 +151,7 @@ async function updateLastfm() {
         }
         // hash for no-album-art image
         if (albumArt.includes("2a96cbd8b46e442fc41c2b86b821562f")) {
-            musicSection.style.backgroundImage = "url(assets/blank-album-art.png)";
+            musicSection.style.backgroundImage = "url(/assets/blank-album-art.png)";
         } else {
             musicSection.style.backgroundImage = "url(" + albumArt + ")";
         }
