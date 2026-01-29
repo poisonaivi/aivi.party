@@ -1,4 +1,4 @@
-# AIVI.party - Art, Projects, About Me, and More!
+# AIVI.PARTY! - writing, artwork, comms, programming, & more!
 
 ## Directories:
 
