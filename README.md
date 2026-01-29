@@ -1,27 +1,13 @@
-> [!NOTE]
-> Site permanently moved to aivi.party as of January 2026. <br>All old domains will continue to resolve.
-
 # AIVI.party - Art, Projects, About Me, and More!
 
-![site button](./badges/88x31.gif)
 ## Directories:
 
-`/archive/                    (prev. /a/)` - Archived site pages.
+`/assets/                                ` - Images and other static media.
 <br>
-`/b/                                     ` - Business/professional representation.
+`/blog/                                  ` - Blog.
 <br>
-`/badges/                                ` - 88x31s and other retro badges.
+`/elements/                              ` - Reused site content, e.g., header & footer.
 <br>
-`/fonts/                                 ` - Specified typefaces.
+`/fonts/                                 ` - Custom fonts.
 <br>
-`/icons/                                 ` - General-purpose symbols.
-<br>
-`/images/                                ` - Bitmap site images.
-<br>
-`/logos/                                 ` - Registered trademark elements.
-<br>
-`/r/                                     ` - Reused site elements.
-<br>
-`/sounds/                                ` - All site sound files.
-<br>
-`/vfx/       (prev. /animationResources/)` - Graphics used for site VFX.
+`/services/                              ` - API endpoints.
