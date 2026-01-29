@@ -15,6 +15,7 @@ export default {
                     headers: {
                         "content-type": "application/json",
                         "Access-Control-Allow-Origin": "aivi.party",
+                        // "Access-Control-Allow-Origin": "*",
                     },
                 });
             } else if (path[1] == "discord-status") {
@@ -27,6 +28,7 @@ export default {
                     headers: {
                         "content-type": "application/json",
                         "Access-Control-Allow-Origin": "aivi.party",
+                        // "Access-Control-Allow-Origin": "*",
                     },
                 });
             } else {

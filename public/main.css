@@ -2,6 +2,13 @@
     font-family: "Monopix";
     src: url(/fonts/monopix.otf) format("opentype");
 }
+@font-face {
+    font-family: "Segris 16";
+    src: url(/fonts/segris-16.otf) format("opentype");
+    size-adjust: 70%;
+    ascent-override: 135%;
+    descent-override: 35%;
+}
 :root {
     --text: #fff;
     --selection: #f6f;
@@ -73,6 +80,7 @@ p {
     margin: 0;
 }
 span {
+    display: inline-block;
     text-shadow: inherit;
     position: relative;
 }
@@ -142,6 +150,7 @@ ul {
     list-style-type: "•  ";
 }
 small {
+    display: inline-block;
     color: var(--small-text);
     font-size: 14px;
     position: relative;
@@ -203,6 +212,15 @@ marquee {
 .secondaryColumn {
     min-width: 300px;
     max-width: 300px;
+}
+.num{
+    font-family: "Segris 16", "Monopix";
+    white-space-collapse: preserve;
+    &.bg {
+        position: absolute;
+        opacity: 0.15;
+        text-shadow: none;
+    }
 }
 .text {
     color: var(--text);

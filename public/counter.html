@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.38">
+    <title>AIVI.PARTY!</title>
+    <script src="/app.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="icon" href="/assets/amethyst-tilted-lowres.png">
+    <style>
+        h1 {
+            text-shadow: none;
+        }
+    </style>
+</head>
+<body onload="start();">
+    <main>
+        <div style="height: 50px;"></div>
+        <section>
+            <h1 class="num bg">?????</h1>
+            <h1 id="counter" class="num">            0</h1>
+            <div style="height: 50px;"></div>
+            <button onmousedown="ctup();">+1</button>
+            <button onmousedown="ctdn();">-1</button>
+            <button onmousedown="goup();">go up</button>
+            <button onmousedown="godn();">go down</button>
+        </section>
+        <script>
+            const sp = "   ";
+            const len = 5;
+            const cte = document.getElementById("counter");
+            var val = 0;
+            var goingup = false;
+            var goingdn = false;
+            function ctup() {
+                val++;
+                update();
+            }
+            function ctdn() {
+                val--;
+                update();
+            }
+            function update() {
+                dis = val;
+                vallen = val.toString().length;
+                for (let i = 0; i < len - vallen; i++) {
+                    dis = sp + dis;                        
+                }
+                cte.innerText = dis;
+            }
+            function goup() {
+                goingdn = false;
+                goingup = !goingup;
+            }
+            function godn() {
+                goingup = false;
+                goingdn = !goingdn;
+            }
+            function start() {
+                setInterval(() => {
+                    if (goingup) {
+                        ctup();
+                    }
+                    if (goingdn) {
+                        ctdn();
+                    }
+                }, 10);
+            }
+        </script>
+    </main>
+</body>
+</html>

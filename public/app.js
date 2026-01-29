@@ -199,8 +199,8 @@ async function updateCommitInfo() {
         const resJSON = await res.json();
         const date = new Date(resJSON.commit.committer.date);
         document.getElementById("commitDate").innerHTML = document.getElementById("changelogCommitDate").innerHTML = "." + date.getUTCFullYear().toString().slice(2, 4) + "." + (date.getUTCMonth() + 1) + "." + (date.getUTCDate());
-        document.getElementById("commitId").innerHTML = " • " + resJSON.sha.slice(0, 7);
-        document.getElementById("changelogCommitId").innerHTML = resJSON.sha;
+        document.getElementById("commitId").innerHTML = " • " + resJSON.sha.slice(0, 7).toUpperCase();
+        document.getElementById("changelogCommitId").innerHTML = resJSON.sha.toUpperCase();
     } catch (error) {
         console.error(error);
     }   
@@ -239,6 +239,6 @@ function updateBeatTime() {
     var timeInMs = parseInt(time.slice(0, 2)) * 3600000 + parseInt(time.slice(3,5)) * 60000 + parseInt(time.slice(6,8)) * 1000 + milliseconds;
     var centibeats = Math.floor(timeInMs / 864).toString().padStart(5, "0");
     var beats = centibeats.slice(0, 3) + "." + centibeats.slice(3, 5);
-    document.getElementById("beatTime").innerHTML = "@" + beats;
+    document.getElementById("beatTime").innerHTML = beats;
     setTimeout("updateBeatTime()", 864 - timeInMs % 864 );
 }
