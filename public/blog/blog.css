@@ -6,6 +6,7 @@
     --text: #fff;
     --selection: #f6f;
     --selection-text: #404;
+    --caption: #222;
     --shadow: #000;
     --small-text: #888;
     --section: #000;
@@ -25,7 +26,7 @@
     --danger-b: #700;
     --danger-c: #200;
     font-size: 18px;
-    /* font-family: Monopix; */
+    font-family: Monopix;
     color: var(--text);
     -webkit-text-size-adjust: none;
 }
@@ -57,6 +58,19 @@ a {
     &:active {
         opacity: 0.4;
     }
+}
+figure {
+    margin: auto;
+    border: solid var(--border);
+    max-width: 80%;
+    figcaption {
+        background-color: var(--caption);
+        padding: 3px 10px;
+    }
+}
+img {
+    box-sizing: border-box;
+    max-width: 100%;
 }
 section {
     margin: 4px 2px 4px 2px;
