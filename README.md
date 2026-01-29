@@ -10,4 +10,4 @@
 <br>
 `/fonts/                                 ` - Custom fonts.
 <br>
-`/services/                              ` - API endpoints.
+`/services/           (through HTTP only)` - API endpoints.
