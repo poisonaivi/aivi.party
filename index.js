@@ -93,13 +93,15 @@ async function blogNotFound() {
     <body>
         <main>
             <div class="main">
-                <section class="nav"><div class="back"><a href="/blog/index.html">&larr; Back</a></div>aivi's blog</section>
+                <section class="nav"><div class="back"><a href="/blog/index.html">&larr; Back</a></div><a href="/blog/0001.html">&lt;&lt; First</a> | ??? | <a href="/blog/last.html">Last &gt;&gt;</a></section>
                 <section style="text-align: center;">
-                    <h1>404</h1>
-                    <h2><i>Not Found</i></h2>
+                    <div style="height: 50px;"></div>
+                    <h1 class="important">404</h1>
+                    <h2 class="important"><i>Not Found</i></h2>
                     <div style="height: 100px;"></div>
                     <p>The blog post you requested has not been written yet!</p>
-                    <p>For now, you can check out the <a href="/blog/last.html">latest post</a>.</p>
+                    <p>For now, you can check out the <a href="/blog/last.html">latest post</a> or <a href="/blog/index.html">go home</a>.</p>
+                    <div style="height: 80px;"></div>
                 </section>
             </div>
         </main>

@@ -119,26 +119,20 @@ iframe {
 }
 .warning:not(section) {
     color: var(--warning);
-    text-shadow: 0.032em 0.032em var(--warning-b), 0.032em -0.032em var(--warning-b), -0.032em -0.032em var(--warning-b), -0.032em 0.032em var(--warning-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--warning);
     &::selection {
         color: var(--warning);
-        text-shadow: 0.032em 0.032em var(--warning-b), 0.032em -0.032em var(--warning-b), -0.032em -0.032em var(--warning-b), -0.032em 0.032em var(--warning-b), 0.092em 0.092em var(--shadow);
     }
 }
 .danger:not(section) {
     color: var(--danger);
-    text-shadow: 0.032em 0.032em var(--danger-b), 0.032em -0.032em var(--danger-b), -0.032em -0.032em var(--danger-b), -0.032em 0.032em var(--danger-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--danger);
     &::selection {
         color: var(--danger);
-        text-shadow: 0.032em 0.032em var(--danger-b), 0.032em -0.032em var(--danger-b), -0.032em -0.032em var(--danger-b), -0.032em 0.032em var(--danger-b), 0.092em 0.092em var(--shadow);
     }
 }
 .important:not(section) {
     color: var(--accent);
-    text-shadow: 0.032em 0.032em var(--accent-b), 0.032em -0.032em var(--accent-b), -0.032em -0.032em var(--accent-b), -0.032em 0.032em var(--accent-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--accent);
     &::selection {
         color: var(--accent);
-        text-shadow: 0.032em 0.032em var(--accent-b), 0.032em -0.032em var(--accent-b), -0.032em -0.032em var(--accent-b), -0.032em 0.032em var(--accent-b), 0.092em 0.092em var(--shadow);
     }
 }
 .icon {
