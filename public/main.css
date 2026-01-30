@@ -43,8 +43,8 @@ body {
     background-color: var(--section);
     background-image: url(/assets/background-tile.png);
     image-rendering: pixelated;
-    filter: brightness(1.6);
-    mask: linear-gradient(0deg, #aaaa 10%, #ffff 40%, #ffff 60%, #aaaa 90%) 0 0 / 256px 2px;
+    /* filter: brightness(1.6);
+    mask: linear-gradient(0deg, #aaaa 10%, #ffff 40%, #ffff 60%, #aaaa 90%) 0 0 / 256px 2px; */
     &::selection {
         background-color: var(--selection);
         color: var(--selection-text);
