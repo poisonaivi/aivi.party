@@ -14,8 +14,8 @@ export default {
                 return new Response(JSON.stringify(resJSON), {
                     headers: {
                         "content-type": "application/json",
-                        "Access-Control-Allow-Origin": "aivi.party",
-                        // "Access-Control-Allow-Origin": "*",
+                        // "Access-Control-Allow-Origin": "aivi.party",
+                        "Access-Control-Allow-Origin": "*",
                     },
                 });
             } else if (path[1] == "discord-status") {
@@ -27,8 +27,8 @@ export default {
                 return new Response(JSON.stringify(resJSON), {
                     headers: {
                         "content-type": "application/json",
-                        "Access-Control-Allow-Origin": "aivi.party",
-                        // "Access-Control-Allow-Origin": "*",
+                        // "Access-Control-Allow-Origin": "aivi.party",
+                        "Access-Control-Allow-Origin": "*",
                     },
                 });
             } else {

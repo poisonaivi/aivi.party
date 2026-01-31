@@ -10,14 +10,15 @@
     descent-override: 35%;
 }
 :root {
-    --text: #fffc;
+    --text: #ddd;
     --icon: #fff8;
     --selection: #f6f;
     --selection-text: #404;
     --shadow: #000a;
-    --small-text: #555;
+    --small-text: #666;
     --section: #000;
-    --border: #444;
+    --section-b: #111;
+    --border: #333;
     --link: #a7f;
     --link-b: #437;
     --accent: #f0f;
@@ -43,18 +44,16 @@ body {
     background-color: var(--section);
     background-image: url(/assets/background-tile.png);
     image-rendering: pixelated;
-    filter: brightness(1.6);
-    mask: linear-gradient(0deg, #aaaa 10%, #ffff 40%, #ffff 60%, #aaaa 90%) 0 0 / 256px 2px;
+    filter: brightness(1.3);
+    mask: linear-gradient(0deg, #bbbb 10%, #ffff 40%, #ffff 60%, #bbbb 90%) 0 0 / 256px 2px;
     &::selection {
         background-color: var(--selection);
         color: var(--selection-text);
     }
-
 }
 main, .main {
     width: 1000px;
     margin: 0 auto;
-
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -75,7 +74,7 @@ h2 {
 }
 h3 {
     font-size: 36px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 p, li, details, figcaption, .text {
     text-shadow: 0.062em 0.062em var(--shadow), 0 0 0.25em var(--text);
@@ -85,7 +84,6 @@ p {
     margin: 0;
 }
 span {
-    display: inline-block;
     text-shadow: inherit;
     position: relative;
 }
@@ -108,25 +106,25 @@ a {
 section {
     margin: 0 4px 8px 4px;
     padding: 12px;
-    background-color: var(--section);
+    background: linear-gradient(var(--section-b), var(--section));
     border: 2px solid var(--border);
     border-radius: 10px;
     position: relative;
     z-index: 1;
     &.success {
-        background-color: var(--success-c);
+        background: linear-gradient(var(--success-c), var(--section));
         border-color: var(--success);
     }
     &.warning {
-        background-color: var(--warning-c);
+        background: linear-gradient(var(--warning-c), var(--section));
         border-color: var(--warning);
     }
     &.danger {
-        background-color: var(--danger-c);
+        background: linear-gradient(var(--danger-c), var(--section));
         border-color: var(--danger);
     }
     &.important {
-        background-color: var(--accent-c);
+        background: linear-gradient(var(--accent-c), var(--section));
         border-color: var(--accent);
     }
     section {
@@ -304,7 +302,7 @@ marquee {
             z-index: 1;
             height: 250px;
             display: block;
-            filter: brightness(0.7);
+            filter: brightness(0.77);
         }
         figcaption {
             position: relative;
@@ -398,5 +396,17 @@ marquee {
                 }
             }
         }
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(-2px);
     }
 }

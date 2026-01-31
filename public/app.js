@@ -108,6 +108,7 @@ async function updateLastfm() {
     const musicSection = document.getElementById("musicSection");
     const linkLabel = document.getElementById("linkLabel");
     const playingLabel = document.getElementById("playingLabel");
+    const musicIcon = document.getElementById("musicIcon");
     try {
         const res = await fetch("https://aivi.party/services/last-played");
         if (!res.ok) {
@@ -117,6 +118,7 @@ async function updateLastfm() {
             musicSection.style.backgroundImage = "url(/assets/blank-album-art.png";
             linkLabel.removeAttribute("href");
             playingLabel.innerHTML = "Last played";
+            musicIcon.style.animation = "none";
             throw new Error("Failed to fetch.");
         }
         const resJSON = await res.json();
@@ -158,6 +160,7 @@ async function updateLastfm() {
         linkLabel.href = link;
         if (playing == "y") {
             playingLabel.innerHTML = "now playing";
+            musicIcon.style.animation = "bounce 1s steps(1) infinite";
             musicSection.className = "important";
         } else {
             const timeSince = Math.floor(new Date().getTime() / 1000) - parseInt(playing);
@@ -181,6 +184,7 @@ async function updateLastfm() {
                     timeFormatted += " days ago";
             }
             playingLabel.innerHTML = "played " + timeFormatted;
+            musicIcon.style.animation = "none";
             musicSection.removeAttribute("class");
         }
     } catch (error) {
