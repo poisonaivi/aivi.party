@@ -74,7 +74,7 @@ h2 {
 }
 h3 {
     font-size: 36px;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 p, li, details, figcaption, .text {
     text-shadow: 0.062em 0.062em var(--shadow), 0 0 0.25em var(--text);
