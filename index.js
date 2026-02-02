@@ -61,12 +61,15 @@ async function pageNotFound() {
             <div style="height: 100px;"></div>
             <section class="danger" style="text-align: center;">
                 <div style="height: 100px;"></div>
-                <h1>404</h1>
-                <h3><i>Not Found</i></h3>
-                <div style="height: 50px;"></div>
-                <p>You stand before a deep chasm in the Internet.</p>
+                <div style="width: fit-content; margin: 0 auto;">
+                    <h1 class="num bg danger">?????</h1>
+                    <h1 class="num">   404   </h1>
+                </div>
+                <h3><i>Resource Not Found</i></h3>
+                <div style="height: 80px;"></div>
+                <p class="danger">On your travels, you are faced by a deep chasm in the Internet.<br>If anything's down there, it definitely wasn't meant for you.</p>
                 <br>
-                <p><a href="/index.html">Go home?</a></p>
+                <p><a href="/index.html">Head home?</a></p>
                 <div style="height: 100px;"></div>
             </section>
             <footer class="main" id="footer"><script>loadElement("footer.html", "footer");</script></footer> 

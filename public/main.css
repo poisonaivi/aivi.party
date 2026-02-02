@@ -65,6 +65,9 @@ h1, h2, h3, h4, h5, h6 {
         color: var(--accent);
         text-shadow: 0.032em 0.032em var(--accent-b), 0.032em -0.032em var(--accent-b), -0.032em -0.032em var(--accent-b), -0.032em 0.032em var(--accent-b), 0.092em 0.092em var(--shadow);
     }
+    &.num {
+        text-shadow: 0 0 0.5em var(--accent);
+    }
 }
 h1 {
     font-size: 90px;
@@ -221,7 +224,7 @@ marquee {
     white-space-collapse: preserve;
     &.bg {
         position: absolute;
-        opacity: 0.15;
+        opacity: 0.1;
         text-shadow: none;
     }
 }
@@ -397,6 +400,10 @@ marquee {
             }
         }
     }
+}
+
+.ad {
+    filter: brightness(0.77);
 }
 
 @keyframes bounce {

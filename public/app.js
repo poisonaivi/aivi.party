@@ -98,7 +98,7 @@ async function updateDiscord() {
     } catch (error) {
         console.error(error);
     }
-    setTimeout("updateDiscord()", 5000);
+    setTimeout("updateDiscord()", 10000);
 }
 
 async function updateLastfm() {
@@ -190,7 +190,7 @@ async function updateLastfm() {
     } catch (error) {
         console.error(error);
     }
-    setTimeout("updateLastfm()", 5000);
+    setTimeout("updateLastfm()", 10000);
 }
 
 async function updateCommitInfo() {
