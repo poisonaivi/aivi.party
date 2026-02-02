@@ -45,7 +45,7 @@ body {
     background-image: url(/assets/background-tile.png);
     image-rendering: pixelated;
     filter: brightness(1.3);
-    mask: linear-gradient(0deg, #bbbb 10%, #ffff 40%, #ffff 60%, #bbbb 90%) 0 0 / 256px 2px;
+    mask: linear-gradient(0deg, #aaaa 10%, #ffff 40%, #ffff 60%, #aaaa 90%) 0 0 / 256px 2px;
     &::selection {
         background-color: var(--selection);
         color: var(--selection-text);
@@ -170,15 +170,16 @@ iframe {
     border: none;
 }
 textarea, .code {
-    font-size: 0.9rem;
+    padding: 4px;
+    font-size: 0.7rem;
     font-family: monospace;
     text-shadow: none;
     color: var(--text);
     background-color: #222;
     border: 1px solid #444;
     box-sizing: border-box;
-    resize: vertical;
-        &.code {
+    resize: none;
+    &.code {
         width: 100%;
     }
 }
