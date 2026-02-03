@@ -10,13 +10,24 @@
 </head>
 <body>
     <main>
-        <header class="main" id="header"><script>loadElement("indexHeader.html", "header");</script></header>  
+        <header class="main" id="header"><script>loadElement("indexHeader.html", "header");</script></header>
+        <noscript class="main">
+            <br>
+            <section class="danger">
+                <h3 class="danger">Hey! JavaScript is disabled in your browser.</h3>
+                <p>I couldn't care less about your data. I'm not here to spy on you. This site relies on scripts to display navigation elements and external content.</p>
+                <br>
+                <p>Consider enabling JavaScript or whitelisting this site for a better experience.</p>
+                <br>
+                <p>Here's a <a href="https://javascript.amethystx.net/" target="_blank">simple guide to enable JavaScript</a> for most browsers.</p>
+            </section>
+        </noscript>
         <table class="main">
             <tr style="height: 1px;">
                 <td class="secondaryColumn">
                     <section id="discordSection" class="danger">
-                        <p><a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon" src="/assets/logos/discord.png" style="float: right;"></a><img id="presenceIcon" class="icon danger" src="/assets/icons/offline.png"> <span id="presenceLabel" class="danger">Presence not available.</span></p>
-                        <small id="statusDateLabel"></small>
+                        <p><a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon" src="/assets/logos/discord.png" style="float: right;"></a><img id="presenceIcon" class="icon danger" src="/assets/icons/offline.png"> <span id="presenceLabel" class="danger">Presence not available.</span> <small id="statusDateLabel"></small></p>
+                        <hr>
                         <p id="statusLabel"><small>No status found.</small></p>
                         <script>updateDiscord();</script>
                     </section>
@@ -24,7 +35,8 @@
                         <p><small>Eastern Standard Time (UTC&#8209;5)</small></p>
                         <h2 class="num bg">??!??!??</h2>
                         <h2 id="localTime" class="num">--:--:--</h2>
-                        <p><small>UTS:<span id="unixTime" class="important num">----------</span> • @<span id="beatTime" class="important num">---.--</span> beats</small></p>
+                        <hr>
+                        <p><small>UTS:<span id="unixTime" class="important num">----------</span> • Beat: @<span id="beatTime" class="important num">---.--</span></small></p>
                         <script>updateClockTime();</script>
                         <script>updateBeatTime();</script>
                     </section>
@@ -44,7 +56,7 @@
                 </td>
                 <td class="primaryColumn" style="height: inherit;">
                     <section style="overflow: hidden; box-sizing: border-box; min-height: 450px; height: calc(100% - 8px)">
-                        <img src="/assets/embellishment.png" style="width: 450px; position: absolute; top: -25px; right: -20px;">
+                        <img src="/assets/embellishment.png" style="width: 400px; position: absolute; top: -20px; right: -20px;">
                         <h3><span id="greeting">Hello there!</span></h3>
                         <img src="/assets/streetlamp.png" style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 0;">
                         <p>While wandering the vast Internet, you stumble across a realm of purple.</p>
@@ -92,7 +104,7 @@
                         <div style="height: 10px;"></div>
                         <div style="height: 225px; padding: 12px; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 10%, #fff 90%, #0000 100%);">
                             <table id="changelog" style="width: 100%;">
-                                <tr><td class="important num">6.26.2.2</td><td><p>Made 88x31 badge. Rewrote http error messages. Heading number displays had no text stroke by default. Added fade out to scrollable parts of chat and changelog.</p></td></tr>
+                                <tr><td class="important num">6.26.2.2</td><td><p>Made 88x31 badge. Added noscript warnings. Rewrote http error messages. Heading number displays had no text stroke by default. Added fade out to scrollable parts of chat and changelog.</p></td></tr>
                                 <tr><td class="important num">6.26.2.1</td><td><p>Redid some graphics elements on index.html.</p></td></tr>
                                 <tr><td class="important num">6.26.1.30</td><td><p>Added CRT effect to main pages. Improved text and color contrast. Restylized page elements for aethetic consistency using gradients. Added bounce animation. Fixed glyph repertoire in blog post for Segris.</p></td></tr>
                                 <tr><td class="important num">6.26.1.28</td><td><p>Created num and bg class for number displays, using a new font, Segris 16. Temporarily fixed issue where some browsers don't show the entire welcome section.</p></td></tr>
@@ -210,8 +222,9 @@
                         </div>
                     </section>
                 </td><td class="secondaryColumn">
-                    <section class="important">
-                        <h3><span class="important">Link me!!</span></h3>
+                    <section>
+                        <p><span class="important">Sharing is caring! Link me:</span></p>
+                        <hr>
                         <table style="width: 100%;">
                             <tr>
                                 <td style="vertical-align: middle;">

@@ -90,7 +90,7 @@ async function updateDiscord() {
                 minute: '2-digit',
             }, formatter = new Intl.DateTimeFormat([], clockOptions);
             statusLabel.innerHTML = "&ldquo;" + status + "&rdquo;";
-            statusDateLabel.innerHTML = "Status • " + formatter.format(new Date(statusDate));
+            statusDateLabel.innerHTML = formatter.format(new Date(statusDate));
         } else {
             statusLabel.innerHTML = "<small>No status found.</small>"
             statusDateLabel.innerHTML = "";

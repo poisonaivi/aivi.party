@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.38">
-    <title>AIVI.PARTY!</title>
+    <title>guestbook • AIVI.PARTY!</title>
     <script src="/app.js"></script>
     <link rel="stylesheet" href="/main.css">
     <link rel="icon" href="/assets/amethyst-tilted-lowres.png">
@@ -11,6 +11,17 @@
 <body>
     <main>
         <header class="main" id="header"><script>loadElement("header.html", "header");</script></header>
+        <noscript class="main">
+            <br>
+            <section class="danger">
+                <h3 class="danger">Hey! JavaScript is disabled in your browser.</h3>
+                <p>I couldn't care less about your data. I'm not here to spy on you. This site relies on scripts to display navigation elements and external content.</p>
+                <br>
+                <p>Consider enabling JavaScript or whitelisting this site for a better experience.</p>
+                <br>
+                <p>Here's a <a href="https://javascript.amethystx.net/" target="_blank">simple guide to enable JavaScript</a> for most browsers.</p>
+            </section>
+        </noscript>
         <table class="main">
             <tr>
                 <td class="secondaryColumn">
@@ -24,7 +35,7 @@
                     </section>
                 </td>
                 <td class="primaryColumn">
-                    <section class="important" style="margin: 0; overflow: hidden;">
+                    <section class="important" style="padding: 0; overflow: hidden;">
                         <iframe id="guestbookEmbed" src="https://poisonaivi.atabook.org/" style="width: 100%; height: 1800px; margin-top: -60px;"></iframe>
                     </section>
                 </td>

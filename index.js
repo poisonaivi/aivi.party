@@ -67,7 +67,7 @@ async function pageNotFound() {
                 </div>
                 <h3><i>Resource Not Found</i></h3>
                 <div style="height: 80px;"></div>
-                <p class="danger">On your travels, you are faced by a deep chasm in the Internet.<br>If anything's down there, it definitely wasn't meant for you.</p>
+                <p class="danger">You come across a deep chasm in the Internet.<br>If anything's down there, it definitely wasn't meant for you.</p>
                 <br>
                 <p><a href="/index.html">Head home?</a></p>
                 <div style="height: 100px;"></div>
@@ -101,9 +101,9 @@ async function blogNotFound() {
                     <div style="height: 50px;"></div>
                     <h1 class="important">404</h1>
                     <h2 class="important"><i>Not Found</i></h2>
-                    <div style="height: 100px;"></div>
+                    <div style="height: 60px;"></div>
                     <p>The blog post you requested has not been written yet!</p>
-                    <p>For now, you can check out the <a href="/blog/last.html">latest post</a> or <a href="/blog/index.html">go home</a>.</p>
+                    <p>You can still check out the <a href="/blog/last.html">latest post</a> or <a href="/blog/index.html">go home</a>.</p>
                     <div style="height: 80px;"></div>
                 </section>
             </div>
