@@ -133,19 +133,19 @@ async function updateLastfm() {
         } catch (error) {
             var playing = "y";
         }
-        if (title != titleLabel.innerText) {
+        if (title != titleLabel.innerText.replace(/(\r\n|\n|\r)/gm, "")) {
             if (title.length > 14) {
                 title = "<marquee>" + title + "</marquee>";
             }
             titleLabel.innerHTML = title;
         }
-        if (artist != artistLabel.innerText) {
+        if (artist != artistLabel.innerText.replace(/(\r\n|\n|\r)/gm, "")) {
             if (artist.length > 29) {
                 artist = '<marquee scrollamount="4">' + artist + "</marquee>";
             }
             artistLabel.innerHTML = artist;
         }
-        if (album != albumLabel.innerText) {
+        if (album != albumLabel.innerText.replace(/(\r\n|\n|\r)/gm, "")) {
             if (album.length > 29) {
                 album = '<marquee scrollamount="4">' + album + "</marquee>";
             }
