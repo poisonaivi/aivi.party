@@ -8,7 +8,7 @@
 
 :root {
     --acc-accent: #95c;
-    --acc-border: #b8d;
+    --acc-border: #a7d;
     --acc-accent-text: #fff;
     --acc-bg: #ccc;
 }
@@ -20,7 +20,7 @@
     position: fixed;
     left: 7px;
     bottom: 7px;
-    border: solid 2.5px white;
+    border: outset 3px var(--acc-border);
     border-radius: 100%;
     background-color: var(--acc-accent);
     background-image: url(/assets/icons/accessibility.png);
@@ -48,7 +48,7 @@
         margin: 10px 0;
     }
     div {
-        padding: 10px;
+        padding: 12px;
     }
 }
 
