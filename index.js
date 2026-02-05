@@ -72,7 +72,7 @@ async function pageNotFound() {
                 <p><a href="/index.html">Head home?</a></p>
                 <div style="height: 100px;"></div>
             </section>
-            <footer class="main" id="footer"><script>loadElement("footer.html", "footer");</script></footer> 
+            <footer id="footer"><script>loadElement("footer.html", "footer");</script></footer> 
         </main>
     </body>
     </html>`;
@@ -95,7 +95,7 @@ async function blogNotFound() {
     </head>
     <body>
         <main>
-            <div class="main">
+            <div>
                 <section class="nav"><div class="back"><a href="/blog/index.html">&larr; Back</a></div><a href="/blog/0001.html">&lt;&lt; First</a> | ??? | <a href="/blog/last.html">Last &gt;&gt;</a></section>
                 <section style="text-align: center;">
                     <div style="height: 50px;"></div>

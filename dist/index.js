@@ -70,7 +70,7 @@ async function pageNotFound() {
                 <p><a href="/index.html">Go home?</a></p>
                 <div style="height: 100px;"></div>
             </section>
-            <footer class="main" id="footer"><script>loadElement("footer.html", "footer");<\/script></footer> 
+            <footer id="footer"><script>loadElement("footer.html", "footer");<\/script></footer> 
         </main>
     </body>
     </html>`;

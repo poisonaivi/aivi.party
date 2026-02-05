@@ -11,27 +11,36 @@
 }
 :root {
     --text: #ddd;
+    --d-text-b: #ddd;
+    --text-b: var(--d-text-b);
     --icon: #fff8;
     --selection: #f6f;
     --selection-text: #404;
     --shadow: #000a;
-    --small-text: #666;
+    --d-small-text: #666;
+    --small-text: var(--d-small-text);
     --section: #000;
     --section-b: #111;
-    --border: #333;
+    --d-border: #333;
+    --border: var(--d-border);
     --link: #b8f;
-    --link-b: #537;
+    --d-link-b: #537;
+    --link-b: var(--d-link-b);
     --accent: #f0f;
-    --accent-b: #707;
+    --d-accent-b: #707;
+    --accent-b: var(--d-accent-b);
     --accent-c: #202;
     --success: #0f0;
-    --success-b: #070;
+    --d-success-b: #070;
+    --success-b: var(--d-success-b);
     --success-c: #020;
     --warning: #ff0;
-    --warning-b: #770;
+    --d-warning-b: #770;
+    --warning-b: var(--d-warning-b);
     --warning-c: #220;
     --danger: #f00;
-    --danger-b: #700;
+    --d-danger-b: #700;
+    --danger-b: var(--d-danger-b);
     --danger-c: #200;
     font-size: 18px;
     font-family: Monopix, monospace;
@@ -44,7 +53,6 @@ body {
     background-color: var(--section);
     background-image: url(/assets/background-tile.png);
     image-rendering: pixelated;
-    mask: linear-gradient(0deg, #aaaa 10%, #ffff 40%, #ffff 60%, #aaaa 90%) 0 0 / 256px 2px;
     &::selection {
         background-color: var(--selection);
         color: var(--selection-text);
@@ -55,6 +63,7 @@ main, .main {
     margin: 0 auto;
 }
 main {
+    mask: linear-gradient(0deg, #aaaa 10%, #ffff 40%, #ffff 60%, #aaaa 90%) 0 0 / 256px 2px;
     filter: brightness(1.4);
 }
 h1, h2, h3, h4, h5, h6 {
@@ -82,7 +91,7 @@ h3 {
     margin-bottom: 6px;
 }
 p, li, details, figcaption, .text {
-    text-shadow: 0.062em 0.062em var(--shadow), 0 0 0.25em var(--text);
+    text-shadow: 0.062em 0.062em var(--shadow), 0 0 0.25em var(--text-b);
     position: relative;
 }
 p {
@@ -300,7 +309,6 @@ marquee {
         display: inline-block;
         overflow: hidden;
         margin: 0 -1px 2px 0;
-        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 700ms;
         background-image: url(/assets/transparency.png);
         background-size: 16px;
         img {
@@ -308,7 +316,6 @@ marquee {
             z-index: 1;
             height: 250px;
             display: block;
-            filter: brightness(0.77);
         }
         figcaption {
             position: relative;
@@ -319,19 +326,15 @@ marquee {
             padding: 8px;
             box-sizing: border-box;
             position: absolute;
-            transition: inherit;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 700ms;
             &.desc {
                 bottom: 0;
                 background: linear-gradient(#0000, #000a 30%, #000);
                 height: fit-content;
                 opacity: 0;
-                font-size: 10px;
             }
         }
         &:hover, &:active {
-            scale: 1.4;
-            box-shadow: 0 0 50px var(--shadow);
-            z-index: 3;
             figcaption {
                 opacity: 0;
                 &.desc {
@@ -378,15 +381,11 @@ marquee {
                 transition: inherit;
             }
             .actions {
-                font-size: 15px;
                 opacity: 0;
                 transition: inherit;
             }
         }
         &:hover, &:active {
-            scale: 1.2;
-            box-shadow: 0 0 50px var(--shadow);
-            z-index: 2;
             figure {
                 img {
                     width: 40%;

@@ -9,6 +9,7 @@
     <link rel="icon" href="/assets/amethyst-tilted-lowres.png">
 </head>
 <body>
+    <div id="accessibility" hidden><script defer src="/elements/accScript.js"></script><script>loadElement("accMenu.html", "accessibility", );</script></div>
     <main>
         <header class="main" id="header"><script>loadElement("indexHeader.html", "header");</script></header>
         <noscript>
@@ -61,11 +62,11 @@
                         <img src="/assets/streetlamp.png" style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 0;">
                         <p>While wandering the vast Internet, you stumble across a realm of purple.</p>
                         <br>
-                        <p>Welcome to <span class="important">aivi</span><span class="success">.party!</span> You can call me <span class="important">Amethyst</span> or <span class="important">Aivi</span> <small>(she/her/it)</small>. This domain is my home on the Internet, and it's mostly just a place for me to experiment, post my drawings, write bad code, and talk about my many interests.</p>
+                        <p>Welcome to <span class="important">aivi</span><span class="success">.party!</span> You can call me <span class="important">Amethyst</span> or <span class="important">Aivi</span> <small>(she/her/it)</small>. I like indie web stuff, and this domain is my hub for all that. It's also a place for me to experiment, post my drawings, write bad code, and talk about my many interests.</p>
                         <br>
                         <p>Before you continue exploring, you should know <span class="important">that this site isn't made for everyone</span>! There's foul language, NSFW outlinks, and the occasional rant into heavier topics. <span class="important">Proceed if you wish!</span></p>
                         <br>
-                        <small>As of January 6, 2026, most content previously served on amethystx.net has been relocated to aivi.party.</small>
+                        <small>If anything looks broken, try hitting Ctrl/Cmd/Opt + Shift + R to hard-reload the site.</small>
                         <small style="position: absolute; bottom: 12px; right: 12px;">version <span class="num">6<span id="commitDate"></span><span id="commitId"></span></span></small>
                         <script>updateCommitInfo();</script>
                         <script>updateGreeting();</script>
@@ -104,6 +105,7 @@
                         <div style="height: 10px;"></div>
                         <div style="height: 225px; padding: 12px; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 10%, #fff 90%, #0000 100%);">
                             <table id="changelog" style="width: 100%;">
+                                <tr><td class="important num">6.26.2.5</td><td><p>Added experimental accessibility menu on main pages. Removed scaling hover transitions in gallery.html and projects.html.</p></td></tr>
                                 <tr><td class="important num">6.26.2.3</td><td><p>Fixed issue where marquees kept restarting when using Safari. Cleaned up formatting on most pages.</p></td></tr>
                                 <tr><td class="important num">6.26.2.2</td><td><p>Made 88x31 badge. Added noscript warnings. Rewrote http error messages. Heading number displays had no text stroke by default. Added fade out to scrollable parts of chat and changelog.</p></td></tr>
                                 <tr><td class="important num">6.26.2.1</td><td><p>Redid some graphics elements on index.html.</p></td></tr>

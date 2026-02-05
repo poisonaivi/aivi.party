@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/elements/accStyles.css">
+<button id="acc-button" onclick="accMenuOpen();" title="Open Accessibility Menu"></button>
+<div id="acc-menu">
+    <div class="acc-title">
+        <img src="/assets/icons/accessibility.png" style="float: left; transform: translate(-3px, -2px);"><b>Accessibility Menu [Experimental]</b>
+        <button onclick="accMenuClose();" style="float: right; transform: translateY(-1px);" title="Close Accessibility Menu"><u>Close</u></button>
+    </div>
+    <div class="acc-options">
+        <fieldset>
+            <legend><b>Visual:</b></legend>
+            <input type="checkbox" id="novfx" onclick="accChange();">
+            <label for="novfx">Disable visual effects</label>
+            <br>
+            <input type="checkbox" id="desat" onclick="accChange();">
+            <label for="desat">Reduce bright colors</label>
+            <br>
+            <input type="checkbox" id="contrast" onclick="accChange();">
+            <label for="contrast">Increase contrast</label>
+            <br>
+            <input type="checkbox" id="invert" onclick="accChange();">
+            <label for="invert">Invert colors</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><b>Font:</b></legend>
+            <input type="radio" id="sitefont" name="font" onclick="accChange();" checked>
+            <label for="sitefont" style="font-family: monopix;">Default</label>
+            <br>
+            <input type="radio" id="accfont" name="font" onclick="accChange();">
+            <label for="accfont" style="font-family: OpenDyslexic;">OpenDyslexic</label>
+            <br>
+            <input type="radio" id="sansfont" name="font" onclick="accChange();">
+            <label for="sansfont" style="font-family: sans-serif;">Sans-serif</label>
+            <br>
+            <input type="radio" id="seriffont" name="font" onclick="accChange();">
+            <label for="seriffont" style="font-family: serif;">Serif</label>
+        </fieldset>
+        <br>
+        <i>Accessibility features may not work on every page. Performance may vary depending on your browser and device type.</i>
+    </div>
+</div>
