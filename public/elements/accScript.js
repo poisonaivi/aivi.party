@@ -7,8 +7,8 @@ function accMenuClose() {
 }
 
 function accRecall() {
-    optionIds = ["novfx", "desat", "contrast", "invert", "accfont", "sansfont", "seriffont"];
-    options = [false, false, false, false, false, false, false];
+    optionIds = ["novfx", "desat", "contrast", "invert", "accfont", "sansfont", "seriffont", "monofont"];
+    options = [false, false, false, false, false, false, false, false];
     for (let i = 0; i < options.length; i++) {
         if (localStorage.getItem(optionIds[i])) {
             options[i] = true;
@@ -17,7 +17,6 @@ function accRecall() {
             }, 100);
         }
     }
-    console.log(options);
 }
 
 function accChange() {
@@ -77,6 +76,9 @@ function accApply() {
     if (options[6]) {
         mainFont = "serif";
     }
+    if (options[7]) {
+        mainFont = "monospace";
+    }
     mainEle.style.filter = mainFilter;
     mainEle.style.mask = mainMask;
     mainEle.style.fontFamily = mainFont;
@@ -84,10 +86,10 @@ function accApply() {
 }
 
 loadElement("accMenu.html", "accessibility");
-var options;
-var optionIds;
 setTimeout(() => {
     document.getElementById("accessibility").hidden = false;
 }, 400);
+var options;
+var optionIds;
 accRecall();
 accApply();

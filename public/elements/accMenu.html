@@ -2,7 +2,7 @@
 <button id="acc-button" onclick="accMenuOpen();" title="Open Accessibility Menu"></button>
 <div id="acc-menu">
     <div class="acc-title">
-        <img src="/assets/icons/accessibility.png" style="float: left; transform: translate(-3px, -2px);"><b>Accessibility Menu [Experimental]</b>
+        <img src="/assets/icons/accessibility.png" style="float: left; transform: translate(-3px, -2px);"><b>Accessibility Menu</b>
         <button onclick="accMenuClose();" style="float: right; transform: translateY(-1px);" title="Close Accessibility Menu"><u>Close</u></button>
     </div>
     <div class="acc-options">
@@ -34,8 +34,11 @@
             <br>
             <input type="radio" id="seriffont" name="font" onclick="accChange();">
             <label for="seriffont" style="font-family: serif;">Serif</label>
+            <br>
+            <input type="radio" id="monofont" name="font" onclick="accChange();">
+            <label for="monofont" style="font-family: monospace;">Monospace</label>
         </fieldset>
         <br>
-        <i>Accessibility features may not work on every page. Performance may vary depending on your browser and device type.</i>
+        <i>Performance may vary depending on your browser and device type. Settings are saved on your device.</i>
     </div>
 </div>

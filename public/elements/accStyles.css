@@ -7,9 +7,10 @@
 }
 
 :root {
-    --acc-accent: #55f;
+    --acc-accent: #95c;
+    --acc-border: #b8d;
     --acc-accent-text: #fff;
-    --acc-bg: #fff;
+    --acc-bg: #ccc;
 }
 
 #acc-button {
@@ -19,12 +20,13 @@
     position: fixed;
     left: 7px;
     bottom: 7px;
-    border: solid 2px var(--acc-bg);
+    border: solid 2.5px white;
     border-radius: 100%;
     background-color: var(--acc-accent);
     background-image: url(/assets/icons/accessibility.png);
     background-size: cover;
 }
+
 #acc-menu {
     visibility: hidden;
     width: 500px;
@@ -35,9 +37,9 @@
     position: fixed;
     left: 7px;
     bottom: 7px;
-    border-radius: 15px;
+    border-radius: 20px;
     background-color: var(--acc-bg);
-    border: solid 2px var(--acc-accent);
+    border: outset 3px var(--acc-border);
     overflow: hidden;
     font-family:'Lucida Grande', Verdana, sans-serif;
     color: #000;
