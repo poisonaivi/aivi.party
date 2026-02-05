@@ -87,6 +87,6 @@ var options;
 var optionIds;
 setTimeout(() => {
     document.getElementById("accessibility").hidden = false;
-}, 200);
+}, 500);
 accRecall();
 accApply();
