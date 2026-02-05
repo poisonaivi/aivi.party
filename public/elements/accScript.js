@@ -83,10 +83,11 @@ function accApply() {
     document.getElementById("acc-menu").style.fontFamily = mainFont;
 }
 
+loadElement("accMenu.html", "accessibility");
 var options;
 var optionIds;
 setTimeout(() => {
     document.getElementById("accessibility").hidden = false;
-}, 500);
+}, 400);
 accRecall();
 accApply();
