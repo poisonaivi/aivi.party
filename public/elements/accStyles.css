@@ -8,7 +8,7 @@
 
 :root {
     --acc-accent: #95c;
-    --acc-border: #a7d;
+    --acc-border: #fff;
     --acc-accent-text: #fff;
     --acc-bg: #ccc;
 }
@@ -18,9 +18,9 @@
     aspect-ratio: 1;
     z-index: 100;
     position: fixed;
-    left: 7px;
-    bottom: 7px;
-    border: outset 3px var(--acc-border);
+    left: 8px;
+    bottom: 8px;
+    border: solid 3px var(--acc-border);
     border-radius: 100%;
     background-color: var(--acc-accent);
     background-image: url(/assets/icons/accessibility.png);
@@ -39,7 +39,7 @@
     bottom: 7px;
     border-radius: 20px;
     background-color: var(--acc-bg);
-    border: outset 3px var(--acc-border);
+    border: ridge 2px var(--acc-accent);
     overflow: hidden;
     font-family:'Lucida Grande', Verdana, sans-serif;
     color: #000;

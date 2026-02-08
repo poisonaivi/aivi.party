@@ -28,8 +28,8 @@
     <main>
         <div style="height: 50px;"></div>
         <section>
-            <h1 class="num bg">?????</h1>
-            <h1 id="counter" class="num">            0</h1>
+            <!-- <h1 class="num bg">?????</h1> -->
+            <h1 id="counter" class="num">0000</h1>
             <div style="height: 50px;"></div>
             <button onmousedown="ctup();">+1</button>
             <button onmousedown="ctdn();">-1</button>
@@ -38,7 +38,7 @@
         </section>
         <script>
             const sp = "   ";
-            const len = 5;
+            const len = 4;
             const cte = document.getElementById("counter");
             var val = 0;
             var goingup = false;
@@ -55,7 +55,7 @@
                 dis = val;
                 vallen = val.toString().length;
                 for (let i = 0; i < len - vallen; i++) {
-                    dis = sp + dis;                        
+                    dis = "0" + dis;                        
                 }
                 cte.innerText = dis;
             }
@@ -78,7 +78,7 @@
                 }, 10);
             }
         </script>
-        <section>
+        <section hidden>
             <h1 class="num bg">??!??!??</h1>
             <h1 class="num" style="display: inline-block;">12:34 PM</h1>
             <div style="display: inline-block; margin-left: 40px;">

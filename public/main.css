@@ -181,6 +181,7 @@ iframe {
     border: none;
 }
 textarea, .code {
+    display: block;
     padding: 4px;
     font-size: 0.7rem;
     font-family: monospace;
@@ -320,7 +321,7 @@ marquee {
         figcaption {
             position: relative;
             z-index: 2;
-            background: linear-gradient(#000d, #0002, #0000);
+            background: linear-gradient(#000d, #0004, #0000);
             height: 100%;
             width: 100%;
             padding: 8px;
@@ -329,7 +330,7 @@ marquee {
             transition: cubic-bezier(0.075, 0.82, 0.165, 1) 700ms;
             &.desc {
                 bottom: 0;
-                background: linear-gradient(#0000, #000a 30%, #000);
+                background: linear-gradient(#0000, #000c 20%, #000);
                 height: fit-content;
                 opacity: 0;
             }
