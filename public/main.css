@@ -315,7 +315,7 @@ marquee {
         img {
             position: relative;
             z-index: 1;
-            height: 250px;
+            height: 300px;
             display: block;
         }
         figcaption {
