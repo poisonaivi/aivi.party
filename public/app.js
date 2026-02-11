@@ -225,7 +225,9 @@ function updateClockTime() {
     var seconds = time.slice(6, 8);
     var milliseconds = date.getMilliseconds();
     document.getElementById("localTime").innerHTML = hours + ":" + minutes + ":" + seconds;
-    document.getElementById("unixTime").innerHTML = Date.now().toString().slice(0, -3);
+    try {
+        document.getElementById("unixTime").innerHTML = Date.now().toString().slice(0, -3);
+    } catch {}
 	setTimeout("updateClockTime()", 1000 - milliseconds % 1000 );
 }
 

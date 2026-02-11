@@ -58,13 +58,32 @@ body {
         color: var(--selection-text);
     }
 }
-main, .main {
-    width: 1000px;
-    margin: 0 auto;
-}
 main {
+    width: 1000px;
+    height: 100vh;
+    max-width: 95%;
+    margin: 0 auto;
     mask: linear-gradient(0deg, #aaaa 10%, #ffff 40%, #ffff 60%, #aaaa 90%) 0 0 / 256px 2px;
     filter: brightness(1.4);
+}
+.main {
+    padding: 3%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    box-sizing: border-box;
+}
+#left, #right {
+    display: table-cell;
+    vertical-align: middle;
+}
+#left {
+    width: 25%;
+    min-width: 100px;
+}
+#right {
+    padding: 20px 0 20px 3.3%;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -95,7 +114,7 @@ p, li, details, figcaption, .text {
     position: relative;
 }
 p {
-    margin: 0;
+    margin: 5px 0;
 }
 span {
     text-shadow: inherit;
@@ -105,6 +124,7 @@ a {
     color: var(--link);
     text-shadow: 0.032em 0.032em var(--link-b), 0.032em -0.032em var(--link-b), -0.032em -0.032em var(--link-b), -0.032em 0.032em var(--link-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--link);
     position: relative;
+    cursor: pointer;
     &:hover {
         opacity: 0.6;
         text-decoration-style: dashed;    
@@ -118,11 +138,11 @@ a {
     }
 }
 section {
-    margin: 0 4px 8px 4px;
-    padding: 12px;
+    /* margin: 0 4px 8px 4px; */
+    /* padding: 12px; */
     background: linear-gradient(var(--section-b), var(--section));
     border: 2px solid var(--border);
-    border-radius: 18px;
+    border-radius: 9px;
     position: relative;
     z-index: 1;
     &.success {
@@ -225,13 +245,6 @@ details[open] > summary {
 marquee {
     display: block;
 }
-.primaryColumn {
-    width: 700px;
-}
-.secondaryColumn {
-    min-width: 300px;
-    max-width: 300px;
-}
 .num{
     font-family: "Segris 16", "Monopix", monospace;
     white-space-collapse: preserve;
@@ -300,10 +313,11 @@ marquee {
 .button {
     display: inline-block;
     padding: 5px 12px;
+    margin: 8px 0;
     background-color: var(--accent-c);
-    border: solid 1px var(--link);
+    border: solid 1px var(--accent);
     border-radius: 4px;
-    box-shadow: 3px 3px var(--link), 0 0 24px var(--link-b);
+    box-shadow: 3px 3px var(--accent-b), 0 0 18px var(--accent-c);
     z-index: 2;
     &:hover {
         border-style: dashed;
@@ -323,125 +337,6 @@ marquee {
             transition: opacity 5s;
         }
     }
-}
-
-#changelog tr td, .facts tr td {
-    &:first-of-type {
-        text-align: right;
-        width: 110px;
-        padding-right: 10px;
-    }
-    p {
-        margin-bottom: 18px;
-    }
-}
-
-.gallery {
-    margin: 0px 4px;
-    figure {
-        border: 2px solid var(--border);
-        border-radius: 18px;
-        position: relative;
-        display: inline-block;
-        overflow: hidden;
-        margin: 0 -1px 2px 0;
-        background-image: url(/assets/transparency.png);
-        background-size: 16px;
-        img {
-            position: relative;
-            z-index: 1;
-            height: 300px;
-            display: block;
-        }
-        figcaption {
-            position: relative;
-            z-index: 2;
-            background: linear-gradient(#000d, #0004, #0000);
-            height: 100%;
-            width: 100%;
-            padding: 12px;
-            box-sizing: border-box;
-            position: absolute;
-            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 700ms;
-            &.desc {
-                bottom: 0;
-                background: linear-gradient(#0000, #000c 20%, #000);
-                height: fit-content;
-                opacity: 0;
-            }
-        }
-        &:hover, &:active {
-            figcaption {
-                opacity: 0;
-                &.desc {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
-
-.listing {
-    margin: 0px 4px;
-    section {
-        margin: 0 0 8px 0;
-        height: 140px;
-        position: relative;
-        overflow: hidden;
-        padding: 0;
-        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 700ms;
-        figure {
-            position: relative;
-            z-index: 0;
-            margin: 0;
-            height: 100%;
-            transition: inherit;
-            img {
-                height: 100%;
-                width: 25%;
-                object-fit: cover;
-                mask-image: linear-gradient(90deg, #000, #0000);
-                transition: inherit;
-            }
-        }
-        .desc {
-            display: inline-block;
-            position: absolute;
-            width: 77%;
-            z-index: 1;
-            margin-left: 20%;
-            padding: 8px 12px 4px 0px;
-            transition: inherit;
-            p {
-                position: absolute;
-                transition: inherit;
-            }
-            .actions {
-                opacity: 0;
-                transition: inherit;
-            }
-        }
-        &:hover, &:active {
-            figure {
-                img {
-                    width: 40%;
-                }
-            }
-            .desc {
-                margin-left: 40%;
-                p {
-                    opacity: 0;
-                }
-                .actions {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
-
-.ad {
-    filter: brightness(0.77);
 }
 
 @keyframes bounce {
