@@ -59,7 +59,7 @@ async function pageNotFound() {
     <body>
         <div id="accessibility" hidden><script defer src="/elements/accScript.js"></script></div>
         <main>
-            <header class="main" id="header"><script>loadElement("header.html", "header");</script></header>
+            <header class="main" id="header"><script src="/elements/headerScript.js"></script></header>
             <section class="danger" style="text-align: center;">
                 <div style="height: 100px;"></div>
                 <div style="width: fit-content; margin: 0 auto;">

@@ -27,26 +27,25 @@
             <tr style="height: 1px;">
                 <td class="secondaryColumn">
                     <section id="discordSection" class="danger">
-                        <p><a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon" src="/assets/logos/discord.png" style="float: right;"></a><img id="presenceIcon" class="icon danger" src="/assets/icons/offline.png"> <span id="presenceLabel" class="danger">Presence not available.</span> <small id="statusDateLabel"></small></p>
+                        <a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon inline-right" src="/assets/logos/discord.png" style="float: right;"></a>
+                        <img id="presenceIcon" class="icon danger inline-left" src="/assets/icons/offline.png"><span id="presenceLabel" class="danger">Presence not available.</span> <small id="statusDateLabel"></small>
                         <hr>
                         <p id="statusLabel"><small>No status found.</small></p>
                         <script>updateDiscord();</script>
                     </section>
                     <section>
-                        <small>Eastern Standard Time (UTC&#8209;5)</small>
-                        <h2 class="num bg" style="font-size: 75px;">??!??!??</h2>
-                        <h2 id="localTime" class="num" style="font-size: 75px;">--:--:--</h2>
+                        <p><img class="icon inline-left" src="/assets/icons/clock.png">Eastern Standard <small>(UTC&#8209;5)</small></p>
+                        <h2 class="num bg" style="font-size: 65px;">??!??!??</h2>
+                        <h2 id="localTime" class="num" style="font-size: 65px;">--:--:--</h2>
                         <hr>
-                        <small>UTS:<span id="unixTime" class="important num">----------</span> • Beat: @<span id="beatTime" class="important num">---.--</span></small>
+                        <small>Unix Epoch:<span id="unixTime" class="important num">----------</span> • Beat: @<span id="beatTime" class="important num">---.--</span></small>
                         <script>updateClockTime();</script>
                         <script>updateBeatTime();</script>
                     </section>
                     <section id="musicSection" style="aspect-ratio: 1.5; box-shadow: inset 0 0 30px var(--shadow); background-image: url(/assets/blank-album-art.png); background-position: 50%; background-size: cover; overflow: hidden;">
                         <div style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #000b;"></div>                        
-                        <a href="https://www.last.fm/user/am3thystx" target="_blank">
-                            <p style="float: right;" ><img class="icon" src="/assets/logos/lastfm.png"></p>
-                        </a>
-                        <p style="float: left;"><img id="musicIcon" class="icon" src="/assets/icons/music.png"> <span id="playingLabel">last played</span></p>
+                        <a href="https://www.last.fm/user/am3thystx" target="_blank"><img class="icon inline-right" src="/assets/logos/lastfm.png" style="float: right;"></a>
+                        <p style="float: left;"><img id="musicIcon" class="icon inline-left" src="/assets/icons/music.png"><span id="playingLabel">last played</span></p>
                         <div style="position: absolute; bottom: 12px; width: calc(100% - 2 * 12px);">
                             <a class="important" id="linkLabel" target="_blank"><h3 id="titleLabel" style="white-space: nowrap; overflow: visible;"><span class="danger">No song found.</span></h3></a>
                             <p id="artistLabel" style="white-space: nowrap; overflow: visible;"></p>
@@ -77,14 +76,14 @@
                 <td colspan="2">
                     <section>
                         <table style="width: 100%; text-align: center;">
-                            <td style="width: 12.5%"><a href="https://www.deviantart.com/am3thystx" target="_blank">DeviantArt<br><img class="icon" src="/assets/logos/deviantart.png"></a></td>
-                            <td style="width: 12.5%"><a href="https://cara.app/poisonaivi" target="_blank">Cara<br><img class="icon" src="/assets/logos/cara.png"></td>
-                            <td style="width: 12.5%"><a href="https://discord.com/users/802178124342493224" target="_blank">Discord<br><img class="icon" src="/assets/logos/discord.png"></a></td>
-                            <td style="width: 12.5%"><a href="https://bsky.app/profile/aivi.party" target="_blank">Bluesky<br><img class="icon" src="/assets/logos/bluesky.png"></a></td>
-                            <td style="width: 12.5%"><a href="https://github.com/ax-x3" target="_blank">GitHub<br><img class="icon" src="/assets/logos/github.png"></a></td>
-                            <td style="width: 12.5%"><a href="https://www.last.fm/user/am3thystx" target="_blank">Last.fm<br><img class="icon" src="/assets/logos/lastfm.png"></a></td>
-                            <td style="width: 12.5%"><a href="https://neocities.org/site/aivi" target="_blank">Neocities<br><img class="icon" src="/assets/logos/neocities.png"></a></td>
-                            <td style="width: 12.5%"><a href="https://webtiles.kicya.net/#875,-1625" target="_blank">WebTiles<br><img class="icon" src="/assets/logos/webtiles.png"></a></td>
+                            <td style="width: 12.5%"><a href="https://www.deviantart.com/am3thystx" target="_blank"><img class="icon" src="/assets/logos/deviantart.png"><br>DeviantArt</a></td>
+                            <td style="width: 12.5%"><a href="https://cara.app/poisonaivi" target="_blank"><img class="icon" src="/assets/logos/cara.png"><br>Cara</td>
+                            <td style="width: 12.5%"><a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon" src="/assets/logos/discord.png"><br>Discord</a></td>
+                            <td style="width: 12.5%"><a href="https://bsky.app/profile/aivi.party" target="_blank"><img class="icon" src="/assets/logos/bluesky.png"><br>Bluesky</a></td>
+                            <td style="width: 12.5%"><a href="https://github.com/ax-x3" target="_blank"><img class="icon" src="/assets/logos/github.png"><br>GitHub</a></td>
+                            <td style="width: 12.5%"><a href="https://www.last.fm/user/am3thystx" target="_blank"><img class="icon" src="/assets/logos/lastfm.png"><br>Last.fm</a></td>
+                            <td style="width: 12.5%"><a href="https://neocities.org/site/aivi" target="_blank"><img class="icon" src="/assets/logos/neocities.png"><br>Neocities</a></td>
+                            <td style="width: 12.5%"><a href="https://webtiles.kicya.net/#875,-1625" target="_blank"><img class="icon" src="/assets/logos/webtiles.png"><br>WebTiles</a></td>
                         </table>
                     </section>
                 </td>
@@ -96,16 +95,16 @@
                     <section style="padding: 0; overflow: hidden;">
                         <iframe src="https://www3.cbox.ws/box/?boxid=3545093&boxtag=rRmvwj" style="width: 100%; height: 400px; mask-image: linear-gradient(0deg, #fff 80%, #0000 100%);"></iframe>	
                         <div style="height: 15px; margin: 8px 12px 12px 12px;">
-                            <small style="float: left">Chat messages are public, so be kind to others!</small>
+                            <small style="float: left"><img class="icon inline-left" src="/assets/icons/chat.png">Chat messages are public, so be kind to others!</small>
                             <small style="float: right">Also, check out the <a href="/guestbook.html">guestbook</a>!</small>
                         </div>
                     </section>
                     <section style="padding: 0; overflow: hidden;">
                         <p style="margin: 12px 12px 0 12px;"><img class="icon" src="/assets/icons/document.png"> changelog <small>version: <span class="success num">6<span id="changelogCommitDate"><span class="danger">.X.X.X</span></span></span> hash: <span id="changelogCommitId" class="success num"><span class="danger">UNAVAILABLE</span></span></small></p>
                         <div style="height: 10px;"></div>
-                        <div style="height: 225px; padding: 12px; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 10%, #fff 90%, #0000 100%);">
+                        <div style="height: 225px; padding: 12px; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 20%, #fff 90%, #0000 100%);">
                             <table id="changelog" style="width: 100%;">
-                                <tr><td class="important num">6.26.2.10</td><td><p>Added Wikipedia links to about.html. Made gallery previews larger. Made the clock fit available space. Decorated regular header. Added header to error pages.</p></td></tr>
+                                <tr><td class="important num">6.26.2.10</td><td><p>Improved headers and created new buttons for navigation. Improved usage of icons. Added gradients to scrobbler marquees. Added Wikipedia links to about.html. Made gallery previews larger. Made the clock fit available space. Added header to error pages.</p></td></tr>
                                 <tr><td class="important num">6.26.2.9</td><td><p>New banner and redesigned header.</p></td></tr>
                                 <tr><td class="important num">6.26.2.7</td><td><p>Adjusted accessibility colors. Increased size of button preview.</p></td></tr>
                                 <tr><td class="important num">6.26.2.5</td><td><p>Added experimental accessibility menu on main pages. Removed scaling hover transitions in gallery.html and projects.html.</p></td></tr>
@@ -229,13 +228,12 @@
                     </section>
                 </td><td class="secondaryColumn">
                     <section>
-                        <p><span class="important">Sharing is caring!</span> Link me:</p>
+                        <p><img class="icon inline-left" src="/assets/icons/heart.png"><span class="important">Sharing</span> is caring!</p>
                         <hr>
-                        <div style="text-align: center;">
-                            <img src="/assets/badges/aivi-party-88x31.gif" style="width: 80%;">
+                        <div style="text-align: center; margin-bottom: 8px;">
+                            <img src="/assets/badges/aivi-party-88x31.gif" style="width: 60%;">
                             <br>
-                            <small class="num">88X31</small>
-                            <hr>
+                            <small><img class="icon inline-left" src="/assets/icons/link.png">Link my button!</small>
                         </div>
                         <textarea class="code"><a href="https://aivi.party/" target="_blank"><img src="https://aivi.party/assets/badges/aivi-party-88x31.gif"></a></textarea>
                     </section>
@@ -246,7 +244,7 @@
                         <!-- <iframe class="ad" style="width: 100%; aspect-ratio: 1;" src="https://rubybulbs.net/neko.html"></iframe> -->
                     </section>
                     <section>
-                        <p><span class="important">Sitemap</span> coming soon...</p>
+                        <p><img class="icon inline-left" src="/assets/icons/list.png"><span class="important">Sitemap</span> coming soon...</p>
                     </section>
                 </td>
             </tr>

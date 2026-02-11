@@ -44,7 +44,7 @@ async function updateDiscord() {
         if (!res.ok) {
             presenceLabel.innerHTML = "Presence not available.";
             presenceLabel.className = "danger";
-            presenceIcon.className = "icon danger";
+            presenceIcon.className = "icon inline-left danger";
             presenceIcon.src = "/assets/icons/offline.png";
             statusLabel.innerHTML = "<small>No status found.</small>"
             statusDateLabel.innerHTML = "";
@@ -56,25 +56,25 @@ async function updateDiscord() {
         if (presence == "online") {
             presenceLabel.innerHTML = "online";
             presenceLabel.className = "success";
-            presenceIcon.className = "icon success";
+            presenceIcon.className = "icon inline-left success";
             presenceIcon.src = "/assets/icons/online.png";
             discordSection.className = "success";
         } else if (presence == "idle") {
             presenceLabel.innerHTML = "idle";
             presenceLabel.className = "warning";
-            presenceIcon.className = "icon warning";
+            presenceIcon.className = "icon inline-left warning";
             presenceIcon.src = "/assets/icons/idle.png";
             discordSection.className = "warning";
         } else if (presence == "dnd") {
             presenceLabel.innerHTML = "do not disturb";
             presenceLabel.className = "danger";
-            presenceIcon.className = "icon danger";
+            presenceIcon.className = "icon inline-left danger";
             presenceIcon.src = "/assets/icons/dnd.png";
             discordSection.className = "danger";
         } else if (presence == "offline") {
             presenceLabel.innerHTML = "offline";
             presenceLabel.className = "danger";
-            presenceIcon.className = "icon danger";
+            presenceIcon.className = "icon inline-left danger";
             presenceIcon.src = "/assets/icons/offline.png";
             discordSection.className = "danger";
         }
@@ -89,7 +89,7 @@ async function updateDiscord() {
                 hour: '2-digit',
                 minute: '2-digit',
             }, formatter = new Intl.DateTimeFormat([], clockOptions);
-            statusLabel.innerHTML = "&ldquo;" + status + "&rdquo;";
+            statusLabel.innerHTML = status;
             statusDateLabel.innerHTML = formatter.format(new Date(statusDate));
         } else {
             statusLabel.innerHTML = "<small>No status found.</small>"
@@ -135,19 +135,19 @@ async function updateLastfm() {
         }
         if (title != titleLabel.innerText.replace(/(\r\n|\n|\r)/gm, "")) {
             if (title.length > 14) {
-                title = "<marquee>" + title + "</marquee>";
+                title = "<marquee style='mask-image: linear-gradient(90deg, #0000, #fff 10%, #fff 90%, #0000);'>" + title + "</marquee>";
             }
             titleLabel.innerHTML = title;
         }
         if (artist != artistLabel.innerText.replace(/(\r\n|\n|\r)/gm, "")) {
             if (artist.length > 29) {
-                artist = '<marquee scrollamount="4">' + artist + "</marquee>";
+                artist = "<marquee scrollamount='4' style='mask-image: linear-gradient(90deg, #0000, #fff 10%, #fff 90%, #0000);'>" + artist + "</marquee>";
             }
             artistLabel.innerHTML = artist;
         }
         if (album != albumLabel.innerText.replace(/(\r\n|\n|\r)/gm, "")) {
             if (album.length > 29) {
-                album = '<marquee scrollamount="4">' + album + "</marquee>";
+                album = "<marquee scrollamount='4' style='mask-image: linear-gradient(90deg, #0000, #fff 10%, #fff 90%, #0000);'>" + album + "</marquee>";
             }
             albumLabel.innerHTML = album;
         }
@@ -159,7 +159,7 @@ async function updateLastfm() {
         }
         linkLabel.href = link;
         if (playing == "y") {
-            playingLabel.innerHTML = "now playing";
+            playingLabel.innerHTML = "playing now";
             musicIcon.style.animation = "bounce 1s steps(1) infinite";
             musicSection.className = "important";
         } else {
