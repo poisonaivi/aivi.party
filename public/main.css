@@ -325,7 +325,7 @@ marquee {
     }
 }
 
-#changelog tr td, .facts tr td {
+.changelog tr td, .facts tr td {
     &:first-of-type {
         text-align: right;
         width: 110px;
