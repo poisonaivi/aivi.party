@@ -14,7 +14,7 @@ function accRecall() {
             options[i] = true;
             setTimeout(() => {
                 document.getElementById(optionIds[i]).checked = true;
-            }, 100);
+            }, 500);
         }
     }
 }
@@ -88,7 +88,7 @@ function accApply() {
 loadElement("accMenu.html", "accessibility");
 setTimeout(() => {
     document.getElementById("accessibility").hidden = false;
-}, 400);
+}, 500);
 var options;
 var optionIds;
 accRecall();
