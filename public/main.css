@@ -9,6 +9,13 @@
     ascent-override: 135%;
     descent-override: 20%;
 }
+@font-face {
+    font-family: "Splice";
+    src: url(/fonts/splice-dm.otf) format("opentype");
+    size-adjust: 65%;
+    ascent-override: 140%;
+    descent-override: 20%;
+}
 :root {
     --text: #ddd;
     --d-text-b: #ddd;
