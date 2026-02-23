@@ -25,11 +25,11 @@ function updateGreeting() {
     const hour = new Date().getHours();
     const greeting = document.getElementById("greeting");
     if (hour >= 4 && hour < 12) {
-        greeting.innerHTML = "Good morning!";
+        greeting.innerHTML = "Good morning,";
     } else if (hour >= 12 && hour < 19) {
-        greeting.innerHTML = "Good afternoon!";
+        greeting.innerHTML = "Good afternoon,";
     } else {
-        greeting.innerHTML = "Good evening!";
+        greeting.innerHTML = "Good evening,";
     }
 }
 
@@ -195,7 +195,7 @@ async function updateLastfm() {
 
 async function updateCommitInfo() {
     try {
-        const res = await fetch("https://api.github.com/repos/ax-x3/aivi.party/commits/6.0");
+        const res = await fetch("https://api.github.com/repos/poisonaivi/aivi.party/commits/6.0");
         if (!res.ok) {
             document.getElementById("commit").innerHTML = "Unavailable";
             throw new Error("Failed to fetch.");

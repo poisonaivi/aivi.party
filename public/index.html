@@ -32,11 +32,13 @@
                         <script>updateDiscord();</script>
                     </section>
                     <section>
-                        <p><img class="icon inline-left" src="/assets/icons/clock.png">Eastern Standard <small>(UTC&#8209;5)</small></p>
-                        <h2 class="num bg" style="font-size: 65px;">??!??!??</h2>
-                        <h2 id="localTime" class="num" style="font-size: 65px;">--:--:--</h2>
+                        <p><img class="icon inline-left" src="/assets/icons/clock.png">eastern stnd. time <small>UTC&#8209;5</small></p>
+                        <div style="transform: translateX(37px);">
+                            <h2 class="num bg">??!??!??</h2>
+                            <h2 id="localTime" class="num">--:--:--</h2>
+                        </div>
                         <hr>
-                        <small>Unix Epoch:<span id="unixTime" class="important num">----------</span> • Beat: @<span id="beatTime" class="important num">---.--</span></small>
+                        <small>unix epoch:<span id="unixTime" class="important num">----------</span> • beat: @<span id="beatTime" class="important num">---.--</span></small>
                         <script>updateClockTime();</script>
                         <script>updateBeatTime();</script>
                     </section>
@@ -54,19 +56,50 @@
                 </td>
                 <td class="primaryColumn" style="height: inherit;">
                     <section style="overflow: hidden; box-sizing: border-box; min-height: 450px; height: calc(100% - 8px)">
-                        <img src="/assets/embellishment.png" style="width: 400px; position: absolute; top: -20px; right: -20px;">
-                        <h3><span id="greeting">Hello there!</span></h3>
+                        <small style="position: absolute; top: 12px; right: 12px;">v<span class="num">6<span id="commitDate"></span><span id="commitId"></span></span></small>
+                        <h3><span id="greeting">Hello there,</span> internet user.</h3>
+                        <p>I'm <span class="important">aivi</span> <small>she/it</small>, a self-taught <span class="important">web dev</span> & <a href="/gallery.html">furry artist</a>. I pride myself in creating things with my own two paws, so I built this website to share it all. <small>Est. 2024.</small></p>
+                        <br>
+                        <p>Somewhere along the way, I ran into literally the <span class="important">coolest people <i>ever</i></span>, and now I'm part of what they call the "<span class="important">indie web</span>."</p>
+                        <br>
+                        <p>It's been <span class="important">2</span> years, <span class="important">4</span> domains, <span class="important">6</span> redesigns, and probably over a thousand deployments since, but I still must warn you that this site is, and will always be, a work in progress.</p>
+                        <br>
+                        <p><small>If anything looks broken, try <span class="important">Ctrl/Cmd/Opt + Shift + R</span>.</small></p>
+                        <hr>
+                        <div style="font-size: 0;">
+                            <a href="https://aivi.party/" target="_blank"><img class="badge w88 h31" src="/assets/badges/aivi-party-88x31.gif"></a>
+                            <a href="https://amethystx.net/" target="_blank"><img class="badge w88 h31" src="/assets/badges/amethystx-net-88x31.gif"></a>
+                            <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img class="badge w88 h31" src="/assets/badges/CC-BY-NC-ND-88x31.png"></a>
+                            <a href="https://javascript.amethystx.net/" target="_blank"><img class="badge w88 h31" src="https://javascript.amethystx.net/enable-javascript.png"></a>
+                            <img class="badge w88 h31" src="/assets/badges/floppy-copy.png">
+                            <img class="badge w88 h31" src="/assets/badges/css-difficult.png">
+                            <img class="badge w88 h31" src="/assets/badges/queer-pride.png">
+                            <img class="badge w88 h31" src="/assets/badges/queercoded.png">
+                            <img class="badge w88 h31" src="/assets/badges/trans-rights-now.png">
+                            <a href="https://eightyeightthirty.one/" target="_blank"><img class="badge w88 h31" src="/assets/badges/eightyeightthirty-one.png"></a>
+                            <a href="https://nekoweb.org/" target="_blank"><img class="badge w88 h31" src="https://nekoweb.org/assets/buttons/button3.gif"></a>
+                            <a href="https://neocities.org/" target="_blank"><img class="badge w88 h31" src="/assets/badges/web-design-passion.gif"></a>
+                            <a href="https://duducat.moe/" target="_blank"><img class="badge w88 h31" src="/assets/badges/duducat.gif"></a>
+                            <a href="https://jbc.lol"><img class="badge w88 h31" src="https://jbc.lol/imgs/buttons/jbtn.gif"></a>
+                            <a href="https://dimden.dev/" target="_blank"><img class="badge w88 h31" src="https://dimden.dev/services/images/88x31.gif"></a>
+                            <a href="https://melankorin.net/" target="_blank"><img class="badge w88 h31" src="https://melankorin.net/assets/img/buttons/button-1.gif"></a>
+                            <a href="https://lyra.horse/" target="_blank"><img class="badge w88 h31" src="https://lyra.horse/badges/lyra.horse.png"></a>
+                            <a href="https://darkosparko.nekoweb.org/" target="_blank"><img class="badge w88 h31" src="https://darkosparko.nekoweb.org/rocket-button.gif"></a>
+                            <a href="https://toasty.place/" target="_blank"><img class="badge w88 h31" src="https://toasty.place/images/buttons/sitebutton.gif"></a>
+                            <a href="https://pilosophos.com/" target="_blank"><img class="badge w88 h31" src="https://pilosophos.com/images/88x31/pilosophos-circle-88x31.png"></a>
+                        </div>
+                        
+                        <!-- <img src="/assets/embellishment.png" style="width: 400px; position: absolute; top: -20px; right: -20px;">
                         <img src="/assets/streetlamp.png" style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 0;">
                         <p>While wandering the vast Internet, you stumble across a realm of purple.</p>
-                        <br>
-                        <p>Welcome to <span class="important">aivi</span><span class="success">.party!</span> You can call me <span class="important">Amethyst</span> or <span class="important">Aivi</span> <small>(she/her/it)</small>. I like the indie web and hacker-esque stuff, and this domain is my hub for all that. It's also a place for me to post my drawings, write bad code, and talk about my many interests.</p>
+                        
+                        <p> Welcome to <span class="important">aivi</span><span class="success">.party!</span> You can call me <span class="important">Amethyst</span> or <span class="important">Aivi</span> <small>(she/her/it)</small>. I love the indie web and hacker-y stuff, . I also use this place to post my drawings, write bad code, and talk about my many interests.</p>
                         <br>
                         <p>Before you continue exploring, you should know that <span class="important">this site wasn't made for everyone</span>. There's cursing, NSFW outlinks, and the occasional rant into heavier topics. If that doesn't matter to you, then welcome.</p>
                         <br>
                         <p><a class="button" href="/guestbook.html"><img class="icon inline-left" src="/assets/icons/document.png">Sign the guestbook!</a></p>
                         <br>
-                        <small>If anything looks broken, try hitting Ctrl/Cmd/Opt + Shift + R to hard-reload the site.</small>
-                        <small style="position: absolute; bottom: 12px; right: 12px;">version <span class="num">6<span id="commitDate"></span><span id="commitId"></span></span></small>
+                        <small>If anything looks broken, try hitting Ctrl/Cmd/Opt + Shift + R to hard-reload the site.</small> -->
                         <script>updateCommitInfo();</script>
                         <script>updateGreeting();</script>
                     </section>
@@ -76,11 +109,11 @@
                 <td colspan="2">
                     <section>
                         <table style="width: 100%; text-align: center;">
-                            <td style="width: 20%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>E-mail<a> <small>(<a href="/poisonaivi-pub.asc">pgp key</a>)</small></td>
+                            <td style="width: 20%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>E-mail<a> <small>(<a href="/aivi-pub-key-D90EBAE6.txt" target="_blank">pgp key</a>)</small></td>
                             <td style="width: 20%"><a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon" src="/assets/logos/discord.png"><br>Discord</a></td>
                             <td style="width: 20%"><a href="https://matrix.to/#/@poisonaivi:matrix.org" target="_blank"><img class="icon" src="/assets/logos/matrix.png"><br>Matrix</a></td>
                             <td style="width: 20%"><a href="https://bsky.app/profile/aivi.party" target="_blank"><img class="icon" src="/assets/logos/bluesky.png"><br>Bluesky</a></td>
-                            <td style="width: 20%"><a href="https://github.com/ax-x3" target="_blank"><img class="icon" src="/assets/logos/github.png"><br>GitHub</a></td>
+                            <td style="width: 20%"><a href="https://github.com/poisonaivi" target="_blank"><img class="icon" src="/assets/logos/github.png"><br>GitHub</a></td>
                         </table>
                     </section>
                 </td>
@@ -97,7 +130,7 @@
                         </div>
                     </section>
                     <section style="padding: 0; overflow: hidden;">
-                        <p style="margin: 12px 12px 0 12px;"><img class="icon" src="/assets/icons/document.png"> changelog <small>version: <span class="success num">6<span id="changelogCommitDate"><span class="danger">.X.X.X</span></span></span> hash: <span id="changelogCommitId" class="success num"><span class="danger">UNAVAILABLE</span></span></small></p>
+                        <p style="margin: 12px 12px 0 12px;"><img class="icon" src="/assets/icons/document.png"> changelog <small>version: <span class="success num">6<span id="changelogCommitDate"><span class="danger">.X.X.X</span></span></span> commit: <span id="changelogCommitId" class="success num"><span class="danger">UNAVAILABLE</span></span></small></p>
                         <div style="height: 10px;"></div>
                         <div id="changelog" style="height: 225px; padding: 12px; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 20%, #fff 90%, #0000 100%);"><script>loadElement("changelog.html", "changelog");</script></div>
                     </section>
@@ -106,17 +139,16 @@
                         <p><img class="icon inline-left" src="/assets/icons/heart.png"><span class="important">Sharing</span> is caring!</p>
                         <hr>
                         <div style="text-align: center; margin-bottom: 8px;">
-                            <img src="/assets/badges/aivi-party-88x31.gif" style="width: 60%;">
+                            <img class="badge" src="/assets/badges/aivi-party-88x31.gif" style="width: 60%;">
                             <br>
                             <small><img class="icon inline-left" src="/assets/icons/link.png">Link my button!</small>
                         </div>
-                        <textarea class="code"><a href="https://aivi.party/" target="_blank"><img src="https://aivi.party/assets/badges/aivi-party-88x31.gif"></a></textarea>
+                        <textarea><a href="https://aivi.party/" target="_blank"><img src="https://aivi.party/assets/badges/aivi-party-88x31.gif"></a></textarea>
                     </section>
                     <section>
                         <iframe class="ad" style="width: 100%; aspect-ratio: 1;" src="https://dimden.neocities.org/navlink/"></iframe>
                         <hr>
-                        <small>NekoLink Ads not available.</small>
-                        <!-- <iframe class="ad" style="width: 100%; aspect-ratio: 1;" src="https://rubybulbs.net/neko.html"></iframe> -->
+                        <iframe class="ad" style="width: 100%; aspect-ratio: 1;" src="https://evehibi.nekoweb.org/ringlink/"></iframe>
                     </section>
                     <section>
                         <p><img class="icon inline-left" src="/assets/icons/list.png"><span class="important">Sitemap</span> coming soon...</p>
