@@ -25,11 +25,11 @@ function updateGreeting() {
     const hour = new Date().getHours();
     const greeting = document.getElementById("greeting");
     if (hour >= 4 && hour < 12) {
-        greeting.innerHTML = "Good morning,";
+        greeting.innerHTML = "good morning,";
     } else if (hour >= 12 && hour < 19) {
-        greeting.innerHTML = "Good afternoon,";
+        greeting.innerHTML = "good afternoon,";
     } else {
-        greeting.innerHTML = "Good evening,";
+        greeting.innerHTML = "good evening,";
     }
 }
 
