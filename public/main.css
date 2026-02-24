@@ -245,7 +245,7 @@ marquee {
     white-space-collapse: preserve;
     &.bg {
         position: absolute;
-        color: var(--accent-c);
+        opacity: 0.1;
         text-shadow: none;
     }
     &.success {
