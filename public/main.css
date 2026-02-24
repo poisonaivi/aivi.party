@@ -112,6 +112,7 @@ a {
     color: var(--link);
     text-shadow: 0.032em 0.032em var(--link-b), 0.032em -0.032em var(--link-b), -0.032em -0.032em var(--link-b), -0.032em 0.032em var(--link-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--link);
     position: relative;
+    text-decoration-thickness: 1px;
     &:hover {
         opacity: 0.6;
         text-decoration-style: dashed;    
@@ -158,7 +159,8 @@ section {
     }
 }
 hr {
-    border: 1px solid var(--border);
+    border: none;
+    border-top: 2px solid var(--border);
 }
 table {
     border-collapse: collapse;
@@ -318,7 +320,7 @@ marquee {
 }
 .button {
     display: inline-block;
-    padding: 5px 12px;
+    padding: 2px 8px;
     background-color: var(--accent-c);
     border: solid 1px var(--link);
     border-radius: 4px;
@@ -328,7 +330,8 @@ marquee {
         border-style: dashed;
     }
     &.selected {
-        border-style: dashed;
+        border-style: solid;
+        box-shadow: 0 0 8px var(--link), 0 0 16px var(--link);
         z-index: 1;
     }
 }
