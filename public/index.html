@@ -14,9 +14,9 @@
         <header class="main" id="header"><script>loadElement("indexHeader.html", "header");</script></header>
         <noscript>
             <section class="danger" style="margin-top: 8px;">
-                <h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript Error</h3>
+                <h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript disabled</h3>
                 <br>
-                <p>JavaScript appears to be disabled in your browser! This site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p>
+                <p>Congrats, you tripped the noscript element! This site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p>
                 <br>
                 <p>For a better experience, consider <a href="https://javascript.amethystx.net/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p>
             </section>
@@ -24,11 +24,11 @@
         <table class="main">
             <tr style="height: 1px;">
                 <td class="secondaryColumn">
-                    <section id="discordSection" class="danger">
+                    <section id="discordSection">
                         <a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon inline-right" src="/assets/logos/discord.png" style="float: right;"></a>
-                        <img id="presenceIcon" class="icon danger inline-left" src="/assets/icons/offline.png"><span id="presenceLabel" class="danger">Presence not available.</span> <small id="statusDateLabel"></small>
+                        <img id="presenceIcon" class="icon danger inline-left" src="/assets/icons/loading.gif"><span id="presenceLabel" class="danger">loading presence</span> <small id="statusDateLabel"></small>
                         <hr>
-                        <p id="statusLabel"><small>No status found.</small></p>
+                        <p id="statusLabel"><small>status unavailable</small></p>
                         <script>updateDiscord();</script>
                     </section>
                     <section>
@@ -47,8 +47,8 @@
                         <a href="https://www.last.fm/user/am3thystx" target="_blank"><img class="icon inline-right" src="/assets/logos/lastfm.png" style="float: right;"></a>
                         <p style="float: left;"><img id="musicIcon" class="icon inline-left" src="/assets/icons/music.png"><span id="playingLabel">last played</span></p>
                         <div style="position: absolute; bottom: 12px; width: calc(100% - 2 * 12px);">
-                            <a class="important" id="linkLabel" target="_blank"><h3 id="titleLabel" style="white-space: nowrap; overflow: visible;"><span class="danger">No song found.</span></h3></a>
-                            <p id="artistLabel" style="white-space: nowrap; overflow: visible;"></p>
+                            <a class="important" id="linkLabel" target="_blank"><h3 id="titleLabel" style="white-space: nowrap; overflow: visible;"></h3></a>
+                            <p id="artistLabel" style="white-space: nowrap; overflow: visible;"><span class="danger"><img class="icon danger inline-left" src="/assets/icons/loading.gif">loading song</span></p>
                             <p id="albumLabel" style="white-space: nowrap; overflow: visible;"></p>
                         </div>
                         <script>updateLastfm();</script>
@@ -127,9 +127,9 @@
                         </div>
                     </section>
                     <section style="padding-bottom: 0; overflow: hidden;">
-                        <p><img class="icon" src="/assets/icons/document.png"> changelog <small>version: <span class="success num">6<span id="changelogCommitDate"><span class="danger">.X.X.X</span></span></span> commit: <span id="changelogCommitId" class="success num"><span class="danger">UNAVAILABLE</span></span></small></p>
+                        <p><img class="icon" src="/assets/icons/document.png"> changelog <small>version: <span class="success num">6<span id="changelogCommitDate"><span class="danger">.X.X.X</span></span></span> commit: <span id="changelogCommitId" class="success num"><span class="danger">LOADING</span></span></small></p>
                         <hr>
-                        <div id="changelog" style="height: 225px; padding: 12px 0; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 20%, #fff 90%, #0000 100%);"><script>loadElement("changelog.html", "changelog");</script></div>
+                        <div id="changelog" style="height: 225px; padding: 12px 0; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 20%, #fff 90%, #0000 100%);"><p style="text-align: center;"><br><img class="icon" src="/assets/icons/loading.gif"></p><script>loadElement("changelog.html", "changelog");</script></div>
                     </section>
                 </td><td class="secondaryColumn">
                     <section>

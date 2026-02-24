@@ -248,9 +248,18 @@ marquee {
         color: var(--accent-c);
         text-shadow: none;
     }
-    &.important, &.success, &.warning, &.danger {
-        text-shadow: none;
+    &.success {
+        text-shadow: 0 0 0.5em var(--success)
+    } 
+    &.warning {
+        text-shadow: 0 0 0.5em var(--warning)
     }
+    &.danger {
+        text-shadow: 0 0 0.5em var(--danger)
+    }
+    &.important {
+        text-shadow: 0 0 0.5em var(--accent)
+    } 
 }
 .text {
     color: var(--text);

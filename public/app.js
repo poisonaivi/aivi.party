@@ -42,11 +42,11 @@ async function updateDiscord() {
     try {
         const res = await fetch("https://aivi.party/services/discord-status");
         if (!res.ok) {
-            presenceLabel.innerHTML = "Presence not available.";
+            presenceLabel.innerHTML = "api error";
             presenceLabel.className = "danger";
             presenceIcon.className = "icon inline-left danger";
-            presenceIcon.src = "/assets/icons/offline.png";
-            statusLabel.innerHTML = "<small>No status found.</small>"
+            presenceIcon.src = "/assets/icons/error.png";
+            statusLabel.innerHTML = "<small>status unavailable</small>"
             statusDateLabel.innerHTML = "";
             discordSection.className = "danger";
             throw new Error("Failed to fetch.");
@@ -92,7 +92,7 @@ async function updateDiscord() {
             statusLabel.innerHTML = status;
             statusDateLabel.innerHTML = formatter.format(new Date(statusDate));
         } else {
-            statusLabel.innerHTML = "<small>No status found.</small>"
+            statusLabel.innerHTML = "<small>no status set rn :3</small>"
             statusDateLabel.innerHTML = "";
         }
     } catch (error) {
@@ -112,12 +112,13 @@ async function updateLastfm() {
     try {
         const res = await fetch("https://aivi.party/services/last-played");
         if (!res.ok) {
-            titleLabel.innerHTML = "No data.";
-            artistLabel.innerHTML = "";
+            titleLabel.innerHTML = "";
+            artistLabel.innerHTML = "<span class='danger'><img class='icon inline-left' src='/assets/icons/error.png'>api error</span>";
             albumLabel.innerHTML = "";
-            musicSection.style.backgroundImage = "url(/assets/blank-album-art.png";
+            musicSection.style.backgroundImage = "url(/assets/blank-album-art.png)";
+            musicSection.className = "danger";
             linkLabel.removeAttribute("href");
-            playingLabel.innerHTML = "Last played";
+            playingLabel.innerHTML = "last played";
             musicIcon.style.animation = "none";
             throw new Error("Failed to fetch.");
         }
@@ -167,19 +168,19 @@ async function updateLastfm() {
             if (timeSince <= 3600) {
                 var timeFormatted = Math.floor(timeSince / 60);
                 if (timeFormatted == 1)
-                    timeFormatted += " minute ago";
+                    timeFormatted = "a minute ago";
                 else
                     timeFormatted += " minutes ago";
             } else if (timeSince <= 86400) {
                 var timeFormatted = Math.floor(timeSince / 3600);
                 if (timeFormatted == 1)
-                    timeFormatted += " hour ago";
+                    timeFormatted = "an hour ago";
                 else
                     timeFormatted += " hours ago";
             } else {
                 var timeFormatted = Math.floor(timeSince / 86400);
                 if (timeFormatted == 1)
-                    timeFormatted += " day ago";
+                    timeFormatted = "a day ago";
                 else
                     timeFormatted += " days ago";
             }
@@ -197,7 +198,7 @@ async function updateCommitInfo() {
     try {
         const res = await fetch("https://api.github.com/repos/poisonaivi/aivi.party/commits/6.0");
         if (!res.ok) {
-            document.getElementById("commit").innerHTML = "Unavailable";
+            document.getElementById("changelogCommitId").innerHTML = "<span class='danger'>API   ERROR</span>";
             throw new Error("Failed to fetch.");
         }
         const resJSON = await res.json();
