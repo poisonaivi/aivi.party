@@ -1,9 +1,30 @@
 @font-face {
-    font-family: "OpenDyslexic";
+    font-family: "acc-dyslexic";
     src: url(/fonts/OpenDyslexic-Regular.otf) format("opentype");
     size-adjust: 80%;
     ascent-override: 115%;
     descent-override: 40%;
+}
+
+@font-face {
+    font-family: "acc-sansserif";
+    src: url(/fonts/Exo-Variable.ttf) format("truetype");
+    size-adjust: 90%;
+    ascent-override: 106%;
+}
+
+@font-face {
+    font-family: "acc-serif";
+    src: url(/fonts/MicaValo.ttf) format("truetype");
+    size-adjust: 92%;
+}
+
+@font-face {
+    font-family: "acc-monospace";
+    src: url(/fonts/UbuntuMono-Regular.ttf) format("truetype");
+    size-adjust: 98%;
+    ascent-override: 100%;
+    descent-override: 28%;
 }
 
 :root {
@@ -41,7 +62,7 @@
     background-color: var(--acc-bg);
     border: ridge 2px var(--acc-accent);
     overflow: hidden;
-    font-family:'Lucida Grande', Verdana, sans-serif;
+    font-family: acc-sansserif, sans-serif;
     color: #000;
     input, label {
         cursor: pointer;

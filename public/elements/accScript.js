@@ -12,9 +12,14 @@ function accRecall() {
     for (let i = 0; i < options.length; i++) {
         if (localStorage.getItem(optionIds[i])) {
             options[i] = true;
-            setTimeout(() => {
-                document.getElementById(optionIds[i]).checked = true;
-            }, 500);
+        }
+    }
+}
+
+function accUpdateCheckboxes() {
+    for (let i = 0; i < options.length; i++) {
+        if (options[i]) {
+            document.getElementById(optionIds[i]).checked = true;
         }
     }
 }
@@ -37,7 +42,7 @@ function accApply() {
     const root = document.querySelector(':root');
     var mainFilter = "";
     var mainMask = "";
-    var mainFont = "";
+    mainFont = "";
     if (options[0]) {
         mainFilter += "brightness(1)";
         mainMask = "none";
@@ -68,28 +73,33 @@ function accApply() {
         mainFilter += "invert(1)";
     }
     if (options[4]) {
-        mainFont = "OpenDyslexic";
+        mainFont = "acc-dyslexic";
     }
     if (options[5]) {
-        mainFont = "sans-serif";
+        mainFont = "acc-sansserif";
     }
     if (options[6]) {
-        mainFont = "serif";
+        mainFont = "acc-serif";
     }
     if (options[7]) {
-        mainFont = "monospace";
+        mainFont = "acc-monospace";
     }
     mainEle.style.filter = mainFilter;
     mainEle.style.mask = mainMask;
     mainEle.style.fontFamily = mainFont;
-    document.getElementById("acc-menu").style.fontFamily = mainFont;
+    try {
+        document.getElementById("acc-menu").style.fontFamily = mainFont;
+    } catch {}
 }
 
 loadElement("accMenu.html", "accessibility");
-setTimeout(() => {
-    document.getElementById("accessibility").hidden = false;
-}, 500);
 var options;
 var optionIds;
+var mainFont;
 accRecall();
 accApply();
+window.onload = (event) => {
+    accUpdateCheckboxes();
+    document.getElementById("accessibility").hidden = false;
+    document.getElementById("acc-menu").style.fontFamily = mainFont;
+}
