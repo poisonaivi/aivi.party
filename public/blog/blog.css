@@ -67,6 +67,9 @@ figure {
         background-color: var(--caption);
         padding: 3px 10px;
     }
+    img {
+        width: 100%;
+    }
 }
 img {
     box-sizing: border-box;

@@ -207,7 +207,7 @@ code, textarea {
 }
 textarea {
     display: block;
-    padding: 8px;
+    padding: 6px;
     box-sizing: border-box;
     resize: none;
     width: 100%;
