@@ -1,4 +1,4 @@
-# AIVI.PARTY! - writing, art, programming, & more!
+# aivi.party
 
 ## Directories:
 
