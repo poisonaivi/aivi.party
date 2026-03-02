@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent);
     position: relative;
     text-shadow: 0.032em 0.032em var(--accent-b), 0.032em -0.032em var(--accent-b), -0.032em -0.032em var(--accent-b), -0.032em 0.032em var(--accent-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--accent);
+    font-weight: 500;
     &::selection {
         color: var(--accent);
         text-shadow: 0.032em 0.032em var(--accent-b), 0.032em -0.032em var(--accent-b), -0.032em -0.032em var(--accent-b), -0.032em 0.032em var(--accent-b), 0.092em 0.092em var(--shadow);
@@ -98,7 +99,6 @@ h1 {
 }
 h2 {
     font-size: 54px;
-    font-weight: 100;
 }
 h3 {
     font-size: 36px;

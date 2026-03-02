@@ -106,6 +106,7 @@ async function updateLastfm() {
     const artistLabel = document.getElementById("artistLabel");
     const albumLabel = document.getElementById("albumLabel");
     const musicSection = document.getElementById("musicSection");
+    const artFilter = document.getElementById("artFilter");
     const linkLabel = document.getElementById("linkLabel");
     const playingLabel = document.getElementById("playingLabel");
     const musicIcon = document.getElementById("musicIcon");
@@ -154,9 +155,11 @@ async function updateLastfm() {
         }
         // hash for no-album-art image
         if (albumArt.includes("2a96cbd8b46e442fc41c2b86b821562f")) {
-            musicSection.style.backgroundImage = "url(/assets/blank-album-art.png)";
+            musicSection.style.removeProperty("background-image");
+            artFilter.hidden = true;
         } else {
             musicSection.style.backgroundImage = "url(" + albumArt + ")";
+            artFilter.hidden = false;
         }
         linkLabel.href = link;
         if (playing == "y") {

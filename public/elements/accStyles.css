@@ -62,14 +62,15 @@
     background-color: var(--acc-bg);
     border: ridge 2px var(--acc-accent);
     overflow: hidden;
-    font-family: acc-sansserif, sans-serif;
+    font-family: acc-monospace, sans-serif;
     color: #000;
     input, label {
         cursor: pointer;
         margin: 10px 0;
     }
     div {
-        padding: 12px;
+        padding: 8px 16px;
+        margin-bottom: 10px;
     }
 }
 
