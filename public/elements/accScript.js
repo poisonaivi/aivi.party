@@ -99,7 +99,6 @@ var mainFont;
 accRecall();
 accApply();
 window.onload = (event) => {
-    console.log("acc-menu loaded");
     accUpdateCheckboxes();
     document.getElementById("accessibility").hidden = false;
     document.getElementById("acc-menu").style.fontFamily = mainFont;
