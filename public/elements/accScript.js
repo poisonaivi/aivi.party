@@ -99,9 +99,10 @@ var mainFont;
 accRecall();
 accApply();
 window.onload = (event) => {
-    document.getElementById("acc-menu").onload = (event) => {
+    document.getElementById("acc-menu").addEventListener('load', (event) => {
+        console.log("acc-menu loaded");
         accUpdateCheckboxes();
         document.getElementById("accessibility").hidden = false;
         document.getElementById("acc-menu").style.fontFamily = mainFont;
-    }
+    });
 }
