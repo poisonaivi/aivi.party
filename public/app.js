@@ -16,7 +16,6 @@ async function loadElement(filename, elementid) {
             throw new Error("Failed to fetch element.");
         }
         element.innerHTML = await res.text();
-        console.log("loaded");
     } catch (error) {
         console.error(error);
     }

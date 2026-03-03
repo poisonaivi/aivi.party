@@ -99,10 +99,15 @@ var mainFont;
 accRecall();
 accApply();
 window.onload = (event) => {
-    document.getElementById("acc-menu").addEventListener('load', (event) => {
-        console.log("acc-menu loaded");
-        accUpdateCheckboxes();
-        document.getElementById("accessibility").hidden = false;
-        document.getElementById("acc-menu").style.fontFamily = mainFont;
-    });
+    try {
+        document.getElementById("acc-menu").addEventListener('load', (event) => {
+            console.log("acc-menu loaded");
+            accUpdateCheckboxes();
+            document.getElementById("accessibility").hidden = false;
+            document.getElementById("acc-menu").style.fontFamily = mainFont;
+        });
+    } catch (error) {
+        console.log("menu probably wasn't loaded yet.");
+        console.log(document.getElementById("acc-menu"));
+    }
 }
