@@ -125,7 +125,7 @@ a {
     z-index: 1;
     text-decoration-thickness: 1px;
     &:hover {
-        opacity: 0.75;
+        opacity: 0.6;
         text-decoration-style: dashed;    
         z-index: 2;
     }
