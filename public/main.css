@@ -212,14 +212,15 @@ code, textarea {
     font-family: "Ubuntu Mono";
     text-shadow: none;
     color: var(--text);
-    background-color: var(--accent-c);
-    border: solid 1px var(--border);
+    background-color: var(--section-b);
+    border: dashed 1px var(--border);
     border-radius: 4px;
 }
 textarea {
     display: block;
-    padding: 6px;
+    padding: 8px;
     box-sizing: border-box;
+    white-space: nowrap;
     resize: none;
     width: 100%;
     height: fit-content;
