@@ -22,13 +22,15 @@ async function loadElement(filename, elementid) {
 }
 
 async function registerHit() {
-    try {
-        const res = await fetch("https://aivi.party/services/hit-counter?a=add");
-        if (!res.ok) {
-            throw new Error("Failed to fetch.");
+    if (window.location.href.includes("://aivi.party/")) {
+        try {
+            const res = await fetch("https://aivi.party/services/hit-counter?a=add");
+            if (!res.ok) {
+                throw new Error("Failed to fetch.");
+            }
+        } catch (error) {
+            console.error(error);
         }
-    } catch (error) {
-        console.error(error);
     }
 }
 registerHit();
@@ -52,11 +54,11 @@ function updateGreeting() {
     const hour = new Date().getHours();
     const greeting = document.getElementById("greeting");
     if (hour >= 4 && hour < 12) {
-        greeting.innerHTML = "good morning,";
+        greeting.innerHTML = "good morning";
     } else if (hour >= 12 && hour < 19) {
-        greeting.innerHTML = "good afternoon,";
+        greeting.innerHTML = "good afternoon";
     } else {
-        greeting.innerHTML = "good evening,";
+        greeting.innerHTML = "good evening";
     }
 }
 

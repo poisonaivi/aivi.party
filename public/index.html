@@ -29,10 +29,6 @@
         <table class="main">
             <tr style="height: 1px;">
                 <td class="secondaryColumn">
-                    <section>
-                        <p>hits: <span id="hitcount"></span></p>
-                        <script defer>updateHits();</script>
-                    </section>
                     <section id="discordSection">
                         <a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon inline-right" src="/assets/logos/discord.png" style="float: right;"></a>
                         <img id="presenceIcon" class="icon danger inline-left" src="/assets/icons/loading.gif"><span id="presenceLabel" class="danger">loading presence</span> <small id="statusDateLabel"></small>
@@ -80,11 +76,11 @@
                         <small style="position: absolute; top: 12px; right: 12px;">v<span class="num">6<span id="commitDate"></span><span id="commitId"></span></span></small>
                         <div style="position: relative; z-index: 1;">
                             <h3><span id="funTitle">not actually a party</span></h3>
-                            <p><span id="greeting">hi,</span> i'm <span class="important">aivi</span> <small>she/it</small>, a self-taught <span class="important">web dev</span> & <a href="/gallery.html">furry artist</a>. i pride myself in creating things with my own two paws, so i built this website to share it all. <small>est. 2024</small></p>
+                            <p><span id="greeting">hi</span>, i'm <span class="important">aivi</span> <small>she/it</small>, a self-taught <span class="important">web dev</span> & <a href="/gallery.html">furry artist</a>. i pride myself in creating things with my own two paws, so i built this website to share it all. <small>est. 2024</small></p>
                             <br>
                             <p>somewhere along the way, i ran into literally the <span class="important">coolest people <i>ever</i></span>, and now i'm part of what they call the "<span class="important">indie web</span>."</p>
                             <br>
-                            <p>it's been <span class="important">2</span> years, <span class="important">4</span> domains, <span class="important">6</span> redesigns, and probably over a thousand deployments since, but i still must warn you that this site is, and will always be, a work in progress.</p>
+                            <p>it's been <span class="important num">2</span> years, <span class="important num">4</span> domains, <span class="important num">6</span> redesigns, and <span id="hitcount" class="important num"><span class="danger">XXXXX</span></span> visitors since, but i still must warn you that this site is, and will always be, a work in progress.</p>
                             <br>
                             <p><small>if anything looks broken, try hard-reloading with <span class="important">Ctrl/Cmd/Opt + Shift + R</span></small></p>
                             <hr>
@@ -116,17 +112,19 @@
                         <script>updateCommitInfo();</script>
                         <script>updateGreeting();</script>
                         <script>updateFunTitle();</script>
+                        <script>updateHits();</script>
                     </section>
                 </td>
             </tr>
         </table>
         <section>
             <table style="width: 100%; text-align: center;">
-                <td style="width: 20%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>E-mail<a> <small>(<a href="/aivi-pub-key-D90EBAE6.txt" target="_blank">pgp key</a>)</small></td>
-                <td style="width: 20%"><a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon" src="/assets/logos/discord.png"><br>Discord</a></td>
-                <td style="width: 20%"><a href="https://matrix.to/#/@poisonaivi:matrix.org" target="_blank"><img class="icon" src="/assets/logos/matrix.png"><br>Matrix</a></td>
-                <td style="width: 20%"><a href="https://bsky.app/profile/aivi.party" target="_blank"><img class="icon" src="/assets/logos/bluesky.png"><br>Bluesky</a></td>
-                <td style="width: 20%"><a href="https://github.com/poisonaivi" target="_blank"><img class="icon" src="/assets/logos/github.png"><br>GitHub</a></td>
+                <td style="width: 17%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>E-mail<a> <small>(<a href="/aivi-pub-key-D90EBAE6.txt" target="_blank">pgp key</a>)</small></td>
+                <td style="width: 17%"><a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon" src="/assets/logos/discord.png"><br>Discord</a></td>
+                <td style="width: 17%"><a href="https://matrix.to/#/@poisonaivi:matrix.org" target="_blank"><img class="icon" src="/assets/logos/matrix.png"><br>Matrix</a></td>
+                <td style="width: 17%"><a href="https://bsky.app/profile/aivi.party" target="_blank"><img class="icon" src="/assets/logos/bluesky.png"><br>Bluesky</a></td>
+                <td style="width: 17%"><a href="https://github.com/poisonaivi" target="_blank"><img class="icon" src="/assets/logos/github.png"><br>GitHub</a></td>
+                <td style="width: 17%"><a href="/guestbook.html"><img class="icon" src="/assets/icons/document.png"><br><img class="icon inline-left" src="/assets/icons/arrow-more.png" style="animation: shake 1s steps(1) infinite;">guestbook<img class="icon inline-right" src="/assets/icons/arrow-back.png" style="animation: shake 1s steps(1) infinite; animation-delay: 500ms;"></a></td>
             </table>
         </section>
         <table class="main">
@@ -144,12 +142,8 @@
                         <hr>
                         <div id="changelog" style="height: 225px; padding: 12px 0; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 20%, #fff 90%, #0000 100%);"><p style="text-align: center;"><br><img class="icon" src="/assets/icons/loading.gif"></p><script>loadElement("changelog.html", "changelog");</script></div>
                     </section>
-                </td><td class="secondaryColumn">
-                    <section style="text-align: center;">
-                        <p style="transform: translateY(-4px);"><small>sign the</small></p>
-                        <p><img class="icon" src="/assets/icons/arrow-more.png" style="animation: shake 1s steps(1) infinite;"><img class="icon inline-left" src="/assets/icons/arrow-more.png"style=" animation: shake 1s steps(1) infinite; animation-delay: 250ms;"><a class="button" href="/guestbook.html"><img class="icon inline-left" src="/assets/icons/document.png">guestbook</a><img class="icon inline-right" src="/assets/icons/arrow-back.png" style="animation: shake 1s steps(1) infinite; animation-delay: 750ms;"><img class="icon" src="/assets/icons/arrow-back.png" style="animation: shake 1s steps(1) infinite; animation-delay: 500ms;"></p>
-                        <p><small>before you leave!</small></p>
-                    </section>
+                </td>
+                <td class="secondaryColumn">
                     <section style="text-align: center;">
                         <div style="margin-bottom: 8px;">
                             <small><img class="icon inline-left" src="/assets/icons/link.png">hotlink my button</small>
@@ -164,7 +158,8 @@
                         <!-- <iframe class="ad" style="width: 100%; aspect-ratio: 1;" src="https://evehibi.nekoweb.org/ringlink/"></iframe> -->
                     </section>
                     <section>
-                        <p><img class="icon inline-left" src="/assets/icons/list.png"><span class="important">sitemap</span> coming soon...</p>
+                        <p><img class="icon inline-left" src="/assets/icons/list.png">sitemap</p>
+                        <small>&lt;!-- todo --&gt;</small>
                     </section>
                 </td>
             </tr>
