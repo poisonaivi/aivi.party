@@ -166,8 +166,14 @@ section {
         border-color: var(--accent);
     }
     section {
-        margin: -4px;
+        margin: 0 -4px var(--border-spacing) -4px;
         border-radius: calc(var(--border-radius) - 10px);
+        &:first-child {
+            margin-top: -4px;
+        }
+        &:last-child {
+            margin-bottom: -4px;
+        }
     }
 }
 hr {
@@ -320,6 +326,9 @@ marquee {
     &.w88 {
         width: 88px;
     }
+}
+.webring {
+    padding: 4px;
 }
 .icon {
     display: inline-block;

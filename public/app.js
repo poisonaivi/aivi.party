@@ -33,6 +33,47 @@ function updateGreeting() {
     }
 }
 
+function updateFunTitle() {
+    const titles = [
+        "not actually a party",
+        "open for maintenance",
+        "lorem ipsum or something",
+        "population: 1",
+        "open 24 hours",
+        "a realm of purple",
+        "a soapbox of sorts",
+        "come here often?",
+        "make websites, not war",
+        "yet another web corner",
+        "take a moment and relax",
+        "i hope you like purple",
+        "cringe culture is dead",
+        "reclaim the internet",
+        "css fears me",
+        "powered by stackoverflow",
+        "this site uses no cookies",
+        "#1 webkit hater",
+        "a quiet corner of the internet",
+        "200 ok",
+        "internet participation award",
+        "a web-browsing rest stop",
+        "my home on the internet",
+        "a shout into the void",
+        "dear internet stranger,",
+        "@everyone",
+        "greetings, traveller",
+        "welcome, stranger",
+        "howdy, surfer of the web",
+        "one of the sites of all time",
+        "independent webber",
+        "{funTitle}",
+        "~$ cat intro.txt",
+        "something in cyberspace"
+    ];
+    // document.getElementById("funTitle").innerHTML = titles[titles.length - 1];
+    document.getElementById("funTitle").innerHTML = titles[Math.floor(Math.random() * titles.length)];
+}
+
 async function updateDiscord() {
     const presenceLabel = document.getElementById("presenceLabel");
     const presenceIcon = document.getElementById("presenceIcon");
