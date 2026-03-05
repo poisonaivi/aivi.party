@@ -1,7 +1,7 @@
 export default {
     async fetch(request, env, ctx) {
-        const url = new URL(request.url);
-        var path = url.pathname.toString().slice(1).split("/");
+        const { search, pathname } = new URL(request.url);
+        var path = pathname.toString().slice(1).split("/");
         if (path[0] == "services") {
             try {
                 if (path[1] == "last-played") {
@@ -31,17 +31,23 @@ export default {
                         },
                     });
                 } else if (path[1] == "hit-counter") {
-                    const hits = await env.hitCounter.get('aivi.party');
-                    await env.hitCounter.put('aivi.party', parseInt(hits) + 1);
+                    var hits = await env.hitCounter.get('aivi.party');
+                    hits = parseInt(hits);
+                    if (search.includes("?a=add")) {
+                        hits = hits + 1;
+                        await env.hitCounter.put('aivi.party', hits);
+                    }
+                    return new Response(JSON.stringify({hits: hits}), {
+                        headers: {
+                            "content-type": "application/json",
+                            // "Access-Control-Allow-Origin": "aivi.party",
+                            "Access-Control-Allow-Origin": "*",
+                        },
+                    });
                     // list all key-value pairs
                     // const allKeys = await env.KV.list();
                     // delete a key-value pair
                     // await env.KV.delete('KEY');
-                    return new Response(
-                    JSON.stringify({
-                        hits: hits
-                    }),
-                    );
                 } else {
                     return pageNotFound();
                 }

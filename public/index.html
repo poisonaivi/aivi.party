@@ -29,6 +29,10 @@
         <table class="main">
             <tr style="height: 1px;">
                 <td class="secondaryColumn">
+                    <section>
+                        <p>hits: <span id="hitcount"></span></p>
+                        <script defer>updateHits();</script>
+                    </section>
                     <section id="discordSection">
                         <a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon inline-right" src="/assets/logos/discord.png" style="float: right;"></a>
                         <img id="presenceIcon" class="icon danger inline-left" src="/assets/icons/loading.gif"><span id="presenceLabel" class="danger">loading presence</span> <small id="statusDateLabel"></small>
