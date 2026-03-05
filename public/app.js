@@ -21,6 +21,20 @@ async function loadElement(filename, elementid) {
     }
 }
 
+async function registerHit() {
+    try {
+        const res = await fetch("https://aivi.party/services/hit-counter");
+        if (!res.ok) {
+            throw new Error("Failed to fetch.");
+        }
+        const resJSON = await res.json();
+        const hits = resJSON.hits;
+        console.log(hits);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 function updateGreeting() {
     const hour = new Date().getHours();
     const greeting = document.getElementById("greeting");
@@ -157,7 +171,8 @@ async function updateLastfm() {
             titleLabel.innerHTML = "";
             artistLabel.innerHTML = "<span class='danger'><img class='icon inline-left' src='/assets/icons/error.png'>api error</span>";
             albumLabel.innerHTML = "";
-            musicSection.style.backgroundImage = "url(/assets/blank-album-art.png)";
+            musicSection.style.removeProperty("background-image");
+            artFilter.hidden = true;
             musicSection.className = "danger";
             linkLabel.removeAttribute("href");
             playingLabel.innerHTML = "last played";

@@ -1,48 +1,59 @@
 export default {
-  async fetch(request, env, ctx) {
-    const url = new URL(request.url);
-    var path = url.pathname.toString().slice(1).split("/");
-
-    if (path[0] == "services") {
-        try {
-            if (path[1] == "last-played") {
-                const res = await fetch("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=am3thystx&api_key=e7e7db3733ebd1413a1466b1ab6117de&format=json&limit=1");
-                if (!res.ok) {
-                    throw new Error("Response from Last.fm was not OK.");
+    async fetch(request, env, ctx) {
+        const url = new URL(request.url);
+        var path = url.pathname.toString().slice(1).split("/");
+        if (path[0] == "services") {
+            try {
+                if (path[1] == "last-played") {
+                    const res = await fetch("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=am3thystx&api_key=e7e7db3733ebd1413a1466b1ab6117de&format=json&limit=1");
+                    if (!res.ok) {
+                        throw new Error("Response from Last.fm was not OK.");
+                    }
+                    const resJSON = await res.json();
+                    return new Response(JSON.stringify(resJSON), {
+                        headers: {
+                            "content-type": "application/json",
+                            // "Access-Control-Allow-Origin": "aivi.party",
+                            "Access-Control-Allow-Origin": "*",
+                        },
+                    });
+                } else if (path[1] == "discord-status") {
+                    const res = await fetch("https://api.lanyard.rest/v1/users/802178124342493224");
+                    if (!res.ok) {
+                        throw new Error("Response from Lanyard was not OK.");
+                    }
+                    const resJSON = await res.json();
+                    return new Response(JSON.stringify(resJSON), {
+                        headers: {
+                            "content-type": "application/json",
+                            // "Access-Control-Allow-Origin": "aivi.party",
+                            "Access-Control-Allow-Origin": "*",
+                        },
+                    });
+                } else if (path[1] == "hit-counter") {
+                    const hits = await env.hitCounter.get('aivi.party');
+                    await env.hitCounter.put('aivi.party', parseInt(hits) + 1);
+                    // list all key-value pairs
+                    // const allKeys = await env.KV.list();
+                    // delete a key-value pair
+                    // await env.KV.delete('KEY');
+                    return new Response(
+                    JSON.stringify({
+                        hits: hits
+                    }),
+                    );
+                } else {
+                    return pageNotFound();
                 }
-                const resJSON = await res.json();
-                return new Response(JSON.stringify(resJSON), {
-                    headers: {
-                        "content-type": "application/json",
-                        // "Access-Control-Allow-Origin": "aivi.party",
-                        "Access-Control-Allow-Origin": "*",
-                    },
-                });
-            } else if (path[1] == "discord-status") {
-                const res = await fetch("https://api.lanyard.rest/v1/users/802178124342493224");
-                if (!res.ok) {
-                    throw new Error("Response from Lanyard was not OK.");
-                }
-                const resJSON = await res.json();
-                return new Response(JSON.stringify(resJSON), {
-                    headers: {
-                        "content-type": "application/json",
-                        // "Access-Control-Allow-Origin": "aivi.party",
-                        "Access-Control-Allow-Origin": "*",
-                    },
-                });
-            } else {
-                return pageNotFound();
+            } catch (error) {
+                console.error(error);
             }
-        } catch (error) {
-            console.error(error);
+        } else if (path[0] == "blog") {
+            return blogNotFound();
+        } else {
+            return pageNotFound();
         }
-    } else if (path[0] == "blog") {
-        return blogNotFound();
-    } else {
-        return pageNotFound();
     }
-  }
 };
 
 async function pageNotFound() {
