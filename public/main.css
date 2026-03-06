@@ -25,7 +25,7 @@
 }
 :root {
     --text: #ddd;
-    --d-text-b: #ddd;
+    --d-text-b: #ccc;
     --text-b: var(--d-text-b);
     --icon: #fff8;
     --selection: #f6f;
@@ -270,16 +270,16 @@ marquee {
         opacity: 0.1;
         text-shadow: none;
     }
-    &.success {
+    &.success, .success {
         text-shadow: 0 0 0.5em var(--success)
     } 
-    &.warning {
+    &.warning, .warning {
         text-shadow: 0 0 0.5em var(--warning)
     }
-    &.danger {
+    &.danger, .danger {
         text-shadow: 0 0 0.5em var(--danger)
     }
-    &.important {
+    &.important, .important {
         text-shadow: 0 0 0.5em var(--accent)
     } 
 }

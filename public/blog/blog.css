@@ -26,7 +26,7 @@
     --danger-b: #700;
     --danger-c: #200;
     font-size: 18px;
-    font-family: Monopix;
+    font-family: Ubuntu Mono;
     color: var(--text);
     -webkit-text-size-adjust: none;
 }

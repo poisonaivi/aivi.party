@@ -159,7 +159,7 @@ async function updateDiscord() {
                 hour: '2-digit',
                 minute: '2-digit',
             }, formatter = new Intl.DateTimeFormat([], clockOptions);
-            statusLabel.innerHTML = status;
+            statusLabel.innerHTML = "&quot;" + status + "&quot;";
             statusDateLabel.innerHTML = formatter.format(new Date(statusDate));
         } else {
             statusLabel.innerHTML = "<small>no status set rn :3</small>"
@@ -277,8 +277,7 @@ async function updateCommitInfo() {
         }
         const resJSON = await res.json();
         const date = new Date(resJSON.commit.committer.date);
-        document.getElementById("commitDate").innerHTML = document.getElementById("changelogCommitDate").innerHTML = "." + date.getUTCFullYear().toString().slice(2, 4) + "." + (date.getUTCMonth() + 1) + "." + (date.getUTCDate());
-        document.getElementById("commitId").innerHTML = " • " + resJSON.sha.slice(0, 7).toUpperCase();
+        document.getElementById("changelogCommitDate").innerHTML = "." + date.getUTCFullYear().toString().slice(2, 4) + "." + (date.getUTCMonth() + 1) + "." + (date.getUTCDate());
         document.getElementById("changelogCommitId").innerHTML = resJSON.sha.toUpperCase();
     } catch (error) {
         console.error(error);
