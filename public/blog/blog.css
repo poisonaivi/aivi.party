@@ -2,6 +2,10 @@
     font-family: "Monopix";
     src: url(/fonts/monopix.otf) format("opentype");
 }
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url(/fonts/UbuntuMono-Regular.ttf) format("truetype");
+}
 :root {
     --text: #fff;
     --selection: #f6f;
