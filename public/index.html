@@ -21,28 +21,27 @@
                 <p>for a better experience, consider <a href="https://javascript.aivi.party/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p>
             </section>
         </noscript>
-        <!-- <section class="danger">
-            <p class="danger"><img class="icon inline-left" src="/assets/icons/warning.png">notice:</p>
-            <hr>
-            <p>the <a href="https://k-id.aivi.party/" target="_blank">k-id age verifier</a> is currently patched, and the devs are aware of this. fixes will be released when the time is right. please don't ask the devs, admins, or previous verifiers to verify your account.</p>
-        </section> -->
         <table class="main">
             <tr style="height: 1px;">
                 <td class="secondaryColumn">
                     <section id="discordSection">
-                        <a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon inline-right" src="/assets/logos/discord.png" style="float: right;"></a>
-                        <p><img id="presenceIcon" class="icon danger inline-left" src="/assets/icons/loading.gif"><span id="presenceLabel" class="danger">loading presence</span> <small id="statusDateLabel"></small></p>
-                        <hr>
-                        <p><span id="statusLabel"><small>status unavailable</small></span></p>
+                        <p><img id="presenceIcon" class="icon danger inline-left" src="/assets/icons/loading.gif"><span id="presenceLabel" class="danger">loading presence</span></p>
+                        <p><span id="statusLabel"></span></p>
                         <script>updateDiscord();</script>
                     </section>
-                    <section class="success">
-                        <p class="success" style="float: right;">new post</p>
-                        <p><a href="/blog/index.html"><img class="icon inline-left" src="/assets/icons/speech.png"></a><small>Mar 6, 2026</small></p>
-                        <p><a href="/blog/0005.html">Discord, online privacy, and who should be protecting the kids</a></p>
+                    <section>
+                        <p style="float: right;"><small><a href="/blog/index.html">more posts<img class="icon" src="/assets/icons/arrow-more.png"></a></small></p>
+                        <p><img class="icon inline-left" src="/assets/icons/speech.png">blog</p>
+                        <hr>
+                        <a href="/blog/0005.html"><p><small><img class="icon inline-left" src="/assets/icons/pin.png">March 6, 2026</small><br>Discord, online privacy, and who should be protecting the kids</p></a>
+                        <hr>
+                        <a href="/blog/0001.html"><p><small><img class="icon inline-left" src="/assets/icons/pin.png">January 21, 2026</small><br>world wide webbing</p></a>
+                        <hr>
+                        <a href="/blog/0004.html"><p><small>February 25, 2026</small><br>Monopix - a monospaced, pixelated typeface with a very innovative name</p></a>
                     </section>
                     <section>
-                        <p><img class="icon inline-left" src="/assets/icons/clock.png">UTC&#8209;5 <small>eastern standard time</small></p>
+                        <p style="float: right;"><small>(UTC-05:00)</small></p>
+                        <p><img class="icon inline-left" src="/assets/icons/clock.png">my time</p>
                         <div style="transform: translateX(68px);">
                             <h3 class="num bg">??!??!??</h3>
                             <h3 id="localTime" class="num"><span class="danger">--:--:--</span></h3>
@@ -50,17 +49,6 @@
                         <p><small>unix epoch:<span id="unixTime" class="important num"><span class="danger">----------</span></span> beat: @<span id="beatTime" class="important num"><span class="danger">---.--</span></span></small></p>
                         <script>updateClockTime();</script>
                         <script>updateBeatTime();</script>
-                    </section>
-                    <section id="musicSection" style="aspect-ratio: 1.5; box-shadow: inset 0 0 30px var(--shadow); background-position: 50%; background-size: cover; overflow: hidden;">
-                        <div id="artFilter" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #000b;" hidden></div>                        
-                        <a href="https://www.last.fm/user/am3thystx" target="_blank"><img class="icon inline-right" src="/assets/logos/lastfm.png" style="float: right;"></a>
-                        <p style="float: left;"><img id="musicIcon" class="icon inline-left" src="/assets/icons/music.png"><span id="playingLabel">last played</span></p>
-                        <div style="position: absolute; bottom: 12px; width: calc(100% - 2 * 12px);">
-                            <a class="important" id="linkLabel" target="_blank"><h3 id="titleLabel" style="white-space: nowrap; overflow: visible;"></h3></a>
-                            <p id="artistLabel" style="white-space: nowrap; overflow: visible;"><span class="danger"><img class="icon danger inline-left" src="/assets/icons/loading.gif">loading song</span></p>
-                            <p id="albumLabel" style="white-space: nowrap; overflow: visible;"></p>
-                        </div>
-                        <script>updateLastfm();</script>
                     </section>
                 </td>
                 <td class="primaryColumn" style="height: inherit;">
@@ -125,14 +113,26 @@
                         <iframe src="https://www3.cbox.ws/box/?boxid=3545093&boxtag=rRmvwj" style="width: calc(100% + 22px); height: 350px; margin: 0 0 -6px -10px; mask-image: linear-gradient(0deg, #fff 80%, #0000 100%);"></iframe>	
                     </section>
                     <section style="padding-bottom: 0; overflow: hidden;">
-                        <p><img class="icon inline-left" src="/assets/icons/document.png">changelog <small>version: <span class="success num">6<span id="changelogCommitDate"><span class="danger">.X.X.X</span></span></span> commit: <span id="changelogCommitId" class="success num"><span class="danger">LOADING</span></span></small></p>
+                        <p style="float: right;"><small>version: <span class="success num">6<span id="changelogCommitDate"><span class="danger">.X.X.X</span></span></span> commit: <span id="changelogCommitId" class="success num"><span class="danger">LOADING</span></span></small></p>
+                        <p><img class="icon inline-left" src="/assets/icons/document.png">changelog</p>
                         <div id="changelog" style="height: 225px; padding: 12px 0; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 20%, #fff 90%, #0000 100%);"><p style="text-align: center;"><br><img class="icon" src="/assets/icons/loading.gif"></p><script>loadElement("changelog.html", "changelog");</script></div>
                     </section>
                 </td>
                 <td class="secondaryColumn">
+                    <section id="musicSection" style="aspect-ratio: 1.5; box-shadow: inset 0 0 30px var(--shadow); background-position: 50%; background-size: cover; overflow: hidden;">
+                        <div id="artFilter" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #000b;" hidden></div>                        
+                        <a href="https://www.last.fm/user/am3thystx" target="_blank"><img class="icon inline-right" src="/assets/logos/lastfm.png" style="float: right;"></a>
+                        <p style="float: left;"><img id="musicIcon" class="icon inline-left" src="/assets/icons/music.png"><span id="playingLabel">last played</span></p>
+                        <div style="position: absolute; bottom: 12px; width: calc(100% - 2 * 12px);">
+                            <a class="important" id="linkLabel" target="_blank"><h3 id="titleLabel" style="white-space: nowrap; overflow: visible;"></h3></a>
+                            <p id="artistLabel" style="white-space: nowrap; overflow: visible;"><span class="danger"><img class="icon danger inline-left" src="/assets/icons/loading.gif">loading song</span></p>
+                            <p id="albumLabel" style="white-space: nowrap; overflow: visible;"></p>
+                        </div>
+                        <script>updateLastfm();</script>
+                    </section>
                     <section>
+                        <p style="float: right;"><small>hotlinking encouraged</small></p>
                         <p><img class="icon inline-left" src="/assets/icons/link.png">link me!</p>
-                        <p><small>hotlinking encouraged</small></p>
                         <table style="width: 100%; margin: 6px 0 -6px;">
                             <tr>
                                 <td style="padding-right: 4px;">

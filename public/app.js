@@ -107,7 +107,6 @@ async function updateDiscord() {
     const presenceLabel = document.getElementById("presenceLabel");
     const presenceIcon = document.getElementById("presenceIcon");
     const statusLabel = document.getElementById("statusLabel");
-    const statusDateLabel = document.getElementById("statusDateLabel");
     const discordSection = document.getElementById("discordSection");
     try {
         const res = await fetch("https://aivi.party/services/discord-status");
@@ -116,8 +115,7 @@ async function updateDiscord() {
             presenceLabel.className = "danger";
             presenceIcon.className = "icon inline-left danger";
             presenceIcon.src = "/assets/icons/error.png";
-            statusLabel.innerHTML = "<small>status unavailable</small>"
-            statusDateLabel.innerHTML = "";
+            statusLabel.innerHTML = "<hr><small>status unavailable</small>"
             discordSection.className = "danger";
             throw new Error("Failed to fetch.");
         }
@@ -150,20 +148,9 @@ async function updateDiscord() {
         }
         if (resJSON.data.activities.length != 0) {
             const status = resJSON.data.activities['0'].state;
-            const statusDate = resJSON.data.activities['0'].created_at;
-            const clockOptions = {
-                month: 'short',
-                day: 'numeric',
-                year: 'numeric',
-                hour12: false,
-                hour: '2-digit',
-                minute: '2-digit',
-            }, formatter = new Intl.DateTimeFormat([], clockOptions);
-            statusLabel.innerHTML = "&quot;" + status + "&quot;";
-            statusDateLabel.innerHTML = formatter.format(new Date(statusDate));
+            statusLabel.innerHTML = "<hr>&quot;" + status + "&quot;";
         } else {
-            statusLabel.innerHTML = "<small>no status set rn :3</small>"
-            statusDateLabel.innerHTML = "";
+            statusLabel.innerHTML = "";
         }
     } catch (error) {
         console.error(error);
