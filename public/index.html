@@ -11,16 +11,23 @@
 <body>
     <div id="accessibility" hidden><script defer src="/elements/accScript.js"></script></div>
     <main>
-        <header class="main" id="header"><script>loadElement("indexHeader.html", "header");</script></header>
-        <noscript>
-            <section class="danger">
-                <h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript disabled</h3>
-                <br>
-                <p>congrats, you tripped the noscript element! this site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p>
-                <br>
-                <p>for a better experience, consider <a href="https://javascript.aivi.party/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p>
+        <header class="main" id="header">
+            <section style="height: 280px; background-image: url('/assets/aivibanner2026-web.jpeg'); background-size: cover; overflow: hidden; display: flex; align-items: flex-end; justify-content: center;">
+                <div style="position: absolute; left: 0; bottom: 0; width: 100%; height: 120px; background-image: linear-gradient(0deg, #000, #0000);"></div>
+                <div style="position: relative; z-index: 1;">
+                    <a id="index" class="button selected" href="/index.html"><img class="icon inline-left" src="/assets/icons/home.png">index</a>
+                    <a id="about" class="button" href="/about.html"><img class="icon inline-left" src="/assets/icons/person.png">about</a>
+                    <a id="contact" class="button" href="/contact.html"><img class="icon inline-left" src="/assets/icons/mail.png">contact</a>
+                    <a id="commissions" class="button" href="/commissions.html"><img class="icon inline-left" src="/assets/icons/heart.png">commissions</a>
+                    <a id="gallery" class="button" href="/gallery.html"><img class="icon inline-left" src="/assets/icons/image.png">gallery</a>
+                    <a id="projects" class="button" href="/projects.html"><img class="icon inline-left" src="/assets/icons/code.png">projects</a>
+                    <!-- <a id="guestbook" class="button" href="/guestbook.html"><img class="icon inline-left" src="/assets/icons/document.png">guestbook</a> -->
+                    <a class="button" href="/blog/index.html"><img class="icon inline-left" src="/assets/icons/speech.png">blog</a>
+                </div>
             </section>
-        </noscript>
+            <!-- <script>loadElement("indexHeader.html", "header");</script> -->
+        </header>
+        <noscript><section class="danger"><h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript disabled</h3><p>congrats, you tripped the noscript element! this site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p><br><p>consider <a href="https://javascript.aivi.party/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p></section></noscript>
         <table class="main">
             <tr style="height: 1px;">
                 <td class="secondaryColumn">
@@ -168,7 +175,7 @@
                         <a href="/commissions.html">commissions</a>
                         <a href="/projects.html">projects</a>
                         <a href="/guestbook.html">guestbook</a>
-                        <a href="/blog/index.html">blog</a></div>
+                        <a href="/blog/index.html">blog</a>
                     </section>
                 </td>
             </tr>
