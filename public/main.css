@@ -10,11 +10,10 @@
     descent-override: 20%;
 }
 @font-face {
-    font-family: "Ubuntu Mono";
+    font-family: "acc-monospace";
     src: url(/fonts/UbuntuMono-Regular.ttf) format("truetype");
-    size-adjust: 98%;
-    ascent-override: 100%;
-    descent-override: 28%;
+    ascent-override: 95%;
+    descent-override: 30%;
 }
 @font-face {
     font-family: "Splice";
