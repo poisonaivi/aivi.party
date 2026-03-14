@@ -21,7 +21,6 @@
                     <a id="commissions" class="button" href="/commissions.html"><img class="icon inline-left" src="/assets/icons/heart.png">commissions</a>
                     <a id="gallery" class="button" href="/gallery.html"><img class="icon inline-left" src="/assets/icons/image.png">gallery</a>
                     <a id="projects" class="button" href="/projects.html"><img class="icon inline-left" src="/assets/icons/code.png">projects</a>
-                    <!-- <a id="guestbook" class="button" href="/guestbook.html"><img class="icon inline-left" src="/assets/icons/document.png">guestbook</a> -->
                     <a class="button" href="/blog/index.html"><img class="icon inline-left" src="/assets/icons/speech.png">blog</a>
                 </div>
             </section>
@@ -46,16 +45,16 @@
                         <hr>
                         <a href="/blog/0004.html"><p><small>February 25, 2026</small><br>Monopix - a monospaced, pixelated typeface with a very innovative name</p></a>
                     </section>
-                    <section>
-                        <p style="float: right;"><small>(UTC-04:00)</small></p>
-                        <p><img class="icon inline-left" src="/assets/icons/clock.png">my time</p>
-                        <div style="transform: translateX(68px);">
-                            <h3 class="num bg">??!??!??</h3>
-                            <h3 id="localTime" class="num"><span class="danger">--:--:--</span></h3>
+                    <section id="musicSection" style="aspect-ratio: 1.5; box-shadow: inset 0 0 30px var(--shadow); background-position: 50%; background-size: cover; overflow: hidden;">
+                        <div id="artFilter" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #000b;" hidden></div>                        
+                        <a href="https://www.last.fm/user/am3thystx" target="_blank"><img class="icon inline-right" src="/assets/logos/lastfm.png" style="float: right;"></a>
+                        <p style="float: left;"><img id="musicIcon" class="icon inline-left" src="/assets/icons/music.png"><span id="playingLabel">last played</span></p>
+                        <div style="position: absolute; bottom: 12px; width: calc(100% - 2 * 12px);">
+                            <a class="important" id="linkLabel" target="_blank"><h3 id="titleLabel" style="white-space: nowrap; overflow: visible;"></h3></a>
+                            <p id="artistLabel" style="white-space: nowrap; overflow: visible;"><span class="danger"><img class="icon danger inline-left" src="/assets/icons/loading.gif">loading song</span></p>
+                            <p id="albumLabel" style="white-space: nowrap; overflow: visible;"></p>
                         </div>
-                        <p><small>unix epoch:<span id="unixTime" class="important num"><span class="danger">----------</span></span> beat: @<span id="beatTime" class="important num"><span class="danger">---.--</span></span></small></p>
-                        <script>updateClockTime();</script>
-                        <script>updateBeatTime();</script>
+                        <script>updateLastfm();</script>
                     </section>
                 </td>
                 <td class="primaryColumn" style="height: inherit;">
@@ -63,16 +62,16 @@
                         <img src="/assets/streetlamp.png" style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 0;">
                         <div style="position: relative; z-index: 1;">
                             <h3><span id="funTitle">not actually a party</span></h3>
-                            <p><span id="greeting">hi</span>, i'm <span class="important">aivi</span> <small>she/it</small>, a self-taught <span class="important">web dev</span> & <a href="/gallery.html">furry artist</a>. i pride myself in creating things with my own two paws, so i built this website to share it all. since 2024, it's seen <span id="hitcount" class="success num"><span class="danger">-----</span></span> visitors.</p>
+                            <p><span id="greeting">hi</span>, i'm <span class="important">aivi</span> <small>she/it</small>, a self-taught <span class="important">web dev</span> & <a href="/gallery.html">furry artist</a>. i pride myself in creating things with my own two paws, and i built this website to share it all. <span id="hitcount" class="success num"><span class="danger">-----</span></span> humans, robots, and other beings have passed through here.</p>
                             <br>
-                            <p>somewhere along the way, i ran into literally the <span class="important">coolest people <i>ever</i></span>, and now i'm part of what they call the "<span class="important">indie web</span>."</p>
+                            <p>even though it's <span class="important num">2</span> years, <span class="important num">4</span> domains, <span class="important num">6</span> redesigns, and probably over a thousand commits old, this site is, and will always be, a work in progress.</p>
                             <br>
-                            <p>it's been <span class="important num">2</span> years, <span class="important num">4</span> domains, <span class="important num">6</span> redesigns, and probably over a thousand commits since, but i still must warn you that this site is, and will always be, a work in progress.</p>
+                            <p>nothing here would exist if i hadn't taken inspiration from others, so feel free to look inside, copy code (although you should learn how it works), and get inspired.</p>
                             <br>
                             <p><small>if anything looks broken, try hard-reloading with <span class="important">Ctrl/Cmd/Opt + Shift + R</span></small></p>
                             <hr>
                             <div style="font-size: 0;">
-                                <!-- <a href="https://aivi.party/" target="_blank"><img class="badge w88 h31" src="/assets/badges/aivi-party-88x31.gif"></a> -->
+                                <a href="https://aivi.party/" target="_blank"><img class="badge w88 h31" src="/assets/badges/aivi-party-88x31.gif"></a>
                                 <a href="https://amethystx.net/" target="_blank"><img class="badge w88 h31" src="/assets/badges/amethystx-net-88x31.gif"></a>
                                 <a href="https://popop614.neocities.org/" target="_blank"><img class="badge w88 h31" src="https://popop614.neocities.org/8831.png"></a>
                                 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img class="badge w88 h31" src="/assets/badges/CC-BY-NC-ND-88x31.png"></a>
@@ -93,7 +92,6 @@
                                 <a href="https://baccyflap.com" target="_blank"><img class="badge w88 h31" src="https://baccyflap.com/mus/links/button.gif"></a>
                                 <a href="https://toasty.place/" target="_blank"><img class="badge w88 h31" src="https://toasty.place/images/buttons/sitebutton.gif"></a>
                                 <a href="https://darkosparko.nekoweb.org/" target="_blank"><img class="badge w88 h31" src="https://darkosparko.nekoweb.org/rocket-button.gif"></a>
-                                <a href="https://pilosophos.com/" target="_blank"><img class="badge w88 h31" src="https://pilosophos.com/images/88x31/pilosophos-circle-88x31.png"></a>
                             </div>
                         </div>
                         <script>updateCommitInfo();</script>
@@ -126,20 +124,21 @@
                     </section>
                 </td>
                 <td class="secondaryColumn">
-                    <section id="musicSection" style="aspect-ratio: 1.5; box-shadow: inset 0 0 30px var(--shadow); background-position: 50%; background-size: cover; overflow: hidden;">
-                        <div id="artFilter" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #000b;" hidden></div>                        
-                        <a href="https://www.last.fm/user/am3thystx" target="_blank"><img class="icon inline-right" src="/assets/logos/lastfm.png" style="float: right;"></a>
-                        <p style="float: left;"><img id="musicIcon" class="icon inline-left" src="/assets/icons/music.png"><span id="playingLabel">last played</span></p>
-                        <div style="position: absolute; bottom: 12px; width: calc(100% - 2 * 12px);">
-                            <a class="important" id="linkLabel" target="_blank"><h3 id="titleLabel" style="white-space: nowrap; overflow: visible;"></h3></a>
-                            <p id="artistLabel" style="white-space: nowrap; overflow: visible;"><span class="danger"><img class="icon danger inline-left" src="/assets/icons/loading.gif">loading song</span></p>
-                            <p id="albumLabel" style="white-space: nowrap; overflow: visible;"></p>
+                    <section>
+                        <p style="float: right;"><small>(UTC-04:00)</small></p>
+                        <p><img class="icon inline-left" src="/assets/icons/clock.png">local time</p>
+                        <hr>
+                        <div style="transform: translateX(68px);">
+                            <h3 class="num bg">??!??!??</h3>
+                            <h3 id="localTime" class="num"><span class="danger">--:--:--</span></h3>
                         </div>
-                        <script>updateLastfm();</script>
+                        <p><small>unix epoch:<span id="unixTime" class="important num"><span class="danger">----------</span></span> beat: @<span id="beatTime" class="important num"><span class="danger">---.--</span></span></small></p>
+                        <script>updateClockTime();</script>
+                        <script>updateBeatTime();</script>
                     </section>
                     <section>
-                        <p style="float: right;"><small>hotlinking encouraged</small></p>
-                        <p><img class="icon inline-left" src="/assets/icons/link.png">link me!</p>
+                        <p><img class="icon inline-left" src="/assets/icons/link.png">link my site!</p>
+                        <hr>
                         <table style="width: 100%; margin: 6px 0 -6px;">
                             <tr>
                                 <td style="padding-right: 4px;">
@@ -152,30 +151,27 @@
                         </table>
                     </section>
                     <section>
+                        <p><img class="icon inline-left" src="/assets/icons/question.png">random cool site</p>
+                        <hr>
+                        <div style="text-align: center;">
+                            <iframe class="ad" style="display: inline-block; width: 180px; aspect-ratio: 1; box-shadow: 0 0 40px #666; overflow: hidden;" src="https://dimden.neocities.org/navlink/"></iframe>
+                        </div>
+                    </section>
+                    <section>
+                        <p><img class="icon inline-left" src="/assets/icons/people.png">webrings & neigbors</p>
+                        <hr>
                         <section class="webring" style="text-align: center; border-color: #fff; background: #fd4482; font-family: 'Helvetica Neue', Helvetica, sans-serif;">
                             <a href="https://hotlinewebring.club/aivi/previous" style="text-shadow: none; color: #fff;">&larr;</a> <a href="https://hotlinewebring.club/" target="_blank" style="text-shadow: none; color: #fff;"><i><b>HOTLINE WEBRING</b></i></a> <a href="https://hotlinewebring.club/aivi/next" style="text-shadow: none; color: #fff;">&rarr;</a>
                         </section>
                         <section class="webring" style="text-align: center; border: 2px ridge #bbb; border-radius: 0; background: #fff; font-family: 'Times New Roman', Times, serif;">
                             <a href="https://webring.dinhe.net/prev/aivi.party" style="text-shadow: none; color: #00f;">&larr;</a> <a href="https://webring.dinhe.net/" target="_blank" style="text-shadow: none; color: #00f;"><b>Retronaut Webring</b></a> <a href="https://webring.dinhe.net/next/aivi.party" style="text-shadow: none; color: #00f;">&rarr;</a>
                         </section>
-                        <section class="webring" style="text-align: center; border-color: #aaa; background: linear-gradient(45deg, #522, #552, #252, #255, #225, #525);">
-                            <a href="https://baccyflap.com/noai/?prv&s=aiv"><img class="icon inline-left" src="/assets/icons/arrow-back.png"></a><a href="https://baccyflap.com/noai" target="_blank">no ai webring</a> <small><a href="https://baccyflap.com/noai/?rnd">(?)</a></small><a href="https://baccyflap.com/noai/?nxt&s=aiv" target="_top"><img class="icon inline-right" src="/assets/icons/arrow-more.png"></a>
+                        <section class="webring" style="text-align: center; border-color: #bbb; background: linear-gradient(45deg, #522, #552, #252, #255, #225, #525); font-family: 'Ubuntu Mono', monospace;">
+                            <a href="https://baccyflap.com/noai/?prv&s=aiv" style="color: #ddd;">&larr;</a> <a href="https://baccyflap.com/noai" target="_blank" style="color: #ddd;">no ai webring</a> <small><a href="https://baccyflap.com/noai/?rnd" style="color: #ddd;">(?)</a></small> <a href="https://baccyflap.com/noai/?nxt&s=aiv" style="color: #ddd;">&rarr;</a>
                         </section>
-                    </section>
-                    <section style="text-align: center;">
-                        <iframe class="ad" style="display: inline-block; width: 180px; aspect-ratio: 1; box-shadow: 0 0 40px #666; overflow: hidden;" src="https://dimden.neocities.org/navlink/"></iframe>
-                    </section>
-                    <section>
-                        <p><img class="icon inline-left" src="/assets/icons/list.png">sitemap</p>
-                        <p><small>indexing links for search engines</small></p>
-                        <a href="/index.html">index</a>
-                        <a href="/about.html">about</a>
-                        <a href="/contact.html">contact</a>
-                        <a href="/gallery.html">gallery</a>
-                        <a href="/commissions.html">commissions</a>
-                        <a href="/projects.html">projects</a>
-                        <a href="/guestbook.html">guestbook</a>
-                        <a href="/blog/index.html">blog</a>
+                        <section class="webring" style="text-align: center; border: 1px solid #fff; border-radius: 0; background: #454545; font-family: Merriweather, Georgia, serif;">
+                            <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=aivi" style="color: #fff;">⥼</a> <a href="https://webring.bucketfish.me/index.html" target="_blank"><span style="background: linear-gradient(90deg, #ffaeae, #ffe5a3, #eeff97, #a3ffae, #93cbff, #cf9fff); background-clip: text; -webkit-background-clip: text; color: #0000; text-shadow: none;">bucket webring</span></a> <small><a href="https://webring.bucketfish.me/redirect.html?to=random&name=aivi" style="color: #fff;">(?)</a></small> <a href="https://webring.bucketfish.me/redirect.html?to=next&name=aivi" style="color: #fff;">⥽</a>
+                        </section>
                     </section>
                 </td>
             </tr>

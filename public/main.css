@@ -10,7 +10,7 @@
     descent-override: 20%;
 }
 @font-face {
-    font-family: "acc-monospace";
+    font-family: "Ubuntu Mono";
     src: url(/fonts/UbuntuMono-Regular.ttf) format("truetype");
     ascent-override: 95%;
     descent-override: 30%;
@@ -254,7 +254,11 @@ marquee {
     display: block;
 }
 #header {
-    margin-top: var(--border-spacing);
+    & section {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: none;
+    }
 }
 .primaryColumn {
     width: 700px;
