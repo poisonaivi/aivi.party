@@ -147,7 +147,7 @@ async function updateDiscord() {
             discordSection.className = "danger";
         }
         if (resJSON.data.activities.length != 0) {
-            const status = resJSON.data.activities['0'].state;
+            const status = resJSON.data.activities['0'].state.replace("<", "&lt;").replace(">", "&gt;");
             statusLabel.innerHTML = "<hr>&quot;" + status + "&quot;";
         } else {
             statusLabel.innerHTML = "";
