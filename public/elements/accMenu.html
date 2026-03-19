@@ -1,4 +1,3 @@
-<!-- <link rel="stylesheet" href="/elements/accStyles.css"> -->
 <style>
     @font-face {
         font-family: "acc-dyslexic";
@@ -8,18 +7,18 @@
         descent-override: 40%;
     }
 
-    @font-face {
+    /* @font-face {
         font-family: "acc-sansserif";
         src: url(/fonts/Exo-Variable.ttf) format("truetype");
         size-adjust: 90%;
         ascent-override: 106%;
-    }
+    } */
 
-    @font-face {
+    /* @font-face {
         font-family: "acc-serif";
         src: url(/fonts/MicaValo.ttf) format("truetype");
         size-adjust: 92%;
-    }
+    } */
 
     @font-face {
         font-family: "acc-monospace";
@@ -99,36 +98,36 @@
     </div>
     <div class="acc-options">
         <fieldset>
-            <legend><b>Visual:</b></legend>
+            <legend><b>visual:</b></legend>
             <input type="checkbox" id="novfx" onclick="accChange();">
-            <label for="novfx">Disable visual effects</label>
+            <label for="novfx">disable visual effects</label>
             <br>
             <input type="checkbox" id="desat" onclick="accChange();">
-            <label for="desat">Reduce bright colors</label>
+            <label for="desat">reduce bright colors</label>
             <br>
             <input type="checkbox" id="contrast" onclick="accChange();">
-            <label for="contrast">Increase contrast</label>
+            <label for="contrast">increase contrast</label>
             <br>
             <input type="checkbox" id="invert" onclick="accChange();">
-            <label for="invert">Invert colors</label>
+            <label for="invert">invert colors</label>
         </fieldset>
         <br>
         <fieldset>
-            <legend><b>Font:</b></legend>
+            <legend><b>typeface:</b></legend>
             <input type="radio" id="sitefont" name="font" onclick="accChange();" checked>
-            <label for="sitefont" style="font-family: monopix;">Default</label>
+            <label for="sitefont" style="font-family: monopix;">pixelated (default)</label>
             <br>
-            <input type="radio" id="accfont" name="font" onclick="accChange();">
-            <label for="accfont" style="font-family: acc-dyslexic;">OpenDyslexic</label>
+            <input type="radio" id="monofont" name="font" onclick="accChange();">
+            <label for="monofont" style="font-family: acc-monospace;">smooth</label>
             <br>
-            <input type="radio" id="sansfont" name="font" onclick="accChange();">
+            <input type="radio" id="dysfont" name="font" onclick="accChange();">
+            <label for="dysfont" style="font-family: acc-dyslexic;">OpenDyslexic (experimental)</label>
+            <!-- <input type="radio" id="sansfont" name="font" onclick="accChange();">
             <label for="sansfont" style="font-family: acc-sansserif;">Sans-serif</label>
             <br>
             <input type="radio" id="seriffont" name="font" onclick="accChange();">
             <label for="seriffont" style="font-family: acc-serif;">Serif</label>
-            <br>
-            <input type="radio" id="monofont" name="font" onclick="accChange();">
-            <label for="monofont" style="font-family: acc-monospace;">Monospace</label>
+            <br> -->
         </fieldset>
         <br>
         <i>Performance may vary depending on your browser and device type. Settings are saved on your device.</i>

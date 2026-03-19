@@ -7,8 +7,8 @@ function accMenuClose() {
 }
 
 function accRecall() {
-    optionIds = ["novfx", "desat", "contrast", "invert", "accfont", "sansfont", "seriffont", "monofont"];
-    options = [false, false, false, false, false, false, false, false];
+    optionIds = ["novfx", "desat", "contrast", "invert", "monofont", "dysfont"];
+    options = [false, false, false, false, false, false];
     for (let i = 0; i < options.length; i++) {
         if (localStorage.getItem(optionIds[i])) {
             options[i] = true;
@@ -73,16 +73,10 @@ function accApply() {
         mainFilter += "invert(1)";
     }
     if (options[4]) {
-        mainFont = "acc-dyslexic";
+        mainFont = "acc-monospace";
     }
     if (options[5]) {
-        mainFont = "acc-sansserif";
-    }
-    if (options[6]) {
-        mainFont = "acc-serif";
-    }
-    if (options[7]) {
-        mainFont = "acc-monospace";
+        mainFont = "acc-dyslexic";
     }
     mainEle.style.filter = mainFilter;
     mainEle.style.mask = mainMask;

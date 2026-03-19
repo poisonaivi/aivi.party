@@ -69,13 +69,12 @@
                             <br>
                             <p>most of the things here were inspired, at least in part, by other people. i don't mind if you <span class="important">view-source</span>, <span class="important">adapt code</span> (though you should first understand how it works), or take inspiration from this site.</p>
                             <br>
-                            <p><small>if anything looks broken, try hard-reloading with <span class="important">Ctrl/Cmd/Opt + Shift + R</span></small></p>
+                            <p><small>if anything looks broken, try hard-reloading with Ctrl/Cmd/Opt + Shift + R</small></p>
                             <hr>
                             <div style="font-size: 0;">
                                 <a href="https://aivi.party/" target="_blank"><img class="badge w88 h31" src="/assets/badges/aivi-party-88x31-2.gif"></a>
                                 <a href="https://amethystx.net/" target="_blank"><img class="badge w88 h31" src="/assets/badges/amethystx-net-88x31.gif"></a>
                                 <a href="https://popop614.neocities.org/" target="_blank"><img class="badge w88 h31" src="https://popop614.neocities.org/8831.png"></a>
-                                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img class="badge w88 h31" src="/assets/badges/CC-BY-NC-ND-88x31.png"></a>
                                 <a href="https://javascript.aivi.party/" target="_blank"><img class="badge w88 h31" src="https://javascript.aivi.party/enable-javascript.png"></a>
                                 <img class="badge w88 h31" src="/assets/badges/floppy-copy.png">
                                 <img class="badge w88 h31" src="/assets/badges/css-difficult.png">
@@ -93,6 +92,7 @@
                                 <a href="https://baccyflap.com" target="_blank"><img class="badge w88 h31" src="https://baccyflap.com/mus/links/button.gif"></a>
                                 <a href="https://toasty.place/" target="_blank"><img class="badge w88 h31" src="https://toasty.place/images/buttons/sitebutton.gif"></a>
                                 <a href="https://darkosparko.nekoweb.org/" target="_blank"><img class="badge w88 h31" src="https://darkosparko.nekoweb.org/rocket-button.gif"></a>
+                                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img class="badge w88 h31" src="/assets/badges/CC-BY-NC-ND-88x31.png"></a>
                             </div>
                         </div>
                         <script>updateCommitInfo();</script>
@@ -103,14 +103,28 @@
                 </td>
             </tr>
         </table>
-        <section>
-            <table style="width: 100%; text-align: center;">
-                <td style="width: 25%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>e-mail<a> <small>(<a href="/aivi-pub-key-D90EBAE6.txt" target="_blank">pgp key</a>)</small></td>
-                <td style="width: 25%"><a href="https://bsky.app/profile/aivi.party" target="_blank"><img class="icon" src="/assets/logos/bluesky.png"><br>Bluesky</a></td>
-                <td style="width: 25%"><a href="https://github.com/poisonaivi" target="_blank"><img class="icon" src="/assets/logos/github.png"><br>GitHub</a></td>
-                <td style="width: 25%"><a href="/guestbook.html"><img class="icon" src="/assets/icons/document.png"><br><img class="icon inline-left" src="/assets/icons/arrow-more.png" style="animation: shake 1s steps(1) infinite;">guestbook<img class="icon inline-right" src="/assets/icons/arrow-back.png" style="animation: shake 1s steps(1) infinite; animation-delay: 500ms;"></a></td>
-            </table>
-        </section>
+        <table class="main">
+            <tr>
+                <td class="secondaryColumn">
+                    <section>
+                        <p class="success"><img class="icon inline-left" src="/assets/icons/clock.png">local <small class="success">(UTC-4)</small>: <span id="localTime" class="num"><span class="danger">--:--:--</span></span></p>
+                        <p><small>UNIX epoch:<span id="unixTime" class="num"><span class="danger">----------</span></span> • beat: @<span id="beatTime" class="num"><span class="danger">---.--</span></span></small></p>
+                        <script>updateClockTime();</script>
+                        <script>updateBeatTime();</script>
+                    </section>
+                </td>
+                <td class="primaryColumn">
+                    <section>
+                        <table style="width: 100%; text-align: center;">
+                            <td style="width: 25%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>e-mail</a> &nbsp;<small><img class="icon inline-left" src="/assets/icons/locked.png"><a href="/aivi-pub-key-D90EBAE6.txt" target="_blank">pgp</a></small></td>
+                            <td style="width: 25%"><a href="https://bsky.app/profile/aivi.party" target="_blank"><img class="icon" src="/assets/logos/bluesky.png"><br>Bluesky</a></td>
+                            <td style="width: 25%"><a href="https://github.com/poisonaivi" target="_blank"><img class="icon" src="/assets/logos/github.png"><br>GitHub</a></td>
+                            <td style="width: 25%"><a href="/guestbook.html"><img class="icon" src="/assets/icons/document.png"><br><img class="icon inline-left" src="/assets/icons/arrow-more.png" style="animation: shake 1s steps(1) infinite;">guestbook<img class="icon inline-right" src="/assets/icons/arrow-back.png" style="animation: shake 1s steps(1) infinite; animation-delay: 500ms;"></a></td>
+                        </table>
+                    </section>
+                </td>
+            </tr>
+        </table>
         <table class="main">
             <tr>
                 <td class="primaryColumn">
@@ -123,20 +137,19 @@
                         <p><img class="icon inline-left" src="/assets/icons/document.png">changelog</p>
                         <div id="changelog" style="height: 225px; padding: 12px 0; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 20%, #fff 90%, #0000 100%);"><p style="text-align: center;"><br><img class="icon" src="/assets/icons/loading.gif"></p><script>loadElement("changelog.html", "changelog");</script></div>
                     </section>
+                    <section>
+                        <p><img class="icon inline-left" src="/assets/icons/list.png">to-do</p>
+                        <hr>
+                        <ul> 
+                            <li>new page background</li>
+                            <li>put something fun in the margins</li>
+                            <li>add alt text to images</li>
+                            <li>compress large files!!</li>
+                            <li>improve gallery, projects, and blog layout</li>
+                        </ul>
+                    </section>
                 </td>
                 <td class="secondaryColumn">
-                    <section>
-                        <p style="float: right;"><small>(UTC-04:00)</small></p>
-                        <p><img class="icon inline-left" src="/assets/icons/clock.png">local time</p>
-                        <hr>
-                        <div style="transform: translateX(68px);  width: 150px;">
-                            <h3 class="num bg">??!??!??</h3>
-                            <h3 id="localTime" class="num"><span class="danger">--:--:--</span></h3>
-                        </div>
-                        <p><small>unix epoch:<span id="unixTime" class="important num"><span class="danger">----------</span></span> beat: @<span id="beatTime" class="important num"><span class="danger">---.--</span></span></small></p>
-                        <script>updateClockTime();</script>
-                        <script>updateBeatTime();</script>
-                    </section>
                     <section>
                         <p><img class="icon inline-left" src="/assets/icons/share.png">link my site!</p>
                         <hr>
