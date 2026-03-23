@@ -161,7 +161,7 @@ async function updateDiscord() {
 async function updateLastfm() {
     const titleLabel = document.getElementById("titleLabel");
     const artistLabel = document.getElementById("artistLabel");
-    const albumLabel = document.getElementById("albumLabel");
+    // const albumLabel = document.getElementById("albumLabel");
     const musicSection = document.getElementById("musicSection");
     const artFilter = document.getElementById("artFilter");
     const linkLabel = document.getElementById("linkLabel");
@@ -172,7 +172,7 @@ async function updateLastfm() {
         if (!res.ok) {
             titleLabel.innerHTML = "";
             artistLabel.innerHTML = "<span class='danger'><img class='icon inline-left' src='/assets/icons/error.png'>api error</span>";
-            albumLabel.innerHTML = "";
+            // albumLabel.innerHTML = "";
             musicSection.style.removeProperty("background-image");
             artFilter.hidden = true;
             musicSection.className = "danger";
@@ -185,7 +185,7 @@ async function updateLastfm() {
         const latest = resJSON.recenttracks.track[0];
         var title = latest.name;
         var artist = latest.artist["#text"];
-        var album = latest.album["#text"];
+        // var album = latest.album["#text"];
         const albumArt = latest.image[2]["#text"];
         const link = latest.url;
         try {
@@ -194,7 +194,9 @@ async function updateLastfm() {
             var playing = "y";
         }
         if (title != titleLabel.innerText.replace(/(\r\n|\n|\r)/gm, "")) {
-            if (title.length > 14) {
+            // 14 char for h3
+            // 29 char for p
+            if (title.length > 29) {
                 title = "<marquee style='mask-image: linear-gradient(90deg, #0000, #fff 10%, #fff 90%, #0000);'>" + title + "</marquee>";
             }
             titleLabel.innerHTML = title;
@@ -205,12 +207,12 @@ async function updateLastfm() {
             }
             artistLabel.innerHTML = artist;
         }
-        if (album != albumLabel.innerText.replace(/(\r\n|\n|\r)/gm, "")) {
-            if (album.length > 29) {
-                album = "<marquee scrollamount='4' style='mask-image: linear-gradient(90deg, #0000, #fff 10%, #fff 90%, #0000);'>" + album + "</marquee>";
-            }
-            albumLabel.innerHTML = album;
-        }
+        // if (album != albumLabel.innerText.replace(/(\r\n|\n|\r)/gm, "")) {
+        //     if (album.length > 29) {
+        //         album = "<marquee scrollamount='4' style='mask-image: linear-gradient(90deg, #0000, #fff 10%, #fff 90%, #0000);'>" + album + "</marquee>";
+        //     }
+        //     albumLabel.innerHTML = album;
+        // }
         // hash for no-album-art image
         if (albumArt.includes("2a96cbd8b46e442fc41c2b86b821562f")) {
             musicSection.style.removeProperty("background-image");
