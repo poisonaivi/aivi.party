@@ -57,7 +57,7 @@
                     </section>
                 </td>
                 <td class="primaryColumn" style="height: inherit;">
-                    <section style="overflow: hidden; box-sizing: border-box; min-height: 450px; height: calc(100% - var(--border-spacing))">
+                    <section style="overflow: hidden; box-sizing: border-box; min-height: 500px; height: calc(100% - var(--border-spacing))">
                         <img src="/assets/streetlamp.png" style="position: absolute; bottom: -24px; left: 0; width: 100%; z-index: 0;">
                         <div style="position: relative; z-index: 1;">
                             <h3><span id="funTitle">not actually a party</span></h3>
@@ -65,7 +65,7 @@
                             <br>
                             <p>even though it's <span class="important num">2</span> years, <span class="important num">4</span> domains, <span class="important num">6</span> redesigns, and probably over a thousand commits old, this site is, and will always be, a work in progress.</p>
                             <br>
-                            <p>most of the things here were inspired, at least in part, by other people. i don't mind if you <span class="important">view-source</span>, <span class="important">adapt code</span> (though you should first understand how it works), or take inspiration from this site.</p>
+                            <p>most of the things here were inspired, at least in part, by other people. i don't mind if you <span class="important">view-source</span>, <span class="important">adapt code</span>, or <span class="important">take inspiration</span> from this site, although i implore you to understand what you paste.</p>
                             <br>
                             <p><small>if anything looks broken, try hard-reloading with Ctrl/Cmd/Opt + Shift + R</small></p>
                             <hr>
@@ -103,17 +103,17 @@
             </tr>
         </table>
         <table class="main">
-            <tr>
+            <tr style="height: 1px;">
                 <td class="secondaryColumn">
                     <section>
-                        <p class="success"><img class="icon inline-left" src="/assets/icons/clock.png">local <small class="success">(UTC-4)</small>: <span id="localTime" class="num"><span class="danger">--:--:--</span></span></p>
-                        <p><small>UNIX epoch:<span id="unixTime" class="num"><span class="danger">----------</span></span> • beat: @<span id="beatTime" class="num"><span class="danger">---.--</span></span></small></p>
+                        <p><img class="icon inline-left" src="/assets/icons/clock.png"><span id="localTime" class="success num"><span class="danger">--:--:--</span></span> local (UTC-4)</p>
+                        <p style="translate: 0 3px;"><small>UNIX TS: <span id="unixTime" class="num"><span class="danger">----------</span></span> / beat: @<span id="beatTime" class="num"><span class="danger">---.--</span></span></small></p>
                         <script>updateClockTime();</script>
                         <script>updateBeatTime();</script>
                     </section>
                 </td>
-                <td class="primaryColumn">
-                    <section>
+                <td class="primaryColumn" style="height: inherit;">
+                    <section style="box-sizing: border-box; min-height: 70px; height: calc(100% - var(--border-spacing))">
                         <table style="width: 100%; text-align: center;">
                             <td style="width: 25%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>e-mail</a> &nbsp;<small><img class="icon inline-left" src="/assets/icons/locked.png"><a href="/aivi-pub-key-D90EBAE6.txt" target="_blank">pgp</a></small></td>
                             <td style="width: 25%"><a href="https://bsky.app/profile/aivi.party" target="_blank"><img class="icon" src="/assets/logos/bluesky.png"><br>Bluesky</a></td>

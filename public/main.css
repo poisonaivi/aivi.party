@@ -5,9 +5,8 @@
 @font-face {
     font-family: "Segris 16";
     src: url(/fonts/segris-16.otf) format("opentype");
-    size-adjust: 70%;
-    ascent-override: 140%;
-    descent-override: 20%;
+    size-adjust: 72%;
+    ascent-override: 135%;
 }
 @font-face {
     font-family: "Ubuntu Mono";
