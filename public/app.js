@@ -33,7 +33,6 @@ async function registerHit() {
         }
     }
 }
-registerHit();
 
 async function updateHits() {
     try {
