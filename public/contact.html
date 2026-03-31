@@ -11,8 +11,8 @@
 <body>
     <div id="accessibility" hidden><script defer src="/elements/accScript.js"></script></div>
     <main>
-        <header class="main" id="header"><script defer src="/elements/headerScript.js"></script><noscript><section class="danger"><h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript disabled</h3><p>congrats, you tripped the noscript element! this site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p><br><p>consider <a href="https://javascript.aivi.party/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p></section></noscript></header>
-        <table class="main">
+        <header id="header"><script defer src="/elements/headerScript.js"></script><noscript><section class="danger"><h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript disabled</h3><p>congrats, you tripped the noscript element! this site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p><br><p>consider <a href="https://javascript.aivi.party/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p></section></noscript></header>
+        <table>
             <tr>
                 <td class="primaryColumn">
                     <section class="important">
@@ -22,6 +22,8 @@
                         <p><a href="mailto:poison@aivi.party" target="_blank"><img class="icon inline-left" src="/assets/icons/mail.png">e-mail</a> <small>poison@aivi.party <img class="icon inline-left" src="/assets/icons/locked.png">pgp key: <a href="/aivi-pub-key-D90EBAE6.txt" target="_blank">.txt</a> <a href="/aivi-pub-key-D90EBAE6.asc" target="_blank">.asc</a> fp: D90E BAE6 F16F 976B…</small></p>
                         <br>
                         <p><a href="https://discord.com/users/802178124342493224" target="_blank"><img class="icon inline-left" src="/assets/logos/discord.png">Discord</a> <small>mutual server required</small></p>
+                        <br>
+                        <p><a href="/chat.html"><img class="icon inline-left" src="/assets/icons/chat.png">public chat</a> <small>(cbox) aivi</small></p>                        
                         <br>
                         <p><a href="/guestbook.html"><img class="icon inline-left" src="/assets/icons/document.png">guestbook</a> <small>(Atabook) poisonaivi</small></p>                        
                     </section>
@@ -61,7 +63,7 @@
                 </td>
             </tr>
         </table>
-        <footer class="main" id="footer"><script>loadElement("footer.html", "footer");</script></footer> 
+        <footer id="footer"><script>loadElement("footer.html", "footer");</script></footer> 
     </main>
 </body>
 </html>

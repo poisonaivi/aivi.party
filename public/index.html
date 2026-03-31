@@ -13,7 +13,7 @@
 <body>
     <div id="accessibility" hidden><script defer src="/elements/accScript.js"></script></div>
     <main>
-        <header class="main" id="header">
+        <header id="header">
             <section id="header-section" style="height: 280px; background-image: url('/assets/aivibanner2026-web.jpeg'); background-size: cover; overflow: hidden; display: flex; align-items: flex-end; justify-content: center;">
                 <div style="position: absolute; left: 0; bottom: 0; width: 100%; height: 100px; background-image: linear-gradient(0deg, #000, #0000);"></div>
                 <div style="position: relative; z-index: 1;">
@@ -28,7 +28,7 @@
             </section>
         </header>
         <noscript><section class="danger"><h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript disabled</h3><p>congrats, you tripped the noscript element! this site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p><br><p>consider <a href="https://javascript.aivi.party/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p></section></noscript>
-        <table class="main">
+        <table>
             <tr style="height: 1px;">
                 <td class="secondaryColumn">
                     <section id="discordSection">
@@ -103,11 +103,11 @@
                 </td>
             </tr>
         </table>
-        <table class="main">
+        <table>
             <tr style="height: 1px;">
                 <td class="secondaryColumn">
                     <section>
-                        <p><img class="icon inline-left" src="/assets/icons/clock.png"><span id="localTime" class="success num"><span class="danger">--:--:--</span></span> local (UTC-4)</p>
+                        <p><img class="icon inline-left" src="/assets/icons/clock.png"><span id="localTime" class="success num"><span class="danger">--:--:--</span></span> EDT (UTC-4)</p>
                         <p style="translate: 0 3px;"><small>uts: <span id="unixTime" class="num"><span class="danger">----------</span></span> • beat: @<span id="beatTime" class="num"><span class="danger">---.--</span></span></small></p>
                         <script>updateClockTime();</script>
                         <script>updateBeatTime();</script>
@@ -125,11 +125,12 @@
                 </td>
             </tr>
         </table>
-        <table class="main">
+        <table>
             <tr>
                 <td class="primaryColumn">
                     <section style="overflow: hidden;">
-                        <p><img class="icon inline-left" src="/assets/icons/chat.png">chatbox</p>
+                        <p style="float: right;"><small>for something more permanent, sign my <a href="/guestbook.html">guestbook</a></small></p>
+                        <p><img class="icon inline-left" src="/assets/icons/chat.png">chat</p>
                         <iframe src="https://www3.cbox.ws/box/?boxid=3545093&boxtag=rRmvwj" style="width: calc(100% + 22px); height: 350px; margin: 0 0 -6px -10px; mask-image: linear-gradient(0deg, #fff 85%, #0000 100%);"></iframe>	
                     </section>
                     <section style="padding-bottom: 0; overflow: hidden;">
@@ -215,7 +216,7 @@
                 </td>
             </tr>
         </table>
-        <footer class="main" id="footer"><script>loadElement("footer.html", "footer");</script></footer> 
+        <footer id="footer"><script>loadElement("footer.html", "footer");</script></footer> 
     </main>
 </body>
 </html>

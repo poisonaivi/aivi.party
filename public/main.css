@@ -73,7 +73,7 @@ body {
         color: var(--selection-text);
     }
 }
-main, .main {
+main {
     width: 1000px;
     margin: 0 auto;
 }
@@ -122,14 +122,16 @@ a, a p {
     text-shadow: 0.032em 0.032em var(--link-b), 0.032em -0.032em var(--link-b), -0.032em -0.032em var(--link-b), -0.032em 0.032em var(--link-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--link);
     position: relative;
     z-index: 1;
+    text-decoration: none;
     text-decoration-thickness: 1px;
     &:hover {
-        opacity: 0.6;
+        opacity: 0.75;
+        text-decoration: underline;
         text-decoration-style: dashed;    
         z-index: 2;
     }
     &:active {
-        opacity: 0.5;
+        opacity: 0.6;
     }
     &::selection {
         color: var(--link);
@@ -363,7 +365,6 @@ marquee {
     border: solid 1px var(--link);
     border-radius: 10px;
     box-shadow: 0 0 6px var(--link);
-    text-decoration: none;
     z-index: 2;
     &::before {
         content: "";
