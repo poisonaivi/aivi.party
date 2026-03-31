@@ -54,7 +54,7 @@
     --d-danger-b: #600;
     --danger-b: var(--d-danger-b);
     --danger-c: #200;
-    --border-radius: 30px;
+    --border-radius: 16px;
     --border-width: 2px;
     --border-spacing: 8px;
     font-size: 18px;
@@ -146,7 +146,6 @@ section {
     background: linear-gradient(var(--section-b), var(--section));
     border: var(--border-width) solid var(--border);
     border-radius: var(--border-radius);
-    corner-shape: squircle;
     position: relative;
     z-index: 1;
     &#header-section {
@@ -405,7 +404,6 @@ marquee {
     figure {
         border: var(--border-width) solid var(--border);
         border-radius: var(--border-radius);
-        corner-shape: squircle;
         position: relative;
         display: inline-block;
         overflow: hidden;
