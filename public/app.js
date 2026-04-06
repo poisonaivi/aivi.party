@@ -124,25 +124,25 @@ async function updateDiscord() {
             presenceLabel.innerHTML = "online";
             presenceLabel.className = "success";
             presenceIcon.className = "icon inline-left success";
-            presenceIcon.src = "/assets/icons/online.png";
+            presenceIcon.src = "/assets/icons/status-online.png";
             discordSection.className = "success";
         } else if (presence == "idle") {
             presenceLabel.innerHTML = "idle";
             presenceLabel.className = "warning";
             presenceIcon.className = "icon inline-left warning";
-            presenceIcon.src = "/assets/icons/idle.png";
+            presenceIcon.src = "/assets/icons/status-idle.png";
             discordSection.className = "warning";
         } else if (presence == "dnd") {
             presenceLabel.innerHTML = "do not disturb";
             presenceLabel.className = "danger";
             presenceIcon.className = "icon inline-left danger";
-            presenceIcon.src = "/assets/icons/dnd.png";
+            presenceIcon.src = "/assets/icons/status-dnd.png";
             discordSection.className = "danger";
         } else if (presence == "offline") {
             presenceLabel.innerHTML = "offline";
             presenceLabel.className = "danger";
             presenceIcon.className = "icon inline-left danger";
-            presenceIcon.src = "/assets/icons/offline.png";
+            presenceIcon.src = "/assets/icons/status-offline.png";
             discordSection.className = "danger";
         }
         if (resJSON.data.activities.length != 0) {

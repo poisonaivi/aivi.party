@@ -66,7 +66,8 @@ body {
     margin: 0;
     box-sizing: border-box;
     background-color: var(--section);
-    background-image: url(/assets/background-tile.png);
+    background-image: url(/assets/background-tile-2.png);
+    background-size: 580px;
     image-rendering: pixelated;
     &::selection {
         background-color: var(--selection);
