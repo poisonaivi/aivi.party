@@ -14,7 +14,7 @@
     <div id="accessibility" hidden><script defer src="/elements/accScript.js"></script></div>
     <main>
         <header id="header">
-            <section id="header-section" style="height: 280px; background-image: url('/assets/aivibanner2026-web.jpeg'); background-size: cover; overflow: hidden; display: flex; align-items: flex-end; justify-content: center;">
+            <section id="header-section" style="height: 280px; background-image: url('/assets/aivibanner2026-web.jpeg'); background-size: cover; overflow: hidden; display: flex; align-items: flex-end; justify-content: center; border-bottom-right-radius: 0;">
                 <div style="position: absolute; left: 0; bottom: 0; width: 100%; height: 100px; background-image: linear-gradient(0deg, #000, #0000);"></div>
                 <div style="position: relative; z-index: 1;">
                     <a id="index" class="button selected" href="/index.html"><img class="icon inline-left" src="/assets/icons/home.png">index</a>
@@ -25,6 +25,7 @@
                     <a id="commissions" class="button" href="/commissions.html"><img class="icon inline-left" src="/assets/icons/heart.png">commissions</a>
                     <a id="contact" class="button" href="/contact.html"><img class="icon inline-left" src="/assets/icons/mail.png">contact</a>
                 </div>
+                <img src="/assets/icons/scissors-cutting.png" style="width: 20px; position: absolute; bottom: 0; right: 10px; opacity: 0.2;">
             </section>
         </header>
         <noscript><section class="danger"><h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript disabled</h3><p>congrats, you tripped the noscript element! this site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p><br><p>consider <a href="https://javascript.aivi.party/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p></section></noscript>
@@ -58,7 +59,7 @@
                     </section>
                 </td>
                 <td class="primaryColumn" style="height: inherit;">
-                    <section style="overflow: hidden; box-sizing: border-box; min-height: 500px; height: calc(100% - var(--border-spacing))">
+                    <section style="overflow: hidden; box-sizing: border-box; min-height: 500px; height: calc(100% + var(--border-width)); transform: translateY(calc(0px - (var(--border-spacing) + var(--border-width)))); border-top-left-radius: 0; border-top-right-radius: 0; border-top-style: dashed; background-image: none; background-color: #000;">
                         <img src="/assets/streetlamp.png" style="position: absolute; bottom: -24px; left: 0; width: 100%; z-index: 0;">
                         <div style="position: relative; z-index: 1;">
                             <h3><span id="funTitle">not actually a party</span></h3>
@@ -116,7 +117,7 @@
                 <td class="primaryColumn" style="height: inherit;">
                     <section style="box-sizing: border-box; min-height: 70px; height: calc(100% - var(--border-spacing))">
                         <table style="width: 100%; text-align: center;">
-                            <td style="width: 25%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>e-mail</a>&nbsp;<small><img class="icon inline-left" src="/assets/icons/lock.png"><a href="/aivi-pub-key-D90EBAE6.txt" target="_blank">PGP</a></small></td>
+                            <td style="width: 25%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>e-mail</a>&nbsp;<small><img class="icon inline-left" src="/assets/icons/lock.png"><a href="/aivi-pub-key-904DFA58.txt" target="_blank">PGP</a></small></td>
                             <td style="width: 25%"><a href="https://bsky.app/profile/aivi.party" target="_blank"><img class="icon" src="/assets/logos/bluesky.png"><br>Bluesky</a></td>
                             <td style="width: 25%"><a href="https://github.com/poisonaivi" target="_blank"><img class="icon" src="/assets/logos/github.png"><br>GitHub</a></td>
                             <td style="width: 25%"><a href="/guestbook.html"><img class="icon" src="/assets/icons/book.png"><br><img class="icon inline-left" src="/assets/icons/arrow-f.png" style="animation: shake 1s steps(1) infinite;">guestbook<img class="icon inline-right" src="/assets/icons/arrow-b.png" style="animation: shake 1s steps(1) infinite; animation-delay: 500ms;"></a></td>
@@ -130,7 +131,7 @@
                 <td class="primaryColumn">
                     <section style="overflow: hidden;">
                         <p style="float: right;"><small>for something more permanent, sign my <a href="/guestbook.html">guestbook</a></small></p>
-                        <p><img class="icon inline-left" src="/assets/icons/chat.png">chatroom</p>
+                        <p><img class="icon inline-left" src="/assets/icons/chat.png">chatbox</p>
                         <iframe src="https://www3.cbox.ws/box/?boxid=3545093&boxtag=rRmvwj" style="width: calc(100% + 22px); height: 350px; margin: 0 0 -6px -10px; mask-image: linear-gradient(0deg, #fff 85%, #0000 100%);"></iframe>	
                     </section>
                     <section style="padding-bottom: 0; overflow: hidden;">
@@ -142,13 +143,29 @@
                         <p><img class="icon inline-left" src="/assets/icons/list.png">to-do</p>
                         <hr>
                         <ul> 
-                            <li>replace marquee tags in response to Chrome update</li>
+                            <li><s>replace marquee tags in response to Chrome update</s> <small>chrome fixed marquees</small></li>
                             <li><s>new page background</s></li>
                             <li>put something fun in the margins</li>
                             <li>add alt text to images</li>
                             <li>compress large files!!</li>
                             <li>improve gallery, projects, and blog layout</li>
                         </ul>
+                    </section>
+                    <section>
+                        <p><img class="icon inline-left" src="/assets/icons/people.png">webrings</p>
+                        <hr>
+                        <section class="webring" style="text-align: center; border-color: #fff; background: #fd4482; font-family: 'Helvetica Neue', Helvetica, sans-serif;">
+                            <a href="https://hotlinewebring.club/aivi/previous" style="text-shadow: none; color: #fff;">&larr;</a> <a href="https://hotlinewebring.club/" target="_blank" style="text-shadow: none; color: #fff;"><i><b>HOTLINE WEBRING</b></i></a> <a href="https://hotlinewebring.club/aivi/next" style="text-shadow: none; color: #fff;">&rarr;</a>
+                        </section>
+                        <section class="webring" style="text-align: center; border: 2px ridge #bbb; border-radius: 0; background: #fff; font-family: 'Times New Roman', Times, serif;">
+                            <a href="https://webring.dinhe.net/prev/aivi.party" style="text-shadow: none; color: #00f;">&larr;</a> <a href="https://webring.dinhe.net/" target="_blank" style="text-shadow: none; color: #00f;"><b>Retronaut Webring</b></a> <a href="https://webring.dinhe.net/next/aivi.party" style="text-shadow: none; color: #00f;">&rarr;</a>
+                        </section>
+                        <section class="webring" style="text-align: center; border: 1px solid #fff; border-radius: 0; background: #454545; font-family: Merriweather, Georgia, serif;">
+                            <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=aivi" style="color: #fff;">⥼</a> <a href="https://webring.bucketfish.me/index.html" target="_blank"><span style="background: linear-gradient(90deg, #ffaeae, #ffe5a3, #eeff97, #a3ffae, #93cbff, #cf9fff); background-clip: text; -webkit-background-clip: text; color: #0000; text-shadow: none;">bucket webring</span></a> <small><a href="https://webring.bucketfish.me/redirect.html?to=random&name=aivi" style="color: #fff;">(?)</a></small> <a href="https://webring.bucketfish.me/redirect.html?to=next&name=aivi" style="color: #fff;">⥽</a>
+                        </section>
+                        <section class="webring" style="text-align: center; border-color: #bbb; background: linear-gradient(45deg, #522, #552, #252, #255, #225, #525); font-family: 'Ubuntu Mono', monospace;">
+                            <a href="https://baccyflap.com/noai/?prv&s=aiv" style="color: #ddd;">&larr;</a> <a href="https://baccyflap.com/noai" target="_blank" style="color: #ddd;">no ai webring</a> <small><a href="https://baccyflap.com/noai/?rnd" style="color: #ddd;">(?)</a></small> <a href="https://baccyflap.com/noai/?nxt&s=aiv" style="color: #ddd;">&rarr;</a>
+                        </section>
                     </section>
                 </td>
                 <td class="secondaryColumn">
@@ -201,22 +218,6 @@
                         <div style="text-align: center;">
                             <iframe class="ad" style="display: inline-block; width: 180px; aspect-ratio: 1; box-shadow: 0 0 40px #666; overflow: hidden;" src="https://nvlk.dimden.dev/"></iframe>
                         </div>
-                    </section>
-                    <section>
-                        <p><img class="icon inline-left" src="/assets/icons/people.png">webrings & neigbors</p>
-                        <hr>
-                        <section class="webring" style="text-align: center; border-color: #fff; background: #fd4482; font-family: 'Helvetica Neue', Helvetica, sans-serif;">
-                            <a href="https://hotlinewebring.club/aivi/previous" style="text-shadow: none; color: #fff;">&larr;</a> <a href="https://hotlinewebring.club/" target="_blank" style="text-shadow: none; color: #fff;"><i><b>HOTLINE WEBRING</b></i></a> <a href="https://hotlinewebring.club/aivi/next" style="text-shadow: none; color: #fff;">&rarr;</a>
-                        </section>
-                        <section class="webring" style="text-align: center; border: 2px ridge #bbb; border-radius: 0; background: #fff; font-family: 'Times New Roman', Times, serif;">
-                            <a href="https://webring.dinhe.net/prev/aivi.party" style="text-shadow: none; color: #00f;">&larr;</a> <a href="https://webring.dinhe.net/" target="_blank" style="text-shadow: none; color: #00f;"><b>Retronaut Webring</b></a> <a href="https://webring.dinhe.net/next/aivi.party" style="text-shadow: none; color: #00f;">&rarr;</a>
-                        </section>
-                        <section class="webring" style="text-align: center; border: 1px solid #fff; border-radius: 0; background: #454545; font-family: Merriweather, Georgia, serif;">
-                            <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=aivi" style="color: #fff;">⥼</a> <a href="https://webring.bucketfish.me/index.html" target="_blank"><span style="background: linear-gradient(90deg, #ffaeae, #ffe5a3, #eeff97, #a3ffae, #93cbff, #cf9fff); background-clip: text; -webkit-background-clip: text; color: #0000; text-shadow: none;">bucket webring</span></a> <small><a href="https://webring.bucketfish.me/redirect.html?to=random&name=aivi" style="color: #fff;">(?)</a></small> <a href="https://webring.bucketfish.me/redirect.html?to=next&name=aivi" style="color: #fff;">⥽</a>
-                        </section>
-                        <section class="webring" style="text-align: center; border-color: #bbb; background: linear-gradient(45deg, #522, #552, #252, #255, #225, #525); font-family: 'Ubuntu Mono', monospace;">
-                            <a href="https://baccyflap.com/noai/?prv&s=aiv" style="color: #ddd;">&larr;</a> <a href="https://baccyflap.com/noai" target="_blank" style="color: #ddd;">no ai webring</a> <small><a href="https://baccyflap.com/noai/?rnd" style="color: #ddd;">(?)</a></small> <a href="https://baccyflap.com/noai/?nxt&s=aiv" style="color: #ddd;">&rarr;</a>
-                        </section>
                     </section>
                 </td>
             </tr>

@@ -29,7 +29,7 @@
     --selection: #f6f;
     --selection-text: #404;
     --shadow: #000c;
-    --d-small-text: #666;
+    --d-small-text: #555;
     --small-text: var(--d-small-text);
     --section: #000;
     --section-b: #111;
@@ -207,7 +207,7 @@ small {
     position: relative;
     text-shadow: 0.062em 0.062em var(--shadow), 0 0 0.25em var(--small-text);
     img {
-        filter: brightness(0.4);
+        filter: brightness(0.3);
     }
 }
 iframe {
