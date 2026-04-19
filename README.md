@@ -2,12 +2,18 @@
 
 ## Directories:
 
-`/assets/                                ` - Images and other static media.
+`assets/                                ` - images and other static media
 <br>
-`/blog/                                  ` - Blog.
+`.. badges/                             ` - 88x31 and other collectables
 <br>
-`/elements/                              ` - Reused site content, e.g., header & footer.
+`.. icons/                              ` - pixel iconset made by yours truly
 <br>
-`/fonts/                                 ` - Custom fonts.
+`.. logos/                              ` - pixelated logos
 <br>
-`/services/           (through HTTP only)` - API endpoints.
+`blog/                                  ` - yapyapyapyap
+<br>
+`elements/                              ` - cross-page reused site content
+<br>
+`fonts/                                 ` - page fonts, including custom ones
+<br>
+`services/           (through HTTP only)` - API endpoints
