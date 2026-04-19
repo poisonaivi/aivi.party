@@ -79,9 +79,9 @@ main {
     margin: 0 auto;
 }
 main {
-    mask: linear-gradient(0deg, #aaaa 50%, #ffff 50%) 0 0 / 256px 2px, linear-gradient(90deg, #eeee 50%, #ffff 50%) 0 0 / 3px 256px;
+    mask: linear-gradient(0deg, #bbbb 50%, #ffff 50%) 0 0 / 256px 2px, linear-gradient(90deg, #eeee 50%, #ffff 50%) 0 0 / 3px 256px;
     mask-composite: intersect;
-    filter: brightness(1.4) saturate(1.25);
+    filter: brightness(1.3) saturate(1.2);
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
