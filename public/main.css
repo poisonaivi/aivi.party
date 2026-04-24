@@ -233,12 +233,11 @@ textarea {
     height: fit-content;
 }
 details > summary {
-    text-decoration: underline solid;
     cursor: pointer;
     list-style-type: none;
     &:hover {
         opacity: 0.6;
-        text-decoration-style: dashed;
+        text-decoration: underline dashed;
     }
     &:active {
         opacity: 0.4;

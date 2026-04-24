@@ -11,23 +11,23 @@
 <body>
     <div id="accessibility" hidden><script defer src="/elements/accScript.js"></script></div>
     <main>
-        <header id="header"><script defer src="/elements/headerScript.js"></script></header>
-        <section class="danger" style="text-align: center;">
+        <div style="height: 120px;"></div>
+        <div style="width: fit-content; margin: 0 auto;">
+            <h1 class="danger" style="position: absolute; translate: 170px -20px; animation: bounce 1s steps(1) infinite;">?</h1>
+            <h1 class="danger" style="position: absolute; translate: -80px 40px; animation: bounce 1s steps(1) infinite; animation-delay: 250ms;">?</h1>
+            <h2 class="danger" style="position: absolute; translate: -80px -50px; animation: bounce 1s steps(1) infinite; animation-delay: 500ms;">error</h2>
+            <h2 class="danger" style="position: absolute; translate: 150px 110px; animation: bounce 1s steps(1) infinite; animation-delay: 750ms;">404</h2>
+            <img style="position: relative; z-index: 1; width: 150px; translate: -7px 0; filter: drop-shadow(4px 4px var(--shadow)) drop-shadow(0 0 12px #90ba);" src="/assets/aivi-logo-2026-pix.png">
+        </div>
+        <div style="height: 80px;"></div>
+        <div style="text-align: center;">
+            <p>the magical little creature inside this server<br>couldn't find what you were looking for</p>
+            <br><br>
+            <p><a href="/index.html"><img class="icon inline-left" src="/assets/icons/arrow-l.png">head home</a></p>
             <div style="height: 100px;"></div>
-            <div style="width: fit-content; margin: 0 auto;">
-                <h1 class="num bg danger">???</h1>
-                <h1 class="num">404</h1>
-            </div>
-            <h3><i>Resource Not Found</i></h3>
-            <div style="height: 80px;"></div>
-            <p>You arrive at a deep chasm in the Internet.<br>If anything's down there, it definitely wasn't meant for you.</p>
-            <br>
-            <p><a href="/index.html"><img class="icon inline-left" src="/assets/icons/arrow-l.png">Head home?</a></p>
-            <br>
-            <p><small>Or, if you feel like it, <a href="/guestbook.html">tell me how you got here</a>.</small></p>
-            <div style="height: 100px;"></div>
-        </section>
-        <footer id="footer"><script>loadElement("footer.html", "footer");</script></footer> 
+            <p><small class="danger">request returned status code 404 Not Found <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404" target="_blank">[MDN ref]</a></small></p>
+        </div>
+        <footer id="footer"><script>loadElement("simpleFooter.html", "footer");</script></footer> 
     </main>
 </body>
 </html>

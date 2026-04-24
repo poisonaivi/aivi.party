@@ -10,7 +10,11 @@
 <br>
 `.. logos/                              ` - pixelated logos
 <br>
+`.. projects/                           ` - project thumbnails
+<br>
 `blog/                                  ` - yapyapyapyap
+<br>
+`.. assets/                             ` - blog media
 <br>
 `elements/                              ` - cross-page reused site content
 <br>
