@@ -52,8 +52,7 @@
                         <p><img id="musicIcon" class="icon inline-left" src="/assets/icons/music.png"><span id="playingLabel">last played</span></p>
                         <div style="position: absolute; bottom: 12px; width: calc(100% - 2 * 12px);">
                             <a id="linkLabel" target="_blank"><p id="titleLabel" style="white-space: nowrap; overflow: visible;"></p></a>
-                            <p id="artistLabel" style="white-space: nowrap; overflow: visible;"><span class="danger"><img class="icon danger inline-left" src="/assets/icons/loading.gif">loading song</span></p>
-                            <!-- <p id="albumLabel" style="white-space: nowrap; overflow: visible;"></p> -->
+                            <p><small id="artistLabel" style="white-space: nowrap; overflow: visible;"><span class="danger"><img class="icon danger inline-left" src="/assets/icons/loading.gif">loading song</span></small></p>
                         </div>
                         <script>updateLastfm();</script>
                     </section>
@@ -118,6 +117,10 @@
                 </td>
                 <td class="primaryColumn" style="height: inherit;">
                     <section style="box-sizing: border-box; min-height: 70px; height: calc(100% - var(--border-spacing))">
+                        <small style="position: absolute; top: 6px; left: 6px; scale: 0.5;"><img class="icon" src="/assets/icons/math-times.png"></small>
+                        <small style="position: absolute; top: 6px; right: 6px; scale: 0.5;"><img class="icon" src="/assets/icons/math-times.png"></small>
+                        <small style="position: absolute; bottom: 4px; left: 6px; scale: 0.5;"><img class="icon" src="/assets/icons/math-times.png"></small>
+                        <small style="position: absolute; bottom: 4px; right: 6px; scale: 0.5;"><img class="icon" src="/assets/icons/math-plus.png"></small>
                         <table style="width: 100%; text-align: center;">
                             <td style="width: 25%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>e-mail</a>&nbsp;<small><img class="icon inline-left" src="/assets/icons/key.png"><a href="/aivi-pub-key-904DFA58.txt" target="_blank">PGP</a></small></td>
                             <td style="width: 25%"><a href="https://bsky.app/profile/aivi.party" target="_blank"><img class="icon" src="/assets/logos/bluesky.png"><br>Bluesky</a></td>
