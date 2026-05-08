@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.6">
+    <title>aivi's blog</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <main>
+        <div>
+            <section class="nav"><div class="back"><a href=".">&larr; Back</a></div><a href="0001.html">&lt;&lt; First</a> | <a href="0005.html">&lt; Prev</a> | 0006 | <a href="0007.html">Next &gt;</a> | <a href="last.html">Last &gt;&gt;</a></section>
+            <section>
+                <small>May 8, 2026</small>
+                <h1>time.aivi.party - a better world clock</h1>
+                <p>I met some people online recently, and they happen to be located in different places around the world. Naturally, people lke us with connections in different countries need a way to quickly and intuitively convert between timezones, so that's what I tried to make with <a href="https://time.aivi.party/" target="_blank">time.aivi.party</a>.</p>
+                <figure>
+                    <img src="assets/time.png">
+                    <figcaption><small>The default timezone list in time.aivi.party.</small></figcaption>
+                </figure>
+                <p>It's a timezone visualizing and conversion tool that can run on- or offline on any device using only data pulled from the browser and the device's settings.</p>
+                <p>Each timezone gets rendered as a colorful linear clock, showing the hours of the day from left to right. The leftmost, dashed border shows the current time in each zone, and the colors represent whether any timezone is in day or night. Together, this lets you quickly compare timezones visually, and without doing any calculations.</p>
+                <p>If you have a select group of timezones that you want to keep track of, you can use the memory actions below to do so:</p>
+                <p>`<span class="important">edit</span>` allows you to reorder and remove displayed timezones.</p>
+                <p>`<span class="important">clear</span>` visually empties the screen but doesn't erase any memory.</p>
+                <p>`<span class="important">save</span>` overwrites anything stored in memory with the list on screen.</p>
+                <p>`<span class="important">load</span>` tries retrieving from memory, displaying the default list if empty.</p>
+                <p>`<span class="danger">forget</span>` destructively deletes the entire saved list from memory.</p>
+                <h2>how time.aivi.party works</h2>
+                <p>On first load, the tool detects your device time, and then dynamically loads a default list of timezones. Afterwards, you can add, edit, or remove them however you wish. It uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">localStorage</a> to manage your timezone list, so that on each visit, your selected timezones are automatically loaded.</p>
+                <figure>
+                    <img src="assets/time-banner.png">
+                    <figcaption><small>The top bar that shows your timezone and local time, with various settings.</small></figcaption>
+                </figure>
+                <p>Each timezone in your list is stored as an <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank">IANA timezone identifier</a>, like `America/New_York`, instead of UTC offset, meaning any offsets caused by daylight savings are automatically accounted for, and timezones are automatically named by city or well-known names.</p>
+                <p>With IANA standards, all clocks are relative to UTC+0 time, however displayed time offsets are based off your device time in order to be more useful at a glance.</p>
+                <p>Furthermore, a clever little function is able to get timezone abbreviations even from timezones that aren't in JavaScript's native <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat" target="_blank">Intl.TimeDateFormatter</a> object. It first uses a small lookup table to account for nonstandard abbreviation spellings, before abbreviating the Long timezone name produced by Intl, rather than the Short, which is occasionally unreliable.</p>
+                <p>You can add timezones by entering the IANA identifier in the Search box, and inputs are automatically sanitized, validated, and corrected if possible.</p>
+                <p>All ui and animation for time.aivi.party is entirely hand-coded HTML, JavaScript, and CSS. No AI nor website builders were used.</p>
+            </section>
+            <section class="nav"><div class="back"><a href=".">&larr; Back</a></div><a href="0001.html">&lt;&lt; First</a> | <a href="0005.html">&lt; Prev</a> | 0006 | <a href="0007.html">Next &gt;</a> | <a href="last.html">Last &gt;&gt;</a></section>
+        </div>
+    </main>
+</body>
+</html>
