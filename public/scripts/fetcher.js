@@ -144,7 +144,7 @@ async function updateLastfm() {
 }
 async function updateCommitInfo() {
     try {
-        const res = await fetch("https://api.github.com/repos/poisonaivi/aivi.party/commits/6.0");
+        const res = await fetch("https://api.github.com/repos/poisonaivi/aivi.party/commits/main");
         if (!res.ok) {
             document.getElementById("changelogCommitId").innerHTML = "<span class='danger'>API   ERROR</span>";
             throw new Error("Failed to fetch.");
