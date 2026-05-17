@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.38">
-    <title>AIVI.PARTY!</title>
-    <script src="/app.js"></script>
-    <link rel="stylesheet" href="/main.css">
-    <link rel="icon" href="/assets/aivi-logo-2026-pix.png">
-    <link rel="apple-touch-icon" href="/assets/aivi-logo-2026-pix-pad.png"/>
+    <title>aivi.party!</title>
+    <script src="/scripts/loader.js"></script>
+    <script src="/scripts/greetz.js"></script>
+    <script src="/scripts/hits.js"></script>
+    <script src="/scripts/fetcher.js"></script>
+    <script src="/scripts/clock.js"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/widgets.css">
+    <link rel="icon" href="/assets/branding/aivi-logo-2026-pix.png">
+    <link rel="apple-touch-icon" href="/assets/branding/aivi-logo-2026-pix-pad.png"/>
     <script>registerHit();</script>
 </head>
 <body>
-    <div id="accessibility" hidden><script defer src="/elements/accScript.js"></script></div>
+    <div id="accessibility" hidden><script defer src="/scripts/accessibility.js"></script></div>
     <main>
         <header id="header">
-            <section id="header-section" style="height: 280px; background-image: url('/assets/aivibanner2026-web.jpeg'); background-size: cover; overflow: hidden; display: flex; align-items: flex-end; justify-content: center; border-bottom-right-radius: 0;">
-                <div style="position: absolute; left: 0; bottom: 0; width: 100%; height: 100px; background-image: linear-gradient(0deg, #000, #0000);"></div>
-                <div style="position: relative; z-index: 1;">
+            <section id="header-section" style="height: 270px; display: flex; align-items: flex-end; justify-content: center; border-bottom-right-radius: 0;">
+                <img class="thumbnailImage" style="object-fit: cover; object-position: 50% 0%; mask-image: linear-gradient(90deg, #0000, #ffff 50%);" src="/assets/images/aivibanner2026-blank.jpeg">
+                <div style="position: absolute; z-index: 2; left: 0; bottom: 0; width: 100%; height: 100px; background-image: linear-gradient(0deg, #000, #0000);"></div>
+                <h1 style="position: absolute; z-index: 2; left: 30px; top: 35px; line-height: 80px; font-family: Monopix;">aivi.<br><span class="success">&nbsp;party!</span></h1>                
+                <div style="position: relative; z-index: 2;">
                     <a id="index" class="button selected" href="/index.html"><img class="icon inline-left" src="/assets/icons/home.png">index</a>
                     <a id="about" class="button" href="/about.html"><img class="icon inline-left" src="/assets/icons/furry.png">about</a>
                     <a id="gallery" class="button" href="/gallery.html"><img class="icon inline-left" src="/assets/icons/image.png">gallery</a>
-                    <a id="projects" class="button" href="/projects.html"><img class="icon inline-left" src="/assets/icons/code.png">projects</a>
+                    <a id="projects" class="button" href="/projects.html"><img class="icon inline-left" src="/assets/icons/hammer.png">projects</a>
                     <a id="blog" class="button" href="/blog/index.html"><img class="icon inline-left" src="/assets/icons/speech.png">blog</a>
-                    <a id="commissions" class="button" href="/commissions.html"><img class="icon inline-left" src="/assets/icons/heart.png">commissions</a>
+                    <a id="commissions" class="button" href="/commissions.html"><img class="icon inline-left" src="/assets/icons/pencil.png">commissions</a>
                     <a id="contact" class="button" href="/contact.html"><img class="icon inline-left" src="/assets/icons/mail.png">contact</a>
                 </div>
                 <img src="/assets/icons/scissors-cutting.png" style="width: 20px; position: absolute; bottom: 0; right: 10px; opacity: 0.2;">
@@ -33,24 +40,29 @@
             <tr style="height: 1px;">
                 <td class="secondaryColumn">
                     <section id="discordSection">
-                        <p><img id="presenceIcon" class="icon danger inline-left" src="/assets/icons/loading.gif"><span id="presenceLabel" class="danger">loading presence</span></p>
-                        <p><span id="statusLabel"></span></p>
+                        <div class="title-bar">
+                            <small class="bright text"><img id="presenceIcon" class="icon inline-left" src="/assets/branding/discord.png"><span id="presenceLabel">STATUS</span></small>
+                        </div>
+                        <p><span id="statusLabel"><small><span class="danger"><img class="icon danger inline-left" src="/assets/icons/loading.gif">loading presence</span></small></span></p>
                         <script>updateDiscord();</script>
                     </section>
                     <section>
-                        <p style="float: right;"><small><a href="/blog/index.html">blog<img class="icon" src="/assets/icons/arrow-r.png"></a></small></p>
-                        <p><img class="icon inline-left" src="/assets/icons/speech.png">latest posts</p>
-                        <hr>
+                        <div class="title-bar">
+                            <p style="float: right;"><small><a href="/blog/index.html">blog<img class="icon" src="/assets/icons/arrow-r.png"></a></small></p>
+                            <small class="bright text"><img class="icon inline-left" src="/assets/icons/speech.png">LATEST POSTS</small>
+                        </div>
                         <a href="/blog/0005.html"><p><small><img class="icon inline-left" src="/assets/icons/pin.png">March 6, 2026</small><br>Discord, online privacy, and who should be protecting the kids</p></a>
                         <hr>
                         <a href="/blog/0006.html"><p><small>May 8, 2026</small><br>time.aivi.party - a better world clock</p></a>
                         <hr>
                         <a href="/blog/0004.html"><p><small>February 25, 2026</small><br>Monopix - a monospaced, pixelated typeface with a very innovative name</p></a>
                     </section>
-                    <section id="musicSection" style="aspect-ratio: 1.8; box-shadow: inset 0 0 30px var(--shadow); background-position: 50%; background-size: cover; overflow: hidden;">
-                        <div id="artFilter" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #000b;" hidden></div>                        
-                        <p><img id="musicIcon" class="icon inline-left" src="/assets/icons/music.png"><span id="playingLabel">last played</span></p>
-                        <div style="position: absolute; bottom: 12px; width: calc(100% - 2 * 12px);">
+                    <section id="musicSection" style="aspect-ratio: 1.5;">
+                        <div class="title-bar">
+                            <small class="bright text"><img id="musicIcon" class="icon inline-left" src="/assets/icons/music.png"><span class="text" id="playingLabel">LAST PLAYED</span></small>
+                        </div>
+                        <img id="albumImage" class="tinted thumbnailImage" style="object-fit: cover; object-position: 50% 40%; mask-image: linear-gradient(#eeee, #1111);" src="" hidden>
+                        <div class="thumbnailText">
                             <a id="linkLabel" target="_blank"><p id="titleLabel" style="white-space: nowrap; overflow: visible;"></p></a>
                             <p><small id="artistLabel" style="white-space: nowrap; overflow: visible;"><span class="danger"><img class="icon danger inline-left" src="/assets/icons/loading.gif">loading song</span></small></p>
                         </div>
@@ -58,13 +70,13 @@
                     </section>
                 </td>
                 <td class="primaryColumn" style="height: inherit;">
-                    <section style="overflow: hidden; box-sizing: border-box; min-height: 500px; height: calc(100% + var(--border-width)); transform: translateY(calc(0px - (var(--border-spacing) + var(--border-width)))); border-top-left-radius: 0; border-top-right-radius: 0; border-top-style: dashed; background-image: none; background-color: #000;">
-                        <img src="/assets/streetlamp.png" style="position: absolute; bottom: -24px; left: 0; width: 100%; z-index: 0;">
+                    <section style="overflow: hidden; box-sizing: border-box; min-height: 500px; height: calc(100% + var(--border-width)); transform: translateY(calc(0px - (var(--border-spacing) + var(--border-width)))); border-top-left-radius: 0; border-top-right-radius: 0; border-top-style: dashed;">
+                        <img src="/assets/images/streetlamp.png" style="position: absolute; bottom: -24px; left: 0; width: 100%; z-index: 0; opacity: 0.7;">
                         <div style="position: relative; z-index: 1;">
                             <h3><span id="funTitle">not actually a party</span></h3>
                             <p><span id="greeting">hi</span>, i'm <a href="/about.html">aivi</a> <small>she/it</small>, a self-taught <span class="important">web dev</span> & <a href="/gallery.html">furry artist</a>. i pride myself in creating things with my own two paws, and i despise commercial social media platforms, so i built this website to share my work with the world on my <span class="important">own terms</span>.</p>
                             <br>
-                            <p>most of everything here was inspired, at least in part, by other people's creations. i encourage you to <a href="https://github.com/poisonaivi/aivi.party" target="_blank">view and adapt my code</a> or otherwise take <span class="important">inspiration</span> from this site. You can also use whatever you'd like from my <a href="/assets.html">asset library</a>.</p>
+                            <p>most of everything here was inspired, at least in part, by other people's creations. i encourage you to <a href="https://github.com/poisonaivi/aivi.party" target="_blank">view and adapt my code</a> or otherwise take <span class="important">inspiration</span> from this site. You can also use whatever you'd like from my <a href="/assets/index.html">asset library</a>.</p>
                             <br>
                             <p>even though this site is <span class="important">2</span> years, <span class="important">4</span> domains, <span class="important">6</span> redesigns, and probably over a thousand commits old, it still is, and will always be, a work in progress.</p>
                             <br>
@@ -74,28 +86,28 @@
                             <hr>
                             <div style="font-size: 0;">
                                 <a href="https://aivi.party/" target="_blank"><img class="badge w88 h31" src="/assets/badges/aivi-party-88x31-2.gif"></a>
-                                <!-- <a href="https://amethystx.net/" target="_blank"><img class="badge w88 h31" src="/assets/badges/amethystx-net-88x31.gif"></a> -->
-                                <a href="https://popop614.neocities.org/" target="_blank"><img class="badge w88 h31" src="https://popop614.neocities.org/8831.png"></a>
-                                <a href="https://javascript.aivi.party/" target="_blank"><img class="badge w88 h31" src="https://javascript.aivi.party/enable-javascript.png"></a>
-                                <img class="badge w88 h31" src="/assets/badges/floppy-copy.png">
-                                <img class="badge w88 h31" src="/assets/badges/css-difficult.png">
+                                <!-- <a href="https://amethystx.net/" target="_blank"><img class="badge tinted w88 h31" src="/assets/badges/amethystx-net-88x31.gif"></a> -->
+                                <a href="https://popop614.neocities.org/" target="_blank"><img class="badge tinted w88 h31" src="https://popop614.neocities.org/8831.png"></a>
+                                <a href="https://javascript.aivi.party/" target="_blank"><img class="badge tinted w88 h31" src="https://javascript.aivi.party/enable-javascript.png"></a>
+                                <img class="badge tinted w88 h31" src="/assets/badges/floppy-copy.png">
+                                <img class="badge tinted w88 h31" src="/assets/badges/css-difficult.png">
                                 <!-- <img class="badge w88 h31" src="/assets/badges/queer-pride.png"> -->
-                                <img class="badge w88 h31" src="/assets/badges/queercoded.png">
-                                <img class="badge w88 h31" src="/assets/badges/trans-rights-now.png">
-                                <a href="https://eightyeightthirty.one/" target="_blank"><img class="badge w88 h31" src="/assets/badges/eightyeightthirty-one.png"></a>
-                                <a href="https://nekoweb.org/" target="_blank"><img class="badge w88 h31" src="https://nekoweb.org/assets/buttons/button3.gif"></a>
-                                <a href="https://neocities.org/" target="_blank"><img class="badge w88 h31" src="/assets/badges/web-design-passion.gif"></a>
-                                <a href="https://eyeorb.net/" target="_blank"><img class="badge w88 h31" src="https://eyeorb.net/site_button.gif"></a>
-                                <a href="https://whirlwindnoa.moe/" target="_blank"><img class="badge w88 h31" src="https://whirlwindnoa.moe/img/noa.gif"></a>
-                                <a href="https://rice.place/" target="_blank"><img class="badge w88 h31" src="https://rice.place/button/riceus.gif"></a>
-                                <a href="https://dimden.dev/" target="_blank"><img class="badge w88 h31" src="https://dimden.dev/services/images/88x31.gif"></a>
-                                <a href="https://melankorin.net/" target="_blank"><img class="badge w88 h31" src="https://melankorin.net/assets/img/buttons/button-1.gif"></a>
-                                <a href="https://lyra.horse/" target="_blank"><img class="badge w88 h31" src="https://lyra.horse/badges/lyra.horse.png"></a>
-                                <a href="https://toasty.place/" target="_blank"><img class="badge w88 h31" src="https://toasty.place/images/buttons/sitebutton.gif"></a>
-                                <a href="https://darkosparko.nekoweb.org/" target="_blank"><img class="badge w88 h31" src="https://darkosparko.nekoweb.org/rocket-button.gif"></a>
-                                <a href="https://duducat.moe/" target="_blank"><img class="badge w88 h31" src="/assets/badges/duducat.gif"></a>
-                                <a href="https://jbc.lol" target="_blank"><img class="badge w88 h31" src="https://jbc.lol/imgs/buttons/jbtn.gif"></a>
-                                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img class="badge w88 h31" src="/assets/badges/CC-BY-NC-ND-88x31.png"></a>
+                                <img class="badge tinted w88 h31" src="/assets/badges/queercoded.png">
+                                <img class="badge tinted w88 h31" src="/assets/badges/trans-rights-now.png">
+                                <a href="https://eightyeightthirty.one/" target="_blank"><img class="badge tinted w88 h31" src="/assets/badges/eightyeightthirty-one.png"></a>
+                                <a href="https://nekoweb.org/" target="_blank"><img class="badge tinted w88 h31" src="https://nekoweb.org/assets/buttons/button3.gif"></a>
+                                <a href="https://neocities.org/" target="_blank"><img class="badge tinted w88 h31" src="/assets/badges/web-design-passion.gif"></a>
+                                <a href="https://eyeorb.net/" target="_blank"><img class="badge tinted w88 h31" src="https://eyeorb.net/site_button.gif"></a>
+                                <a href="https://whirlwindnoa.moe/" target="_blank"><img class="badge tinted w88 h31" src="https://whirlwindnoa.moe/img/noa.gif"></a>
+                                <a href="https://rice.place/" target="_blank"><img class="badge tinted w88 h31" src="https://rice.place/button/riceus.gif"></a>
+                                <a href="https://dimden.dev/" target="_blank"><img class="badge tinted w88 h31" src="https://dimden.dev/services/images/88x31.gif"></a>
+                                <a href="https://melankorin.net/" target="_blank"><img class="badge tinted w88 h31" src="https://melankorin.net/assets/img/buttons/button-1.gif"></a>
+                                <a href="https://lyra.horse/" target="_blank"><img class="badge tinted w88 h31" src="https://lyra.horse/badges/lyra.horse.png"></a>
+                                <a href="https://toasty.place/" target="_blank"><img class="badge tinted w88 h31" src="https://toasty.place/images/buttons/sitebutton.gif"></a>
+                                <a href="https://darkosparko.nekoweb.org/" target="_blank"><img class="badge tinted w88 h31" src="https://darkosparko.nekoweb.org/rocket-button.gif"></a>
+                                <a href="https://duducat.moe/" target="_blank"><img class="badge tinted w88 h31" src="/assets/badges/duducat.gif"></a>
+                                <a href="https://jbc.lol" target="_blank"><img class="badge tinted w88 h31" src="https://jbc.lol/imgs/buttons/jbtn.gif"></a>
+                                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img class="badge tinted w88 h31" src="/assets/badges/CC-BY-NC-ND-88x31.png"></a>
                             </div>
                         </div>
                         <script>updateCommitInfo();</script>
@@ -108,24 +120,26 @@
         </table>
         <table>
             <tr style="height: 1px;">
-                <td class="secondaryColumn">
-                    <section>
-                        <p><img class="icon inline-left" src="/assets/icons/clock.png"><span id="localTime" class="success num"><span class="danger">--:--:--</span></span> EDT (UTC-4)</p>
-                        <p style="translate: 0 3px;"><small>uts: <span id="unixTime" class="num"><span class="danger">----------</span></span> • beat: @<span id="beatTime" class="num"><span class="danger">---.--</span></span></small></p>
+                <td class="secondaryColumn" style="height: inherit;">
+                    <section style="box-sizing: border-box; min-height: 70px; height: calc(100% - var(--border-spacing))">
+                        <div class="title-bar">
+                            <small class="bright text"><img class="icon inline-left" src="/assets/icons/clock.png">EDT TIMEZONE (UTC-4)</small>
+                        </div>
+                        <p style="margin-bottom: -3px;"><span id="localTime" class="success num"><span class="danger">--:--:--</span></span><small><img class="icon inline-right" src="/assets/icons/arrow-rr.png"><span id="unixTime" class="num"><span class="danger">----------</span></span> • @<span id="beatTime" class="num"><span class="danger">---.--</span></span></small></p>
                         <script>updateClockTime();</script>
                         <script>updateBeatTime();</script>
                     </section>
                 </td>
-                <td class="primaryColumn" style="height: inherit;">
-                    <section style="box-sizing: border-box; min-height: 70px; height: calc(100% - var(--border-spacing))">
+                <td class="primaryColumn">
+                    <section>
                         <small style="position: absolute; top: 6px; left: 6px; scale: 0.5;"><img class="icon" src="/assets/icons/math-times.png"></small>
                         <small style="position: absolute; top: 6px; right: 6px; scale: 0.5;"><img class="icon" src="/assets/icons/math-times.png"></small>
                         <small style="position: absolute; bottom: 4px; left: 6px; scale: 0.5;"><img class="icon" src="/assets/icons/math-times.png"></small>
                         <small style="position: absolute; bottom: 4px; right: 6px; scale: 0.5;"><img class="icon" src="/assets/icons/math-plus.png"></small>
                         <table style="width: 100%; text-align: center;">
-                            <td style="width: 25%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>e-mail</a>&nbsp;<small><img class="icon inline-left" src="/assets/icons/key.png"><a href="/aivi-pub-key-904DFA58.txt" target="_blank">PGP</a></small></td>
-                            <td style="width: 25%"><a href="https://bsky.app/profile/aivi.party" target="_blank"><img class="icon" src="/assets/logos/bluesky.png"><br>Bluesky</a></td>
-                            <td style="width: 25%"><a href="https://github.com/poisonaivi" target="_blank"><img class="icon" src="/assets/logos/github.png"><br>GitHub</a></td>
+                            <td style="width: 25%"><a href="mailto:poison@aivi.party"><img class="icon" src="/assets/icons/mail.png"><br>e-mail</a>&nbsp;<small><img class="icon inline-left" src="/assets/icons/key.png"><a href="/poison-aivi-party-904DFA58.txt" target="_blank">PGP</a></small></td>
+                            <td style="width: 25%"><a href="https://bsky.app/profile/aivi.party" target="_blank"><img class="icon" src="/assets/branding/bluesky.png"><br>Bluesky</a></td>
+                            <td style="width: 25%"><a href="https://github.com/poisonaivi" target="_blank"><img class="icon" src="/assets/branding/github.png"><br>GitHub</a></td>
                             <td style="width: 25%"><a href="/guestbook.html"><img class="icon" src="/assets/icons/book.png"><br><img class="icon inline-left" src="/assets/icons/arrow-f.png" style="animation: shake 1s steps(1) infinite;">guestbook<img class="icon inline-right" src="/assets/icons/arrow-b.png" style="animation: shake 1s steps(1) infinite; animation-delay: 500ms;"></a></td>
                         </table>
                     </section>
@@ -135,60 +149,78 @@
         <table>
             <tr>
                 <td class="primaryColumn">
-                    <section style="overflow: hidden;">
-                        <p style="float: right;"><small>for something more permanent, sign my <a href="/guestbook.html">guestbook<img class="icon" src="/assets/icons/arrow-r.png"></a></small></p>
-                        <p><img class="icon inline-left" src="/assets/icons/chat.png">chat</p>
-                        <iframe src="https://www3.cbox.ws/box/?boxid=3545093&boxtag=rRmvwj" style="width: calc(100% + 22px); height: 350px; margin: 0 0 -6px -10px; mask-image: linear-gradient(0deg, #fff 85%, #0000 100%);"></iframe>	
+                    <section>
+                        <div class="title-bar">
+                            <p style="float: right;"><small class="text">for something more permanent, sign my <a href="/guestbook.html">guestbook<img class="icon" src="/assets/icons/arrow-r.png"></a></small></p>
+                            <small class="bright text"><img class="icon inline-left" src="/assets/icons/chat.png">CHAT</small>
+                        </div>
+                        <iframe src="https://www3.cbox.ws/box/?boxid=3545093&boxtag=rRmvwj" style="width: calc(100% + 22px); height: 350px; margin: calc(-4px - var(--border-spacing)) 0 -6px -10px;"></iframe>	
                     </section>
                     <section style="padding-bottom: 0; overflow: hidden;">
-                        <p style="float: right;"><small>version: <span class="success num">6<span id="changelogCommitDate"><span class="danger">.X.X.X</span></span></span> commit: <span id="changelogCommitId" class="success num"><span class="danger">LOADING</span></span></small></p>
-                        <p><img class="icon inline-left" src="/assets/icons/edit.png">changelog</p>
-                        <div style="height: 3px;"></div>
-                        <div id="changelog" style="height: 225px; padding: 12px 0; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 20%, #fff 90%, #0000 100%);"><p style="text-align: center;"><br><img class="icon" src="/assets/icons/loading.gif"></p><script>loadElement("changelog.html", "changelog");</script></div>
+                        <div class="title-bar">
+                            <p style="float: right;"><small class="text">version: <span class="success num">6<span id="changelogCommitDate"><span class="danger">.X.X.X</span></span></span> commit: <span id="changelogCommitId" class="success num"><span class="danger">LOADING</span></span></small></p>
+                            <small class="bright text"><img class="icon inline-left" src="/assets/icons/edit.png">CHANGELOG</small>
+                        </div>
+                        <div id="changelog" style="height: 225px; margin-top: calc(0 - var(--border-spacing)); padding: 12px 0; overflow-y: scroll; mask-image: linear-gradient(0deg, #0000 0%, #fff 20%);"><p style="text-align: center;"><br><img class="icon" src="/assets/icons/loading.gif"></p><script>loadElement("changelog.html", "changelog");</script></div>
                     </section>
                     <section>
-                        <p><img class="icon inline-left" src="/assets/icons/list.png">to-do</p>
-                        <hr>
+                        <div class="title-bar">
+                            <small class="bright text"><img class="icon inline-left" src="/assets/icons/list.png">TO-DO</small>
+                        </div>
                         <ul> 
                             <li><s>replace marquee tags in response to Chrome update</s> <small>chrome fixed marquees</small></li>
                             <li><s>new page background</s></li>
+                            <li><s>add alt text to art</s></li>
+                            <li><s>improve gallery, projects, and blog layout</s></li>
                             <li>put something fun in the margins</li>
-                            <li>add alt text to images</li>
                             <li>compress large files!!</li>
-                            <li>improve gallery, projects, and blog layout</li>
                         </ul>
                     </section>
                     <section>
-                        <p><img class="icon inline-left" src="/assets/icons/people.png">webrings</p>
-                        <hr>
-                        <section class="webring" style="text-align: center; border-color: #fff; background: #fd4482; font-family: 'Helvetica Neue', Helvetica, sans-serif;">
-                            <a href="https://hotlinewebring.club/aivi/previous" style="text-shadow: none; color: #fff;">&larr;</a> <a href="https://hotlinewebring.club/" target="_blank" style="text-shadow: none; color: #fff;"><i><b>HOTLINE WEBRING</b></i></a> <a href="https://hotlinewebring.club/aivi/next" style="text-shadow: none; color: #fff;">&rarr;</a>
+                        <div class="title-bar">
+                            <small class="bright text"><img class="icon inline-left" src="/assets/icons/people.png">WEBRINGS</small>
+                        </div>
+                        <section class="webring">
+                            <a style="float: left;" href="https://hotlinewebring.club/aivi/previous"><img class="icon inline-left" src="/assets/icons/arrow-ll.png">previous</a>
+                            <a style="float: right;" href="https://hotlinewebring.club/aivi/next">next<img class="icon inline-right" src="/assets/icons/arrow-rr.png"></a>
+                            <a href="https://hotlinewebring.club/" target="_blank">hotline webring</a>
                         </section>
-                        <section class="webring" style="text-align: center; border: 2px ridge #bbb; border-radius: 0; background: #fff; font-family: 'Times New Roman', Times, serif;">
-                            <a href="https://webring.dinhe.net/prev/aivi.party" style="text-shadow: none; color: #00f;">&larr;</a> <a href="https://webring.dinhe.net/" target="_blank" style="text-shadow: none; color: #00f;"><b>Retronaut Webring</b></a> <a href="https://webring.dinhe.net/next/aivi.party" style="text-shadow: none; color: #00f;">&rarr;</a>
+                        <section class="webring">
+                            <a style="float: left;" href="https://webring.dinhe.net/prev/aivi.party"><img class="icon inline-left" src="/assets/icons/arrow-ll.png">previous</a>
+                            <a style="float: right;" href="https://webring.dinhe.net/next/aivi.party">next<img class="icon inline-right" src="/assets/icons/arrow-rr.png"></a>
+                            <a href="https://webring.dinhe.net/" target="_blank">retronaut webring</a>
                         </section>
-                        <section class="webring" style="text-align: center; border: 1px solid #fff; border-radius: 0; background: #454545; font-family: Merriweather, Georgia, serif;">
-                            <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=aivi" style="color: #fff;">⥼</a> <a href="https://webring.bucketfish.me/index.html" target="_blank"><span style="background: linear-gradient(90deg, #ffaeae, #ffe5a3, #eeff97, #a3ffae, #93cbff, #cf9fff); background-clip: text; -webkit-background-clip: text; color: #0000; text-shadow: none;">bucket webring</span></a> <small><a href="https://webring.bucketfish.me/redirect.html?to=random&name=aivi" style="color: #fff;">(?)</a></small> <a href="https://webring.bucketfish.me/redirect.html?to=next&name=aivi" style="color: #fff;">⥽</a>
+                        <section class="webring">
+                            <a style="float: left;" href="https://webring.bucketfish.me/redirect.html?to=prev&name=aivi"><img class="icon inline-left" src="/assets/icons/arrow-ll.png">previous</a>
+                            <a style="float: right;" href="https://webring.bucketfish.me/redirect.html?to=next&name=aivi">next<img class="icon inline-right" src="/assets/icons/arrow-rr.png"></a>
+                            <a href="https://webring.bucketfish.me/index.html" target="_blank">bucket webring</a>
+                            <small><a href="https://webring.bucketfish.me/redirect.html?to=random&name=aivi" target="_blank">(rand)</a></small>
                         </section>
-                        <section class="webring" style="text-align: center; border-color: #bbb; background: linear-gradient(45deg, #522, #552, #252, #255, #225, #525); font-family: 'Ubuntu Mono', monospace;">
-                            <a href="https://baccyflap.com/noai/?prv&s=aiv" style="color: #ddd;">&larr;</a> <a href="https://baccyflap.com/noai" target="_blank" style="color: #ddd;">no ai webring</a> <small><a href="https://baccyflap.com/noai/?rnd" style="color: #ddd;">(?)</a></small> <a href="https://baccyflap.com/noai/?nxt&s=aiv" style="color: #ddd;">&rarr;</a>
+                        <section class="webring">
+                            <a style="float: left;" href="https://baccyflap.com/noai/?prv&s=aiv"><img class="icon inline-left" src="/assets/icons/arrow-ll.png">previous</a>
+                            <a style="float: right;" href="https://baccyflap.com/noai/?nxt&s=aiv">next<img class="icon inline-right" src="/assets/icons/arrow-rr.png"></a>
+                            <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
+                            <small><a href="https://baccyflap.com/noai/?rnd" target="_blank">(rand)</a></small>
                         </section>
                     </section>
                 </td>
                 <td class="secondaryColumn">
-                    <section style="aspect-ratio: 0.6; background-image: url(https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ouvu3umdjiwzywo53srxspur/bafkreigqhw5vblhvhvjnzh4cqwyoacpnuoenqe7uhayobc3yaqttnkusha@jpeg); background-position: 50%; background-size: cover; overflow: hidden;">
-                        <p style="float: right;"><small><a href="/gallery.html">gallery<img class="icon" src="/assets/icons/arrow-r.png"></a></small></p>
-                        <div style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-image: linear-gradient(#000a, #0002 20%);"></div>                        
-                        <p><img class="icon inline-left" src="/assets/icons/image.png">latest artwork</p>
+                    <section style="aspect-ratio: 1;">
+                        <div class="title-bar">
+                            <p style="float: right;"><small><a href="/gallery.html">gallery<img class="icon" src="/assets/icons/arrow-r.png"></a></small></p>
+                            <small class="bright text"><img class="icon inline-left" src="/assets/icons/image.png">LATEST ARTWORK</small>
+                        </div>
+                        <img class="tinted thumbnailImage" alt="katabame-chan turned into a wolfish furry character." style="object-position: 50% 0%;" src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ouvu3umdjiwzywo53srxspur/bafkreigqhw5vblhvhvjnzh4cqwyoacpnuoenqe7uhayobc3yaqttnkusha@jpeg">
                     </section>
                     <section>
-                        <p style="float: right;"><small><a href="/assets.html">assets<img class="icon" src="/assets/icons/arrow-r.png"></a></small></p>
-                        <p><img class="icon inline-left" src="/assets/icons/link.png">link my button!</p>
-                        <hr>
+                        <div class="title-bar">
+                            <p style="float: right;"><small><a href="/assets/index.html">assets<img class="icon" src="/assets/icons/arrow-r.png"></a></small></p>
+                            <small class="bright text"><img class="icon inline-left" src="/assets/icons/link.png">LINK MY BUTTON!</small>
+                        </div>
                         <table style="width: 100%; margin: 6px 0 -6px;">
                             <tr>
                                 <td style="padding-right: 4px;">
-                                    <img class="badge" src="/assets/badges/aivi-party-88x31.gif">
+                                    <img class="badge w88 h31" src="/assets/badges/aivi-party-88x31.gif">
                                 </td>
                                 <td>
                                     <textarea style="height: 38px;"><a href="https://aivi.party/" target="_blank"><img src="https://aivi.party/assets/badges/aivi-party-88x31.gif"></a></textarea>
@@ -196,7 +228,7 @@
                             </tr>
                             <tr>
                                 <td style="padding-right: 4px;">
-                                    <img class="badge" src="/assets/badges/aivi-party-88x31-2.gif">
+                                    <img class="badge w88 h31" src="/assets/badges/aivi-party-88x31-2.gif">
                                 </td>
                                 <td>
                                     <textarea style="height: 38px;"><a href="https://aivi.party/" target="_blank"><img src="https://aivi.party/assets/badges/aivi-party-88x31-2.gif"></a></textarea>
@@ -204,7 +236,7 @@
                             </tr>
                             <tr>
                                 <td style="padding-right: 4px;">
-                                    <img class="badge" src="/assets/badges/aivi-party-88x31-3.gif">
+                                    <img class="badge w88 h31" src="/assets/badges/aivi-party-88x31-3.gif">
                                 </td>
                                 <td>
                                     <textarea style="height: 38px;"><a href="https://aivi.party/" target="_blank"><img src="https://aivi.party/assets/badges/aivi-party-88x31-3.gif"></a></textarea>
@@ -212,7 +244,7 @@
                             </tr>
                             <tr>
                                 <td style="padding-right: 4px;">
-                                    <img class="badge" src="/assets/badges/aivi-party-88x31-4.gif">
+                                    <img class="badge w88 h31" src="/assets/badges/aivi-party-88x31-4.gif">
                                 </td>
                                 <td>
                                     <textarea style="height: 38px;"><a href="https://aivi.party/" target="_blank"><img src="https://aivi.party/assets/badges/aivi-party-88x31-4.gif"></a></textarea>
@@ -221,10 +253,11 @@
                         </table>
                     </section>
                     <section>
-                        <p><img class="icon inline-left" src="/assets/icons/question.png">random cool site</p>
-                        <hr>
-                        <div style="text-align: center;">
-                            <iframe class="ad" style="display: inline-block; width: 180px; aspect-ratio: 1; box-shadow: 0 0 40px #666; overflow: hidden;" src="https://nvlk.dimden.dev/"></iframe>
+                        <div class="title-bar">
+                            <small class="bright text"><img class="icon inline-left" src="/assets/icons/question.png">RANDOM COOL SITE (AD)</small>
+                        </div>
+                        <div style="text-align: center; margin-top: 16px;">
+                            <iframe class="ad tinted" style="display: inline-block; width: 180px; aspect-ratio: 1; box-shadow: 0 0 40px #666; overflow: hidden;" src="https://nvlk.dimden.dev/"></iframe>
                         </div>
                     </section>
                 </td>

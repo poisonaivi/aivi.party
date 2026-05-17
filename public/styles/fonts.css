@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Monopix";
+    src: url(/assets/fonts/monopix.otf) format("opentype");
+}
+@font-face {
+    font-family: "Monopix XS";
+    src: url(/assets/fonts/monopix-xs.otf) format("opentype");
+    size-adjust: 110%;
+}
+@font-face {
+    font-family: "Monopix XL";
+    src: url(/assets/fonts/monopix-xl.otf) format("opentype");
+    size-adjust: 86%;
+}
+@font-face {
+    font-family: "Segris 16";
+    src: url(/assets/fonts/segris-16.otf) format("opentype");
+    size-adjust: 72%;
+    ascent-override: 135%;
+}
+@font-face {
+    font-family: "Splice";
+    src: url(/assets/fonts/splice-dm.otf) format("opentype");
+    size-adjust: 65%;
+}
+@font-face {
+    font-family: "Targil";
+    src: url(/assets/fonts/targil.otf) format("opentype");
+}

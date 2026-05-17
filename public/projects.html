@@ -3,42 +3,474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.38">
-    <title>projects - AIVI.PARTY!</title>
-    <script src="/app.js"></script>
-    <link rel="stylesheet" href="/main.css">
-    <link rel="icon" href="/assets/aivi-logo-2026-pix.png">
+    <title>projects - aivi.party!</title>
+    <script src="/scripts/loader.js"></script>
+    <script src="/scripts/lightbox.js"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/lightbox.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <link rel="icon" href="/assets/branding/aivi-logo-2026-pix.png">
 </head>
 <body>
-    <div id="accessibility" hidden><script defer src="/elements/accScript.js"></script></div>
+    <div id="accessibility" hidden><script defer src="/scripts/accessibility.js"></script></div>
+    <div id="lightbox">
+        <div onclick="hideLightbox();" style="position: absolute; z-index: 19; width: 100%; height: 100%;"></div>
+        <main class="accessory">
+            <table>
+                <tr>
+                    <td class="secondaryColumn">
+                        <table style="width: 100%">
+                            <tr>
+                                <td style="width: 50%; text-align: center;">
+                                    <a>
+                                        <section onclick="hideLightbox();" class="danger" style="cursor: pointer; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
+                                            <span class="danger noselect"><img class="icon inline-left" src="/assets/icons/x.png">close</span>
+                                        </section>
+                                    </a>
+                                </td>
+                                <td style="width: 50%; text-align: center;">
+                                    <a>
+                                        <section onclick="shareLightbox();" style="cursor: pointer; border-top-left-radius: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+                                            <span class="success noselect"><img class="icon inline-left" src="/assets/icons/share.png">share</span>
+                                        </section>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 50%; text-align: center;">
+                                    <a>
+                                        <section onclick="showLightbox('next');" style="cursor: pointer; border-top-right-radius: 0; border-bottom-right-radius: 0; border-top-left-radius: 0;">
+                                            <span class="important noselect"><img class="icon inline-left" src="/assets/icons/arrow-ll.png">next</span>
+                                        </section>
+                                    </a>
+                                </td>
+                                <td style="width: 50%; text-align: center;">
+                                    <a>
+                                        <section onclick="showLightbox('prev');" style="cursor: pointer; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0;">
+                                            <span class="important noselect">previous<img class="icon inline-right" src="/assets/icons/arrow-rr.png"></span>
+                                        </section>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <section>
+                            <div class="title-bar">
+                                <small class="bright text"><img class="icon inline-left" src="/assets/icons/info.png">INFO</small>
+                            </div>
+                            <p><small><img class="icon inline-left" src="/assets/icons/tag.png"><span id="fill-id"></span></small></p>
+                            <h3><span id="fill-title"></span></h3>
+                            <br>
+                            <p><small><img class="icon inline-left" src="/assets/icons/link.png">link</small></p>
+                            <p id="fill-link"></p>
+                            <hr>
+                            <table style="width: 100%">
+                                <tr>
+                                    <td style="width: 50%">
+                                        <p><small><img class="icon inline-left" src="/assets/icons/calendar.png">created</small></p>
+                                        <p id="fill-date" style="padding-right: 4px"></p>
+                                    </td>
+                                    <td style="width: 50%">
+                                        <p><small><img class="icon inline-left" src="/assets/icons/hammer.png">tools</small></p>
+                                        <p id="fill-tools"></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr>
+                            <p><small><img class="icon inline-left" src="/assets/icons/paragraph-l.png">description</small></p>
+                            <p id="fill-description"></p>
+                            <hr>
+                            <table style="width: 100%">
+                                <tr>
+                                    <td style="width: 50%">
+                                        <p><small><img class="icon inline-left" src="/assets/icons/book.png">readme</small></p>
+                                        <p><small id="fill-readme" style="padding-right: 4px"></small></p>
+                                    </td>
+                                    <td style="width: 50%">
+                                        <p><small><img class="icon inline-left" src="/assets/icons/code.png">source</small></p>
+                                        <p><small id="fill-source"></small></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <p style="text-align: center;"><small>&copy; <span id="fill-year"></span> poisonaivi</small></p>
+                        </section>
+                    </td>
+                    <td class="primaryColumn" style="padding-left: 20px;">
+                        <div id="lightboxImageWrapper">
+                            <img id="lightboxImage">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </main>
+    </div>
     <main>
-        <header id="header"><script defer src="/elements/headerScript.js"></script><noscript><section class="danger"><h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript disabled</h3><p>congrats, you tripped the noscript element! this site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p><br><p>consider <a href="https://javascript.aivi.party/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p></section></noscript></header>
-        <section class="important">
-            <h3><img class="icon inline-left" src="/assets/icons/hammer.png">things i've made</h3>
-            <p>creations of all kinds. there's more stuff out there on the internet if you can find them</p>
-            <br>
-            <section class="warning">
-                <p><span class="warning">note:</span> i will be reorganizing a lot of this when i get the chance</p>
+        <header id="header"><script defer src="/scripts/header.js"></script><noscript><section class="danger"><h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript disabled</h3><p>congrats, you tripped the noscript element! this site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p><br><p>consider <a href="https://javascript.aivi.party/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p></section></noscript></header>
+        <table>
+            <tr style="height: 1px;">
+                <td class="primaryColumn" style="height: inherit;">
+                    <section style="box-sizing: border-box; min-height: 180px; height: calc(100% - var(--border-spacing))">
+                        <h3>things i've made</h3>
+                        <p>creations of all kinds. there's more stuff out there on the internet if you can find it</p>
+                    </section>
+                </td>
+                <td class="secondaryColumn">
+                    <section>
+                        <div class="title-bar">
+                            <small class="bright text"><img class="icon inline-left" src="/assets/icons/list.png">CONTENTS</small>
+                        </div>
+                        <p><small>jump to...</small></p>
+                        <p><a href="#code-projects"><img class="icon inline-left" src="/assets/icons/code.png">coding projects</a></p>
+                        <br>
+                        <p><a href="#build-projects"><img class="icon inline-left" src="/assets/icons/hammer.png">builds</a></p>
+                        <br>
+                        <p><a href="#font-projects"><img class="icon inline-left" src="/assets/icons/font.png">typefaces</a></p>
+                    </section>
+                </td>
+            </tr>
+        </table>
+        <section id="code-projects">
+            <div class="title-bar">
+                <small class="bright text"><img class="icon inline-left" src="/assets/icons/code.png">CODE</small>
+            </div>
+            <div class="thumbnailContainer">
+                <section class="important project thumbnail" id="prj5012" onclick="showLightbox('prj5012');" style="max-width: 47%;">
+                    <div class="title-bar">
+                        <small class="bright important text"><img class="icon inline-left" src="/assets/icons/star.png">FEATURED - time.aivi.party</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 50%;" src="/assets/projects/time.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">time.aivi.party</h3>
+                        <p class="data-short">A better, prettier world clock.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://time.aivi.party/" target="_blank">time.aivi.party</a></span>
+                    <span class="hiddenData data-date">May 2026</span>
+                    <span class="hiddenData data-tools">JavaScript, HTML, CSS</span>
+                    <span class="hiddenData data-description">A really pretty world clock and timezone visualizer that lets you quickly convert and compare timezones.</span>
+                    <span class="hiddenData data-source"><a href="https://github.com/poisonaivi/time.aivi.party" target="_blank">GitHub</a></span>
+                    <span class="hiddenData data-readme"><a href="/blog/0006.html" target="_blank">blog</a></span>
+                </section>
+                <section class="project thumbnail" id="prj5011" onclick="showLightbox('prj5011');" style="flex-basis: 40%;">
+                    <div class="title-bar">
+                        <small class="bright text">meowgen</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 0%;" src="/assets/projects/meowgen.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">meowgen</h3>
+                        <p class="data-short">Generate meows. meow meow meow</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://meowgen.pages.dev/" target="_blank">meowgen.pages.dev</a></span>
+                    <span class="hiddenData data-date">August 2025</span>
+                    <span class="hiddenData data-tools">JavaScript, HTML, CSS</span>
+                    <span class="hiddenData data-description">A super advanced generative procedural communication tool for cat-person communication.</span>
+                    <span class="hiddenData data-source"><a href="https://github.com/poisonaivi/meowgen/tree/main" target="_blank">GitHub</a></span>
+                    <span class="hiddenData data-readme"><a href="https://github.com/poisonaivi/meowgen/blob/main/README.md" target="_blank">GitHub</a></span>
+                </section>
+                <section class="project thumbnail" id="prj5010" onclick="showLightbox('prj5010');" style="flex-basis: 40%;">
+                    <div class="title-bar">
+                        <small class="bright text">driveUD beta</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 50%;" src="/assets/projects/driveud.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">driveUD beta</h3>
+                        <p class="data-short">An attempt at optical self-driving for Roblox.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://github.com/poisonaivi/driveUD/tree/main" target="_blank">project files</a></span>
+                    <span class="hiddenData data-date">June 2025</span>
+                    <span class="hiddenData data-tools">Python</span>
+                    <span class="hiddenData data-description">A primitive lane assist/self-driving script using Python + pyautogui, designed for the Ultimate Driving game series on Roblox.</span>
+                    <span class="hiddenData data-source"><a href="https://github.com/poisonaivi/driveUD/tree/main" target="_blank">GitHub</a></span>
+                    <span class="hiddenData data-readme"><a href="https://github.com/poisonaivi/driveUD/blob/main/README.md" target="_blank">GitHub</a></span>
+                </section>
+                <section class="project thumbnail" id="prj5009" onclick="showLightbox('prj5009');" style="flex-basis: 40%;">
+                    <div class="title-bar">
+                        <small class="bright text">Enable Javascript!</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 50%;" src="/assets/projects/enable-javascript.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">Enable Javascript!</h3>
+                        <p class="data-short">Go-to page for JavaScript-disabling users.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://javascript.aivi.party/" target="_blank">javascript.aivi.party</a></span>
+                    <span class="hiddenData data-date">March 2025</span>
+                    <span class="hiddenData data-tools">JavaScript, HTML, CSS</span>
+                    <span class="hiddenData data-description">A helpful page with guides on how to enable JS on popular browsers.</span>
+                    <span class="hiddenData data-source"><a href="https://github.com/poisonaivi/enable-javascript/tree/main" target="_blank">GitHub</a></span>
+                    <span class="hiddenData data-readme"><a href="https://javascript.aivi.party/#faqs" target="_blank">FAQs</a></span>
+                </section>
+                <section class="project thumbnail" id="prj5008" onclick="showLightbox('prj5008');" style="flex-basis: 40%;">
+                    <div class="title-bar">
+                        <small class="bright text">neuMetronome</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 100%;" src="/assets/projects/neumetronome.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">neuMetronome</h3>
+                        <p class="data-short">A neumorphic metronome with many features.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://neumetronome.pages.dev/" target="_blank">neumetronome.pages.dev</a></span>
+                    <span class="hiddenData data-date">May 2024</span>
+                    <span class="hiddenData data-tools">JavaScript, HTML, CSS</span>
+                    <span class="hiddenData data-description">A JS metronome with a neumorphic aesthetic. Accurate to ±1ms/300k years with an internet connection and functioning society.</span>
+                    <span class="hiddenData data-source"><a href="https://github.com/poisonaivi/neumetronome" target="_blank">GitHub</a></span>
+                    <span class="hiddenData data-readme"><span class="danger">unavailable</span></span>
+                </section>
+                <section class="project thumbnail" id="prj5007" onclick="showLightbox('prj5007');" style="flex-basis: 40%;">
+                    <div class="title-bar">
+                        <small class="bright text">calculateUD v2</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 0%;" src="/assets/projects/calculateud.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">calculateUD v2</h3>
+                        <p class="data-short">Ultimate Driving series grinding calculator.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://calculateud.pages.dev/" target="_blank">calculateud.pages.dev</a></span>
+                    <span class="hiddenData data-date">February 2024</span>
+                    <span class="hiddenData data-tools">JavaScript, HTML, CSS</span>
+                    <span class="hiddenData data-description">A grinding calculator designed for the Ultimate Driving game series on Roblox. (Please touch grass.)</span>
+                    <span class="hiddenData data-source"><a href="https://github.com/poisonaivi/calculateUD" target="_blank">GitHub</a></span>
+                    <span class="hiddenData data-readme"><a href="https://github.com/poisonaivi/calculateUD/blob/main/README.md" target="_blank">GitHub</a></span>
+                </section>
+                <section class="project thumbnail" id="prj5006" onclick="showLightbox('prj5006');" style="flex-basis: 40%;">
+                    <div class="title-bar">
+                        <small class="bright text">stupidCalculator</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 0%;" src="/assets/projects/stupidcalculator.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">stupidCalculator</h3>
+                        <p class="data-short">A CLI-style calulator that's really dumb.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://stupidcalculator.pages.dev/" target="_blank">stupidcalculator.pages.dev</a></span>
+                    <span class="hiddenData data-date">January 2024</span>
+                    <span class="hiddenData data-tools">JavaScript, HTML, CSS</span>
+                    <span class="hiddenData data-description">It's a command-line calculator (emulated in browser), and its really fast (lie). What else can I say?</span>
+                    <span class="hiddenData data-source"><a href="https://github.com/poisonaivi/stupidcalculator" target="_blank">GitHub</a></span>
+                    <span class="hiddenData data-readme"><span class="danger">unavailable</span></span>
+                </section>
+                <section class="project thumbnail" id="prj5005" onclick="showLightbox('prj5005');" style="flex-basis: 40%;">
+                    <div class="title-bar">
+                        <small class="bright text">stupidCalendar</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 0%;" src="/assets/projects/stupidcalendar.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">stupidCalendar</h3>
+                        <p class="data-short">A really useless date/time display.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://stupidcalendar.pages.dev/" target="_blank">stupidcalendar.pages.dev</a></span>
+                    <span class="hiddenData data-date">January 2024</span>
+                    <span class="hiddenData data-tools">JavaScript, HTML, CSS</span>
+                    <span class="hiddenData data-description">It's like a smart display, except stupid. StupidCalendar provides a static timestamp from a random timezone with an unusable date format. Now with dark mode.</span>
+                    <span class="hiddenData data-source"><a href="https://github.com/poisonaivi/stupidcalendar" target="_blank">GitHub</a></span>
+                    <span class="hiddenData data-readme"><span class="danger">unavailable</span></span>
+                </section>
+                <section class="project thumbnail" id="prj5004" onclick="showLightbox('prj5004');" style="flex-basis: 40%;">
+                    <div class="title-bar">
+                        <small class="bright text">calculator_</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 35%;" src="/assets/projects/calculator_.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">calculator_</h3>
+                        <p class="data-short">Scratch-based graphing calculator.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://turbowarp.org/936913520/fullscreen" target="_blank">turbowarp.org/936913520</a></span>
+                    <span class="hiddenData data-date">December 2023</span>
+                    <span class="hiddenData data-tools">Scratch</span>
+                    <span class="hiddenData data-description">A fully functional scientific graphing calculator made on Scratch with Desmos-style UI, using custom function libraries and 4000+ blocks.</span>
+                    <span class="hiddenData data-source"><a href="https://scratch.mit.edu/projects/936913520/editor/" target="_blank">Scratch</a></span>
+                    <span class="hiddenData data-readme">see source</span>
+                </section>
+                <section class="project thumbnail" id="prj5003" onclick="showLightbox('prj5003');" style="flex-basis: 40%;">
+                    <div class="title-bar">
+                        <small class="bright text">SPrint Lite</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 0%;" src="/assets/projects/sprint-lite.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">SPrint Lite</h3>
+                        <p class="data-short">A lightweight text rendering engine for Scratch.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://turbowarp.org/901951175/fullscreen" target="_blank">turbowarp.org/901951175</a></span>
+                    <span class="hiddenData data-date">October 2023</span>
+                    <span class="hiddenData data-tools">Scratch</span>
+                    <span class="hiddenData data-description">A lightweight pen-based text rendering engine for Scratch, successor of BetterText. Sister project of sPrint Pro.</span>
+                    <span class="hiddenData data-source"><a href="https://scratch.mit.edu/projects/901951175/editor/" target="_blank">Scratch</a></span>
+                    <span class="hiddenData data-readme">see source</span>
+                </section>
+                <section class="project thumbnail" id="prj5002" onclick="showLightbox('prj5002');" style="flex-basis: 40%;">
+                    <div class="title-bar">
+                        <small class="bright text">SPrint Pro</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 100%;" src="/assets/projects/sprint-pro.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">SPrint Pro</h3>
+                        <p class="data-short">A rich text rendering engine for Scratch.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://turbowarp.org/897395928/fullscreen" target="_blank">turbowarp.org/897395928</a></span>
+                    <span class="hiddenData data-date">September 2023</span>
+                    <span class="hiddenData data-tools">Scratch</span>
+                    <span class="hiddenData data-description">A feature-rich pen-based text rendering engine for Scratch, designed for those who need ultra-fine, pixel-level control. Sister project of sPrint Lite.</span>
+                    <span class="hiddenData data-source"><a href="https://scratch.mit.edu/projects/897395928/editor/" target="_blank">Scratch</a></span>
+                    <span class="hiddenData data-readme">see source</span>
+                </section>
+                <section class="project thumbnail" id="prj5001" onclick="showLightbox('prj5001');" style="max-width: 47%;">
+                    <div class="title-bar">
+                        <small class="bright text">mandelbrotter</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 35%;" src="/assets/projects/mandelbrotter.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">mandelbrotter</h3>
+                        <p class="data-short">A Scratch-based fractal rendering engine.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://turbowarp.org/895102733/fullscreen?turbo&fps=250" target="_blank">turbowarp.org/895102733</a></span>
+                    <span class="hiddenData data-date">September 2023</span>
+                    <span class="hiddenData data-tools">Scratch</span>
+                    <span class="hiddenData data-description">Mandelbrot and Julia fractal rendering engine on Scratch with touchscreen support.</span>
+                    <span class="hiddenData data-source"><a href="https://scratch.mit.edu/projects/895102733/editor/" target="_blank">Scratch</a></span>
+                    <span class="hiddenData data-readme"><span class="danger">unavailable</span></span>
+                    <span class="hiddenData data-prevID"><span class="danger">prj4902</span></span>
+                </section>
+            </div>
+        </section>
+        <section id="build-projects">
+            <div class="title-bar">
+                <small class="bright text"><img class="icon inline-left" src="/assets/icons/hammer.png">BUILDS</small>
+            </div>
+            <div class="thumbnailContainer">
+                <section class="project thumbnail" id="prj4902" onclick="showLightbox('prj4902');" style="flex-basis: 40%;">
+                    <div class="title-bar">
+                        <small class="bright text">Tensegrity</small>
+                    </div>
+                    <img class="thumbnailImage" style="object-position: 50% 50%;" src="/assets/projects/tensegrity.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">Tensegrity</h3>
+                        <p class="data-short">A handmade floating table.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://aivi.party/industrial-tech/tensegrity.html" target="_blank">project docs</a></span>
+                    <span class="hiddenData data-date">December 2025</span>
+                    <span class="hiddenData data-tools">woodworking</span>
+                    <span class="hiddenData data-description">A cable-tensioned floating table built out of wood, with all steps and materials fully documented.</span>
+                    <span class="hiddenData data-source"><a href="https://aivi.party/industrial-tech/tensegrity.html" target="_blank">project docs</a></span>
+                    <span class="hiddenData data-readme">see source</span>
+                </section>
+                <section class="project thumbnail" id="prj4901" onclick="showLightbox('prj4901');" style="max-width: 47%;">
+                    <div class="title-bar">
+                        <small class="bright text">3DP-VR</small>
+                    </div>
+                    <img onload="openSharedLightbox();" class="thumbnailImage" style="object-position: 50% 50%;" src="/assets/projects/3DP-VR.jpeg">
+                    <div class="thumbnailText">
+                        <h3 class="important data-title">3DP-VR</h3>
+                        <p class="data-short">A 3D-printed VR viewer.</p>
+                    </div>
+                    <span class="hiddenData data-link"><a href="https://github.com/poisonaivi/3DP-VR/tree/main" target="_blank">project files</a></span>
+                    <span class="hiddenData data-date">May 2025</span>
+                    <span class="hiddenData data-tools">3D printing</span>
+                    <span class="hiddenData data-description">A simple VR viewer designed in a few hours with zero research or background knowledge.</span>
+                    <span class="hiddenData data-source"><a href="https://github.com/poisonaivi/3DP-VR/tree/main" target="_blank">GitHub</a></span>
+                    <span class="hiddenData data-readme"><a href="https://github.com/poisonaivi/3DP-VR/blob/main/README.md" target="_blank">GitHub</a></span>
+                    <span class="hiddenData data-prevID"><span class="danger">prj0801</span></span>
+                </section>
+            </div>
+        </section>
+        <section id="font-projects">
+            <div class="title-bar">
+                <small class="bright text"><img class="icon inline-left" src="/assets/icons/font.png">TYPEFACES</small>
+            </div>
+            <section>
+                <div class="title-bar">
+                    <small class="bright text">MONOPIX</small>
+                </div>
+                <h3><i>Monopix</i></h3>
+                <table style="width: 100%">
+                    <tr>
+                        <td style="width: 33%">
+                            <p><small><img class="icon inline-left" src="/assets/icons/book.png">learn more</small></p>
+                            <p><a href="/blog/0004.html" target="_blank">read about this typeface</a></p>
+                        </td>
+                        <td style="width: 33%">
+                            <p><small><img class="icon inline-left" src="/assets/icons/download.png">download</small></p>
+                            <p><a href="/blog/0004.html" target="_blank">download options</a></p>
+                        </td>
+                        <td style="width: 33%">
+                            <p><small><img class="icon inline-left" src="/assets/icons/link.png">source</small></p>
+                            <p><a href="https://fontstruct.com/fontstructions/show/2776172/monopix-2" target="_blank">FontStruct</a></p>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+                <p><small>XL</small></p>
+                <p class="fontPreview text" style="font-family: 'Monopix XL';">Sphinx of black quartz, judge my vow.</p>
+                <hr>
+                <p><small>regular</small></p>
+                <p class="fontPreview text" style="font-family: Monopix;">Sphinx of black quartz, judge my vow.</p>
+                <hr>
+                <p><small>XS</small></p>
+                <p class="fontPreview text" style="font-family: 'Monopix XS';">Sphinx of black quartz, judge my vow.</p>
+            </section>
+            <section>
+                <div class="title-bar">
+                    <small class="bright text">SEGRIS</small>
+                </div>
+                <h3><i>Segris</i></h3>
+                <table style="width: 100%">
+                    <tr>
+                        <td style="width: 33%">
+                            <p><small><img class="icon inline-left" src="/assets/icons/book.png">learn more</small></p>
+                            <p><a href="/blog/0003.html" target="_blank">read about this typeface</a></p>
+                        </td>
+                        <td style="width: 33%">
+                            <p><small><img class="icon inline-left" src="/assets/icons/download.png">download</small></p>
+                            <p><a href="/blog/0003.html" target="_blank">download options</a></p>
+                        </td>
+                        <td style="width: 33%">
+                            <p><small><img class="icon inline-left" src="/assets/icons/link.png">source</small></p>
+                            <p><a href="https://fontstruct.com/fontstructions/show/2816062/segris-16" target="_blank">FontStruct</a></p>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+                <p><small>16-segment regular (basic latin)</small></p>
+                <p class="fontPreview text" style="font-family: 'Segris 16';">SPHINX OF BLACK QUARTZ, JUDGE MY VOW.</p>
+                <hr>
+                <p><small>16-segment regular (western arabic numerals)</small></p>
+                <p class="fontPreview text" style="font-family: 'Segris 16';">0123456789</p>
+            </section>
+            <section>
+                <div class="title-bar">
+                    <small class="bright text">TARGIL</small>
+                </div>
+                <h3><i>Targil</i></h3>
+                <table style="width: 100%">
+                    <tr>
+                        <td style="width: 50%">
+                            <p><small><img class="icon inline-left" src="/assets/icons/download.png">download</small></p>
+                            <p><a href="https://fontstruct.com/fontstructions/download/2871342" target="_blank">download options</a></p>
+                        </td>
+                        <td style="width: 50%">
+                            <p><small><img class="icon inline-left" src="/assets/icons/link.png">source</small></p>
+                            <p><a href="https://fontstruct.com/fontstructions/show/2871342/targil" target="_blank">FontStruct</a></p>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+                <p><small>regular</small></p>
+                <p class="fontPreview text" style="font-family: 'Targil';">Sphinx of black quartz, judge my vow.</p>
+            </section>
+            <section>
+                <div class="title-bar">
+                    <small class="bright text">SPLICE</small>
+                </div>
+                <h3><i>Splice</i></h3>
+                <table style="width: 100%">
+                    <tr>
+                        <td style="width: 100%">
+                            <p><small><img class="icon inline-left" src="/assets/icons/download.png">download</small></p>
+                            <p><a href="/assets/fonts/splice-dm.otf" target="_blank">download as .OTF</a></p>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+                <p><small>dot matrix</small></p>
+                <p class="fontPreview text" style="font-family: 'Splice';">Sphinx of black quartz, judge my vow.</p>
             </section>
         </section>
-        <div class="listing">
-            <section><div class="desc"><h3>time.aivi.party</h3><p>A really pretty world clock/timezone visualizer that shows you all the info you need.<br><small>May 2026 • HTML, JS, CSS • any device</small></p><div class="actions"><a href="https://time.aivi.party/" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">compare timezones</a><br><a href="/blog/0006.html" target="_blank"><img class="icon inline-left" src="/assets/icons/chat.png">blog post</a><br><a href="https://github.com/poisonaivi/time.aivi.party" target="_blank"><img class="icon inline-left" src="/assets/logos/github.png">source code</a></div></div><figure><img src="/assets/projects/time.jpeg"></figure></section>
-            <section><div class="desc"><h3>Segris 16</h3><p>A segment pixel typeface for neue-retro clocks.<br><small>January 2026 • typeface • any device</small></p><div class="actions"><a href="/blog/0003.html" target="_blank"><img class="icon inline-left" src="/assets/icons/chat.png">blog post</a><br><a href="https://fontstruct.com/fontstructions/show/2816062/segris-16" target="_blank"><img class="icon inline-left" src="/assets/icons/link.png">FontStruct</a></div></div><figure><img src="/blog/assets/segris16demo.png"></figure></section>
-            <section><div class="desc"><h3>Tensegrity</h3><p>A cable-tensioned floating table built out of wood, with all steps and materials fully documented.<br><small>December 2025 • woodworking</small></p><div class="actions"><a href="https://aivi.party/industrial-tech/tensegrity.html" target="_blank"><img class="icon inline-left" src="/assets/icons/image.png">take a gander</a><br><a href="https://aivi.party/industrial-tech/" target="_blank"><img class="icon inline-left" src="/assets/icons/link.png">IT2 homepage</a></div></div><figure><img src="/assets/projects/tensegrity.jpeg"></figure></section>
-            <section><div class="desc"><h3>Monopix</h3><p>A monospaced, pixelated typeface with a very innovative name. The font for this website.<br><small>November 2025 • typeface • any device</small></p><div class="actions"><a href="/blog/0004.html" target="_blank"><img class="icon inline-left" src="/assets/icons/chat.png">blog post</a><br><a href="https://fontstruct.com/fontstructions/show/2776172/monopix-2" target="_blank"><img class="icon inline-left" src="/assets/icons/link.png">FontStruct</a></div></div><figure><img src="/blog/assets/monopixdemo.png"></figure></section>
-            <section><div class="desc"><h3>meowgen</h3><p>Advanced generative procedural communication. Generate meows. meow meow meow<br><small>August 2025 • HTML, JS, CSS • any device</small></p><div class="actions"><a href="https://meowgen.pages.dev/" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">meow a little</a><br><a href="https://github.com/poisonaivi/meowgen/tree/main" target="_blank"><img class="icon inline-left" src="/assets/logos/github.png">source code</a></div></div><figure><img src="/assets/projects/meowgen.jpeg"></figure></section>
-            <section><div class="desc"><h3>driveUD (beta)</h3><p>A primitive lane assist/self-driving script using Python + pyautogui, designed for the Ultimate Driving game series on Roblox.<br><small>June 2025 • Python • desktop</small></p><div class="actions"><a href="https://github.com/poisonaivi/driveUD/tree/main" target="_blank"><img class="icon inline-left" src="/assets/logos/github.png">source code</a></div></div><figure><img src="/assets/projects/driveUD.jpeg"></figure></section>
-            <section><div class="desc"><h3>3DP-VR</h3><p>A simple VR viewer designed in a few hours with zero research or background knowledge.<br><small>May 2025 • OnShape, 3D printing • mobile</small></p><div class="actions"><a href="https://github.com/poisonaivi/3DP-VR/tree/main" target="_blank"><img class="icon inline-left" src="/assets/logos/github.png">project files</a></div></div><figure><img src="/assets/projects/3DP-VR.jpeg"></figure></section>
-            <section><div class="desc"><h3>Enable JavaScript!</h3><p>A helpful page with guides on how to enable JS on popular browsers.<br><small>March 2025 • HTML, JS, CSS • any device</small></p><div class="actions"><a href="https://javascript.aivi.party/" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">visit website</a><br><a href="https://github.com/poisonaivi/enable-javascript/tree/main" target="_blank"><img class="icon inline-left" src="/assets/logos/github.png">source code</a></div></div><figure><img src="/assets/projects/enable-javascript.jpeg"></figure></section>
-            <section><div class="desc"><h3>neuMetronome</h3><p>A JS metronome with a neumorphic aesthetic. Accurate to ±1ms/300k years with an internet connection and functioning society.<br><small>May 2024 • HTML, JS, CSS • desktop</small></p><div class="actions"><a href="https://neumetronome.pages.dev/" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">keep the tempo</a><br><a href="https://github.com/poisonaivi/neumetronome" target="_blank"><img class="icon inline-left" src="/assets/logos/github.png">source code</a></div></div><figure><img src="/assets/projects/neuMetronome.jpeg"></figure></section>
-            <section><div class="desc"><h3>calculateUD v2</h3><p>A grinding calculator designed for the Ultimate Driving game series on Roblox. (Please touch grass.)<br><small>February 2024 • HTML, JS, CSS • any device</small></p><div class="actions"><a href="https://calculateud.pages.dev/" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">start grinding</a><br><a href="https://github.com/poisonaivi/calculateUD" target="_blank"><img class="icon inline-left" src="/assets/logos/github.png">source code</a></div></div><figure><img src="/assets/projects/calculateUD.jpeg"></figure></section>
-            <section><div class="desc"><h3>stupidCalculator</h3><p>It's a command-line calculator (emulated in browser), and its really fast (lie). What else can I say?<br><small>January 2024 • HTML, JS, CSS • any device</small></p><div class="actions"><a href="https://stupidcalculator.pages.dev/" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">add some numbers</a><br><a href="https://github.com/poisonaivi/stupidcalculator" target="_blank"><img class="icon inline-left" src="/assets/logos/github.png">source code</a></div></div><figure><img src="/assets/projects/stupidCalculator.jpeg"></figure></section>
-            <section><div class="desc"><h3>stupidCalendar</h3><p>It's like a smart display, except stupid. StupidCalendar provides a static timestamp from a random timezone with an unusable date format. Now with dark mode.<br><small>January 2024 • HTML, JS, CSS • any device</small></p><div class="actions"><a href="https://stupidcalendar.pages.dev/" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">check the date</a><br><a href="https://github.com/poisonaivi/stupidcalendar" target="_blank"><img class="icon inline-left" src="/assets/logos/github.png">source code</a></div></div><figure><img src="/assets/projects/stupidCalendar.jpeg"></figure></section>
-            <section><div class="desc"><h3>calculator_</h3><p>A fully functional scientific graphing calculator made on Scratch with Desmos-style UI, using custom function libraries and 4000+ blocks.<br><small>December 2023 • Scratch 3 • desktop</small></p><div class="actions"><a href="https://turbowarp.org/936913520/fullscreen" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">do some trigonometry</a><br><a href="https://scratch.mit.edu/projects/936913520/editor/" target="_blank"><img class="icon inline-left" src="/assets/logos/scratch.png">source code</a></div></div><figure><img src="/assets/projects/calculator_.jpeg"></figure></section>
-            <section><div class="desc"><h3>Vegetable Samurai</h3><p>This is not a knockoff of a certain fruit slicing game.<br><small>November 2023 • Scratch 3 • any device</small></p><div class="actions"><a href="https://turbowarp.org/920568040/fullscreen" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">slice some veggies</a><br><a href="https://scratch.mit.edu/projects/920568040/editor/" target="_blank"><img class="icon inline-left" src="/assets/logos/scratch.png">source code</a></div></div><figure><img src="/assets/projects/vegetable-samurai.jpeg"></figure></section>
-            <section><div class="desc"><h3>SPrint Lite</h3><p>A lightweight pen-based text rendering engine for Scratch, successor of BetterText. Sister project of sPrint Pro.<br><small>October 2023 • Scratch 3</small></p><div class="actions"><a href="https://turbowarp.org/901951175/fullscreen" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">print some text</a><br><a href="https://scratch.mit.edu/projects/901951175/editor/" target="_blank"><img class="icon inline-left" src="/assets/logos/scratch.png">source code</a></div></div><figure><img src="/assets/projects/sprint-lite.jpeg"></figure></section>
-            <section><div class="desc"><h3>SPrint Pro</h3><p>A feature-rich text rendering engine for Scratch, designed for those who need ultra-fine, pixel-level control. Sister project of sPrint Lite.<br><small>September 2023 • Scratch 3</small></p><div class="actions"><a href="https://turbowarp.org/897395928/fullscreen" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">render some prose</a><br><a href="https://scratch.mit.edu/projects/897395928/editor/" target="_blank"><img class="icon inline-left" src="/assets/logos/scratch.png">source code</a></div></div><figure><img src="/assets/projects/sprint-pro.jpeg"></figure></section>
-            <section><div class="desc"><h3>mandelbrotter</h3><p>Mandelbrot and Julia fractal rendering engine on Scratch with touchscreen support.<br><small>September 2023 • Scratch 3 • any decvice</small></p><div class="actions"><a href="https://turbowarp.org/895102733/fullscreen?turbo&fps=250" target="_blank"><img class="icon inline-left" src="/assets/icons/play.png">zoom in to the void</a><br><a href="https://scratch.mit.edu/projects/895102733/editor/" target="_blank"><img class="icon inline-left" src="/assets/logos/scratch.png">source code</a></div></div><figure><img src="/assets/projects/mandelbrotter.jpeg"></figure></section>
-        </div>
         <footer id="footer"><script>loadElement("footer.html", "footer");</script></footer> 
     </main>
 </body>

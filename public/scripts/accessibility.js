@@ -1,21 +1,18 @@
 function accMenuOpen() {
     document.getElementById("acc-menu").style.visibility = "visible";
 }
-
 function accMenuClose() {
     document.getElementById("acc-menu").style.visibility = "hidden";
 }
-
 function accRecall() {
-    optionIds = ["novfx", "desat", "contrast", "invert", "monofont", "dysfont"];
-    options = [false, false, false, false, false, false];
+    optionIds = ["novfx", "contrast", "monofont"];
+    options = [false, false, false];
     for (let i = 0; i < options.length; i++) {
         if (localStorage.getItem(optionIds[i])) {
             options[i] = true;
         }
     }
 }
-
 function accUpdateCheckboxes() {
     for (let i = 0; i < options.length; i++) {
         if (options[i]) {
@@ -23,7 +20,6 @@ function accUpdateCheckboxes() {
         }
     }
 }
-
 function accChange() {
     for (let i = 0; i < options.length; i++) {
         if (document.getElementById(optionIds[i]).checked) {
@@ -36,29 +32,26 @@ function accChange() {
     }
     accApply();
 }
-
 function accApply() {
-    const mainEle = document.getElementsByTagName("main")[0];
-    const root = document.querySelector(':root');
-    var mainFilter = "";
-    var mainMask = "";
+    const mainEle = document.querySelector("main:not(.accessory)");
+    const root = document.querySelector(":root");
     mainFont = "";
     if (options[0]) {
-        mainFilter += "brightness(1)";
-        mainMask = "none";
+        root.style.setProperty('--crt-filter', 'none');
+        root.style.setProperty('--crt-mask', 'none');
+    } else {
+        root.style.setProperty('--crt-filter', 'var(--d-crt-filter');
+        root.style.setProperty('--crt-mask', 'var(--d-crt-mask');
     }
     if (options[1]) {
-        mainFilter += "saturate(0.5)";
-    }
-    if (options[2]) {
-        root.style.setProperty('--border', '#888');
+        root.style.setProperty('--border', '#858');
         root.style.setProperty('--small-text', '#888');
         root.style.setProperty('--text-b', '#222');
         root.style.setProperty('--link-b', '#102');
         root.style.setProperty('--accent-b', '#202');
-        root.style.setProperty('--success-b', '#020');
-        root.style.setProperty('--warning-b', '#220');
-        root.style.setProperty('--danger-b', '#200');
+        root.style.setProperty('--success-b', '#021');
+        root.style.setProperty('--warning-b', '#221');
+        root.style.setProperty('--danger-b', '#201');
     } else {
         root.style.setProperty('--border', 'var(--d-border');
         root.style.setProperty('--small-text', 'var(--d-small-text');
@@ -69,21 +62,18 @@ function accApply() {
         root.style.setProperty('--warning-b', 'var(--d-warning-b)');
         root.style.setProperty('--danger-b', 'var(--d-danger-b)');
     }
-    if (options[3]) {
-        mainFilter += "invert(1)";
-    }
-    if (options[4]) {
+    if (options[2]) {
         mainFont = "acc-monospace";
     }
-    if (options[5]) {
-        mainFont = "acc-dyslexic";
-    }
-    mainEle.style.filter = mainFilter;
-    mainEle.style.mask = mainMask;
     mainEle.style.fontFamily = mainFont;
     try {
         document.getElementById("acc-menu").style.fontFamily = mainFont;
     } catch {}
+}
+function accLoaded() {
+    accUpdateCheckboxes();
+    document.getElementById("accessibility").hidden = false;
+    document.getElementById("acc-menu").style.fontFamily = mainFont;
 }
 
 loadElement("accMenu.html", "accessibility");
@@ -92,8 +82,3 @@ var optionIds;
 var mainFont;
 accRecall();
 accApply();
-window.onload = (event) => {
-    accUpdateCheckboxes();
-    document.getElementById("accessibility").hidden = false;
-    document.getElementById("acc-menu").style.fontFamily = mainFont;
-}

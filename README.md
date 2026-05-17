@@ -6,9 +6,13 @@
 <br>
 `.. badges/                             ` - 88x31 and other collectables
 <br>
+`.. branding/                           ` - pixelated logos
+<br>
+`.. fonts/                              ` - page fonts
+<br>
 `.. icons/                              ` - pixel iconset made by yours truly
 <br>
-`.. logos/                              ` - pixelated logos
+`.. images/                             ` - static images for decoration
 <br>
 `.. projects/                           ` - project thumbnails
 <br>
@@ -16,8 +20,10 @@
 <br>
 `.. assets/                             ` - blog media
 <br>
-`elements/                              ` - cross-page reused site content
+`layout/                                ` - reused site content
 <br>
-`fonts/                                 ` - page fonts, including custom ones
+`scripts/                               ` - scripts for site functionality
+<br>
+`styles/                                ` - site CSS
 <br>
 `services/           (through HTTP only)` - API endpoints

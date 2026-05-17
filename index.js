@@ -68,31 +68,38 @@ async function pageNotFound() {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.38">
-        <title>404 Not Found</title>
-        <script src="/app.js"></script>
-        <link rel="stylesheet" href="/main.css">
-        <link rel="icon" href="/assets/aivi-logo-2026-pix.png">
+        <title>404: not found</title>
+        <script src="/scripts/loader.js"></script>
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="icon" href="/assets/branding/aivi-logo-2026-pix.png">
     </head>
     <body>
-        <div id="accessibility" hidden><script defer src="/elements/accScript.js"></script></div>
+        <div id="accessibility" hidden><script defer src="/scripts/accessibility.js"></script></div>
         <main>
             <div style="height: 150px;"></div>
             <div style="width: fit-content; margin: 0 auto;">
-                <h2 class="danger" style="position: absolute; translate: 110px -10px; animation: bounce 1s steps(1) infinite;">!?</h1>
-                <h2 class="danger" style="position: absolute; translate: -60px 50px; animation: bounce 1s steps(1) infinite; animation-delay: 250ms;">#</h1>
-                <h3 class="danger num" style="position: absolute; translate: -80px -30px; animation: bounce 1s steps(1) infinite; animation-delay: 500ms;">ERROR</h2>
-                <h3 class="danger num" style="position: absolute; translate: 100px 80px; animation: bounce 1s steps(1) infinite; animation-delay: 750ms;">404</h2>
-                <img style="position: relative; z-index: 1; width: 100px; translate: -7px 0; filter: drop-shadow(4px 4px var(--shadow)) drop-shadow(0 0 12px #90ba);" src="/assets/aivi-logo-2026-pix.png">
+                <h2 class="danger num" style="position: absolute; translate: -150px 30px; rotate: -90deg; animation: shake 1s steps(1) infinite; animation-delay: 800ms;">ERROR</h2>
+                <h2 class="danger num" style="position: absolute; translate: 110px 80px; animation: bounce 1s steps(1) infinite; animation-delay: 600ms;">404</h2>
+                <h1 class="danger" style="position: absolute; translate: 100px -60px; animation: bounce 1s steps(1) infinite;">!?</h1>
+                <h2 class="danger" style="position: absolute; translate: -30px 90px; animation: bounce 1s steps(1) infinite; animation-delay: 200ms;">#</h2>
+                <h2 class="danger" style="position: absolute; translate: 0 -60px; animation: bounce 1s steps(1) infinite; animation-delay: 400ms;">%</h2>
+                <img style="position: absolute; z-index: 2; width: 30px; translate: -40px 30px;" src="/assets/icons/spark.png">
+                <img style="position: absolute; z-index: 2; width: 30px; translate: 40px -40px;" src="/assets/icons/electricity.png">
+                <img style="position: absolute; z-index: 2; width: 30px; translate: 110px 40px;" src="/assets/icons/warning.png">
+                <img style="position: absolute; z-index: 2; width: 30px; translate: 30px 110px;" src="/assets/icons/face-sad.png">
+                <img style="position: relative; z-index: 1; width: 100px; filter: drop-shadow(4px 4px var(--shadow)) drop-shadow(0 0 12px #90ba);" src="/assets/branding/aivi-logo-2026-pix.png">
             </div>
-            <div style="height: 180px;"></div>
-            <section class="danger" style="text-align: center;">
-                <h3 class="danger">404 / not found</h3>
-                <br>
+            <div style="height: 100px;"></div>
+            <section class="danger">
+                <div class="title-bar">
+                    <small class="bright danger"><img class="icon inline-left" src="/assets/icons/error.png">ERROR</small>
+                </div>
+                <h3 class="danger">404: not found</h3>
+                <br>    
                 <p>the magical little creature inside this server couldn't find what you were looking for</p>
                 <br><br>
                 <p><a href="/index.html"><img class="icon inline-left" src="/assets/icons/arrow-rr.png" style="animation: shake 1s steps(1) infinite;">return home<img class="icon inline-right" src="/assets/icons/arrow-ll.png" style="animation: shake 1s steps(1) infinite; animation-delay: 500ms;"></a></p>
             </section>
-            <div style="height: 150px;"></div>
             <footer id="footer"><script>loadElement("simpleFooter.html", "footer");</script></footer> 
         </main>
     </body>

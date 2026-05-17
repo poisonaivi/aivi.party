@@ -1,5 +1,4 @@
 function headerLoaded() {
-    console.log(path);
     document.getElementById(path).classList.add("selected");
 }
 loadElement("header.html", "header");

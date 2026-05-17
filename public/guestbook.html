@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.38">
-    <title>guestbook • AIVI.PARTY!</title>
-    <script src="/app.js"></script>
-    <link rel="stylesheet" href="/main.css">
-    <link rel="icon" href="/assets/aivi-logo-2026-pix.png">
+    <title>guestbook • aivi.party!</title>
+    <script src="/scripts/loader.js"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/assets/branding/aivi-logo-2026-pix.png">
 </head>
 <body>
-    <div id="accessibility" hidden><script defer src="/elements/accScript.js"></script></div>
+    <div id="accessibility" hidden><script defer src="/scripts/accessibility.js"></script></div>
     <main>
-        <header id="header"><script defer src="/elements/headerScript.js"></script><noscript><section class="danger"><h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript disabled</h3><p>congrats, you tripped the noscript element! this site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p><br><p>consider <a href="https://javascript.aivi.party/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p></section></noscript></header>
+        <header id="header"><script defer src="/scripts/header.js"></script><noscript><section class="danger"><h3 class="danger"><img class="icon inline-left" src="/assets/icons/error.png">JavaScript disabled</h3><p>congrats, you tripped the noscript element! this site isn't gonna steal your data, but it relies on scripts to display navigation elements and fetch external content.</p><br><p>consider <a href="https://javascript.aivi.party/" target="_blank">enabling JavaScript</a> or whitelisting this site.</p></section></noscript></header>
         <table>
             <tr>
                 <td class="secondaryColumn">
@@ -19,13 +19,16 @@
                         <h3>leave a msg!</h3>
                         <p>if you write something nice, i'll try to get back to you as soon as i can!</p>
                     </section>
-                    <section>
-                        <p class="success">update from Jan 22, 2026:</p>
+                    <section class="success">
+                        <div class="title-bar">
+                            <small class="bright success"><img class="icon inline-left" src="/assets/icons/exclamation.png">UPDATE</small>
+                        </div>
+                        <small>Jan 22, 2026:</small>
                         <p>just restored all the messages left on the really old guestbook. they should be correctly timestamped and attributed</p>
                     </section>
                 </td>
                 <td class="primaryColumn">
-                    <section class="important" style="padding: 0; overflow: hidden;">
+                    <section style="padding: 0;">
                         <iframe id="guestbookEmbed" src="https://poisonaivi.atabook.org/" style="width: 100%; height: 800px; margin-top: -75px;"></iframe>
                     </section>
                 </td>

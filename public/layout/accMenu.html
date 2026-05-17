@@ -1,7 +1,7 @@
 <style>
     @font-face {
         font-family: "acc-dyslexic";
-        src: url(/fonts/OpenDyslexic-Regular.otf) format("opentype");
+        src: url(/assets/fonts/OpenDyslexic-Regular.otf) format("opentype");
         size-adjust: 83%;
         ascent-override: 110%;
         descent-override: 40%;
@@ -9,7 +9,7 @@
 
     @font-face {
         font-family: "acc-monospace";
-        src: url(/fonts/UbuntuMono-Regular.ttf) format("truetype");
+        src: url(/assets/fonts/UbuntuMono-Regular.ttf) format("truetype");
         ascent-override: 95%;
         descent-override: 30%;
     }
@@ -28,7 +28,7 @@
         position: fixed;
         left: 12px;
         bottom: 12px;
-        border: double 6px var(--acc-border);
+        border: solid 3px var(--acc-border);
         border-radius: 100%;
         background-color: var(--acc-accent);
         background-image: url(/assets/icons/accessibility.png);
@@ -80,7 +80,7 @@
 <button id="acc-button" onclick="accMenuOpen();" title="Open Accessibility Menu"></button>
 <div id="acc-menu">
     <div class="acc-title">
-        <img src="/assets/icons/accessibility.png" style="float: left; transform: translate(-3px, -2px);"><b>Accessibility Menu</b>
+        <img src="/assets/icons/accessibility.png" onload="accLoaded();" style="float: left; transform: translate(-3px, -2px);"><b>Accessibility Menu</b>
         <button onclick="accMenuClose();" style="float: right; transform: translateY(-1px);" title="Close Accessibility Menu"><u>Close</u></button>
     </div>
     <div class="acc-options">
@@ -89,14 +89,8 @@
             <input type="checkbox" id="novfx" onclick="accChange();">
             <label for="novfx">disable visual effects</label>
             <br>
-            <input type="checkbox" id="desat" onclick="accChange();">
-            <label for="desat">reduce bright colors</label>
-            <br>
             <input type="checkbox" id="contrast" onclick="accChange();">
             <label for="contrast">increase contrast</label>
-            <br>
-            <input type="checkbox" id="invert" onclick="accChange();">
-            <label for="invert">invert colors</label>
         </fieldset>
         <br>
         <fieldset>
@@ -106,17 +100,6 @@
             <br>
             <input type="radio" id="monofont" name="font" onclick="accChange();">
             <label for="monofont" style="font-family: acc-monospace;">smooth</label>
-            <br>
-            <input type="radio" id="dysfont" name="font" onclick="accChange();">
-            <label for="dysfont" style="font-family: acc-dyslexic;">OpenDyslexic (experimental)</label>
-            <!-- <input type="radio" id="sansfont" name="font" onclick="accChange();">
-            <label for="sansfont" style="font-family: acc-sansserif;">Sans-serif</label>
-            <br>
-            <input type="radio" id="seriffont" name="font" onclick="accChange();">
-            <label for="seriffont" style="font-family: acc-serif;">Serif</label>
-            <br> -->
         </fieldset>
-        <br>
-        <i>Performance may vary depending on your browser and device type. Settings are saved on your device.</i>
     </div>
 </div>

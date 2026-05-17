@@ -1,0 +1,22 @@
+.webring {
+    padding: 4px;
+    text-align: center;
+}
+.changelog tr td, .facts tr td {
+    &:first-of-type {
+        text-align: right;
+        width: 90px;
+        padding-right: 10px;
+    }
+    p {
+        margin-bottom: 18px;
+    }
+}
+.changelog tr:first-child td:first-child {
+    color: var(--success);
+    text-shadow: 0 0 0.5em var(--success);
+    &::selection {
+        color: var(--success);
+        text-shadow: 0.032em 0.032em var(--success-b), 0.032em -0.032em var(--success-b), -0.032em -0.032em var(--success-b), -0.032em 0.032em var(--success-b), 0.092em 0.092em var(--shadow);
+    }
+}
