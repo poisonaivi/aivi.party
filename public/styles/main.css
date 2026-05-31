@@ -208,12 +208,12 @@ section {
         border-radius: calc(var(--border-radius) - var(--border-spacing));
     }
     section:not(.thumbnail) {
-        margin: 0 -4px var(--border-spacing) -4px;
-        &:first-child {
+        margin: 0 -4.5px var(--border-spacing) -4.5px;
+        &:first-of-type {
             margin-top: -4px;
         }
         &:last-child {
-            margin-bottom: -4px;
+        margin-bottom: -4px;
         }
     }
 }
