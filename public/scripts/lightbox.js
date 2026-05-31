@@ -34,8 +34,9 @@ function showLightbox(thumbnailID) {
         document.getElementById("fill-date").innerHTML = date;
         document.getElementById("fill-medium").innerHTML = section.getElementsByClassName("data-medium")[0].innerText;
         document.getElementById("fill-description").innerHTML = section.getElementsByClassName("data-description")[0].innerHTML;
-        document.getElementById("fill-alt").innerHTML = "ALT: " + section.getElementsByTagName("img")[0].alt;
+        document.getElementById("fill-alt").innerHTML = "ALT: " + section.getElementsByClassName("thumbnailImage")[0].alt;
         document.getElementById("fill-source").innerHTML = section.getElementsByClassName("data-source")[0].innerHTML;
+        document.getElementById("fill-license").innerHTML = section.getElementsByClassName("data-license")[0].innerHTML;
         document.getElementById("fill-year").innerHTML = date.substring(date.length - 4);
         document.getElementById("lightboxImage").src = section.getElementsByClassName("thumbnailImage")[0].src;
     } else if (thumbnailID.includes("prj")) {
