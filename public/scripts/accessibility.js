@@ -40,8 +40,8 @@ function accApply() {
         root.style.setProperty('--crt-filter', 'none');
         root.style.setProperty('--crt-mask', 'none');
     } else {
-        root.style.setProperty('--crt-filter', 'var(--d-crt-filter');
-        root.style.setProperty('--crt-mask', 'var(--d-crt-mask');
+        root.style.setProperty('--crt-filter', 'var(--d-crt-filter)');
+        root.style.setProperty('--crt-mask', 'var(--d-crt-mask)');
     }
     if (options[1]) {
         root.style.setProperty('--border', '#858');
@@ -53,8 +53,8 @@ function accApply() {
         root.style.setProperty('--warning-b', '#221');
         root.style.setProperty('--danger-b', '#201');
     } else {
-        root.style.setProperty('--border', 'var(--d-border');
-        root.style.setProperty('--small-text', 'var(--d-small-text');
+        root.style.setProperty('--border', 'var(--d-border)');
+        root.style.setProperty('--small-text', 'var(--d-small-text)');
         root.style.setProperty('--text-b', 'var(--d-text-b)');
         root.style.setProperty('--link-b', 'var(--d-link-b)');
         root.style.setProperty('--accent-b', 'var(--d-accent-b)');
@@ -66,9 +66,6 @@ function accApply() {
         mainFont = "acc-monospace";
     }
     mainEle.style.fontFamily = mainFont;
-    try {
-        document.getElementById("acc-menu").style.fontFamily = mainFont;
-    } catch {}
 }
 function accLoaded() {
     accUpdateCheckboxes();
