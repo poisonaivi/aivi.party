@@ -8,6 +8,11 @@
     size-adjust: 110%;
 }
 @font-face {
+    font-family: "Monopix XL";
+    src: url(/assets/fonts/monopix-xl.otf) format("opentype");
+    size-adjust: 94%;
+}
+@font-face {
     font-family: "Segris 16";
     src: url(/assets/fonts/segris-16.otf) format("opentype");
     size-adjust: 72%;
@@ -69,7 +74,7 @@
     --crt-filter: var(--d-crt-filter);
     --trans-curve: cubic-bezier(0.24, 1, 0.3, 1);
     font-size: 18px;
-    font-family: Monopix;
+    font-family: "Monopix";
     color: var(--text);
     -webkit-text-size-adjust: none;
 }
@@ -92,6 +97,7 @@ main {
     filter: var(--crt-filter);
 }
 h1, h2, h3, h4, h5, h6 {
+    /* font-family: "Monopix"; */
     margin: 0;
     color: var(--accent);
     position: relative;
@@ -262,7 +268,7 @@ small {
     position: relative;
     text-shadow: 0.062em 0.062em var(--shadow), 0 0 0.25em var(--small-text);
     img {
-        filter: brightness(0.3);
+        filter: brightness(0.3); 
     }
     .bright {
         filter: none;
@@ -460,6 +466,11 @@ marquee {
         &::before {
             background: linear-gradient(var(--warning), #0000 70%);
         }
+    }
+}
+#footer {
+    img {
+        filter: brightness(0.3); 
     }
 }
 #accessibility {

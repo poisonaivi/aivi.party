@@ -4,411 +4,361 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>asset library</title>
+    <script src="/scripts/loader.js"></script>
+    <link rel="stylesheet" href="/styles/article.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
     <style>
-        @font-face {
-            font-family: "Monopix";
-            src: url(/assets/fonts/monopix.otf) format("opentype");
-        }
-        @font-face {
-            font-family: "Segris 16";
-            src: url(/assets/fonts/segris-16.otf) format("opentype");
-            size-adjust: 72%;
-        }
-        @font-face {
-            font-family: "Ubuntu Mono";
-            src: url(/assets/fonts/UbuntuMono-Regular.ttf) format("truetype");
-        }
-        @font-face {
-            font-family: "Splice";
-            src: url(/assets/fonts/splice-dm.otf) format("opentype");
-            size-adjust: 65%;
-        }
-        @font-face {
-            font-family: "Targil";
-            src: url(/assets/fonts/targil.otf) format("opentype");
-            size-adjust: 83%;
-        }
-        body {
-            background-color: #111;
-            color: #fff;
-            margin: 0;
-            padding: 30px;
-            line-height: 150%;
-            font-family: "Ubuntu Mono";
-        }
         img {
             &.icon {
-                width: 20px;
-                translate: 0 5px;
+                width: 16px;
+                height: 16px;
+                translate: 0 1px;
             }
             margin-right: 20px;
-            image-rendering: pixelated;
         }
-        span, small, h2 {
-            color: #555;
+        article, header, footer {
+            max-width: 1500px;
         }
-        hr {
-            border: none;
-            border-top: 2px solid #555;
-        }
-        a {
-            color: #66a;
+        .temp {
+            min-width: 180px;
         }
     </style>
 </head>
 <body>
-    <a href="/index.html">&lt; back</a>
-    <h1>aivi.party asset library</h1>
-    <hr>
-    <h2>typefaces</h2>
-    <table style="width: 100%; padding: 0 20px; line-height: 250%;">
-        <tr>
-            <td><a href="https://aivi.party/blog/0004" target="_blank">Monopix</a></td>
-            <td><p style="font-family: 'Monopix'; font-size: xx-large;">Sphinx of black quartz, judge my vow. 1234567890!?*</p></td>
-        </tr>
-        <tr>
-            <td><a href="https://aivi.party/blog/0003" target="_blank">Segris 16</a></td>
-            <td><p style="font-family: 'Segris 16'; font-size: xx-large;">SPHINX OF BLACK QUARTZ, JUDGE MY VOW. 1234567890!?*</p></td>
-        </tr>
-        <tr>
-            <td><a href="https://design.ubuntu.com/font" target="_blank">Ubuntu Mono</a></td>
-            <td><p style="font-family: 'Ubuntu Mono'; font-size: xx-large;">Sphinx of black quartz, judge my vow. 1234567890!?*</p></td>
-        </tr>
-        <tr>
-            <td>Splice DM</td>
-            <td><p style="font-family: 'Splice'; font-size: xx-large;">Sphinx of black quartz, judge my vow. 1234567890!?*</p></td>
-        </tr>
-        <tr>
-            <td>Targil</td>
-            <td><p style="font-family: 'Targil'; font-size: xx-large;">Sphinx of black quartz, judge my vow. 1234567890!?*</p></td>
-        </tr>
-    </table>
-    <small>Monopix, Segris 16, Splice DM, and Targil are ©poisonaivi and are licensed under CC BY-SA-3.0. <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">https://creativecommons.org/licenses/by-sa/3.0/</a></small>
-    <hr>
-    <h2>iconset</h2>
-    <table style="width: 100%; padding: 0 20px;">
-        <tr>
-            <td style="width: 12.5%;">
-                <img class="icon" src="/assets/icons/accessibility.png"><span>accessibility</span><br>
-                <img class="icon" src="/assets/icons/account.png"><span>account</span><br>
-                <img class="icon" src="/assets/icons/adjust.png"><span>adjust</span><br>
-                <img class="icon" src="/assets/icons/adult.png"><span>adult</span><br>
-                <img class="icon" src="/assets/icons/arrow-b.png"><span>arrow-b</span><br>
-                <img class="icon" src="/assets/icons/arrow-c.png"><span>arrow-c</span><br>
-                <img class="icon" src="/assets/icons/arrow-cc.png"><span>arrow-cc</span><br>
-                <img class="icon" src="/assets/icons/arrow-ccl.png"><span>arrow-ccl</span><br>
-                <img class="icon" src="/assets/icons/arrow-cl.png"><span>arrow-cl</span><br>
-                <img class="icon" src="/assets/icons/arrow-d.png"><span>arrow-d</span><br>
-                <img class="icon" src="/assets/icons/arrow-dd.png"><span>arrow-dd</span><br>
-                <img class="icon" src="/assets/icons/arrow-f.png"><span>arrow-f</span><br>
-                <img class="icon" src="/assets/icons/arrow-l.png"><span>arrow-l</span><br>
-                <img class="icon" src="/assets/icons/arrow-ll.png"><span>arrow-ll</span><br>
-                <img class="icon" src="/assets/icons/arrow-lr.png"><span>arrow-lr</span><br>
-                <img class="icon" src="/assets/icons/arrow-ne.png"><span>arrow-ne</span><br>
-                <img class="icon" src="/assets/icons/arrow-nw.png"><span>arrow-nw</span><br>
-                <img class="icon" src="/assets/icons/arrow-r.png"><span>arrow-r</span><br>
-                <img class="icon" src="/assets/icons/arrow-rr.png"><span>arrow-rr</span><br>
-                <img class="icon" src="/assets/icons/arrow-s.png"><span>arrow-s</span><br>
-                <img class="icon" src="/assets/icons/arrow-se.png"><span>arrow-se</span><br>
-                <img class="icon" src="/assets/icons/arrow-sw.png"><span>arrow-sw</span><br>
-                <img class="icon" src="/assets/icons/arrow-u.png"><span>arrow-u</span><br>
-                <img class="icon" src="/assets/icons/arrow-ud.png"><span>arrow-ud</span><br>
-                <img class="icon" src="/assets/icons/arrow-uu.png"><span>arrow-uu</span><br>
-                <img class="icon" src="/assets/icons/barchart.png"><span>barchart</span><br>
-                <img class="icon" src="/assets/icons/battery-charging.png"><span>battery-charging</span><br>
-                <img class="icon" src="/assets/icons/battery-e.png"><span>battery-e</span><br>
-                <img class="icon" src="/assets/icons/battery-h.png"><span>battery-h</span><br>
-                <img class="icon" src="/assets/icons/battery-l.png"><span>battery-l</span><br>
-                <img class="icon" src="/assets/icons/battery-m.png"><span>battery-m</span><br>
-                <img class="icon" src="/assets/icons/battery.png"><span>battery</span><br>
-                <img class="icon" src="/assets/icons/bell-mute.png"><span>bell-mute</span><br>
-                <img class="icon" src="/assets/icons/bell.png"><span>bell</span><br>
-                <img class="icon" src="/assets/icons/bluetooth.png"><span>bluetooth</span><br>
-            </td>
-            <td style="width: 12.5%;">
-                <img class="icon" src="/assets/icons/book.png"><span>book</span><br>
-                <img class="icon" src="/assets/icons/bookmark.png"><span>bookmark</span><br>
-                <img class="icon" src="/assets/icons/briefcase.png"><span>briefcase</span><br>
-                <img class="icon" src="/assets/icons/calendar.png"><span>calendar</span><br>
-                <img class="icon" src="/assets/icons/camera-off.png"><span>camera-off</span><br>
-                <img class="icon" src="/assets/icons/camera.png"><span>camera</span><br>
-                <img class="icon" src="/assets/icons/card-id.png"><span>card-id</span><br>
-                <img class="icon" src="/assets/icons/card-nfc.png"><span>card-nfc</span><br>
-                <img class="icon" src="/assets/icons/card-stripe.png"><span>card-stripe</span><br>
-                <img class="icon" src="/assets/icons/cellular-issue.png"><span>cellular-issue</span><br>
-                <img class="icon" src="/assets/icons/cellular.png"><span>cellular</span><br>
-                <img class="icon" src="/assets/icons/chat.png"><span>chat</span><br>
-                <img class="icon" src="/assets/icons/check.png"><span>check</span><br>
-                <img class="icon" src="/assets/icons/chip.png"><span>chip</span><br>
-                <img class="icon" src="/assets/icons/clock.png"><span>clock</span><br>
-                <img class="icon" src="/assets/icons/code.png"><span>code</span><br>
-                <img class="icon" src="/assets/icons/copy.png"><span>copy</span><br>
-                <img class="icon" src="/assets/icons/coffee.png"><span>coffee</span><br>
-                <img class="icon" src="/assets/icons/cursor-default.png"><span>cursor-default</span><br>
-                <img class="icon" src="/assets/icons/cursor-grab.png"><span>cursor-grab</span><br>
-                <img class="icon" src="/assets/icons/cursor-grabbing.png"><span>cursor-grabbing</span><br>
-                <img class="icon" src="/assets/icons/cursor-pointer.png"><span>cursor-pointer</span><br>
-                <img class="icon" src="/assets/icons/desktop.png"><span>desktop</span><br>
-                <img class="icon" src="/assets/icons/document.png"><span>document</span><br>
-                <img class="icon" src="/assets/icons/download.png"><span>download</span><br>
-                <img class="icon" src="/assets/icons/drink.png"><span>drink</span><br>
-                <img class="icon" src="/assets/icons/duck.png"><span>duck</span><br>
-                <img class="icon" src="/assets/icons/edit.png"><span>edit</span><br>
-                <img class="icon" src="/assets/icons/eject.png"><span>eject</span><br>
-                <img class="icon" src="/assets/icons/electricity.png"><span>electricity</span><br>
-                <img class="icon" src="/assets/icons/error.png"><span>error</span><br>
-                <img class="icon" src="/assets/icons/eye-closed.png"><span>eye-closed</span><br>
-                <img class="icon" src="/assets/icons/eye-off.png"><span>eye-off</span><br>
-                <img class="icon" src="/assets/icons/eye.png"><span>eye</span><br>
-                <img class="icon" src="/assets/icons/exclamation.png"><span>exclamation</span><br>
-            </td>
-            <td style="width: 12.5%;">
-                <img class="icon" src="/assets/icons/fast-forward.png"><span>fast-forward</span><br>
-                <img class="icon" src="/assets/icons/face-happy.png"><span>face-happy</span><br>
-                <img class="icon" src="/assets/icons/face-neutral.png"><span>face-neutral</span><br>
-                <img class="icon" src="/assets/icons/face-sad.png"><span>face-sad</span><br>
-                <img class="icon" src="/assets/icons/filter.png"><span>filter</span><br>
-                <img class="icon" src="/assets/icons/fire.png"><span>fire</span><br>
-                <img class="icon" src="/assets/icons/flag-checkered.png"><span>flag-checkered</span><br>
-                <img class="icon" src="/assets/icons/flag-rainbow.png"><span>flag-rainbow</span><br>
-                <img class="icon" src="/assets/icons/flag-trans.png"><span>flag-trans</span><br>
-                <img class="icon" src="/assets/icons/flag.png"><span>flag</span><br>
-                <img class="icon" src="/assets/icons/flask-cone.png"><span>flask-cone</span><br>
-                <img class="icon" src="/assets/icons/flask-round.png"><span>flask-round</span><br>
-                <img class="icon" src="/assets/icons/folder-o.png"><span>folder-o</span><br>
-                <img class="icon" src="/assets/icons/folder.png"><span>folder</span><br>
-                <img class="icon" src="/assets/icons/font.png"><span>font</span><br>
-                <img class="icon" src="/assets/icons/fullscreen-exit.png"><span>fullscreen-exit</span><br>
-                <img class="icon" src="/assets/icons/fullscreen.png"><span>fullscreen</span><br>
-                <img class="icon" src="/assets/icons/furry.png"><span>furry</span><br>
-                <img class="icon" src="/assets/icons/game.png"><span>game</span><br>
-                <img class="icon" src="/assets/icons/gauge.png"><span>gauge</span><br>
-                <img class="icon" src="/assets/icons/gender-female.png"><span>gender-female</span><br>
-                <img class="icon" src="/assets/icons/gender-male.png"><span>gender-male</span><br>
-                <img class="icon" src="/assets/icons/gender-man.png"><span>gender-man</span><br>
-                <img class="icon" src="/assets/icons/gender-unisex.png"><span>gender-unisex</span><br>
-                <img class="icon" src="/assets/icons/gender-woman.png"><span>gender-woman</span><br>
-                <img class="icon" src="/assets/icons/gender.png"><span>gender</span><br>
-                <img class="icon" src="/assets/icons/glasses.png"><span>glasses</span><br>
-                <img class="icon" src="/assets/icons/globe.png"><span>globe</span><br>
-                <img class="icon" src="/assets/icons/hammer.png"><span>hammer</span><br>
-                <img class="icon" src="/assets/icons/hand-d.png"><span>hand-d</span><br>
-                <img class="icon" src="/assets/icons/hand-l.png"><span>hand-l</span><br>
-                <img class="icon" src="/assets/icons/hand-peace.png"><span>hand-peace</span><br>
-                <img class="icon" src="/assets/icons/hand-point.png"><span>hand-point</span><br>
-                <img class="icon" src="/assets/icons/hand-r.png"><span>hand-r</span><br>
-                <img class="icon" src="/assets/icons/hand-u.png"><span>hand-u</span><br>
-                <img class="icon" src="/assets/icons/hand-vulcan.png"><span>hand-vulcan</span><br>
-            </td>
-            <td style="width: 12.5%;">
-                <img class="icon" src="/assets/icons/headphones-mute.png"><span>headphones-mute</span><br>
-                <img class="icon" src="/assets/icons/headphones.png"><span>headphones</span><br>
-                <img class="icon" src="/assets/icons/heart-half-outline.png"><span>heart-half-outline</span><br>
-                <img class="icon" src="/assets/icons/heart-half.png"><span>heart-half</span><br>
-                <img class="icon" src="/assets/icons/heart-outline.png"><span>heart-outline</span><br>
-                <img class="icon" src="/assets/icons/heart.png"><span>heart</span><br>
-                <img class="icon" src="/assets/icons/home.png"><span>home</span><br>
-                <img class="icon" src="/assets/icons/hourglass.png"><span>hourglass</span><br>
-                <img class="icon" src="/assets/icons/image.png"><span>image</span><br>
-                <img class="icon" src="/assets/icons/inbox.png"><span>inbox</span><br>
-                <img class="icon" src="/assets/icons/info.png"><span>info</span><br>
-                <img class="icon" src="/assets/icons/key-backspace.png"><span>key-backspace</span><br>
-                <img class="icon" src="/assets/icons/key-command.png"><span>key-command</span><br>
-                <img class="icon" src="/assets/icons/key-control.png"><span>key-control</span><br>
-                <img class="icon" src="/assets/icons/key-enter.png"><span>key-enter</span><br>
-                <img class="icon" src="/assets/icons/key-escape.png"><span>key-escape</span><br>
-                <img class="icon" src="/assets/icons/key-option.png"><span>key-option</span><br>
-                <img class="icon" src="/assets/icons/key-shift.png"><span>key-shift</span><br>
-                <img class="icon" src="/assets/icons/key-space.png"><span>key-space</span><br>
-                <img class="icon" src="/assets/icons/key-tab.png"><span>key-tab</span><br>
-                <img class="icon" src="/assets/icons/key.png"><span>key</span><br>
-                <img class="icon" src="/assets/icons/laptop.png"><span>laptop</span><br>
-                <img class="icon" src="/assets/icons/layer.png"><span>layer</span><br>
-                <img class="icon" src="/assets/icons/light-off.png"><span>light-off</span><br>
-                <img class="icon" src="/assets/icons/light.png"><span>light</span><br>
-                <img class="icon" src="/assets/icons/link.png"><span>link</span><br>
-                <img class="icon" src="/assets/icons/list.png"><span>list</span><br>
-                <img class="icon" src="/assets/icons/location.png"><span>location</span><br>
-                <img class="icon" src="/assets/icons/lock-o.png"><span>lock-o</span><br>
-                <img class="icon" src="/assets/icons/lock.png"><span>lock</span><br>
-                <img class="icon" src="/assets/icons/login.png"><span>login</span><br>
-                <img class="icon" src="/assets/icons/logout.png"><span>logout</span><br>
-                <img class="icon" src="/assets/icons/mail-o.png"><span>mail-o</span><br>
-                <img class="icon" src="/assets/icons/mail.png"><span>mail</span><br>
-            </td>
-            <td style="width: 12.5%;">
-                <img class="icon" src="/assets/icons/math-divide.png"><span>math-divide</span><br>
-                <img class="icon" src="/assets/icons/math-equal.png"><span>math-equal</span><br>
-                <img class="icon" src="/assets/icons/math-greater.png"><span>math-greater</span><br>
-                <img class="icon" src="/assets/icons/math-less.png"><span>math-less</span><br>
-                <img class="icon" src="/assets/icons/math-minus.png"><span>math-minus</span><br>
-                <img class="icon" src="/assets/icons/math-not-equal.png"><span>math-not-equal</span><br>
-                <img class="icon" src="/assets/icons/math-plus.png"><span>math-plus</span><br>
-                <img class="icon" src="/assets/icons/math-times.png"><span>math-times</span><br>
-                <img class="icon" src="/assets/icons/menu-h.png"><span>menu-h</span><br>
-                <img class="icon" src="/assets/icons/menu-v.png"><span>menu-v</span><br>
-                <img class="icon" src="/assets/icons/menu.png"><span>menu</span><br>
-                <img class="icon" src="/assets/icons/microphone-mute.png"><span>microphone-mute</span><br>
-                <img class="icon" src="/assets/icons/microphone.png"><span>microphone</span><br>
-                <img class="icon" src="/assets/icons/mobile-mute.png"><span>mobile-mute</span><br>
-                <img class="icon" src="/assets/icons/mobile.png"><span>mobile</span><br>
-                <img class="icon" src="/assets/icons/moon.png"><span>moon</span><br>
-                <img class="icon" src="/assets/icons/mouse-l.png"><span>mouse-l</span><br>
-                <img class="icon" src="/assets/icons/mouse-m.png"><span>mouse-m</span><br>
-                <img class="icon" src="/assets/icons/mouse-r.png"><span>mouse-r</span><br>
-                <img class="icon" src="/assets/icons/mouse.png"><span>mouse</span><br>
-                <img class="icon" src="/assets/icons/music-mute.png"><span>music-mute</span><br>
-                <img class="icon" src="/assets/icons/music.png"><span>music</span><br>
-                <img class="icon" src="/assets/icons/newspaper.png"><span>newspaper</span><br>
-                <img class="icon" src="/assets/icons/next.png"><span>next</span><br>
-                <img class="icon" src="/assets/icons/no.png"><span>no</span><br>
-                <img class="icon" src="/assets/icons/paragraph-c.png"><span>paragraph-c</span><br>
-                <img class="icon" src="/assets/icons/paragraph-j.png"><span>paragraph-j</span><br>
-                <img class="icon" src="/assets/icons/paragraph-l.png"><span>paragraph-l</span><br>
-                <img class="icon" src="/assets/icons/paragraph-r.png"><span>paragraph-r</span><br>
-                <img class="icon" src="/assets/icons/pause.png"><span>pause</span><br>
-                <img class="icon" src="/assets/icons/pencil.png"><span>pencil</span><br>
-                <img class="icon" src="/assets/icons/people.png"><span>people</span><br>
-                <img class="icon" src="/assets/icons/person-add.png"><span>person-add</span><br>
-                <img class="icon" src="/assets/icons/person-remove.png"><span>person-remove</span><br>
-                <img class="icon" src="/assets/icons/person.png"><span>person</span><br>
-                <img class="icon" src="/assets/icons/pill.png"><span>pill</span><br>
-            </td>
-            <td style="width: 12.5%;">
-                <img class="icon" src="/assets/icons/pin.png"><span>pin</span><br>
-                <img class="icon" src="/assets/icons/pinpoint.png"><span>pinpoint</span><br>
-                <img class="icon" src="/assets/icons/plant.png"><span>plant</span><br>
-                <img class="icon" src="/assets/icons/play.png"><span>play</span><br>
-                <img class="icon" src="/assets/icons/power.png"><span>power</span><br>
-                <img class="icon" src="/assets/icons/previous.png"><span>previous</span><br>
-                <img class="icon" src="/assets/icons/printer.png"><span>printer</span><br>
-                <img class="icon" src="/assets/icons/puzzle.png"><span>puzzle</span><br>
-                <img class="icon" src="/assets/icons/question.png"><span>question</span><br>
-                <img class="icon" src="/assets/icons/record.png"><span>record</span><br>
-                <img class="icon" src="/assets/icons/restaurant.png"><span>restaurant</span><br>
-                <img class="icon" src="/assets/icons/rewind.png"><span>rewind</span><br>
-                <img class="icon" src="/assets/icons/robot.png"><span>robot</span><br>
-                <img class="icon" src="/assets/icons/rss.png"><span>rss</span><br>
-                <img class="icon" src="/assets/icons/save.png"><span>save</span><br>
-                <img class="icon" src="/assets/icons/scan-barcode.png"><span>scan-barcode</span><br>
-                <img class="icon" src="/assets/icons/scan-qr.png"><span>scan-qr</span><br>
-                <img class="icon" src="/assets/icons/scissors-cutting.png"><span>scissors-cutting</span><br>
-                <img class="icon" src="/assets/icons/scissors.png"><span>scissors</span><br>
-                <img class="icon" src="/assets/icons/settings.png"><span>settings</span><br>
-                <img class="icon" src="/assets/icons/search.png"><span>search</span><br>
-                <img class="icon" src="/assets/icons/share.png"><span>share</span><br>
-                <img class="icon" src="/assets/icons/shield.png"><span>shield</span><br>
-                <img class="icon" src="/assets/icons/spark.png"><span>spark</span><br>
-                <img class="icon" src="/assets/icons/speech.png"><span>speech</span><br>
-                <img class="icon" src="/assets/icons/star-half.png"><span>star-half</span><br>
-                <img class="icon" src="/assets/icons/star.png"><span>star</span><br>
-                <img class="icon" src="/assets/icons/status-dnd.png"><span>status-dnd</span><br>
-                <img class="icon" src="/assets/icons/status-idle.png"><span>status-idle</span><br>
-                <img class="icon" src="/assets/icons/status-offline.png"><span>status-offline</span><br>
-                <img class="icon" src="/assets/icons/status-online.png"><span>status-online</span><br>
-                <img class="icon" src="/assets/icons/stopsign.png"><span>stopsign</span><br>
-                <img class="icon" src="/assets/icons/stop.png"><span>stop</span><br>
-                <img class="icon" src="/assets/icons/sun.png"><span>sun</span><br>
-                <img class="icon" src="/assets/icons/tag.png"><span>tag</span><br>
-                <img class="icon" src="/assets/icons/telephone-ring.png"><span>telephone-ring</span><br>
-                <img class="icon" src="/assets/icons/telephone.png"><span>telephone</span><br>
-            </td>
-            <td style="width: 12.5%;">
-                <img class="icon" src="/assets/icons/television.png"><span>television</span><br>
-                <img class="icon" src="/assets/icons/terminal.png"><span>terminal</span><br>
-                <img class="icon" src="/assets/icons/toolbox.png"><span>toolbox</span><br>
-                <img class="icon" src="/assets/icons/trash.png"><span>trash</span><br>
-                <img class="icon" src="/assets/icons/twilight.png"><span>twilight</span><br>
-                <img class="icon" src="/assets/icons/upload.png"><span>upload</span><br>
-                <img class="icon" src="/assets/icons/video.png"><span>video</span><br>
-                <img class="icon" src="/assets/icons/vehicle-bicycle.png"><span>vehicle-bicycle</span><br>
-                <img class="icon" src="/assets/icons/vehicle-boat.png"><span>vehicle-boat</span><br>
-                <img class="icon" src="/assets/icons/vehicle-bus.png"><span>vehicle-bus</span><br>
-                <img class="icon" src="/assets/icons/vehicle-car-small.png"><span>vehicle-car-small</span><br>
-                <img class="icon" src="/assets/icons/vehicle-car.png"><span>vehicle-car</span><br>
-                <img class="icon" src="/assets/icons/vehicle-emergency.png"><span>vehicle-emergency</span><br>
-                <img class="icon" src="/assets/icons/vehicle-motorcycle.png"><span>vehicle-motorcycle</span><br>
-                <img class="icon" src="/assets/icons/vehicle-plane.png"><span>vehicle-plane</span><br>
-                <img class="icon" src="/assets/icons/vehicle-sailboat.png"><span>vehicle-sailboat</span><br>
-                <img class="icon" src="/assets/icons/vehicle-taxi.png"><span>vehicle-taxi</span><br>
-                <img class="icon" src="/assets/icons/vehicle-train.png"><span>vehicle-train</span><br>
-                <img class="icon" src="/assets/icons/vitals.png"><span>vitals</span><br>
-                <img class="icon" src="/assets/icons/volume-high.png"><span>volume-high</span><br>
-                <img class="icon" src="/assets/icons/volume-low.png"><span>volume-low</span><br>
-                <img class="icon" src="/assets/icons/volume-off.png"><span>volume-off</span><br>
-                <img class="icon" src="/assets/icons/volume-mute.png"><span>volume-mute</span><br>
-                <img class="icon" src="/assets/icons/warning.png"><span>warning</span><br>
-                <img class="icon" src="/assets/icons/watch.png"><span>watch</span><br>
-                <img class="icon" src="/assets/icons/water.png"><span>water</span><br>
-                <img class="icon" src="/assets/icons/wheelchair.png"><span>wheelchair</span><br>
-                <img class="icon" src="/assets/icons/wireless-d.png"><span>wireless-d</span><br>
-                <img class="icon" src="/assets/icons/wireless-l.png"><span>wireless-l</span><br>
-                <img class="icon" src="/assets/icons/wireless-off.png"><span>wireless-off</span><br>
-                <img class="icon" src="/assets/icons/wireless-r.png"><span>wireless-r</span><br>
-                <img class="icon" src="/assets/icons/wireless-u.png"><span>wireless-u</span><br>
-                <img class="icon" src="/assets/icons/x.png"><span>x</span><br>
-                <img class="icon" src="/assets/icons/zoom-in.png"><span>zoom-in</span><br>
-                <img class="icon" src="/assets/icons/zoom-out.png"><span>zoom-out</span><br>
-            </td>
-            <td style="width: 12.5%;">
-                logos<br><br>
-                <img class="icon" src="/assets/branding/aiviparty.png"><span>aiviparty</span><br>
-                <img class="icon" src="/assets/branding/bluesky.png"><span>bluesky</span><br>
-                <img class="icon" src="/assets/branding/cara.png"><span>cara</span><br>
-                <img class="icon" src="/assets/branding/deviantart.png"><span>deviantart</span><br>
-                <img class="icon" src="/assets/branding/discord.png"><span>discord</span><br>
-                <img class="icon" src="/assets/branding/fontstruct.png"><span>fontstruct</span><br>
-                <img class="icon" src="/assets/branding/github.png"><span>github</span><br>
-                <img class="icon" src="/assets/branding/lastfm.png"><span>lastfm</span><br>
-                <img class="icon" src="/assets/branding/matrix.png"><span>matrix</span><br>
-                <img class="icon" src="/assets/branding/nekoweb.png"><span>nekoweb</span><br>
-                <img class="icon" src="/assets/branding/neocities.png"><span>neocities</span><br>
-                <img class="icon" src="/assets/branding/scratch.png"><span>scratch</span><br>
-                <img class="icon" src="/assets/branding/signal.png"><span>signal</span><br>
-                <img class="icon" src="/assets/branding/stoat.png"><span>stoat</span><br>
-                <img class="icon" src="/assets/branding/telegram.png"><span>telegram</span><br>
-                <img class="icon" src="/assets/branding/webtiles.png"><span>webtiles</span><br>
-            </td>
-        </tr>
-    </table>
-    <br>
-    <small>Icons are created by poisonaivi and are free to use for any purpose with or without attribution. <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">https://creativecommons.org/publicdomain/zero/1.0/</a></small>
-    <hr>
-    <h2>"brand" assets</h2>
-    <p>Recommendations:</p>
-    <ul>
-        <li>Scale these assets to the required size before using.</li>
-        <li>When using just the logo, aivi-logo-2026-pix-pad is preferable for most cases.</li>
-        <li>When using the logo/wordmark combination, aiviparty-horizontal is preferable for most cases.</li>
-        <li>Recolor these assets as needed, but if so, maintain a single, solid color.</li>
-    </ul>
-    <table style="width: 100%; padding: 0 20px;">
-        <tr>
-            <td>
-                <img style="height: 100px; border: solid 1px gray;" src="/assets/branding/aivi-logo-2026-l.png"><span>aivi-logo-2026-l (medium and small also available as -m and -s)</span><br>
-                <img style="height: 100px; border: solid 1px gray;" src="/assets/branding/aivi-logo-2026-pix-pad.png"><span>aivi-logo-2026-pix-pad</span><br>
-            </td>
-            <td>
-                <img style="height: 70px; border: solid 1px gray;" src="/assets/branding/aiviparty-horizontal.png"><span>aiviparty-horizontal</span><br>
-                <img style="height: 115px; border: solid 1px gray;" src="/assets/branding/aiviparty-vertical.png"><span>aiviparty-vertical</span><br>
-            </td>
-        </tr>
-    </table>
-    <br>
-    <small>Brand assets don't have any trademark restrictions.</small>
-    <hr>
-    <h2>88x31 buttons</h2>
-    <img src="/assets/badges/aivi-party-88x31.gif">
-    <img src="/assets/badges/aivi-party-88x31-2.gif">
-    <img src="/assets/badges/aivi-party-88x31-3.gif">
-    <img src="/assets/badges/aivi-party-88x31-4.gif">
-    <br>
-    <br>
-    <small>Hotlinking is encouraged when linking to my site.</small>
-    <hr>
-    <h2>ads</h2>
-    <img style="height: 180px; border: solid 1px gray;" src="/assets/aivi-square-256.gif"><span>aivi-square-256</span><br>
-    <br>
-    <small>Hotlinking is encouraged when linking to my site.</small>
+    <header id="header"><script>loadElement("assetsHeader.html", "header");</script></header>
+    <main>
+        <article>
+            <h1>library</h1>
+            <p>feel free to use these assets in your own work.</p>
+            <hr>
+            <h2>typefaces</h2>
+            <table style="width: 100%; padding: 0 20px; line-height: 250%;">
+                <tr>
+                    <td><a href="https://aivi.party/blog/monopix" target="_blank">Monopix</a></td>
+                    <td><p style="font-family: 'Monopix'; font-size: xx-large;">Sphinx of black quartz, judge my vow. 1234567890!?*</p></td>
+                </tr>
+                <tr>
+                    <td><a href="https://aivi.party/blog/segris" target="_blank">Segris 16</a></td>
+                    <td><p style="font-family: 'Segris 16'; font-size: xx-large;">SPHINX OF BLACK QUARTZ, JUDGE MY VOW. 1234567890!?*</p></td>
+                </tr>
+                <tr>
+                    <td><a href="https://design.ubuntu.com/font" target="_blank">Ubuntu Mono</a></td>
+                    <td><p style="font-family: 'Ubuntu Mono'; font-size: xx-large;">Sphinx of black quartz, judge my vow. 1234567890!?*</p></td>
+                </tr>
+                <tr>
+                    <td>Splice DM</td>
+                    <td><p style="font-family: 'Splice'; font-size: xx-large;">Sphinx of black quartz, judge my vow. 1234567890!?*</p></td>
+                </tr>
+                <tr>
+                    <td>Targil</td>
+                    <td><p style="font-family: 'Targil'; font-size: xx-large;">Sphinx of black quartz, judge my vow. 1234567890!?*</p></td>
+                </tr>
+            </table>
+            <small>Monopix, Segris 16, Splice DM, and Targil are ©poisonaivi and are licensed under CC BY-SA-3.0. <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">https://creativecommons.org/licenses/by-sa/3.0/</a></small>
+            <hr>
+            <h2>iconset</h2>
+            <div style="width: 100%; padding: 0 20px; display: flex; flex-wrap: wrap;">
+                <div class="temp"><img class="icon" src="/assets/icons/accessibility.png"><small>accessibility</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/account.png"><small>account</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/adjust.png"><small>adjust</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/adult.png"><small>adult</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-b.png"><small>arrow-b</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-c.png"><small>arrow-c</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-cc.png"><small>arrow-cc</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-ccl.png"><small>arrow-ccl</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-cl.png"><small>arrow-cl</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-d.png"><small>arrow-d</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-dd.png"><small>arrow-dd</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-f.png"><small>arrow-f</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-l.png"><small>arrow-l</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-ll.png"><small>arrow-ll</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-lr.png"><small>arrow-lr</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-ne.png"><small>arrow-ne</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-nw.png"><small>arrow-nw</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-r.png"><small>arrow-r</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-rr.png"><small>arrow-rr</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-s.png"><small>arrow-s</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-se.png"><small>arrow-se</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-sw.png"><small>arrow-sw</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-u.png"><small>arrow-u</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-ud.png"><small>arrow-ud</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/arrow-uu.png"><small>arrow-uu</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/barchart.png"><small>barchart</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/battery-charging.png"><small>battery-charging</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/battery-e.png"><small>battery-e</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/battery-h.png"><small>battery-h</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/battery-l.png"><small>battery-l</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/battery-m.png"><small>battery-m</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/battery.png"><small>battery</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/bell-mute.png"><small>bell-mute</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/bell.png"><small>bell</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/bluetooth.png"><small>bluetooth</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/book.png"><small>book</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/bookmark.png"><small>bookmark</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/briefcase.png"><small>briefcase</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/calendar.png"><small>calendar</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/camera-off.png"><small>camera-off</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/camera.png"><small>camera</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/card-id.png"><small>card-id</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/card-nfc.png"><small>card-nfc</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/card-stripe.png"><small>card-stripe</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/cellular-issue.png"><small>cellular-issue</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/cellular.png"><small>cellular</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/chat.png"><small>chat</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/check.png"><small>check</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/chip.png"><small>chip</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/clock.png"><small>clock</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/code.png"><small>code</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/copy.png"><small>copy</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/coffee.png"><small>coffee</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/cursor-default.png"><small>cursor-default</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/cursor-grab.png"><small>cursor-grab</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/cursor-grabbing.png"><small>cursor-grabbing</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/cursor-pointer.png"><small>cursor-pointer</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/desktop.png"><small>desktop</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/document.png"><small>document</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/download.png"><small>download</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/drink.png"><small>drink</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/duck.png"><small>duck</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/edit.png"><small>edit</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/eject.png"><small>eject</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/electricity.png"><small>electricity</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/error.png"><small>error</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/eye-closed.png"><small>eye-closed</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/eye-off.png"><small>eye-off</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/eye.png"><small>eye</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/exclamation.png"><small>exclamation</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/fast-forward.png"><small>fast-forward</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/face-happy.png"><small>face-happy</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/face-neutral.png"><small>face-neutral</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/face-sad.png"><small>face-sad</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/filter.png"><small>filter</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/fire.png"><small>fire</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/flag-checkered.png"><small>flag-checkered</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/flag-rainbow.png"><small>flag-rainbow</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/flag-trans.png"><small>flag-trans</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/flag.png"><small>flag</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/flask-cone.png"><small>flask-cone</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/flask-round.png"><small>flask-round</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/folder-o.png"><small>folder-o</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/folder.png"><small>folder</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/font.png"><small>font</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/fullscreen-exit.png"><small>fullscreen-exit</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/fullscreen.png"><small>fullscreen</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/furry.png"><small>furry</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/game.png"><small>game</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/gauge.png"><small>gauge</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/gender-female.png"><small>gender-female</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/gender-male.png"><small>gender-male</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/gender-man.png"><small>gender-man</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/gender-unisex.png"><small>gender-unisex</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/gender-woman.png"><small>gender-woman</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/gender.png"><small>gender</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/glasses.png"><small>glasses</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/globe.png"><small>globe</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/hammer.png"><small>hammer</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/hand-d.png"><small>hand-d</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/hand-l.png"><small>hand-l</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/hand-peace.png"><small>hand-peace</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/hand-point.png"><small>hand-point</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/hand-r.png"><small>hand-r</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/hand-u.png"><small>hand-u</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/hand-vulcan.png"><small>hand-vulcan</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/headphones-mute.png"><small>headphones-mute</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/headphones.png"><small>headphones</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/heart-half-outline.png"><small>heart-half-outline</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/heart-half.png"><small>heart-half</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/heart-outline.png"><small>heart-outline</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/heart.png"><small>heart</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/home.png"><small>home</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/hourglass.png"><small>hourglass</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/image.png"><small>image</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/inbox.png"><small>inbox</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/info.png"><small>info</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/key-backspace.png"><small>key-backspace</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/key-command.png"><small>key-command</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/key-control.png"><small>key-control</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/key-enter.png"><small>key-enter</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/key-escape.png"><small>key-escape</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/key-option.png"><small>key-option</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/key-shift.png"><small>key-shift</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/key-space.png"><small>key-space</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/key-tab.png"><small>key-tab</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/key.png"><small>key</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/laptop.png"><small>laptop</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/layer.png"><small>layer</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/light-off.png"><small>light-off</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/light.png"><small>light</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/link.png"><small>link</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/list.png"><small>list</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/location.png"><small>location</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/lock-o.png"><small>lock-o</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/lock.png"><small>lock</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/login.png"><small>login</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/logout.png"><small>logout</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/mail-o.png"><small>mail-o</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/mail.png"><small>mail</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/math-divide.png"><small>math-divide</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/math-equal.png"><small>math-equal</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/math-greater.png"><small>math-greater</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/math-less.png"><small>math-less</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/math-minus.png"><small>math-minus</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/math-not-equal.png"><small>math-not-equal</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/math-plus.png"><small>math-plus</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/math-times.png"><small>math-times</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/menu-h.png"><small>menu-h</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/menu-v.png"><small>menu-v</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/menu.png"><small>menu</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/microphone-mute.png"><small>microphone-mute</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/microphone.png"><small>microphone</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/mobile-mute.png"><small>mobile-mute</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/mobile.png"><small>mobile</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/moon.png"><small>moon</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/mouse-l.png"><small>mouse-l</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/mouse-m.png"><small>mouse-m</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/mouse-r.png"><small>mouse-r</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/mouse.png"><small>mouse</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/music-mute.png"><small>music-mute</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/music.png"><small>music</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/newspaper.png"><small>newspaper</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/next.png"><small>next</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/no.png"><small>no</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/paragraph-c.png"><small>paragraph-c</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/paragraph-j.png"><small>paragraph-j</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/paragraph-l.png"><small>paragraph-l</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/paragraph-r.png"><small>paragraph-r</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/pause.png"><small>pause</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/pencil.png"><small>pencil</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/people.png"><small>people</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/person-add.png"><small>person-add</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/person-remove.png"><small>person-remove</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/person.png"><small>person</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/pill.png"><small>pill</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/pin.png"><small>pin</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/pinpoint.png"><small>pinpoint</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/plant.png"><small>plant</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/play.png"><small>play</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/power.png"><small>power</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/previous.png"><small>previous</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/printer.png"><small>printer</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/puzzle.png"><small>puzzle</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/question.png"><small>question</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/record.png"><small>record</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/restaurant.png"><small>restaurant</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/rewind.png"><small>rewind</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/robot.png"><small>robot</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/rss.png"><small>rss</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/save.png"><small>save</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/scan-barcode.png"><small>scan-barcode</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/scan-qr.png"><small>scan-qr</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/scissors-cutting.png"><small>scissors-cutting</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/scissors.png"><small>scissors</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/settings.png"><small>settings</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/search.png"><small>search</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/share.png"><small>share</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/shield.png"><small>shield</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/spark.png"><small>spark</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/speech.png"><small>speech</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/star-half.png"><small>star-half</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/star.png"><small>star</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/status-dnd.png"><small>status-dnd</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/status-idle.png"><small>status-idle</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/status-offline.png"><small>status-offline</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/status-online.png"><small>status-online</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/stopsign.png"><small>stopsign</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/stop.png"><small>stop</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/sun.png"><small>sun</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/tag.png"><small>tag</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/telephone-ring.png"><small>telephone-ring</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/telephone.png"><small>telephone</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/television.png"><small>television</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/terminal.png"><small>terminal</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/toolbox.png"><small>toolbox</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/trash.png"><small>trash</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/twilight.png"><small>twilight</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/upload.png"><small>upload</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/video.png"><small>video</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vehicle-bicycle.png"><small>vehicle-bicycle</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vehicle-boat.png"><small>vehicle-boat</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vehicle-bus.png"><small>vehicle-bus</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vehicle-car-small.png"><small>vehicle-car-small</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vehicle-car.png"><small>vehicle-car</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vehicle-emergency.png"><small>vehicle-emergency</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vehicle-motorcycle.png"><small>vehicle-motorcycle</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vehicle-plane.png"><small>vehicle-plane</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vehicle-sailboat.png"><small>vehicle-sailboat</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vehicle-taxi.png"><small>vehicle-taxi</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vehicle-train.png"><small>vehicle-train</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/vitals.png"><small>vitals</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/volume-high.png"><small>volume-high</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/volume-low.png"><small>volume-low</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/volume-off.png"><small>volume-off</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/volume-mute.png"><small>volume-mute</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/warning.png"><small>warning</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/watch.png"><small>watch</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/water.png"><small>water</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/wheelchair.png"><small>wheelchair</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/wireless-d.png"><small>wireless-d</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/wireless-l.png"><small>wireless-l</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/wireless-off.png"><small>wireless-off</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/wireless-r.png"><small>wireless-r</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/wireless-u.png"><small>wireless-u</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/x.png"><small>x</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/zoom-in.png"><small>zoom-in</small></div>
+                <div class="temp"><img class="icon" src="/assets/icons/zoom-out.png"><small>zoom-out</small></div>
+            </div>
+            <h2>logos</h2>
+            <div style="width: 100%; padding: 0 20px; display: flex; flex-wrap: wrap;">
+                <div class="temp"><img class="icon" src="/assets/branding/aiviparty.png"><small>aiviparty</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/bluesky.png"><small>bluesky</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/cara.png"><small>cara</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/deviantart.png"><small>deviantart</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/discord.png"><small>discord</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/fontstruct.png"><small>fontstruct</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/github.png"><small>github</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/lastfm.png"><small>lastfm</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/matrix.png"><small>matrix</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/nekoweb.png"><small>nekoweb</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/neocities.png"><small>neocities</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/scratch.png"><small>scratch</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/signal.png"><small>signal</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/stoat.png"><small>stoat</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/telegram.png"><small>telegram</small></div>
+                <div class="temp"><img class="icon" src="/assets/branding/webtiles.png"><small>webtiles</small></div>
+            </div>
+            <br>
+            <small>Icons are created by poisonaivi and are free to use for any purpose with or without attribution. <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">https://creativecommons.org/publicdomain/zero/1.0/</a></small>
+            <hr>
+            <h2>"brand" assets</h2>
+            <p>Recommendations:</p>
+            <ul>
+                <li>Scale these assets to the required size before using.</li>
+                <li>When using just the logo, aivi-logo-2026-pix-pad is preferable for most cases.</li>
+                <li>When using the logo/wordmark combination, aiviparty-horizontal is preferable for most cases.</li>
+                <li>Recolor these assets as needed, but if so, maintain a single, solid color.</li>
+            </ul>
+            <div><img style="height: 100px; border: solid 1px var(--text-c);" src="/assets/branding/aivi-logo-2026-l.png"><small>aivi-logo-2026-l (medium and small also available as -m and -s)</small></div>
+            <div><img style="height: 100px; border: solid 1px var(--text-c);" src="/assets/branding/aivi-logo-2026-pix-pad.png"><small>aivi-logo-2026-pix-pad</small></div>
+            <div><img style="height: 70px; border: solid 1px var(--text-c);" src="/assets/branding/aiviparty-horizontal.png"><small>aiviparty-horizontal</small></div>
+            <div><img style="height: 115px; border: solid 1px var(--text-c);" src="/assets/branding/aiviparty-vertical.png"><small>aiviparty-vertical</small></div>
+            <br>
+            <small>Brand assets don't have any trademark restrictions.</small>
+            <hr>
+            <h2>88x31 buttons</h2>
+            <img src="/assets/badges/aivi-party-88x31.gif">
+            <img src="/assets/badges/aivi-party-88x31-2.gif">
+            <img src="/assets/badges/aivi-party-88x31-3.gif">
+            <img src="/assets/badges/aivi-party-88x31-4.gif">
+            <br>
+            <br>
+            <small>Hotlinking is encouraged when linking to my site.</small>
+            <hr>
+            <h2>ads</h2>
+            <div><img style="height: 180px; border: solid 1px var(--text-c);" src="/assets/aivi-square-256.gif"><small>aivi-square-256</small></div>
+            <br>
+            <small>Hotlinking is encouraged when linking to my site.</small>
+        </article>
+    </main>
+    <footer id="footer"><script>loadElement("simpleFooter.html", "footer");</script></footer> 
 </body>
 </html>

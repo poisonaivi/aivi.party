@@ -43,7 +43,7 @@
                         <div class="title-bar">
                             <small class="bright text"><img id="presenceIcon" class="icon inline-left" src="/assets/branding/discord.png"><span id="presenceLabel">STATUS</span></small>
                         </div>
-                        <p><span id="statusLabel"><small><span class="danger"><img class="icon danger inline-left" src="/assets/icons/loading.gif">loading presence</span></small></span></p>
+                        <p><span id="statusLabel"><small><span class="danger"><img class="icon inline-left" src="/assets/icons/loading.gif">loading presence</span></small></span></p>
                         <script>updateDiscord();</script>
                     </section>
                     <section>
@@ -51,11 +51,11 @@
                             <p style="float: right;"><small><a href="/blog/index.html">blog<img class="icon" src="/assets/icons/arrow-r.png"></a></small></p>
                             <small class="bright text"><img class="icon inline-left" src="/assets/icons/speech.png">LATEST POSTS</small>
                         </div>
-                        <a href="/blog/0005.html"><p><small><img class="icon inline-left" src="/assets/icons/pin.png">March 6, 2026</small><br>Discord, online privacy, and who should be protecting the kids</p></a>
+                        <a href="/blog/discord-online-privacy.html"><p><small><img class="icon inline-left" src="/assets/icons/pin.png">March 6, 2026</small><br>Discord, online privacy, and who should be protecting the kids</p></a>
                         <hr>
-                        <a href="/blog/0006.html"><p><small>May 8, 2026</small><br>time.aivi.party - a better world clock</p></a>
+                        <a href="/blog/better-world-clock.html"><p><small>May 8, 2026</small><br>time.aivi.party - a better world clock</p></a>
                         <hr>
-                        <a href="/blog/0004.html"><p><small>February 25, 2026</small><br>Monopix - a monospaced, pixelated typeface with a very innovative name</p></a>
+                        <a href="/blog/monopix.html"><p><small>February 25, 2026</small><br>Monopix - a monospaced, pixelated typeface with a very innovative name</p></a>
                     </section>
                     <section id="musicSection" style="aspect-ratio: 1.5;">
                         <div class="title-bar">
@@ -64,7 +64,7 @@
                         <img id="albumImage" class="tinted thumbnailImage" style="object-fit: cover; object-position: 50% 40%; mask-image: linear-gradient(#eeee, #1111);" src="" hidden>
                         <div class="thumbnailText">
                             <a id="linkLabel" target="_blank"><p id="titleLabel" style="white-space: nowrap; overflow: visible;"></p></a>
-                            <p><small id="artistLabel" style="white-space: nowrap; overflow: visible;"><span class="danger"><img class="icon danger inline-left" src="/assets/icons/loading.gif">loading song</span></small></p>
+                            <p><small id="artistLabel" style="white-space: nowrap; overflow: visible;"><span class="danger"><img class="icon inline-left" src="/assets/icons/loading.gif">loading song</span></small></p>
                         </div>
                         <script>updateLastfm();</script>
                     </section>
@@ -73,7 +73,8 @@
                     <section style="overflow: hidden; box-sizing: border-box; min-height: 630px; height: calc(100% + var(--border-width)); transform: translateY(calc(0px - (var(--border-spacing) + var(--border-width)))); border-top-left-radius: 0; border-top-right-radius: 0; border-top-style: dashed;">
                         <img src="/assets/images/streetlamp.png" style="position: absolute; bottom: -24px; left: 0; width: 100%; z-index: 0; opacity: 0.7;">
                         <div style="position: relative; z-index: 1;">
-                            <h3><span id="funTitle">not actually a party</span></h3>
+                            <h3><span id="funTitle"><span style="color: #f00">f</span><span style="color: #fa0">i</span><span style="color: #ff0">l</span><span style="color: #0b0">l</span><span style="color: #66f">e</span><span style="color: #a0f">d</span> <span style="color: #ff0">w</span><span style="color: #fff">i</span><span style="color: #a0f">t</span><span style="color: #555">h</span> <span style="color: #89f">p</span><span style="color: #f88">r</span><span style="color: #fff">i</span><span style="color: #f88">d</span><span style="color: #89f">e</span></span></h3>
+                            <!-- <h3><span id="funTitle">not actually a party</span></h3> -->
                             <p><span id="greeting">hi</span>, i'm <a href="/about.html">aivi</a> <small>she/it</small>, a self-taught <span class="important">web dev</span> & <a href="/gallery.html">furry artist</a>. i pride myself in creating things with my own two paws, and i despise commercial social media platforms, so i built this website to share my work with the world on my <span class="important">own terms</span>.</p>
                             <br>
                             <p>most of everything here was inspired, at least in part, by other people's creations. i encourage you to <a href="https://github.com/poisonaivi/aivi.party" target="_blank">view and adapt my code</a> or otherwise take <span class="important">inspiration</span> from this site. You can also use whatever you'd like from my <a href="/assets/index.html">asset library</a>.</p>
@@ -112,7 +113,7 @@
                         </div>
                         <script>updateCommitInfo();</script>
                         <script>updateGreeting();</script>
-                        <script>updateFunTitle();</script>
+                        <!-- <script>updateFunTitle();</script> -->
                         <script>updateHits();</script>
                     </section>
                 </td>
@@ -180,30 +181,30 @@
                         <div class="title-bar">
                             <small class="bright text"><img class="icon inline-left" src="/assets/icons/people.png">WEBRINGS</small>
                         </div>
-                        <section class="webring">
-                            <a style="float: left;" href="https://webring.queercoded.dev/prev?source=aivi.party"><img class="icon inline-left" src="/assets/icons/arrow-ll.png">previous</a>
-                            <a style="float: right;" href="https://webring.queercoded.dev/next?source=aivi.party">next<img class="icon inline-right" src="/assets/icons/arrow-rr.png"></a>
+                        <section class="webring" style="background-image: linear-gradient(45deg, #500, #500, #440, #050, #044, #005, #404, #404);">
+                            <small style="float: left;"><a href="https://webring.queercoded.dev/prev?source=aivi.party"><img class="icon inline-left" src="/assets/icons/rewind.png">prev</a></small>
+                            <small style="float: right;"><a href="https://webring.queercoded.dev/next?source=aivi.party">next<img class="icon inline-right" src="/assets/icons/fast-forward.png"></a></small>
                             <a href="https://webring.queercoded.dev/" target="_blank">queer coded webring</a>
                         </section>
                         <section class="webring">
-                            <a style="float: left;" href="https://hotlinewebring.club/aivi/previous"><img class="icon inline-left" src="/assets/icons/arrow-ll.png">previous</a>
-                            <a style="float: right;" href="https://hotlinewebring.club/aivi/next">next<img class="icon inline-right" src="/assets/icons/arrow-rr.png"></a>
+                            <small style="float: left;"><a href="https://hotlinewebring.club/aivi/previous"><img class="icon inline-left" src="/assets/icons/rewind.png">prev</a></small>
+                            <small style="float: right;"><a href="https://hotlinewebring.club/aivi/next">next<img class="icon inline-right" src="/assets/icons/fast-forward.png"></a></small>
                             <a href="https://hotlinewebring.club/" target="_blank">hotline webring</a>
                         </section>
                         <section class="webring">
-                            <a style="float: left;" href="https://webring.dinhe.net/prev/aivi.party"><img class="icon inline-left" src="/assets/icons/arrow-ll.png">previous</a>
-                            <a style="float: right;" href="https://webring.dinhe.net/next/aivi.party">next<img class="icon inline-right" src="/assets/icons/arrow-rr.png"></a>
+                            <small style="float: left;"><a style="float: left;" href="https://webring.dinhe.net/prev/aivi.party"><img class="icon inline-left" src="/assets/icons/rewind.png">prev</a></small>
+                            <small style="float: right;"><a style="float: right;" href="https://webring.dinhe.net/next/aivi.party">next<img class="icon inline-right" src="/assets/icons/fast-forward.png"></a></small>
                             <a href="https://webring.dinhe.net/" target="_blank">retronaut webring</a>
                         </section>
                         <section class="webring">
-                            <a style="float: left;" href="https://webring.bucketfish.me/redirect.html?to=prev&name=aivi"><img class="icon inline-left" src="/assets/icons/arrow-ll.png">previous</a>
-                            <a style="float: right;" href="https://webring.bucketfish.me/redirect.html?to=next&name=aivi">next<img class="icon inline-right" src="/assets/icons/arrow-rr.png"></a>
+                            <small style="float: left;"><a style="float: left;" href="https://webring.bucketfish.me/redirect.html?to=prev&name=aivi"><img class="icon inline-left" src="/assets/icons/rewind.png">prev</a></small>
+                            <small style="float: right;"><a style="float: right;" href="https://webring.bucketfish.me/redirect.html?to=next&name=aivi">next<img class="icon inline-right" src="/assets/icons/fast-forward.png"></a></small>
                             <a href="https://webring.bucketfish.me/index.html" target="_blank">bucket webring</a>
                             <small><a href="https://webring.bucketfish.me/redirect.html?to=random&name=aivi" target="_blank">(rand)</a></small>
                         </section>
                         <section class="webring">
-                            <a style="float: left;" href="https://baccyflap.com/noai/?prv&s=aiv"><img class="icon inline-left" src="/assets/icons/arrow-ll.png">previous</a>
-                            <a style="float: right;" href="https://baccyflap.com/noai/?nxt&s=aiv">next<img class="icon inline-right" src="/assets/icons/arrow-rr.png"></a>
+                            <small style="float: left;"><a style="float: left;" href="https://baccyflap.com/noai/?prv&s=aiv"><img class="icon inline-left" src="/assets/icons/rewind.png">prev</a></small>
+                            <small style="float: right;"><a style="float: right;" href="https://baccyflap.com/noai/?nxt&s=aiv">next<img class="icon inline-right" src="/assets/icons/fast-forward.png"></a></small>
                             <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
                             <small><a href="https://baccyflap.com/noai/?rnd" target="_blank">(rand)</a></small>
                         </section>
@@ -215,7 +216,7 @@
                             <p style="float: right;"><small><a href="/gallery.html">gallery<img class="icon" src="/assets/icons/arrow-r.png"></a></small></p>
                             <small class="bright text"><img class="icon inline-left" src="/assets/icons/image.png">LATEST ARTWORK</small>
                         </div>
-                        <img class="thumbnailImage" alt="A cute green velociraptor with a hard hat from the hit modpack Pyanodons for the hit game Factorio." style="object-position: 20% 50%;" src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ouvu3umdjiwzywo53srxspur/bafkreibmz5ywck3oqaanjumcqfz2hdm7dneqibc2ijh34um6q3e35t3jqe@jpeg">
+                        <img class="tinted thumbnailImage" alt="A cute green velociraptor with a hard hat from the hit modpack Pyanodons for the hit game Factorio." style="object-position: 20% 50%;" src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ouvu3umdjiwzywo53srxspur/bafkreibmz5ywck3oqaanjumcqfz2hdm7dneqibc2ijh34um6q3e35t3jqe@jpeg">
                     </section>
                     <section>
                         <div class="title-bar">
