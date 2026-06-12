@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "Monopix";
+    src: url(/assets/fonts/monopix.otf) format("opentype");
+}
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url(/assets/fonts/UbuntuMono-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Monopix XS";
+    src: url(/assets/fonts/monopix-xs.otf) format("opentype");
+    size-adjust: 110%;
+}
+@font-face {
+    font-family: "Monopix XL";
+    src: url(/assets/fonts/monopix-xl.otf) format("opentype");
+    size-adjust: 94%;
+}
+:root {
+    --bg: #111;
+    --bg-b: #1a1a1a;
+    --text: #aaa;
+    --text-a: #ddd;
+    --text-b: #777;
+    --text-c: #666;
+    --link: #b9f;
+    --link-b: #86a;
+    --link-c: #436;
+    --accent: #d0f;
+    --accent-b: #505;
+    --accent-c: #202;
+    --success: #0f3;
+    --success-b: #051;
+    --success-c: #020;
+    --warning: #ff3;
+    --warning-b: #662;
+    --warning-c: #221;
+    --danger: #f03;
+    --danger-b: #702;
+    --danger-c: #400;
+    --danger-d: #300;
+    font-size: 18px;
+    font-family: "Monopix XL";
+    background-color: var(--bg);
+    background-image: linear-gradient(0deg, var(--bg-b) 2%, #0000 2%), linear-gradient(90deg, var(--bg-b) 2%, #0000 2%);
+    background-size: 70px 70px;
+    color: var(--text);
+    -webkit-text-size-adjust: none;
+    image-rendering: pixelated;
+}
+article, header, footer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-b);
+    font-family: "Monopix";
+    font-weight: 100;
+}
+h1 {
+    font-size: 300%;
+}
+h2 {
+    font-size: 200%;
+}
+p {
+    line-height: 150%;
+}
+a {
+    color: var(--link);
+    &:hover {
+        color: var(--link-b);
+    }
+    &:active {
+        color: var(--link-c);
+    }
+    img:hover {
+        opacity: 0.7;
+    }
+}
+small {
+    color: var(--text-c);
+    font-family: "Monopix XS";
+    .icon {
+        filter: brightness(0.4);
+    }
+}
+hr {
+    border: none;
+    border-top: 1px solid var(--text-c);
+}
+article figure img {
+    width: 100%;
+    border-radius: 8px;
+}
+code {
+    font-family: "Ubuntu Mono";
+    color: var(--text-a);
+    border: solid 1px var(--text-c);
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+.logo {
+    filter: brightness(0.4);
+    &:hover {
+        filter: none;
+    }
+}
+.icon {
+    display: inline-block;
+    height: 1em;
+    margin-bottom: -0.16em;
+    &.inline-left {
+        margin-right: 0.5em;
+    }
+    &.inline-right {
+        margin-left: 0.5em;
+    }
+}
+.success {
+    color: var(--success);
+}
+.warning {
+    color: var(--warning);
+}
+.danger {
+    color: var(--danger);
+}
+.important {
+    color: var(--accent);
+}

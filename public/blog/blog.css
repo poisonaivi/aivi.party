@@ -11,12 +11,13 @@
     --selection: #f6f;
     --selection-text: #404;
     --caption: #222;
-    --shadow: #000;
+    --bg: #111;
     --small-text: #888;
-    --section: #000;
+    --section: #222;
     --border: #555;
     --link: #caf;
-    --link-b: #547;
+    --link-b: #b9c;
+    --link-c: #547;
     --accent: #f0f;
     --accent-b: #707;
     --accent-c: #202;
@@ -37,7 +38,7 @@
 body {
     margin: 0;
     box-sizing: border-box;
-    background-color: var(--shadow);
+    background-color: var(--bg);
     &::selection {
         background-color: var(--selection);
         color: var(--selection-text);
@@ -53,6 +54,12 @@ div.back {
 }
 h1, h2 {
     margin-top: 1.5em;
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 40px;
 }
 a {
     color: var(--link);
@@ -84,13 +91,7 @@ img {
 section {
     margin: 4px 2px 4px 2px;
     padding: 12px;
-    border: 1px solid var(--border);
-    section {
-        margin: -4px;
-    }
-    &.nav {
-        text-align: center;
-    }
+    /* border: 1px solid var(--border); */
 }
 hr {
     border: none;

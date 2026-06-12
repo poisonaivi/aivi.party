@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.38">
     <title>404 Not Found</title>
-    <link rel="stylesheet" href="/blog/blog.css">
+    <script src="/scripts/loader.js"></script>
+    <link rel="stylesheet" href="/styles/article.css">
 </head>
 <body>
+    <header id="header"><script>loadElement("blogHeader.html", "header");</script></header>
     <main>
-        <div>
-            <section class="nav"><div class="back"><a href="/blog/index.html">&larr; Back</a></div><a href="/blog/0001.html">&lt;&lt; First</a> | ??? | <a href="/blog/last.html">Last &gt;&gt;</a></section>
-            <section style="text-align: center;">
-                <div style="height: 50px;"></div>
-                <h1 class="important">404</h1>
-                <h2 class="important"><i>Not Found</i></h2>
-                <div style="height: 60px;"></div>
-                <p>The blog post you requested has not been written yet!</p>
-                <p>You can still check out the <a href="/blog/last.html">latest post</a> or <a href="/blog/index.html">go home</a>.</p>
-                <div style="height: 80px;"></div>
-            </section>
-        </div>
+        <article style="text-align: center;">
+            <h1 class="danger" style="font-size: 600%; text-shadow: -40px 0 var(--danger-b), 40px 0 var(--danger-b), -80px 0 var(--danger-c), 80px 0 var(--danger-c), -120px 0 var(--danger-d), 120px 0 var(--danger-d);">404</h1>
+            <h2>not found</h2>
+            <p>You can still check out the <a href="/blog/last.html">latest post</a> or <a href="/blog/index.html">see a list of posts</a>.</p>
+            <div style="height: 20px;"></div>
+        </article>
     </main>
+    <footer id="footer"><script>loadElement("simpleFooter.html", "footer");</script></footer> 
 </body>
 </html>

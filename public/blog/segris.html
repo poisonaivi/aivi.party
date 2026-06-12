@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="January 29, 2026 • Segris 16 - segment pixel typeface for neue-retro clocks">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.6">
+    <title>aivi's blog</title>
+    <script src="/scripts/loader.js"></script>
+    <link rel="stylesheet" href="/styles/article.css">
+</head>
+<body>
+    <header id="header"><script>loadElement("blogHeader.html", "header");</script></header>
+    <main>
+        <article>
+            <h1>Segris 16 - segment pixel typeface for neue-retro clocks</h1>
+            <small>January 29, 2026</small>
+            <p>Download Segris 16:</p>
+            <ul>
+                <li><a href="assets/segris-16.otf.zip">OpenType (.otf)</a></li>
+                <li><a href="assets/segris-16.ttf.zip">TrueType (.ttf)</a></li>
+                <li><a href="assets/segris-16.woff2.zip">Web Open Font Format (.woff2)</a></li>
+                <li><a href="https://fontstruct.com/fontstructions/show/2816062/segris-16" target="_blank">&nearr; View font on FontStruct.com</a></li>
+            </ul>
+            <p><small>This content is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons BY-SA 3.0</a>.</small></p>
+            <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"><img src="/assets/badges/CC-BY-SA-88x31.png"></a>
+            <p>Segris 16 is a pixel-based 16-segment display typeface. It mimics fancy LCD or LED alphanumerical displays of older tech and appliances. Unlike other segmented typefaces, Segris is a bitmap font (though it is a vector format for compatability). It intentionally avoids the sharp angled lines of other typefaces in order to blend a variety of aesthetics while still looking clean.</p>
+            <figure>
+                <img src="assets/segris16demo.png">
+                <figcaption><small>Segris 16 example uses and glyph repertoire</small></figcaption>
+            </figure>
+            <p>For functionality, some characters are reserved for typesetting purposes. However, they are not wasted, since they couldn't have been displayed aesthetically anyways.</p>
+            <p>The question mark character, <code>?</code>, is mapped to a all-on placeholder. It displays all segments in the 16-segment main display. This character is meant to be displayed behind other characters to simulate an LCD panel effect. That is, you can place a layer containing <code>??:??</code> set to a low opacity behind the main layer, <code>12:34</code>, for a fake LCD effect.</p>
+            <p>The exclamation point character, <code>!</code>, is mapped to the separator placeholder. It displays the colon, decimal point, and apostrophe combined. Similar to the all-on placeholder, <code>?</code>, the separator placeholer is meant to be displayed behind the actual separator for aesthetic effect.</p>
+            <p>The space character <code> </code>, and the non-breaking space character, <code>&nbsp;</code>, are both exactly the same width as the separators, which include <code>:</code>, <code>.</code>, and <code>&rsquo;</code>. To achieve a blinking time separator, simply alternate between the separator and a blank space.</p>
+            <p>Three space characters equal the same total width as one 16-segment character, so you can use triplets of spaces to represent entirely blank characters. If spaces are collapsed in text rendering, you can:</p>
+            <ul>
+                <li>use non-breaking space, <code>&nbsp;</code> <small>(HTML entity &amp;nbsp;)</small>, instead.</li>
+                <li>set <code>white-space-collapse: preserve;</code> in CSS.</li>
+            </ul>
+        </article>
+    </main>
+    <footer id="footer"><script>loadElement("simpleFooter.html", "footer");</script></footer> 
+</body>
+</html>
