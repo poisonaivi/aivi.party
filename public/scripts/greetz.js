@@ -11,6 +11,7 @@ function updateGreeting() {
 }
 function updateFunTitle() {
     const titles = [
+        "<span style='color: #f00'>f</span><span style='color: #fa0'>i</span><span style='color: #ff0'>l</span><span style='color: #0b0'>l</span><span style='color: #66f'>e</span><span style='color: #a0f'>d</span> <span style='color: #ff0'>w</span><span style='color: #fff'>i</span><span style='color: #a0f'>t</span><span style='color: #555'>h</span> <span style='color: #89f'>p</span><span style='color: #f88'>r</span><span style='color: #fff'>i</span><span style='color: #f88'>d</span><span style='color: #89f'>e</span>",
         "not actually a party",
         "open for maintenance",
         "lorem ipsum or something",
@@ -56,7 +57,8 @@ function updateFunTitle() {
         "better than doomscrolling",
         "thanks for checking me out",
         "don't read my blog",
-        "commit and sync"
+        "commit and sync",
+        "headpats accepted here"
     ];
     // document.getElementById("funTitle").innerHTML = titles[titles.length - 1];
     document.getElementById("funTitle").innerHTML = titles[Math.floor(Math.random() * titles.length)];

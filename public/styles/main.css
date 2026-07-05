@@ -70,7 +70,7 @@
     --magenta-filter: sepia(1) hue-rotate(240deg) saturate(2) brightness(0.8);
     --d-crt-mask: intersect linear-gradient(0deg, #bbbb 50%, #ffff 50%) 0 0 / 256px 2px, intersect linear-gradient(90deg, #eeee 50%, #ffff 50%) 0 0 / 3px 256px;
     --crt-mask: var(--d-crt-mask);
-    --d-crt-filter: brightness(1.3) saturate(1.2);
+    --d-crt-filter: brightness(1.4) saturate(1.2) blur(0.5px);
     --crt-filter: var(--d-crt-filter);
     --trans-curve: cubic-bezier(0.24, 1, 0.3, 1);
     font-size: 18px;
