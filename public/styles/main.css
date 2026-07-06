@@ -67,10 +67,10 @@
     --border-radius: 12px;
     --border-width: 2px;
     --border-spacing: 6px;
-    --magenta-filter: sepia(1) hue-rotate(240deg) saturate(2) brightness(0.8);
-    --d-crt-mask: intersect linear-gradient(0deg, #bbbb 50%, #ffff 50%) 0 0 / 256px 2px, intersect linear-gradient(90deg, #eeee 50%, #ffff 50%) 0 0 / 3px 256px;
+    --magenta-filter: sepia(1) hue-rotate(240deg) saturate(2) brightness(0.9);
+    --d-crt-mask: intersect linear-gradient(0deg, #aaaa 10%, #ffff 40%, #ffff 60%, #aaaa 90%) 0 0 / 256px 2px, intersect linear-gradient(90deg, #eeee 50%, #ffff 50%) 0 0 / 3px 256px;
     --crt-mask: var(--d-crt-mask);
-    --d-crt-filter: brightness(1.4) saturate(1.2) blur(0.5px);
+    --d-crt-filter: brightness(1.5) saturate(1.25) blur(0.5px);
     --crt-filter: var(--d-crt-filter);
     --trans-curve: cubic-bezier(0.24, 1, 0.3, 1);
     font-size: 18px;
@@ -96,7 +96,7 @@ main {
     mask: var(--crt-mask);
     filter: var(--crt-filter);
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, .h2, h3, h4, h5, h6 {
     /* font-family: "Monopix"; */
     margin: 0;
     color: var(--accent);
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 90px;
 }
-h2 {
+h2, .h2 {
     font-size: 54px;
 }
 h3 {

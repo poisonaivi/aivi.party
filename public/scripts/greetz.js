@@ -2,11 +2,11 @@ function updateGreeting() {
     const hour = new Date().getHours();
     const greeting = document.getElementById("greeting");
     if (hour >= 4 && hour < 12) {
-        greeting.innerHTML = "good morning";
+        greeting.innerHTML = "<span class='h2' style='float: left; margin: -21px 4px -10px 0;'>g</span>ood morning";
     } else if (hour >= 12 && hour < 19) {
-        greeting.innerHTML = "good afternoon";
+        greeting.innerHTML = "<span class='h2' style='float: left; margin: -21px 4px -10px 0;'>g</span>ood afternoon";
     } else {
-        greeting.innerHTML = "good evening";
+        greeting.innerHTML = "<span class='h2' style='float: left; margin: -21px 4px -10px 0;'>g</span>ood evening";
     }
 }
 function updateFunTitle() {
