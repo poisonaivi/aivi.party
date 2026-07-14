@@ -43,7 +43,7 @@ async function updateDiscord() {
         }
         if (resJSON.data.activities.length != 0) {
             const status = resJSON.data.activities['0'].state.replace("<", "&lt;").replace(">", "&gt;");
-            statusLabel.innerHTML = "&quot;" + status + "&quot;";
+            statusLabel.innerHTML = status;
         } else {
             statusLabel.innerHTML = "<small>*the keeper is silent now*</small>";
         }
