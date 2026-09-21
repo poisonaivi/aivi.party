@@ -66,6 +66,7 @@ h2 {
 }
 p {
     line-height: 150%;
+    text-align: justify;
 }
 a {
     color: var(--link);
@@ -93,6 +94,12 @@ hr {
 article figure img {
     width: 100%;
     border-radius: 8px;
+}
+@media screen and (max-width: 600px) {
+    figure {
+        border: solid red;
+        margin: auto 10px;
+    }
 }
 code {
     font-family: "Ubuntu Mono";
