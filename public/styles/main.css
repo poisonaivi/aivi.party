@@ -63,9 +63,8 @@
     --magenta-filter: sepia(1) hue-rotate(240deg) saturate(2) brightness(0.9);
     --d-crt-mask: intersect linear-gradient(0deg, #aaaa 10%, #ffff 40%, #ffff 60%, #aaaa 90%) 0 0 / 256px 2px, intersect linear-gradient(90deg, #eeee 50%, #ffff 50%) 0 0 / 3px 256px;
     --crt-mask: var(--d-crt-mask);
-    --d-crt-filter: brightness(1.5) saturate(1.25) blur(0.5px);
+    --d-crt-filter: brightness(1.5) saturate(1.25) blur(0.4px);
     --crt-filter: var(--d-crt-filter);
-    --trans-curve: cubic-bezier(0.24, 1, 0.3, 1);
     --d-font-family: "Monopix", "Ubuntu Mono", monospace;
     --font-family: var(--d-font-family);
     --d-font-family-s: "Monopix XS", "Ubuntu Mono", monospace;
