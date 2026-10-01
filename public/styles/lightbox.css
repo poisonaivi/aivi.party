@@ -4,11 +4,21 @@ div#lightbox {
     height: 100%;
     background-color: #000c;
     box-sizing: border-box;
-    z-index: 20;
-    transition: 300ms var(--trans-curve);
+    z-index: 120;
     display: none;
     opacity: 0;
     backdrop-filter: blur(0);
+    &::before {
+        content: "";
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        pointer-events: none;
+        background-image: var(--crt-overlay);
+        background-size: 4px 2px;
+    }
     main {
         mask: none;
         filter: none;
@@ -21,7 +31,6 @@ div#lightbox {
         z-index: 21;
     }
     section {
-        mask: var(--crt-mask);
         filter: var(--crt-filter);
         position: relative;
         z-index: 21;
@@ -35,7 +44,7 @@ div#lightbox {
         width: 100%;
         object-fit: contain;
         position: relative;
-        z-index: 21;
+        z-index: 210;
     }
 }
 section.thumbnail {
@@ -43,7 +52,7 @@ section.thumbnail {
     flex-grow: 1;
     flex-shrink: 1;
     display: inline-block;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
     &.art {
         height: 350px;
         flex-basis: 30%;

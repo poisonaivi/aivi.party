@@ -2,7 +2,6 @@
     @font-face {
         font-family: "acc-monospace";
         src: url(/assets/fonts/UbuntuMono-Regular.ttf) format("truetype");
-        /* size-adjust: 95%; */
         ascent-override: 90%;
         descent-override: 37%;
     }
@@ -17,7 +16,7 @@
     #acc-button {
         width: 50px;
         aspect-ratio: 1;
-        z-index: 100;
+        z-index: 10000;
         position: fixed;
         left: 12px;
         bottom: 12px;
@@ -34,16 +33,17 @@
         max-width: 100vw;
         min-height: fit-content;
         max-height: 100vh;
-        z-index: 101;
+        z-index: 10001;
         position: fixed;
-        left: 12px;
-        bottom: 12px;
+        left: 10px;
+        bottom: 10px;
         border-radius: 20px;
         background-color: var(--acc-bg);
         border: ridge 2px var(--acc-accent);
         overflow: hidden;
-        font-family: acc-monospace, sans-serif;
+        font-family: Verdana, acc-monospace, sans-serif;
         color: #000;
+        cursor: auto;
         input, label {
             cursor: pointer;
             margin: 10px 0;

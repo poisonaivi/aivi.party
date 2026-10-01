@@ -37,10 +37,10 @@ function accApply() {
     const root = document.querySelector(":root");
     if (options[0]) {
         root.style.setProperty('--crt-filter', 'none');
-        root.style.setProperty('--crt-mask', 'none');
+        root.style.setProperty('--crt-overlay', 'none');
     } else {
         root.style.setProperty('--crt-filter', 'var(--d-crt-filter)');
-        root.style.setProperty('--crt-mask', 'var(--d-crt-mask)');
+        root.style.setProperty('--crt-overlay', 'var(--d-crt-overlay)');
     }
     if (options[1]) {
         root.style.setProperty('--border', '#858');

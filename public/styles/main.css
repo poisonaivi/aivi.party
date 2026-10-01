@@ -34,7 +34,7 @@
     --shadow: #000c;
     --d-small-text: #555;
     --small-text: var(--d-small-text);
-    --section: #000;
+    --section: #0007;
     --section-b: #101;
     --d-border: #323;
     --border: var(--d-border);
@@ -61,14 +61,17 @@
     --border-width: 2px;
     --border-spacing: 6px;
     --magenta-filter: sepia(1) hue-rotate(240deg) saturate(2) brightness(0.9);
-    --d-crt-mask: intersect linear-gradient(0deg, #aaaa 10%, #ffff 40%, #ffff 60%, #aaaa 90%) 0 0 / 256px 2px, intersect linear-gradient(90deg, #eeee 50%, #ffff 50%) 0 0 / 3px 256px;
-    --crt-mask: var(--d-crt-mask);
-    --d-crt-filter: brightness(1.5) saturate(1.25) blur(0.4px);
+    --d-crt-overlay: linear-gradient(0deg, #0006 10%, #0000 40%, #0000 60%, #0006 90%), linear-gradient(90deg, #7701 10%, #2261 40%, #2261 60%, #7701 90%);
+    --crt-overlay: var(--d-crt-overlay);
+    --d-crt-filter: brightness(1.5) saturate(1.25) blur(0.5px);
     --crt-filter: var(--d-crt-filter);
     --d-font-family: "Monopix", "Ubuntu Mono", monospace;
     --font-family: var(--d-font-family);
     --d-font-family-s: "Monopix XS", "Ubuntu Mono", monospace;
     --font-family-s: var(--d-font-family);
+    --cursor-pointer: url("/assets/ui/cursor-pointer.png") 10 5, pointer;
+    --cursor-default: url("/assets/ui/cursor-default.png") 5 5, default;
+    --cursor-text: url("/assets/ui/cursor-text.png") 7 11, default;
     font-size: 18px;
     font-family: var(--font-family);
     color: var(--text);
@@ -77,20 +80,31 @@
 body {
     margin: 0;
     box-sizing: border-box;
-    background-color: var(--section);
-    background-image: url(/assets/images/background-tile.png);
+    background-color: black;
+    background-image: url("/assets/images/background-tile.png");
     background-size: 580px;
     image-rendering: pixelated;
+    cursor: var(--cursor-default);
     &::selection {
         background-color: var(--selection);
         color: var(--selection-text);
     }
+    &::before {
+        content: "";
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        pointer-events: none;
+        background-image: var(--crt-overlay);
+        background-size: 4px 2px;
+    }
 }
 main {
+    filter: var(--crt-filter);
     width: 1000px;
     margin: 0 auto;
-    mask: var(--crt-mask);
-    filter: var(--crt-filter);
 }
 h1, h2, .h2, h3, h4, h5, h6 {
     margin: 0;
@@ -132,7 +146,7 @@ a, a p {
     text-shadow: 0.032em 0.032em var(--link-b), 0.032em -0.032em var(--link-b), -0.032em -0.032em var(--link-b), -0.032em 0.032em var(--link-b), 0.092em 0.092em var(--shadow), 0 0 0.5em var(--link);
     text-decoration: none;
     text-decoration-thickness: 1px;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
     &:hover {
         opacity: 0.75;
         text-decoration: underline;
@@ -299,7 +313,7 @@ textarea {
     height: fit-content;
 }
 details > summary {
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
     list-style-type: none;
     &:hover {
         opacity: 0.6;
@@ -481,6 +495,17 @@ marquee {
 }
 #accessibility {
     position: absolute;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 @keyframes bounce {
     0% {

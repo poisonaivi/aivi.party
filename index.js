@@ -43,8 +43,10 @@ export default {
                     if (rawActivities.length > 0) {
                         for (let i = 0; i < rawActivities.length; i++) {
                             let activityName = rawActivities[i].name;
-                            if (activityName == "Custom Status" && !!rawActivities[i].state) {
-                                statusText = rawActivities[i].state;
+                            if (activityName == "Custom Status") {
+                                if (!!rawActivities[i].state) {
+                                    statusText = rawActivities[i].state;
+                                }
                             } else {
                                 activityNames.push(activityName);
                             }
