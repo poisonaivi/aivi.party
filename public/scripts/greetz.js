@@ -54,7 +54,7 @@ function updateFunTitle() {
         // "<span style='color: #f00'>f</span><span style='color: #fa0'>i</span><span style='color: #ff0'>l</span><span style='color: #0b0'>l</span><span style='color: #66f'>e</span><span style='color: #a0f'>d</span> <span style='color: #ff0'>w</span><span style='color: #fff'>i</span><span style='color: #a0f'>t</span><span style='color: #555'>h</span> <span style='color: #89f'>p</span><span style='color: #f88'>r</span><span style='color: #fff'>i</span><span style='color: #f88'>d</span><span style='color: #89f'>e</span>",
         "better than doomscrolling",
         "use code AIVI for 20% off",
-        "commit and sync",
+        "don't forget to git commit",
         "headpats accepted here",
         "covered in bite marks",
         "you're my favorite visitor btw",

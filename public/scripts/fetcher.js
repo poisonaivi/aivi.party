@@ -48,7 +48,7 @@ async function updateDiscord() {
             statusLabelText += "<hr>";
         }
         for (let i = 0; i < activities.length; i++) {
-            if (activities[i] == "Apple Music") {
+            if (activities[i] == "music") {
                 statusLabelText += "<small>listening to music</small><br>";
             } else {
                 statusLabelText += "<small>in " + activities[i].replace("<", "&lt;").replace(">", "&gt;") + "</small><br>";
