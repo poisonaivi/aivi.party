@@ -97,24 +97,27 @@ function nextTitle(title) {
     let caret = document.getElementById("funTitleCaret");
     if (document.hasFocus()) {
         caret.style = "none";
-        let deleteInterval = setInterval(() => {
-            currentTitle.innerHTML = currentTitle.innerHTML.substring(0, currentTitle.innerHTML.length - 1);
-            if (!document.hasFocus() || currentTitle.innerHTML.length == 0) {
-                clearInterval(deleteInterval);
-                caret.style.animation = "blink 1s steps(1) infinite";
-                setTimeout(() => {
-                    caret.style.animation = "none";
-                    let printInterval = setInterval(() => {
-                        currentTitle.innerHTML = title.substring(0, currentTitle.innerHTML.length + 1);
-                        if (!document.hasFocus() || currentTitle.innerHTML.length == title.length) {
-                            clearInterval(printInterval);
-                            caret.style.animation = "blink 1s steps(1) infinite";
-                            currentTitle.innerHTML = title;
-                        }
-                    }, 100);
-                }, 800);
-            }
-        }, 40);
+        currentTitle.innerHTML = currentTitle.innerHTML.substring(0, currentTitle.innerHTML.length - 1);
+        setTimeout(() => {
+            let deleteInterval = setInterval(() => {
+                currentTitle.innerHTML = currentTitle.innerHTML.substring(0, currentTitle.innerHTML.length - 1);
+                if (!document.hasFocus() || currentTitle.innerHTML.length == 0) {
+                    clearInterval(deleteInterval);
+                    caret.style.animation = "blink 1s steps(1) infinite";
+                    setTimeout(() => {
+                        caret.style.animation = "none";
+                        let printInterval = setInterval(() => {
+                            currentTitle.innerHTML = title.substring(0, currentTitle.innerHTML.length + 1);
+                            if (!document.hasFocus() || currentTitle.innerHTML.length == title.length) {
+                                clearInterval(printInterval);
+                                caret.style.animation = "blink 1s steps(1) infinite";
+                                currentTitle.innerHTML = title;
+                            }
+                        }, 100);
+                    }, 800);
+                }
+            }, 50);
+        }, 600);
     } else {
         currentTitle.innerHTML = title;
     }
