@@ -20,7 +20,7 @@ var index_default = {
             headers: {
               "content-type": "application/json",
               // "Access-Control-Allow-Origin": "*",
-              "Access-Control-Allow-Origin": "aivi.party"
+              "Access-Control-Allow-Origin": "poi.sn"
             }
           });
         } else if (path[1] == "discord-status") {
@@ -33,7 +33,7 @@ var index_default = {
             headers: {
               "content-type": "application/json",
               // "Access-Control-Allow-Origin": "*",
-              "Access-Control-Allow-Origin": "aivi.party"
+              "Access-Control-Allow-Origin": "poi.sn"
             }
           });
         } else {

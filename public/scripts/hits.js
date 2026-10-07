@@ -1,7 +1,7 @@
 async function registerHit() {
-    if (window.location.href.includes("://aivi.party/")) {
+    if (window.location.href.includes("://poi.sn/")) {
         try {
-            const res = await fetch("https://aivi.party/api/hit-counter?a=add");
+            const res = await fetch("https://poi.sn/api/hit-counter?a=add");
             if (!res.ok) {
                 throw new Error("Failed to fetch.");
             }
@@ -12,7 +12,7 @@ async function registerHit() {
 }
 async function updateHits() {
     try {
-        const res = await fetch("https://aivi.party/api/hit-counter");
+        const res = await fetch("https://poi.sn/api/hit-counter");
         if (!res.ok) {
             throw new Error("Failed to fetch.");
         }

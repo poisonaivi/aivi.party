@@ -1,4 +1,4 @@
-# aivi.party
+# poi.sn
 
 ## Directories:
 

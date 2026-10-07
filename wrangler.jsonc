@@ -1,6 +1,6 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "aiviparty",
+	"name": "poisn",
 	"compatibility_date": "2026-01-15",
 	"main": "./index.js",
 	"assets": {
@@ -19,6 +19,14 @@
 		},
 		{
 			"pattern": "www.aivi.party",
+			"custom_domain": true
+		},
+		{
+			"pattern": "poi.sn",
+			"custom_domain": true
+		},
+		{
+			"pattern": "www.poi.sn",
 			"custom_domain": true
 		}
 	],

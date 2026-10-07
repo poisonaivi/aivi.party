@@ -4,7 +4,7 @@ async function updateDiscord() {
     const statusLabel = document.getElementById("statusLabel");
     const discordSection = document.getElementById("discordSection");
     try {
-        const res = await fetch("https://aivi.party/api/discord");
+        const res = await fetch("https://poi.sn/api/discord");
         if (!res.ok) {
             presenceLabel.innerHTML = "STATUS";
             presenceLabel.className = "danger";
@@ -73,7 +73,7 @@ async function updateLastfm() {
     const playingLabel = document.getElementById("playingLabel");
     const musicIcon = document.getElementById("musicIcon");
     try {
-        const res = await fetch("https://aivi.party/api/music");
+        const res = await fetch("https://poi.sn/api/music");
         if (!res.ok) {
             titleLabel.innerHTML = "";
             artistLabel.innerHTML = "<span class='danger'><img class='icon inline-left' src='/assets/icons/error.png'>api error</span>";

@@ -70,8 +70,8 @@
     --d-font-family-s: "Monopix XS", "Ubuntu Mono", monospace;
     --font-family-s: var(--d-font-family);
     --cursor-pointer: url("/assets/ui/cursor-pointer.png") 10 5, pointer;
-    --cursor-default: url("/assets/ui/cursor-default.png") 5 5, default;
-    --cursor-text: url("/assets/ui/cursor-text.png") 7 11, default;
+    --cursor-default: url("/assets/ui/cursor-default.png") 5 5, auto;
+    --cursor-text: url("/assets/ui/cursor-text.png") 7 11, auto;
     font-size: 18px;
     font-family: var(--font-family);
     color: var(--text);
@@ -121,7 +121,7 @@ h1, h2, .h2, h3, h4, h5, h6 {
     }
 }
 h1 {
-    font-size: 90px;
+    font-size: 100px;
 }
 h2, .h2 {
     font-size: 54px;

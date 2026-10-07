@@ -26,7 +26,7 @@ export default {
                     }), {
                         headers: {
                             "content-type": "application/json",
-                            // "Access-Control-Allow-Origin": "aivi.party",
+                            // "Access-Control-Allow-Origin": "poi.sn",
                             "Access-Control-Allow-Origin": "*",
                         },
                     });
@@ -59,21 +59,21 @@ export default {
                     }), {
                         headers: {
                             "content-type": "application/json",
-                            // "Access-Control-Allow-Origin": "aivi.party",
+                            // "Access-Control-Allow-Origin": "poi.sn",
                             "Access-Control-Allow-Origin": "*",
                         },
                     });
                 } else if (path[1] == "hit-counter") {
-                    var hits = await env.hitCounter.get('aivi.party');
+                    var hits = await env.hitCounter.get('poi.sn');
                     hits = parseInt(hits);
                     if (search.includes("?a=add")) {
                         hits = hits + 1;
-                        await env.hitCounter.put('aivi.party', hits);
+                        await env.hitCounter.put('poi.sn', hits);
                     }
                     return new Response(JSON.stringify({hits: hits}), {
                         headers: {
                             "content-type": "application/json",
-                            "Access-Control-Allow-Origin": "aivi.party",
+                            "Access-Control-Allow-Origin": "poi.sn",
                             // "Access-Control-Allow-Origin": "*",
                         },
                     });
