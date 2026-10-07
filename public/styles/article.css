@@ -27,18 +27,9 @@
     --link-b: #86a;
     --link-c: #436;
     --accent: #d0f;
-    --accent-b: #505;
-    --accent-c: #202;
-    --success: #0f3;
-    --success-b: #051;
-    --success-c: #020;
-    --warning: #ff3;
-    --warning-b: #662;
-    --warning-c: #221;
-    --danger: #f03;
-    --danger-b: #702;
-    --danger-c: #400;
-    --danger-d: #300;
+    --success: #084;
+    --warning: #cc1;
+    --danger: #c33;
     font-size: 18px;
     font-family: "Monopix XL";
     background-color: var(--bg);
@@ -64,6 +55,9 @@ h1 {
 h2 {
     font-size: 200%;
     margin-top: 2em;
+}
+h3 {
+    font-size: 150%;
 }
 p {
     line-height: 150%;
