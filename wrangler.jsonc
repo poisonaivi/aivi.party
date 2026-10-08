@@ -1,7 +1,7 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "poisn",
-	"compatibility_date": "2026-01-15",
+	"compatibility_date": "2026-10-07",
 	"main": "./index.js",
 	"assets": {
 		"directory": "./public",
@@ -33,7 +33,7 @@
 	"kv_namespaces": [
 		{
 			"binding": "hitCounter",
-			"id": "9ddf2901e2b444fc87aa3fcf67ff801e",
+			"id": "9ddf2901e2b444fc87aa3fcf67ff801e"
 		}
 	]
 }

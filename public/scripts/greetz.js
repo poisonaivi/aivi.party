@@ -11,7 +11,6 @@ function updateGreeting() {
 }
 function updateFunTitle() {
     const titles = [
-        "not actually a party",
         "open 24 hours",
         "a realm of purple",
         "a soapbox of sorts",
