@@ -14,14 +14,15 @@
     }
 
     #acc-button {
-        width: 50px;
+        width: 45px;
         aspect-ratio: 1;
         z-index: 10000;
         position: fixed;
-        left: 12px;
-        bottom: 12px;
+        left: 11px;
+        bottom: 11px;
         border: solid 3px var(--acc-border);
-        border-radius: 100%;
+        border-radius: 15px;
+        border-bottom-left-radius: 0;
         background-color: var(--acc-accent);
         background-image: url(/assets/icons/accessibility.png);
         background-size: cover;
@@ -37,20 +38,22 @@
         position: fixed;
         left: 10px;
         bottom: 10px;
-        border-radius: 20px;
-        background-color: var(--acc-bg);
-        border: ridge 2px var(--acc-accent);
+        border-radius: 30px;
+        border-bottom-left-radius: 0;
+        background-color: var(--acc-accent);
+        border: solid 3px var(--acc-accent);
+        box-shadow: 0 0 20px #000;
         overflow: hidden;
         font-family: Verdana, acc-monospace, sans-serif;
         color: #000;
         cursor: auto;
+        fieldset {
+            border-radius: 12px;
+            border: 2px solid #aaa;
+        }
         input, label {
             cursor: pointer;
             margin: 10px 0;
-        }
-        div {
-            padding: 8px 16px;
-            margin-bottom: 10px;
         }
     }
 
@@ -66,19 +69,25 @@
     }
 
     .acc-title {
-        background-color: var(--acc-accent);
         color: var(--acc-accent-text);
+        padding: 8px 16px 10px;
+    }
+    .acc-options {
+        background-color: var(--acc-bg);
+        padding: 9px 16px 18px;
+        border-top-right-radius: 27px;
+        border-top-left-radius: 27px;
     }
 </style>
 <button id="acc-button" onclick="accMenuOpen();" title="Open Accessibility Menu"></button>
 <div id="acc-menu">
     <div class="acc-title">
-        <img src="/assets/icons/accessibility.png" onload="accLoaded();" style="float: left; transform: translate(-3px, -2px);"><b>Accessibility Menu</b>
+        <img src="/assets/icons/accessibility.png" onload="accLoaded();" style="float: left; translate: 0, 5px;">&nbsp;<b>Accessibility Options</b>
         <button onclick="accMenuClose();" style="float: right; transform: translateY(-1px);" title="Close Accessibility Menu"><u>Close</u></button>
     </div>
     <div class="acc-options">
         <fieldset>
-            <legend><b>visual:</b></legend>
+            <legend><b>Visuals</b></legend>
             <input type="checkbox" id="novfx" onclick="accChange();">
             <label for="novfx">disable visual effects</label>
             <br>
@@ -87,12 +96,12 @@
         </fieldset>
         <br>
         <fieldset>
-            <legend><b>typeface:</b></legend>
+            <legend><b>Font</b></legend>
             <input type="radio" id="sitefont" name="font" onclick="accChange();" checked>
-            <label for="sitefont" style="font-family: monopix;">pixelated (default)</label>
+            <label for="sitefont"><span style="font-family: monopix;">pixelated</span>&nbsp;&nbsp;<span style="font-size: 75%;">default</span></label>
             <br>
             <input type="radio" id="monofont" name="font" onclick="accChange();">
-            <label for="monofont" style="font-family: acc-monospace;">smooth</label>
+            <label for="monofont"><span style="font-family: acc-monospace;">smooth</span></label>
         </fieldset>
     </div>
 </div>

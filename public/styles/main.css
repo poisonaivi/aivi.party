@@ -30,7 +30,7 @@
     --text-b: var(--d-text-b);
     --icon: #fff8;
     --selection: #f6f;
-    --selection-text: #404;
+    --selection-text: #202;
     --shadow: #000c;
     --d-small-text: #555;
     --small-text: var(--d-small-text);
@@ -88,6 +88,7 @@ body {
     &::selection {
         background-color: var(--selection);
         color: var(--selection-text);
+        cursor: var(--cursor-text);
     }
     &::before {
         content: "";
@@ -121,7 +122,7 @@ h1, h2, .h2, h3, h4, h5, h6 {
     }
 }
 h1 {
-    font-size: 100px;
+    font-size: 120px;
 }
 h2, .h2 {
     font-size: 54px;
