@@ -194,6 +194,7 @@ section {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-top: none;
+        padding-bottom: 1px;
     }
     &.success {
         background: linear-gradient(var(--section), var(--success-c));

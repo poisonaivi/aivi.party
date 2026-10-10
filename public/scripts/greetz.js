@@ -82,7 +82,8 @@ function updateFunTitle() {
         "make yourself at home",
         "don't mind the mess",
         "i gotta head to class",
-        "do not consume in large quantities"
+        "do not consume in large quantities",
+        "change requires change"
     ];
     document.getElementById("funTitle").innerHTML = "";
     nextTitle(titles[Math.floor(Math.random() * titles.length)]);
